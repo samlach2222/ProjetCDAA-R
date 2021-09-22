@@ -40,7 +40,7 @@ class FicheContact
 
         std::vector<Interaction> GetListInteraction();
         void AddInteraction(Interaction i);
-        void RemoveInteraction(Interaction i);
+        void RemoveInteraction(int id);
 };
 
 #endif // FICHECONTACT_H

@@ -97,7 +97,22 @@ void FicheContact::AddInteraction(Interaction i)
     listInteraction.push_back(i);
 }
 
-void FicheContact::RemoveInteraction(Interaction i)
+void FicheContact::RemoveInteraction(int id)
 {
-    std::remove_if(listInteraction.begin(), listInteraction.end(), [](Interaction currentI){return currentI == i;});
+    std::vector<int> indexInteractionsASupprimer;
+
+    for (int index = 0; index < static_cast<int>(listInteraction.size()); index++){
+        if (listInteraction[index].GetId() == id){
+            indexInteractionsASupprimer.push_back(index);
+        }
+    }
+
+    int decalage = 0;
+    for (int& index: indexInteractionsASupprimer){
+        listInteraction.erase(listInteraction.begin() + index - decalage);
+
+        decalage++;
+    }
+
+    //listInteraction.erase (std::remove_if(listInteraction.begin(), listInteraction.end(), [&](Interaction currentI){return currentI == i;}));
 }
