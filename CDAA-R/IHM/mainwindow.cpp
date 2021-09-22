@@ -28,6 +28,11 @@ void MainWindow::AddContact()
     FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage());
     gc.AddContact(fc);
 
-    ui->listView->setModel(new QStringListModel());
+    QStringListModel* model = new QStringListModel(this);
+    QStringList list;
+    QString text = QString::fromStdString(gc.GetAllContacts()[0].ToString());
+    list.append(text);
+    model->setStringList(list);
+    ui->listView->setModel(model);
 }
 
