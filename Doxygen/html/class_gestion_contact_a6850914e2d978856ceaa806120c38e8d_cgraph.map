@@ -1,0 +1,7 @@
+<map id="GestionContact::ModifyContact" name="GestionContact::ModifyContact">
+<area shape="rect" id="node1" title="Permet de modifier un contact en le remplacant par un contact c" alt="" coords="5,56,208,83"/>
+<area shape="rect" id="node2" href="$class_log.html#ab71cc07949289808dd1d8f088a0e2964" title="Ajoute un log log à la liste de logs." alt="" coords="276,5,407,32"/>
+<area shape="rect" id="node4" href="$class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" title="Retourne l&#39;id." alt="" coords="274,56,409,83"/>
+<area shape="rect" id="node5" href="$class_database_storage.html#aa565847ae485948e2a0d5e4f3dcbc1c9" title="Met à jour une FicheContact dans la base de données." alt="" coords="256,107,427,133"/>
+<area shape="rect" id="node3" href="$class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="475,5,619,32"/>
+</map>

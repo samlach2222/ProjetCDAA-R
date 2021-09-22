@@ -1,0 +1,11 @@
+<map id="D:/WINDOWS/Documents/GitHub/ProjetCDAA&#45;R/CDAA&#45;R/LOGIC/log.h" name="D:/WINDOWS/Documents/GitHub/ProjetCDAA&#45;R/CDAA&#45;R/LOGIC/log.h">
+<area shape="rect" id="node1" title="Fichier header pour les logs de l&#39;application." alt="" coords="158,5,333,61"/>
+<area shape="rect" id="node2" href="$mainwindow_8h_source.html" title=" " alt="" coords="5,213,192,269"/>
+<area shape="rect" id="node3" href="$gestioncontact_8h.html" title="Fichier Header pour la gestion des contacts de l&#39;application." alt="" coords="136,109,355,165"/>
+<area shape="rect" id="node9" href="$log_8cpp.html" title="Contient les logs de l&#39;application." alt="" coords="379,109,554,165"/>
+<area shape="rect" id="node4" href="$gestioncontact_8cpp.html" title="La classe de gestion de liste des Contacts." alt="" coords="59,317,291,373"/>
+<area shape="rect" id="node5" href="$databasestorage_8h.html" title="Fichier header pour la gestion de la base de données." alt="" coords="267,213,520,269"/>
+<area shape="rect" id="node7" href="$jsonstorage_8h_source.html" title=" " alt="" coords="607,213,831,269"/>
+<area shape="rect" id="node6" href="$databasestorage_8cpp.html" title="Classe pour la gestion de la base de données." alt="" coords="315,317,581,373"/>
+<area shape="rect" id="node8" href="$jsonstorage_8cpp.html" title="La classe de gestion de l&#39;import et l&#39;export au format JSon des informations du programme." alt="" coords="606,317,845,373"/>
+</map>

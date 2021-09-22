@@ -1,0 +1,4 @@
+<map id="Log::AddToTabLog" name="Log::AddToTabLog">
+<area shape="rect" id="node1" title="Ajoute un log log à la liste de logs." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="184,5,328,32"/>
+</map>

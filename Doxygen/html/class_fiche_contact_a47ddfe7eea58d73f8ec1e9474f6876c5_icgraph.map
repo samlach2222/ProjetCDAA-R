@@ -1,0 +1,4 @@
+<map id="FicheContact::getId" name="FicheContact::getId">
+<area shape="rect" id="node1" title="Retourne l&#39;id." alt="" coords="256,5,391,32"/>
+<area shape="rect" id="node2" href="$class_gestion_contact.html#a6850914e2d978856ceaa806120c38e8d" title="Permet de modifier un contact en le remplacant par un contact c" alt="" coords="5,5,208,32"/>
+</map>

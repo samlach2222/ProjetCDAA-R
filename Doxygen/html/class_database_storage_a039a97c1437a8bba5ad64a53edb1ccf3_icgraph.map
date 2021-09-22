@@ -1,0 +1,4 @@
+<map id="DatabaseStorage::Create" name="DatabaseStorage::Create">
+<area shape="rect" id="node1" title="Créé une FicheContact dans la base de données." alt="" coords="241,5,409,32"/>
+<area shape="rect" id="node2" href="$class_gestion_contact.html#a3ea367ebf9fb7e67fb19f7b5b7cb898d" title="Permet d&#39;ajouter un contact c à la liste de contacts." alt="" coords="5,5,193,32"/>
+</map>

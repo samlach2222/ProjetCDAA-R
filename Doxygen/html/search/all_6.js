@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['horodatage_0',['Horodatage',['../class_horodatage.html',1,'Horodatage'],['../class_horodatage.html#a47f1312c886a43ecee77f4454f180b42',1,'Horodatage::Horodatage(int j, int m, int a, int heu, int min, int sec)'],['../class_horodatage.html#a8c9ebdc5bd52f17e6cc180d892960c95',1,'Horodatage::Horodatage()']]],
-  ['horodatage_2ecpp_1',['horodatage.cpp',['../horodatage_8cpp.html',1,'']]]
+  ['interaction_0',['Interaction',['../class_interaction.html',1,'Interaction'],['../class_interaction.html#a2f95b43ad63c3a18f61f1c49efc070df',1,'Interaction::Interaction()']]],
+  ['interaction_2ecpp_1',['interaction.cpp',['../interaction_8cpp.html',1,'']]],
+  ['interaction_2eh_2',['interaction.h',['../interaction_8h.html',1,'']]]
 ];

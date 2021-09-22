@@ -1,6 +1,6 @@
-\hypertarget{class_fiche_contact}{}\doxysection{Fiche\+Contact Class Reference}
+\hypertarget{class_fiche_contact}{}\doxysection{Référence de la classe Fiche\+Contact}
 \label{class_fiche_contact}\index{FicheContact@{FicheContact}}
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fiche_contact_a08d85b3af9bb7b02a0b45645b29e7879}{Fiche\+Contact}} (std\+::string nom, std\+::string prenom, std\+::string entreprise, std\+::string mail, std\+::string telephone, QImage photo)
@@ -43,7 +43,7 @@ std\+::string \mbox{\hyperlink{class_fiche_contact_a9f6b0c7e3dda229b3ccf320cc8ea
 \begin{DoxyCompactList}\small\item\em Retourne un string contenant le nom et le prénom. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Documentation des constructeurs et destructeur}
 \mbox{\Hypertarget{class_fiche_contact_a08d85b3af9bb7b02a0b45645b29e7879}\label{class_fiche_contact_a08d85b3af9bb7b02a0b45645b29e7879}} 
 \index{FicheContact@{FicheContact}!FicheContact@{FicheContact}}
 \index{FicheContact@{FicheContact}!FicheContact@{FicheContact}}
@@ -55,7 +55,7 @@ std\+::string \mbox{\hyperlink{class_fiche_contact_a9f6b0c7e3dda229b3ccf320cc8ea
 Constructeur de la classe \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em nom} & Nom du contact \\
 \hline
 \mbox{\texttt{ in}}  & {\em prenom} & Prénom du contact \\
@@ -69,13 +69,13 @@ Constructeur de la classe \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}
 \mbox{\texttt{ in}}  & {\em photo} & Photo de profile du contact \\
 \hline
 \end{DoxyParams}
-\begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]id non géré \end{DoxyRefDesc}
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]récupérer le plus grand id unique \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Bogue}
+\item[\mbox{\hyperlink{bug__bug000001}{Bogue}}]id non géré \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{A faire}
+\item[\mbox{\hyperlink{todo__todo000001}{A faire}}]récupérer le plus grand id unique \end{DoxyRefDesc}
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Documentation des fonctions membres}
 \mbox{\Hypertarget{class_fiche_contact_a71fa7eac025c91a38b0384f7840da4a9}\label{class_fiche_contact_a71fa7eac025c91a38b0384f7840da4a9}} 
 \index{FicheContact@{FicheContact}!AddInteraction@{AddInteraction}}
 \index{AddInteraction@{AddInteraction}!FicheContact@{FicheContact}}
@@ -87,7 +87,7 @@ Constructeur de la classe \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}
 Ajoute l\textquotesingle{}interaction {\ttfamily i} à la liste des interactions. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em i} & L\textquotesingle{}interaction à ajouter \\
 \hline
 \end{DoxyParams}
@@ -101,7 +101,7 @@ Ajoute l\textquotesingle{}interaction {\ttfamily i} à la liste des interactions
 
 Retourne la date de création de la fiche contact. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 la date de création de la fiche contact 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_a2a009232da5fcc324d77c9f61a4e22a0}\label{class_fiche_contact_a2a009232da5fcc324d77c9f61a4e22a0}} 
@@ -114,7 +114,7 @@ la date de création de la fiche contact
 
 Retourne l\textquotesingle{}entreprise. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 l\textquotesingle{}entreprise 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5}\label{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5}} 
@@ -127,9 +127,17 @@ l\textquotesingle{}entreprise
 
 Retourne l\textquotesingle{}id. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 l\textquotesingle{}id 
 \end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}\label{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}} 
 \index{FicheContact@{FicheContact}!GetListInteraction@{GetListInteraction}}
 \index{GetListInteraction@{GetListInteraction}!FicheContact@{FicheContact}}
@@ -140,7 +148,7 @@ l\textquotesingle{}id
 
 Retourne la liste des intéractions du contact. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 la liste des interactions du contact 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_a599ab1c40101f1dc18cb27440e7a4a61}\label{class_fiche_contact_a599ab1c40101f1dc18cb27440e7a4a61}} 
@@ -153,7 +161,7 @@ la liste des interactions du contact
 
 Retourne le mail. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 le mail 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_a85ad2b5d62fb4340340dece092dd13c9}\label{class_fiche_contact_a85ad2b5d62fb4340340dece092dd13c9}} 
@@ -166,7 +174,7 @@ le mail
 
 Retourne le nom. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 le nom 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_adf6b877158a63870a832f4ee5aab0973}\label{class_fiche_contact_adf6b877158a63870a832f4ee5aab0973}} 
@@ -179,7 +187,7 @@ le nom
 
 Retourne la photo de profil. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 la photo de profil 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_ac4c06ce54b176fe56b111be7d635f31a}\label{class_fiche_contact_ac4c06ce54b176fe56b111be7d635f31a}} 
@@ -192,7 +200,7 @@ la photo de profil
 
 Retourne le prénom. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 le prénom 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_a19a999c780fefd9a9ee2e1e7acd3728c}\label{class_fiche_contact_a19a999c780fefd9a9ee2e1e7acd3728c}} 
@@ -205,7 +213,7 @@ le prénom
 
 Retourne le numéro de téléphone. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 le numéro de téléphone 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_fiche_contact_afd76648ba180fd53fcb5e3853a12a9c1}\label{class_fiche_contact_afd76648ba180fd53fcb5e3853a12a9c1}} 
@@ -219,7 +227,7 @@ le numéro de téléphone
 Enlève l\textquotesingle{}interaction d\textquotesingle{}id {\ttfamily id} de la liste des interactions. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em id} & L\textquotesingle{}id de l\textquotesingle{}interaction à enlever \\
 \hline
 \end{DoxyParams}
@@ -234,7 +242,7 @@ Enlève l\textquotesingle{}interaction d\textquotesingle{}id {\ttfamily id} de l
 Remplace l\textquotesingle{}entreprise. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em new\+Entreprise} & La nouvelle entreprise \\
 \hline
 \end{DoxyParams}
@@ -249,7 +257,7 @@ Remplace l\textquotesingle{}entreprise.
 Remplace le mail. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em new\+Mail} & Le nouveau mail \\
 \hline
 \end{DoxyParams}
@@ -264,7 +272,7 @@ Remplace le mail.
 Remplace le nom. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em new\+Nom} & Le nouveau nom \\
 \hline
 \end{DoxyParams}
@@ -279,7 +287,7 @@ Remplace le nom.
 Remplace la photo de profil. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em new\+Photo} & La nouvelle photo de profil \\
 \hline
 \end{DoxyParams}
@@ -294,7 +302,7 @@ Remplace la photo de profil.
 Remplace le prénom. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em new\+Prenom} & Le nouveau prénom \\
 \hline
 \end{DoxyParams}
@@ -309,7 +317,7 @@ Remplace le prénom.
 Remplace le numéro de téléphone. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em new\+Telephone} & Le nouveau numéro de téléphone \\
 \hline
 \end{DoxyParams}
@@ -323,12 +331,12 @@ Remplace le numéro de téléphone.
 
 Retourne un string contenant le nom et le prénom. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 un string contenant le nom et le prénom 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/drago/\+Desktop/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+LOGIC/\mbox{\hyperlink{fichecontact_8h}{fichecontact.\+h}}\item 
-C\+:/\+Users/drago/\+Desktop/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+LOGIC/\mbox{\hyperlink{fichecontact_8cpp}{fichecontact.\+cpp}}\end{DoxyCompactItemize}
+D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+LOGIC/\mbox{\hyperlink{fichecontact_8h}{fichecontact.\+h}}\item 
+D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+LOGIC/\mbox{\hyperlink{fichecontact_8cpp}{fichecontact.\+cpp}}\end{DoxyCompactItemize}
