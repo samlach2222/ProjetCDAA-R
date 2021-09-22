@@ -3,6 +3,8 @@
 #include <string>
 #include <QImage>
 #include <vector>
+#include "horodatage.h"
+#include "interaction.h"
 
 class FicheContact
 {
