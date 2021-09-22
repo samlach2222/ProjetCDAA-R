@@ -1,0 +1,31 @@
+\hypertarget{gestioncontact_8h_source}{}\doxysection{gestioncontact.\+h}
+\label{gestioncontact_8h_source}\index{C:/Users/drago/Desktop/ProjetCDAA-\/R/CDAA-\/R/LOGIC/gestioncontact.h@{C:/Users/drago/Desktop/ProjetCDAA-\/R/CDAA-\/R/LOGIC/gestioncontact.h}}
+\mbox{\hyperlink{gestioncontact_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef GESTIONCONTACT\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define GESTIONCONTACT\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{fichecontact_8h}{fichecontact.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{log_8h}{log.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_gestion_contact}{GestionContact}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{keyword}{private}:}
+\DoxyCodeLine{20         std::vector<FicheContact> TabContacts;}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_log}{Log}} log;}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_gestion_contact_a0d42db3777c1e15d557979c897acf344}{GestionContact}}();}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d}{AddContact}}(\mbox{\hyperlink{class_fiche_contact}{FicheContact}} c);}
+\DoxyCodeLine{25         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}{SupprContact}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestion_contact_a6850914e2d978856ceaa806120c38e8d}{ModifyContact}}(\mbox{\hyperlink{class_fiche_contact}{FicheContact}} c);}
+\DoxyCodeLine{27         std::vector<FicheContact> \mbox{\hyperlink{class_gestion_contact_a9e696fc5d63a8cae7dc19652d470f62f}{GetAllContacts}}();}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_fiche_contact}{FicheContact}} \mbox{\hyperlink{class_gestion_contact_ae22cc27cbf912262b2716c334a12f5fe}{GetContact}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \mbox{\hyperlink{class_log}{Log}} \mbox{\hyperlink{class_gestion_contact_a1969594dbc9431e39aa7f955f21171be}{getLog}}();}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GESTIONCONTACT\_H}}
+
+\end{DoxyCode}
