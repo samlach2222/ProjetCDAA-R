@@ -46,7 +46,7 @@ void GestionContact::SupprContact(int id)
 
     int decalage = 0;
     for (int& index: indexContactASupprimer){
-        DatabaseStorage::Delete(this->GetContact(id));
+        DatabaseStorage::Delete(id);
         this->TabContacts.erase(this->TabContacts.begin() + index - decalage);
         this->log.AddToTabLog("Contact Removed");
 
