@@ -1,8 +1,18 @@
+/**
+ * @file LOGIC/gestioncontact.h
+ *
+ * @brief Fichier Header pour la gestion des contacts de l'application
+ *
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
+ *
+ */
 #ifndef GESTIONCONTACT_H
 #define GESTIONCONTACT_H
 #include "fichecontact.h"
 #include "log.h"
 #include <vector>
+
 
 class GestionContact
 {

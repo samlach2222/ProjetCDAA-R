@@ -1,3 +1,12 @@
+/**
+ * @file LOGIC/horodatage.cpp
+ *
+ * @brief Le fichier header pour la gestion du temps et de l'heure d'une action
+ *
+ * @author Samuel LACHAUD
+ *
+ */
+
 #ifndef HORODATAGE_H
 #define HORODATAGE_H
 #include <string>
@@ -20,9 +29,17 @@ class Horodatage
         int GetJour();
         int GetMois();
         int GetAnnee();
+        int GetHeure();
+        int GetMinute();
+        int GetSeconde();
+
         void SetJour(int j);
         void SetMois(int m);
         void SetAnnee(int a);
+        void SetHeure(int heu);
+        void SetMinute(int min);
+        void SetSeconde(int sec);
+
 };
 
 #endif // HORODATAGE_H
