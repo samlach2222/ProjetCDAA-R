@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "LOGIC/gestioncontact.h"
+#include "LOGIC/log.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,6 +20,7 @@ public:
 private:
     Ui::MainWindow *ui;
     GestionContact gc;
+    void RefreshLog();
 
 public slots:
     void AddContact();

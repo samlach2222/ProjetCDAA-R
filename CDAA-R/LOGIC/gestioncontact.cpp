@@ -1,6 +1,8 @@
 #include "gestioncontact.h"
 #include "STORAGE/databasestorage.h"
 
+
+
 GestionContact::GestionContact()
 {
     this->TabContacts = std::vector<FicheContact>();
@@ -54,9 +56,16 @@ std::vector<FicheContact> GestionContact::GetAllContacts()
 
 FicheContact GestionContact::GetContact(int id)
 {
+    FicheContact c = FicheContact("","","","","",QImage());
     for (int index = 0; index < static_cast<int>(this->TabContacts.size()); index++){
         if (this->TabContacts[index].getId() == id){
-            return this->TabContacts[index];
+            c = this->TabContacts[index];
         }
     }
+    return c;
+}
+
+Log GestionContact::getLog()
+{
+    return log;
 }

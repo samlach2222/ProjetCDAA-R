@@ -36,7 +36,7 @@ std::string Horodatage::ToString()
 
     // On définit l'heure
     QTime time;
-    time.setHMS(10,10,10);
+    time.setHMS(this->heure, this->minute, this->seconde);
 
     // On regroupe dans un datetime
     QDateTime datetime;
@@ -44,7 +44,7 @@ std::string Horodatage::ToString()
     datetime.setTime(time);
 
     // on retourne en std::string
-    return datetime.toString("dd-MM-yyyy hh:mm:ss").toStdString();
+    return datetime.toString("dd/MM/yyyy hh:mm:ss").toStdString();
 }
 
 int Horodatage::GetJour()

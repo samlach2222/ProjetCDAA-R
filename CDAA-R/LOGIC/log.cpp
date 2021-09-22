@@ -3,6 +3,11 @@
 #include <vector>
 #include <string>
 
+std::vector<std::string> Log::getTabLog()
+{
+    return tabLog;
+}
+
 Log::Log()
 {
     tabLog = std::vector<std::string>();

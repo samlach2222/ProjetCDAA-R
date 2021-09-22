@@ -10,6 +10,7 @@ class Log
     public:
         Log();
         void AddToTabLog(std::string log);
+        std::vector<std::string> getTabLog();
 };
 
 #endif // LOG_H

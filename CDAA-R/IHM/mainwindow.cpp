@@ -15,7 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->pushButton, SIGNAL(clicked()),this, SLOT(AddContact()));
+    gc = GestionContact();
+    this->RefreshLog();
 }
 
 MainWindow::~MainWindow()
@@ -25,14 +26,36 @@ MainWindow::~MainWindow()
 
 void MainWindow::AddContact()
 {
+    // DEBUT TEST
     FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage());
     gc.AddContact(fc);
+    // FIN TEST
 
     QStringListModel* model = new QStringListModel(this);
     QStringList list;
-    QString text = QString::fromStdString(gc.GetAllContacts()[0].ToString());
-    list.append(text);
+    int tabSize = gc.GetAllContacts().size();
+    for(int i =0; i < static_cast<int>(tabSize); i++)
+    {
+        QString text = QString::fromStdString(gc.GetAllContacts()[i].ToString());
+        list.append(text);
+    }
     model->setStringList(list);
     ui->listView->setModel(model);
+
+    this->RefreshLog();
+}
+
+void MainWindow::RefreshLog()
+{
+    QStringListModel* model = new QStringListModel(this);
+    QStringList list;
+    int tabSize = gc.getLog().getTabLog().size();
+    for(int i =0; i < static_cast<int>(tabSize); i++)
+    {
+        QString text = QString::fromStdString(gc.getLog().getTabLog()[i]);
+        list.append(text);
+    }
+    model->setStringList(list);
+    ui->listView_2->setModel(model);
 }
 
