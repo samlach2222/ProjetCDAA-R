@@ -12,6 +12,8 @@ SOURCES += \
     LOGIC/fichecontact.cpp \
     LOGIC/horodatage.cpp \
     LOGIC/interaction.cpp \
+    LOGIC/log.cpp \
+    STORAGE/databasestorage.cpp \
     STORAGE/jsonstorage.cpp \
     main.cpp \
     IHM/mainwindow.cpp
@@ -21,6 +23,8 @@ HEADERS += \
     LOGIC/fichecontact.h \
     LOGIC/horodatage.h \
     LOGIC/interaction.h \
+    LOGIC/log.h \
+    STORAGE/databasestorage.h \
     STORAGE/jsonstorage.h
 
 FORMS += \
