@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     LOGIC/fichecontact.cpp \
+    LOGIC/gestioncontact.cpp \
     LOGIC/horodatage.cpp \
     LOGIC/interaction.cpp \
     LOGIC/log.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     IHM/mainwindow.h \
     LOGIC/fichecontact.h \
+    LOGIC/gestioncontact.h \
     LOGIC/horodatage.h \
     LOGIC/interaction.h \
     LOGIC/log.h \
