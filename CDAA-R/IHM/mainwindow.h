@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "LOGIC/gestioncontact.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +18,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    GestionContact gc;
+
+public slots:
+    void AddContact();
 };
 #endif // MAINWINDOW_H

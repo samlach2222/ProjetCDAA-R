@@ -19,7 +19,7 @@ class FicheContact
         Horodatage dateCreation;
         std::vector<Interaction> listInteraction;
     public:
-        FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation);
+        FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo);
 
         //Getters & Setters
         int getId();
@@ -41,6 +41,7 @@ class FicheContact
         std::vector<Interaction> GetListInteraction();
         void AddInteraction(Interaction i);
         void RemoveInteraction(int id);
+        std::string ToString();
 };
 
 #endif // FICHECONTACT_H

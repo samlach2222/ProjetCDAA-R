@@ -1,6 +1,7 @@
 #include "fichecontact.h"
+#include "horodatage.h"
 
-FicheContact::FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation)
+FicheContact::FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
 {
     this->id = 0;  //TODO: récupérer le plus grand id unique
     this->nom = nom;
@@ -9,7 +10,7 @@ FicheContact::FicheContact(std::string nom, std::string prenom, std::string entr
     this->mail = mail;
     this->telephone = telephone;
     this->photo = photo;
-    this->dateCreation = dateCreation;
+    this->dateCreation = Horodatage();
 }
 
 int FicheContact::getId()
@@ -115,4 +116,9 @@ void FicheContact::RemoveInteraction(int id)
     }
 
     //listInteraction.erase (std::remove_if(listInteraction.begin(), listInteraction.end(), [&](Interaction currentI){return currentI == i;}));
+}
+
+std::string FicheContact::ToString()
+{
+    return nom + " " + prenom;
 }

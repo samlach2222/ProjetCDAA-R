@@ -1,9 +1,9 @@
 #include "databasestorage.h"
 
-DatabaseStorage::DatabaseStorage()
+/*static DatabaseStorage::DatabaseStorage()
 {
     //TODO
-}
+}*/
 
 void DatabaseStorage::Create(FicheContact c)
 {
