@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    LOGIC/fichecontact.cpp \
     LOGIC/interaction.cpp \
     STORAGE/jsonstorage.cpp \
     main.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
 
 HEADERS += \
     IHM/mainwindow.h \
+    LOGIC/fichecontact.h \
     LOGIC/interaction.h \
     STORAGE/jsonstorage.h
 
