@@ -1,3 +1,8 @@
+/**
+ * @file LOGIC/log.h
+ * @brief Fichier header pour les logs de l'application
+ * @author Samuel LACHAUD
+ */
 #ifndef LOG_H
 #define LOG_H
 #include <vector>

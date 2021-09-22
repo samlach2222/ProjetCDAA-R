@@ -1,3 +1,8 @@
+/**
+ * @file LOGIC/interaction.h
+ * @brief Fichier header pour une intéraction
+ * @author Samuel LACHAUD
+ */
 #ifndef INTERACTION_H
 #define INTERACTION_H
 #include <string>

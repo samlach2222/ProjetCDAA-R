@@ -1,3 +1,8 @@
+/**
+ * @file LOGIC/fichecontact.h
+ * @brief Fichier header pour les détails d'un contact et ses interactions
+ * @author Loïs PAZOLA
+ */
 #ifndef FICHECONTACT_H
 #define FICHECONTACT_H
 #include <string>
@@ -36,7 +41,6 @@ class FicheContact
         QImage getPhoto();
         void setPhoto(QImage newPhoto);
         Horodatage getDateCreation();
-        void setDateCreation(Horodatage newDateCreation);
 
         std::vector<Interaction> GetListInteraction();
         void AddInteraction(Interaction i);
