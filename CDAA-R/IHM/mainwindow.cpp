@@ -1,3 +1,12 @@
+/**
+ * @file IHM/mainwindow.cpp
+ * @brief Fenêtre principale de l'application permettant d'afficher les contacts, leur édition et toutes les autres actions souhaitées
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
+ * @version 1.0
+ * @date 23/09/2021
+ */
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "LOGIC/fichecontact.h"
@@ -9,6 +18,10 @@
 #include <QVector>
 #include <qlist.h>
 
+/**
+ * @brief Constructeur de mainwindows
+ * @param[out] parent    QWidget de création de classe
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -19,11 +32,17 @@ MainWindow::MainWindow(QWidget *parent)
     this->RefreshLog();
 }
 
+/**
+ * @brief Destructeur de mainwindow
+ */
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+/**
+ * @brief Méthode associée au bouton d'ajout de contact permettant d'ajouter un contact à la gestion de contact
+ */
 void MainWindow::AddContact()
 {
     // DEBUT TEST
@@ -45,6 +64,9 @@ void MainWindow::AddContact()
     this->RefreshLog();
 }
 
+/**
+ * @brief Méthode permettant de rafraichir l'affichage des logs à chaque fois qu'une action est effectuée
+ */
 void MainWindow::RefreshLog()
 {
     QStringListModel* model = new QStringListModel(this);

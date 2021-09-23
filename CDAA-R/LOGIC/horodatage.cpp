@@ -127,7 +127,7 @@ int Horodatage::GetSeconde()
 
 /**
  * @brief Setter de Jour
- * @param j     Variable que l'on assigne au Jour
+ * @param[in] j     Variable que l'on assigne au Jour
  */
 void Horodatage::SetJour(int j)
 {
@@ -136,7 +136,7 @@ void Horodatage::SetJour(int j)
 
 /**
  * @brief Setter de Mois
- * @param m     Variable que l'on assigne au Mois
+ * @param[in] m     Variable que l'on assigne au Mois
  */
 void Horodatage::SetMois(int m)
 {
@@ -145,7 +145,7 @@ void Horodatage::SetMois(int m)
 
 /**
  * @brief Setter d'Annee
- * @param a     Variable que l'on assigne à l'annee
+ * @param[in] a     Variable que l'on assigne à l'annee
  */
 void Horodatage::SetAnnee(int a)
 {
@@ -154,7 +154,7 @@ void Horodatage::SetAnnee(int a)
 
 /**
  * @brief Setter de l'Heure
- * @param j     Variable que l'on assigne au l'Heure
+ * @param[in] j     Variable que l'on assigne au l'Heure
  */
 void Horodatage::SetHeure(int heu)
 {
@@ -163,7 +163,7 @@ void Horodatage::SetHeure(int heu)
 
 /**
  * @brief Setter des Minutes
- * @param m     Variable que l'on assigne aux Minutes
+ * @param[in] m     Variable que l'on assigne aux Minutes
  */
 void Horodatage::SetMinute(int min)
 {
@@ -172,7 +172,7 @@ void Horodatage::SetMinute(int min)
 
 /**
  * @brief Setter de Secondes
- * @param a     Variable que l'on assigne aux secondes
+ * @param[in] a     Variable que l'on assigne aux secondes
  */
 void Horodatage::SetSeconde(int sec)
 {

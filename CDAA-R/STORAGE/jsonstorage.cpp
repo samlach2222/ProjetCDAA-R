@@ -11,7 +11,7 @@
 
 /**
  * @brief Constructeur de la classe JSonStorage
- * @param filename      Nom du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
+ * @param[in] filename      Nom du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
  */
 JSonStorage::JSonStorage(std::string filename)
 {
@@ -20,7 +20,7 @@ JSonStorage::JSonStorage(std::string filename)
 
 /**
  * @brief Permet de sauvegarder l'ensemble des contacts **gc** dans le fichier Json afin **d'assurer l'interopérabilité**
- * @param gc    Ensemble des contacts de l'application
+ * @param[in] gc    Ensemble des contacts de l'application
  * @todo METHODE A ECRIRE
  */
 void Save(GestionContact gc)

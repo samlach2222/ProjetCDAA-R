@@ -1,3 +1,10 @@
+/**
+ * @file IHM/mainwindow.h
+ * @brief Fichier header pour la fenêtre principale de l'application
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
