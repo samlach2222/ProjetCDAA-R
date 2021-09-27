@@ -19,7 +19,6 @@ UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-
 /**
  * @brief Destructeur de UI_InteractionContact
  */

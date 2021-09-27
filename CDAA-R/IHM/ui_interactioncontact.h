@@ -20,9 +20,12 @@ class UI_InteractionContact : public QWidget
 public:
     explicit UI_InteractionContact(QWidget *parent = nullptr);
     ~UI_InteractionContact();
+    void SetId(int);
+    int GetId();
 
 private:
     Ui::UI_InteractionContact *ui;
+    int id;
 
 public slots:
     void ButtonValidate();

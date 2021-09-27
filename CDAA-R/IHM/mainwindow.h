@@ -9,8 +9,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
 #include "LOGIC/gestioncontact.h"
 #include "LOGIC/log.h"
+#include "ui_filtercontact.h"
+#include "ui_requestcontact.h"
+#include "ui_savegestioncontact.h"
+#include "ui_interactioncontact.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,9 +32,19 @@ public:
 private:
     Ui::MainWindow *ui;
     GestionContact gc;
+    UI_FilterContact fc;
+    UI_RequestContact rc;
+    UI_SaveGestionContact sgc; // Not StarGate Command
+    UI_InteractionContact ic;
+
     void RefreshLog();
 
 public slots:
     void AddContact();
+    void OpenFC();
+    void OpenRC();
+    void OpenSGC();
+    void ListItemDoubleClick();
+    void LogsDoubleClick();
 };
 #endif // MAINWINDOW_H

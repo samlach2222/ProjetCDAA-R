@@ -34,6 +34,6 @@ Log::Log()
 void Log::AddToTabLog(std::string log)
 {
     Horodatage h = Horodatage();
-    tabLog.push_back("( " + h.ToString() + " ) " + log);
+    tabLog.push_back("( " + h.ToString() + " ) "+ "\n" + log);
 }
 

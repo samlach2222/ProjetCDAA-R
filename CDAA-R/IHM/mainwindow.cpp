@@ -10,7 +10,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "LOGIC/fichecontact.h"
-
+#include "ui_interactioncontact.h"
 
 #include <QStandardItemModel>
 #include <QString>
@@ -59,7 +59,7 @@ void MainWindow::AddContact()
         list.append(text);
     }
     model->setStringList(list);
-    ui->listView->setModel(model);
+    ui->ContactList->setModel(model);
 
     this->RefreshLog();
 }
@@ -78,6 +78,49 @@ void MainWindow::RefreshLog()
         list.append(text);
     }
     model->setStringList(list);
-    ui->listView_2->setModel(model);
+    ui->LogsList->setModel(model);
 }
 
+void MainWindow::OpenFC()
+{
+    if(!(rc.isVisible() || sgc.isVisible())){
+        fc.show();
+    }
+}
+
+void MainWindow::OpenRC()
+{
+    if(!(fc.isVisible() || sgc.isVisible())){
+        rc.show();
+    }
+}
+
+void MainWindow::OpenSGC()
+{
+    if(!(fc.isVisible() || rc.isVisible())){
+        sgc.show();
+    }
+}
+
+void MainWindow::ListItemDoubleClick()
+{
+    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+
+    QStringList slist;
+    foreach(const QModelIndex &index, list)
+    {
+        slist.append( index.data(Qt::DisplayRole ).toString());
+    }
+    QString qRow = slist[0];
+    std::string row = qRow.toUtf8().constData(); // QString to string
+    std::string rowId = row.substr(0, 1); // Get Id of row
+    int id = std::stoi(rowId);
+
+    // Il manque le fait de passer l'id a la nouvelle fenêtre
+    ic.show();
+}
+
+void MainWindow::LogsDoubleClick()  // disable Logs edition
+{
+    ui->LogsList->setEditTriggers(QAbstractItemView::NoEditTriggers);
+}

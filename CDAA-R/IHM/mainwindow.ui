@@ -14,37 +14,89 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="listView">
+   <widget class="QListView" name="ContactList">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>40</y>
-      <width>256</width>
-      <height>481</height>
+      <y>50</y>
+      <width>260</width>
+      <height>441</height>
      </rect>
     </property>
    </widget>
-   <widget class="QListView" name="listView_2">
+   <widget class="QListView" name="LogsList">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>40</y>
-      <width>256</width>
-      <height>481</height>
+      <x>645</x>
+      <y>30</y>
+      <width>161</width>
+      <height>531</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="BAddContact">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>20</x>
       <y>490</y>
-      <width>80</width>
-      <height>21</height>
+      <width>260</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>AddContact</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabelLogs">
+    <property name="geometry">
+     <rect>
+      <x>649</x>
+      <y>0</y>
+      <width>151</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Logs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BFilterContact">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>41</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FC</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BRequestContact">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>0</y>
+      <width>41</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RC</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BSaveGestionContact">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>0</y>
+      <width>41</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SGC</string>
     </property>
    </widget>
   </widget>
@@ -63,23 +115,108 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>BAddContact</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>AddContact()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>348</x>
-     <y>517</y>
+     <x>168</x>
+     <y>528</y>
     </hint>
     <hint type="destinationlabel">
-     <x>460</x>
-     <y>318</y>
+     <x>246</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BFilterContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenFC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BRequestContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenRC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BSaveGestionContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenSGC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ContactList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ListItemDoubleClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LogsList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>LogsDoubleClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>683</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>497</x>
+     <y>250</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
   <slot>AddContact()</slot>
+  <slot>OpenFC()</slot>
+  <slot>OpenRC()</slot>
+  <slot>OpenSGC()</slot>
+  <slot>ListItemDoubleClick()</slot>
+  <slot>LogsDoubleClick()</slot>
  </slots>
 </ui>
