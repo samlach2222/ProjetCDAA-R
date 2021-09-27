@@ -11,20 +11,20 @@
 #include <string>
 
 /**
+ * @brief Constructeur de la classe Log
+ */
+Log::Log()
+{
+    tabLog = std::vector<std::string>();
+}
+
+/**
  * @brief Retourne la liste de logs
  * @return la liste de logs
  */
 std::vector<std::string> Log::getTabLog()
 {
     return tabLog;
-}
-
-/**
- * @brief Constructeur de la classe Log
- */
-Log::Log()
-{
-    tabLog = std::vector<std::string>();
 }
 
 /**

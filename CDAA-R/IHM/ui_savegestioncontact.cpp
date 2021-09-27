@@ -3,7 +3,7 @@
  * @brief Permet l'import et l'export des informations au format JSON
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.0
+ * @version 1.1
  * @date 23/09/2021
  */
 

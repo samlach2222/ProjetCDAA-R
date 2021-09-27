@@ -3,7 +3,7 @@
  * @brief La classe de gestion de l'import et l'export au format JSon des informations du programme
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.0
+ * @version 1.1
  * @date 22/09/2021
  */
 

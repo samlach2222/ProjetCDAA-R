@@ -2,7 +2,7 @@
  * @file LOGIC/fichecontact.cpp
  * @brief Contient les détails d'un contact et ses interactions
  * @author Loïs PAZOLA
- * @version 1.0
+ * @version 1.1
  * @date 22/09/2021
  */
 #include "fichecontact.h"
