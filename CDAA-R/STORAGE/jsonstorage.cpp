@@ -18,7 +18,7 @@
 
 /**
  * @brief Constructeur de la classe JSonStorage
- * @param[in] filename      Nom du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
+ * @param[in] filename      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
  */
 JSonStorage::JSonStorage(std::string filename)
 {
@@ -26,9 +26,8 @@ JSonStorage::JSonStorage(std::string filename)
 }
 
 /**
- * @brief Permet de sauvegarder l'ensemble des contacts et logs de **gc** dans le fichier Json afin **d'assurer l'interopérabilité**
+ * @brief Permet de sauvegarder l'ensemble des contacts et logs de **gc** dans le fichier JSon afin **d'assurer l'interopérabilité**
  * @param[in] gc    Ensemble des contacts de l'application
- * @todo METHODE A ECRIRE
  */
 void JSonStorage::Save(GestionContact gc)
 {
@@ -86,8 +85,8 @@ void JSonStorage::Save(GestionContact gc)
 }
 
 /**
- * @brief Permer de Charger depuis le fichier Json toutes les informations des contacts afin **d'assurer l'interopérabilité**
- * @return Retourne l'ensemble des informations de contacts sauvegardées
+ * @brief Permer de Charger depuis le fichier JSon toutes les informations des contacts et des logs afin **d'assurer l'interopérabilité**
+ * @return Retourne l'ensemble des informations des contacts et des logs sauvegardées
  * @todo METHODE A ECRIRE
  */
 GestionContact JSonStorage::Load()

@@ -2,6 +2,7 @@
  * @file IHM/ui_savegestioncontact.h
  * @brief Fichier header pour l'import export des données en Json depuis l'interface graphique
  * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 
 #ifndef UI_SAVEGESTIONCONTACT_H

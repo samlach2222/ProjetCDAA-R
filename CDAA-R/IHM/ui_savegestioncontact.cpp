@@ -2,6 +2,7 @@
  * @file IHM/ui_savegestioncontact.cpp
  * @brief Permet l'import et l'export des informations au format JSON
  * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  * @version 1.0
  * @date 23/09/2021
  */
@@ -14,7 +15,7 @@
 /**
  * @brief Constructeur de UI_SaveGestionContact
  * @param[out] parent    QWidget de création de classe
- * @param[out] gestionContact    Pointer vers la valuer de la classe GestionContact pour en modifier la valeur en import
+ * @param[out] gestionContact    Pointer vers la valeur de la classe GestionContact pour en modifier la valeur en import ou l'exporter
  */
 UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *gestionContact) :
     QWidget(parent),
