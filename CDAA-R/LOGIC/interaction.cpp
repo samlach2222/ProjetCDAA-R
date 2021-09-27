@@ -14,8 +14,8 @@
  */
 Interaction::Interaction(std::string c)
 {
-    this->contenu = c;
-
+    this->SetContenu(c);
+    this->id = 0;  //TODO: récupérer le plus grand id unique
     this->horodatage = Horodatage();
 }
 
