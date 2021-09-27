@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>UI_SaveGestionContact</class>
  <widget class="QWidget" name="UI_SaveGestionContact">
   <property name="geometry">
@@ -15,7 +13,100 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>130</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </widget>
  </widget>
- <pixmapfunction/>
- <connections/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_SaveGestionContact</receiver>
+   <slot>Export()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_SaveGestionContact</receiver>
+   <slot>Import()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_SaveGestionContact</receiver>
+   <slot>Fermer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Export()</slot>
+  <slot>Import()</slot>
+  <slot>Fermer()</slot>
+ </slots>
 </ui>
