@@ -293,6 +293,19 @@
       <string>Supprimer</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="ChooseImage">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -453,6 +466,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>ChooseImage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>331</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>AddContact()</slot>
@@ -464,5 +493,6 @@
   <slot>ListItemClick()</slot>
   <slot>ValiderContact()</slot>
   <slot>SupprimerContact()</slot>
+  <slot>ChooseImage()</slot>
  </slots>
 </ui>
