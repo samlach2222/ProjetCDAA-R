@@ -16,7 +16,7 @@
 #include <QString>
 #include <QStringListModel>
 #include <QVector>
-#include <qlist.h>
+#include <QPixmap>
 
 /**
  * @brief Constructeur de mainwindows
@@ -30,8 +30,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     gc = GestionContact();
     this->RefreshLog();
-}
 
+    // Desactivations de l'édition de contact
+    ui->frameEditContact->setVisible(0);
+}
 /**
  * @brief Destructeur de mainwindow
  */
@@ -46,10 +48,17 @@ MainWindow::~MainWindow()
 void MainWindow::AddContact()
 {
     // DEBUT TEST
-    FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage());
+    FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("D:\\WINDOWS\\Images\\Lapin.png"));
     gc.AddContact(fc);
     // FIN TEST
 
+    this->DisplayContactList();
+
+    this->RefreshLog();
+}
+
+void MainWindow::DisplayContactList()
+{
     QStringListModel* model = new QStringListModel(this);
     QStringList list;
     int tabSize = gc.GetAllContacts().size();
@@ -60,8 +69,6 @@ void MainWindow::AddContact()
     }
     model->setStringList(list);
     ui->ContactList->setModel(model);
-
-    this->RefreshLog();
 }
 
 /**
@@ -120,7 +127,83 @@ void MainWindow::ListItemDoubleClick()
     ic.show();
 }
 
+void MainWindow::ListItemClick()
+{
+    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+
+    QStringList slist;
+    foreach(const QModelIndex &index, list)
+    {
+        slist.append( index.data(Qt::DisplayRole ).toString());
+    }
+    QString qRow = slist[0];
+    std::string row = qRow.toUtf8().constData(); // QString to string
+    std::string rowId = row.substr(0, 1); // Get Id of row
+    int id = std::stoi(rowId);
+    FicheContact contact = gc.GetContact(id -1);
+
+    ui->frameEditContact->setVisible(1);
+
+    ui->editNom->setText(QString::fromStdString(contact.getNom()));
+    ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
+    ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
+    ui->editMail->setText(QString::fromStdString(contact.getMail()));
+    ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
+
+    ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
+    ui->editDateCreation->setEnabled(0);
+
+    QPixmap image = QPixmap::fromImage(contact.getPhoto());
+    int w = ui->Image->width();
+    int h = ui->Image->height();
+    ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+}
+
 void MainWindow::LogsDoubleClick()  // disable Logs edition
 {
     ui->LogsList->setEditTriggers(QAbstractItemView::NoEditTriggers);
+}
+
+void MainWindow::ValiderContact()
+{
+    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+
+    QStringList slist;
+    foreach(const QModelIndex &index, list)
+    {
+        slist.append( index.data(Qt::DisplayRole ).toString());
+    }
+    QString qRow = slist[0];
+    std::string row = qRow.toUtf8().constData(); // QString to string
+    std::string rowId = row.substr(0, 1); // Get Id of row
+    int id = std::stoi(rowId);
+    FicheContact contact = gc.GetContact(id -1);
+    contact.setNom(ui->editNom->text().toStdString());
+    contact.setPrenom(ui->editPrenom->text().toStdString());
+    contact.setEntreprise(ui->editEntreprise->text().toStdString());
+    contact.setMail(ui->editMail->text().toStdString());
+    contact.setTelephone(ui->editTelephone->text().toStdString());
+    contact.setPhoto(ui->Image->pixmap()->toImage());
+
+    gc.ModifyContact(contact);
+    this->DisplayContactList();
+}
+
+void MainWindow::SupprimerContact()
+{
+    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+
+    QStringList slist;
+    foreach(const QModelIndex &index, list)
+    {
+        slist.append( index.data(Qt::DisplayRole ).toString());
+    }
+    QString qRow = slist[0];
+    std::string row = qRow.toUtf8().constData(); // QString to string
+    std::string rowId = row.substr(0, 1); // Get Id of row
+    int id = std::stoi(rowId);
+    gc.SupprContact(id - 1);
+    this->DisplayContactList();
+    ui->frameEditContact->setVisible(0);
+
 }

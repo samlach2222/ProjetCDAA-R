@@ -37,6 +37,7 @@ private:
     UI_SaveGestionContact sgc; // Not StarGate Command
     UI_InteractionContact ic;
 
+    void DisplayContactList();
     void RefreshLog();
 
 public slots:
@@ -46,5 +47,8 @@ public slots:
     void OpenSGC();
     void ListItemDoubleClick();
     void LogsDoubleClick();
+    void ListItemClick();
+    void ValiderContact();
+    void SupprimerContact();
 };
 #endif // MAINWINDOW_H

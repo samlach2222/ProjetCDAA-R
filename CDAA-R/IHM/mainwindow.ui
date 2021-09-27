@@ -99,6 +99,201 @@
      <string>SGC</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frameEditContact">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>50</y>
+      <width>311</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="labelNom">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>90</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nom :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editNom">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>90</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editPrenom">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>140</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPrenom">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>140</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Prénom :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editEntreprise">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>190</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelEntreprise">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>190</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Entreprise :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editMail">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>240</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelMail">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>240</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mail :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editTelephone">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>290</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTelephone">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>290</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Téléphone :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editDateCreation">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Image">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TempLabel</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Validate">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>440</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Valider</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Delete">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>440</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Supprimer</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -210,6 +405,54 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>ContactList</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ListItemClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>403</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Validate</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ValiderContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>568</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Delete</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SupprimerContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>574</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>AddContact()</slot>
@@ -218,5 +461,8 @@
   <slot>OpenSGC()</slot>
   <slot>ListItemDoubleClick()</slot>
   <slot>LogsDoubleClick()</slot>
+  <slot>ListItemClick()</slot>
+  <slot>ValiderContact()</slot>
+  <slot>SupprimerContact()</slot>
  </slots>
 </ui>
