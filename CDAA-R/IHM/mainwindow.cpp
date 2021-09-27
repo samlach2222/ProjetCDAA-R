@@ -138,8 +138,7 @@ void MainWindow::ListItemDoubleClick()
     }
     QString qRow = slist[0];
     std::string row = qRow.toUtf8().constData(); // QString to string
-    std::string rowId = GetIdFromRow(row); // Get Id of row
-    int id = std::stoi(rowId);
+    int id = GetIdFromRow(row); // Get Id of row
 
     // Il manque le fait de passer l'id a la nouvelle fenêtre
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
@@ -163,8 +162,7 @@ void MainWindow::ListItemClick()
     }
     QString qRow = slist[0];
     std::string row = qRow.toUtf8().constData(); // QString to string
-    std::string rowId = GetIdFromRow(row); // Get Id of row
-    int id = std::stoi(rowId);
+    int id = GetIdFromRow(row); // Get Id of row
     FicheContact contact = gc.GetContact(id -1);
 
     ui->frameEditContact->setVisible(1);
@@ -207,8 +205,7 @@ void MainWindow::ValiderContact()
         }
         QString qRow = slist[0];
         std::string row = qRow.toUtf8().constData(); // QString to string
-        std::string rowId = GetIdFromRow(row); // Get Id of row
-        int id = std::stoi(rowId);
+        int id = GetIdFromRow(row); // Get Id of row
         FicheContact contact = gc.GetContact(id -1);
         contact.setNom(ui->editNom->text().toStdString());
         contact.setPrenom(ui->editPrenom->text().toStdString());
@@ -247,8 +244,7 @@ void MainWindow::SupprimerContact()
     }
     QString qRow = slist[0];
     std::string row = qRow.toUtf8().constData(); // QString to string
-    std::string rowId = GetIdFromRow(row); // Get Id of row
-    int id = std::stoi(rowId);
+    int id = GetIdFromRow(row); // Get Id of row
     gc.SupprContact(id - 1);
     this->DisplayContactList();
     ui->frameEditContact->setVisible(0);
@@ -275,11 +271,11 @@ void MainWindow::ChooseImage()
  * @param row       La ligne complète
  * @return l'id obtenu
  */
-std::string MainWindow::GetIdFromRow(std::string row)
+int MainWindow::GetIdFromRow(std::string row)
 {
-    //Prend la position du premier charactère ".", et retourne un string du début jusqu'à cette position
+    //Prend la position du premier charactère ".", et initialise un string à partir du début jusqu'à cette position
     std::size_t posPoint = row.find_first_of(".");
     std::string rowId = row.substr(0, posPoint);
 
-    return rowId;
+    return std::stoi(rowId);
 }
