@@ -23,7 +23,7 @@ JSonStorage::JSonStorage(std::string filename)
  * @param[in] gc    Ensemble des contacts de l'application
  * @todo METHODE A ECRIRE
  */
-void Save(GestionContact gc)
+void JSonStorage::Save(GestionContact gc)
 {
     //TODO
 }
@@ -33,7 +33,7 @@ void Save(GestionContact gc)
  * @return Retourne l'ensemble des informations de contacts sauvegardées
  * @todo METHODE A ECRIRE
  */
-GestionContact Load()
+GestionContact JSonStorage::Load()
 {
     //TODO
 }
