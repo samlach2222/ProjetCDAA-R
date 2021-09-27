@@ -13,6 +13,8 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QBuffer>
+#include <QStandardPaths>
+#include <QDir>
 
 /**
  * @brief Constructeur de la classe JSonStorage
@@ -69,6 +71,13 @@ void JSonStorage::Save(GestionContact gc)
 
     QJsonDocument json_doc(json);
     QString json_string = json_doc.toJson();
+
+    //Création du dossier %AppData%/CDAA-R
+    QString appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QDir appDataDir(appDataPath);
+    if (!appDataDir.exists()){
+        appDataDir.mkpath(".");
+    }
 
     QFile file(QString::fromStdString(this->file));
     file.open(QIODevice::WriteOnly);
