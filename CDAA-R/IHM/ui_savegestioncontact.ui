@@ -52,6 +52,19 @@
     <string>Fermer</string>
    </property>
   </widget>
+  <widget class="QLabel" name="informationLabel">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>160</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>

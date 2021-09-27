@@ -11,6 +11,8 @@
 /**
  * @brief Constructeur de la classe Interaction
  * @param[in] c     Le contenu de l'interaction
+ * @bug id non géré
+ * @todo récupérer le plus grand id unique
  */
 Interaction::Interaction(std::string c)
 {

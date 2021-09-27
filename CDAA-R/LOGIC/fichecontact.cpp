@@ -22,12 +22,12 @@
 FicheContact::FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
 {
     this->id = 0;  //TODO: récupérer le plus grand id unique
-    this->nom = nom;
-    this->prenom = prenom;
-    this->entreprise = entreprise;
-    this->mail = mail;
-    this->telephone = telephone;
-    this->photo = photo;
+    this->setNom(nom);
+    this->setPrenom(prenom);
+    this->setEntreprise(entreprise);
+    this->setMail(mail);
+    this->setTelephone(telephone);
+    this->setPhoto(photo);
     this->dateCreation = Horodatage();
 }
 
