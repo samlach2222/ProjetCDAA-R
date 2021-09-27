@@ -47,6 +47,8 @@ void UI_SaveGestionContact::Import()
 {
     *gc = this->jss.Load();
     // ON DOIT EXPORTER MAINENANT LA CLASSE GC
+
+    ui->informationLabel->setText("Import effectué");
 }
 
 /**
@@ -54,7 +56,17 @@ void UI_SaveGestionContact::Import()
  */
 void UI_SaveGestionContact::Export()
 {
+    /*
+    GestionContact gc0 = GestionContact();
+    FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("C:\\Users\\drago\\Desktop\\mpv.png"));
+    gc0.AddContact(fc);
+    gc0.AddContact(fc);
+
+    this->jss.Save(gc0);
+    */
     this->jss.Save(*gc);
+
+    ui->informationLabel->setText("Export effectué");
 }
 
 /**
