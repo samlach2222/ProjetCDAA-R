@@ -9,6 +9,8 @@
 #include "ui_savegestioncontact.h"
 #include "ui_ui_savegestioncontact.h"
 #include "STORAGE/jsonstorage.h"
+#include <QDir>
+#include <QStandardPaths>
 
 /**
  * @brief Constructeur de UI_SaveGestionContact
@@ -21,7 +23,13 @@ UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *ge
 {
     ui->setupUi(this);
     this->gc = gestionContact; // On récupère la valeur de gestionContact
-    this->jss = JSonStorage("Save.json");
+
+    QString appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QDir appDataDir(appDataPath);
+    if (!appDataDir.exists()){
+        appDataDir.mkpath(".");
+    }
+    this->jss = JSonStorage(appDataPath.toStdString()+"/Save.json");
 }
 
 /**
@@ -54,5 +62,5 @@ void UI_SaveGestionContact::Export()
  */
 void UI_SaveGestionContact::Fermer()
 {
-    this->~UI_SaveGestionContact();
+    this->close();
 }
