@@ -21,12 +21,12 @@
  */
 Horodatage::Horodatage(int j, int m, int a, int heu, int min, int sec)
 {
-    this->jour = j;
-    this->mois = m;
-    this->annee = a;
-    this->heure = heu;
-    this->minute = min;
-    this->seconde = sec;
+    this->SetJour(j);
+    this->SetMois(m);
+    this->SetAnnee(a);
+    this->SetHeure(heu);
+    this->SetMinute(min);
+    this->SetSeconde(sec);
 }
 
 /**
@@ -39,13 +39,13 @@ Horodatage::Horodatage()
     QDate date = dt.date();
     QTime time = dt.time();
 
-    this->jour = date.day();
-    this->mois = date.month();
-    this->annee = date.year();
+    this->SetJour(date.day());
+    this->SetMois(date.month());
+    this->SetAnnee(date.year());
 
-    this->heure = time.hour();
-    this->minute = time.minute();
-    this->seconde = time.second();
+    this->SetHeure(time.hour());
+    this->SetMinute(time.minute());
+    this->SetSeconde(time.second());
 }
 
 /**
