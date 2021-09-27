@@ -138,7 +138,7 @@ void MainWindow::ListItemDoubleClick()
     }
     QString qRow = slist[0];
     std::string row = qRow.toUtf8().constData(); // QString to string
-    std::string rowId = row.substr(0, 1); // Get Id of row
+    std::string rowId = GetIdFromRow(row); // Get Id of row
     int id = std::stoi(rowId);
 
     // Il manque le fait de passer l'id a la nouvelle fenêtre
@@ -163,7 +163,7 @@ void MainWindow::ListItemClick()
     }
     QString qRow = slist[0];
     std::string row = qRow.toUtf8().constData(); // QString to string
-    std::string rowId = row.substr(0, 1); // Get Id of row
+    std::string rowId = GetIdFromRow(row); // Get Id of row
     int id = std::stoi(rowId);
     FicheContact contact = gc.GetContact(id -1);
 
@@ -207,7 +207,7 @@ void MainWindow::ValiderContact()
         }
         QString qRow = slist[0];
         std::string row = qRow.toUtf8().constData(); // QString to string
-        std::string rowId = row.substr(0, 1); // Get Id of row
+        std::string rowId = GetIdFromRow(row); // Get Id of row
         int id = std::stoi(rowId);
         FicheContact contact = gc.GetContact(id -1);
         contact.setNom(ui->editNom->text().toStdString());
@@ -247,7 +247,7 @@ void MainWindow::SupprimerContact()
     }
     QString qRow = slist[0];
     std::string row = qRow.toUtf8().constData(); // QString to string
-    std::string rowId = row.substr(0, 1); // Get Id of row
+    std::string rowId = GetIdFromRow(row); // Get Id of row
     int id = std::stoi(rowId);
     gc.SupprContact(id - 1);
     this->DisplayContactList();
@@ -268,4 +268,18 @@ void MainWindow::ChooseImage()
     int w = ui->Image->width();
     int h = ui->Image->height();
     ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+}
+
+/**
+ * @brief Retourne l'id à partir d'une ligne complète
+ * @param row       La ligne complète
+ * @return l'id obtenu
+ */
+std::string MainWindow::GetIdFromRow(std::string row)
+{
+    //Prend la position du premier charactère ".", et retourne un string du début jusqu'à cette position
+    std::size_t posPoint = row.find_first_of(".");
+    std::string rowId = row.substr(0, posPoint);
+
+    return rowId;
 }

@@ -39,6 +39,7 @@ private:
 
     void DisplayContactList();
     void RefreshLog();
+    std::string GetIdFromRow(std::string row);
 
 public slots:
     void AddContact();
