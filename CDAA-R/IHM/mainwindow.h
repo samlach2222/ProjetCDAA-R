@@ -50,5 +50,6 @@ public slots:
     void ListItemClick();
     void ValiderContact();
     void SupprimerContact();
+    void ChooseImage();
 };
 #endif // MAINWINDOW_H
