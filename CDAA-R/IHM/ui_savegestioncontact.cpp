@@ -50,9 +50,9 @@ void UI_SaveGestionContact::Export()
 }
 
 /**
- * @brief Méthode assignée au bouton **Annuler** qui permet de revenir en arrière sur la page précédente
+ * @brief Méthode assignée au bouton **Fermer** qui permet de fermer la fenêtre
  */
-void UI_SaveGestionContact::Annuler()
+void UI_SaveGestionContact::Fermer()
 {
     this->~UI_SaveGestionContact();
 }

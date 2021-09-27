@@ -31,6 +31,6 @@ private:
 public slots:
     void Import();
     void Export();
-    void Annuler();
+    void Fermer();
 };
 #endif // UI_SAVEGESTIONCONTACT_H
