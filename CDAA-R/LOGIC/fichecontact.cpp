@@ -2,7 +2,7 @@
  * @file LOGIC/fichecontact.cpp
  * @brief Contient les détails d'un contact et ses interactions
  * @author Loïs PAZOLA
- * @version 1.1
+ * @version 1.2
  * @date 22/09/2021
  */
 #include "fichecontact.h"
@@ -10,18 +10,17 @@
 
 /**
  * @brief Constructeur de la classe FicheContact
+ * @param[in] id        L'id du contact
  * @param[in] nom       Nom du contact
  * @param[in] prenom        Prénom du contact
  * @param[in] entreprise        Entreprise du contact
  * @param[in] mail      Mail du contact
  * @param[in] telephone     Numéro de téléphone du contact
  * @param[in] photo     Photo de profile du contact
- * @bug id non géré
- * @todo récupérer le plus grand id unique
  */
-FicheContact::FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
+FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
 {
-    this->id = 0;  //TODO: récupérer le plus grand id unique
+    this->id = id;
     this->setNom(nom);
     this->setPrenom(prenom);
     this->setEntreprise(entreprise);
@@ -167,11 +166,31 @@ std::vector<Interaction> FicheContact::GetListInteraction()
 }
 
 /**
- * @brief Ajoute l'interaction \p i à la liste des interactions
- * @param[in] i     L'interaction à ajouter
+ * @brief Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions
+ * @param[in] contenuInteraction        Le contenu à partir duquel l'interaction sera créé
  */
-void FicheContact::AddInteraction(Interaction i)
+void FicheContact::AddInteraction(std::string contenuInteraction)
 {
+    std::vector<Interaction> allInteractions = GetListInteraction();
+    int firstAvailableId = allInteractions.size();
+
+    std::vector<int> idInteractions;
+    for (int index = 0; index < static_cast<int>(allInteractions.size()); index++){
+        idInteractions[index] = allInteractions[index].GetId();
+    }
+
+    std::sort(idInteractions.begin(), idInteractions.end());
+    int lastId = -1;
+    foreach (int sortedIndex, idInteractions){
+        if (sortedIndex != lastId + 1){
+            //Exemple : si idInteractions contient 0,1,2,4,5 alors lorsque sortedIndex sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
+            firstAvailableId = lastId + 1;
+            break;
+        }
+    }
+
+    Interaction i = Interaction(firstAvailableId, contenuInteraction);
+
     listInteraction.push_back(i);
 }
 
