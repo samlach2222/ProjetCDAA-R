@@ -181,12 +181,14 @@ void FicheContact::AddInteraction(std::string contenuInteraction)
 
     std::sort(idInteractions.begin(), idInteractions.end());
     int lastId = -1;
-    foreach (int sortedIndex, idInteractions){
-        if (sortedIndex != lastId + 1){
+    foreach (int sortedId, idInteractions){
+        if (sortedId != lastId + 1){
             //Exemple : si idInteractions contient 0,1,2,4,5 alors lorsque sortedIndex sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
             firstAvailableId = lastId + 1;
             break;
         }
+
+        lastId = sortedId;
     }
 
     Interaction i = Interaction(firstAvailableId, contenuInteraction);
