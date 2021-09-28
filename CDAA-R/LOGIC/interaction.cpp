@@ -11,13 +11,12 @@
 /**
  * @brief Constructeur de la classe Interaction
  * @param[in] c     Le contenu de l'interaction
- * @bug id non géré
- * @todo récupérer le plus grand id unique
+ * @param[in] id        L'id de l'interaction
  */
-Interaction::Interaction(std::string c)
+Interaction::Interaction(std::string c, int id)
 {
     this->SetContenu(c);
-    this->id = 0;  //TODO: récupérer le plus grand id unique
+    this->id = id;
     this->horodatage = Horodatage();
 }
 

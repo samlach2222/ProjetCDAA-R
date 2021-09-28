@@ -23,6 +23,8 @@ class FicheContact
         QImage photo;
         Horodatage dateCreation;
         std::vector<Interaction> listInteraction;
+
+        int interactionHighestId;
     public:
         FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo);
 
@@ -43,7 +45,7 @@ class FicheContact
         Horodatage getDateCreation();
 
         std::vector<Interaction> GetListInteraction();
-        void AddInteraction(Interaction i);
+        void AddInteraction(std::string contenuInteraction);
         void RemoveInteraction(int id);
         std::string ToString();
 };

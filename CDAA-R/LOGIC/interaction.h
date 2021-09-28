@@ -15,7 +15,7 @@ class Interaction
         std::string contenu;
         Horodatage horodatage;
     public:
-        Interaction(std::string c);
+        Interaction(std::string c, int id);
         int GetId();
         std::string GetContenu();
         void SetContenu(std::string c);
