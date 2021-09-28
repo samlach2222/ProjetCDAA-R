@@ -174,7 +174,7 @@ void FicheContact::AddInteraction(std::string contenuInteraction)
     std::vector<Interaction> allInteractions = GetListInteraction();
     int firstAvailableId = allInteractions.size();
 
-    std::vector<int> idInteractions;
+    std::vector<int> idInteractions(allInteractions.size());
     for (int index = 0; index < static_cast<int>(allInteractions.size()); index++){
         idInteractions[index] = allInteractions[index].GetId();
     }

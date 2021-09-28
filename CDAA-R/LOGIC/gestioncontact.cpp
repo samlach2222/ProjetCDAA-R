@@ -28,7 +28,7 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
     std::vector<FicheContact> allContacts = GetAllContacts();
     int firstAvailableId = allContacts.size();
 
-    std::vector<int> idContacts;
+    std::vector<int> idContacts(allContacts.size());
     for (int index = 0; index < static_cast<int>(allContacts.size()); index++){
         idContacts[index] = allContacts[index].getId();
     }
@@ -107,7 +107,6 @@ std::vector<FicheContact> GestionContact::GetAllContacts()
  */
 FicheContact GestionContact::GetContact(int id)
 {
-
     FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage());
     for (int index = 0; index < static_cast<int>(this->TabContacts.size()); index++){
         if (this->TabContacts[index].getId() == id){
