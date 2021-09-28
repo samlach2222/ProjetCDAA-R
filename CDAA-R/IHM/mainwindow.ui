@@ -275,8 +275,8 @@
     <widget class="QLabel" name="Image">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
+       <x>10</x>
+       <y>10</y>
        <width>91</width>
        <height>91</height>
       </rect>
@@ -314,8 +314,8 @@
     <widget class="QPushButton" name="ChooseImage">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
+       <x>10</x>
+       <y>10</y>
        <width>91</width>
        <height>91</height>
       </rect>
