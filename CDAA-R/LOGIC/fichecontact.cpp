@@ -2,7 +2,7 @@
  * @file LOGIC/fichecontact.cpp
  * @brief Contient les détails d'un contact et ses interactions
  * @author Loïs PAZOLA
- * @version 1.1
+ * @version 1.2
  * @date 22/09/2021
  */
 #include "fichecontact.h"
@@ -171,11 +171,12 @@ std::vector<Interaction> FicheContact::GetListInteraction()
  */
 void FicheContact::AddInteraction(std::string contenuInteraction)
 {
-    int firstAvailableId = listInteraction.size();
+    std::vector<Interaction> allInteractions = GetListInteraction();
+    int firstAvailableId = allInteractions.size();
 
     std::vector<int> idInteractions;
-    for (int index = 0; index < static_cast<int>(listInteraction.size()); index++){
-        idInteractions[index] = listInteraction[index].GetId();
+    for (int index = 0; index < static_cast<int>(allInteractions.size()); index++){
+        idInteractions[index] = allInteractions[index].GetId();
     }
 
     std::sort(idInteractions.begin(), idInteractions.end());
