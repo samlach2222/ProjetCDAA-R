@@ -52,14 +52,13 @@ void UI_SaveGestionContact::Import()
  */
 void UI_SaveGestionContact::Export()
 {
-    /*
-    GestionContact gc0 = GestionContact();
-    FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("C:\\Users\\drago\\Desktop\\mpv.png"));
-    gc0.AddContact(fc);
-    gc0.AddContact(fc);
 
-    this->jss.Save(gc0);
-    */
+//    GestionContact gc0 = GestionContact();
+//    FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
+//    gc0.AddContact(fc);
+//    gc0.AddContact(fc);
+
+//    this->jss.Save(gc0);
     this->jss.Save(*gc);
 
     ui->informationLabel->setText("Export effectué");
