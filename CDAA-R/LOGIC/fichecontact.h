@@ -26,7 +26,7 @@ class FicheContact
 
         int interactionHighestId;
     public:
-        FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo);
+        FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo);
 
         //Getters & Setters
         int getId();

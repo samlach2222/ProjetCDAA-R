@@ -10,18 +10,17 @@
 
 /**
  * @brief Constructeur de la classe FicheContact
+ * @param[in] id        L'id du contact
  * @param[in] nom       Nom du contact
  * @param[in] prenom        Prénom du contact
  * @param[in] entreprise        Entreprise du contact
  * @param[in] mail      Mail du contact
  * @param[in] telephone     Numéro de téléphone du contact
  * @param[in] photo     Photo de profile du contact
- * @bug id non géré
- * @todo récupérer le plus grand id unique
  */
-FicheContact::FicheContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
+FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
 {
-    this->id = 0;  //TODO: récupérer le plus grand id unique
+    this->id = id;
     this->setNom(nom);
     this->setPrenom(prenom);
     this->setEntreprise(entreprise);
