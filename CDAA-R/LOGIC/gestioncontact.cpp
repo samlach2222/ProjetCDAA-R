@@ -3,7 +3,7 @@
  * @brief La classe de gestion de liste des Contacts
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.0
+ * @version 1.1
  * @date 22/09/2021
  */
 
@@ -20,11 +20,31 @@ GestionContact::GestionContact()
 }
 
 /**
- * @brief Permet d'ajouter un contact **c** à la liste de contacts
+ * @brief Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres
  * @param[in] c     Contact à ajouter à la liste
  */
-void GestionContact::AddContact(FicheContact c)
+void GestionContact::AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
 {
+    std::vector<FicheContact> allContacts = GetAllContacts();
+    int firstAvailableId = allContacts.size();
+
+    std::vector<int> idContacts;
+    for (int index = 0; index < static_cast<int>(allContacts.size()); index++){
+        idContacts[index] = allContacts[index].getId();
+    }
+
+    std::sort(idContacts.begin(), idContacts.end());
+    int lastId = -1;
+    foreach (int sortedIndex, idContacts){
+        if (sortedIndex != lastId + 1){
+            //Exemple : si idContacts contient 0,1,2,4,5 alors lorsque sortedIndex sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
+            firstAvailableId = lastId + 1;
+            break;
+        }
+    }
+
+    FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo);
+
     this->TabContacts.push_back(c);
     DatabaseStorage::Create(c);
     this->log.AddToTabLog("Contact Added");
