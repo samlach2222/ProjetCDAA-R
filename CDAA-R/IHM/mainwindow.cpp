@@ -245,8 +245,7 @@ void MainWindow::ValiderContact()
         std::string mail = ui->editMail->text().toStdString();
         std::string telephone = ui->editTelephone->text().toStdString();
         QImage image = ui->Image->pixmap()->toImage();
-        FicheContact contact = FicheContact(nom,prenom,entreprise,mail,telephone,image);
-        gc.AddContact(contact);
+        gc.AddContact(nom,prenom,entreprise,mail,telephone,image);
     }
     ui->frameEditContact->setVisible(0);
     this->DisplayContactList();
