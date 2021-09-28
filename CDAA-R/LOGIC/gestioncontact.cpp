@@ -22,6 +22,8 @@ GestionContact::GestionContact()
 /**
  * @brief Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres
  * @param[in] c     Contact à ajouter à la liste
+ * @bug On doit trier par id le tableau
+ * @todo Trier par id le tableau
  */
 void GestionContact::AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
 {
@@ -48,6 +50,7 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
     FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo);
 
     this->TabContacts.push_back(c);
+    // sort here By ID
     DatabaseStorage::Create(c);
     this->log.AddToTabLog("Contact Added");
 }
