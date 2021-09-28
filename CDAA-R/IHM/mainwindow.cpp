@@ -41,23 +41,30 @@ MainWindow::MainWindow(QWidget *parent)
     ui->frameEditContact->setVisible(0);
     ui->ChooseImage->setStyleSheet("QPushButton { background-color: rgba(10, 0, 0, 0); }");
 
-    QPixmap QPFilterContact(":/Ressources/Icons/FilterContact.png");    //gestion de la taille relative des icones des boutons
-    int wfc = ui->BFilterContact->width();
-    int hfc = ui->BFilterContact->height();
+    // Gestion de la taille relative des icones des boutons avec 90% du bouton
+    QPixmap QPFilterContact(":/Ressources/Icons/FilterContact.png");
+    int wfc = ui->BFilterContact->width() * 90/100;
+    int hfc = ui->BFilterContact->height() * 90/100;
     ui->BFilterContact->setIcon(QPFilterContact);
-    ui->BSaveGestionContact->setIconSize(QSize(wfc,hfc));
+    ui->BFilterContact->setIconSize(QSize(wfc,hfc));
 
     QPixmap QPSaveGestionContact(":/Ressources/Icons/SaveGestionContact.png");
-    int wsgc = ui->BSaveGestionContact->width();
-    int hsgc = ui->BSaveGestionContact->height();
+    int wsgc = ui->BSaveGestionContact->width() * 90/100;
+    int hsgc = ui->BSaveGestionContact->height() * 90/100;
     ui->BSaveGestionContact->setIcon(QPSaveGestionContact);
     ui->BSaveGestionContact->setIconSize(QSize(wsgc,hsgc));
 
     QPixmap QPRequestContact(":/Ressources/Icons/RequestContact.png");
-    int wrc = ui->BRequestContact->width();
-    int hrc = ui->BRequestContact->height();
+    int wrc = ui->BRequestContact->width() * 90/100;
+    int hrc = ui->BRequestContact->height() * 90/100;
     ui->BRequestContact->setIcon(QPRequestContact);
-    ui->BSaveGestionContact->setIconSize(QSize(wrc,hrc));
+    ui->BRequestContact->setIconSize(QSize(wrc,hrc));
+
+    QPixmap QPAddContact(":/Ressources/Icons/AddContact.png");
+    int wac = ui->BAddContact->width() * 90/100;
+    int hac = ui->BAddContact->height() * 90/100;
+    ui->BAddContact->setIcon(QPAddContact);
+    ui->BAddContact->setIconSize(QSize(wac,hac));
 }
 /**
  * @brief Destructeur de mainwindow
