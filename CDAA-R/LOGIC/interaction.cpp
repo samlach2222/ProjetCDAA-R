@@ -10,10 +10,10 @@
 
 /**
  * @brief Constructeur de la classe Interaction
- * @param[in] c     Le contenu de l'interaction
  * @param[in] id        L'id de l'interaction
+ * @param[in] c     Le contenu de l'interaction
  */
-Interaction::Interaction(std::string c, int id)
+Interaction::Interaction(int id, std::string c)
 {
     this->SetContenu(c);
     this->id = id;

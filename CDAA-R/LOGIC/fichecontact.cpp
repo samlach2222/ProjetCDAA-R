@@ -189,7 +189,7 @@ void FicheContact::AddInteraction(std::string contenuInteraction)
         }
     }
 
-    Interaction i = Interaction(contenuInteraction, firstAvailableId);
+    Interaction i = Interaction(firstAvailableId, contenuInteraction);
 
     listInteraction.push_back(i);
 }
