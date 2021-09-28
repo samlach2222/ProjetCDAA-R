@@ -50,6 +50,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    Ressources/Icons/AddContact.png \
     Ressources/Icons/unkonowContact.png \
     Ressources/Lapin.png \
     Ressources/ORF.png
