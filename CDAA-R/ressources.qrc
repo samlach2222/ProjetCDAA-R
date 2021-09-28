@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Ressources/Icons/unknownContact.png</file>
+        <file>Ressources/Icons/FilterContact.png</file>
+        <file>Ressources/Icons/InteractionContact.png</file>
+        <file>Ressources/Icons/SaveGestionContact.png</file>
+        <file>Ressources/Icons/RequestContact.png</file>
+    </qresource>
+</RCC>

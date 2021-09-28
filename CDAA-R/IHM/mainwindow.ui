@@ -70,7 +70,13 @@
      </rect>
     </property>
     <property name="text">
-     <string>FC</string>
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="BRequestContact">
@@ -83,7 +89,13 @@
      </rect>
     </property>
     <property name="text">
-     <string>RC</string>
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="BSaveGestionContact">
@@ -96,7 +108,13 @@
      </rect>
     </property>
     <property name="text">
-     <string>SGC</string>
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
     </property>
    </widget>
    <widget class="QFrame" name="frameEditContact">
@@ -109,7 +127,7 @@
      </rect>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::Box</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
@@ -117,8 +135,8 @@
     <widget class="QLabel" name="labelNom">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>90</y>
+       <x>70</x>
+       <y>140</y>
        <width>60</width>
        <height>20</height>
       </rect>
@@ -130,8 +148,8 @@
     <widget class="QLineEdit" name="editNom">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>90</y>
+       <x>140</x>
+       <y>140</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -140,8 +158,8 @@
     <widget class="QLineEdit" name="editPrenom">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>140</y>
+       <x>140</x>
+       <y>190</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -153,8 +171,8 @@
     <widget class="QLabel" name="labelPrenom">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>140</y>
+       <x>70</x>
+       <y>190</y>
        <width>60</width>
        <height>20</height>
       </rect>
@@ -166,8 +184,8 @@
     <widget class="QLineEdit" name="editEntreprise">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>190</y>
+       <x>140</x>
+       <y>240</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -179,8 +197,8 @@
     <widget class="QLabel" name="labelEntreprise">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>190</y>
+       <x>70</x>
+       <y>240</y>
        <width>60</width>
        <height>20</height>
       </rect>
@@ -192,8 +210,8 @@
     <widget class="QLineEdit" name="editMail">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>240</y>
+       <x>140</x>
+       <y>290</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -205,8 +223,8 @@
     <widget class="QLabel" name="labelMail">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>240</y>
+       <x>70</x>
+       <y>290</y>
        <width>60</width>
        <height>20</height>
       </rect>
@@ -218,8 +236,8 @@
     <widget class="QLineEdit" name="editTelephone">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>290</y>
+       <x>140</x>
+       <y>340</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -231,8 +249,8 @@
     <widget class="QLabel" name="labelTelephone">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>290</y>
+       <x>70</x>
+       <y>340</y>
        <width>60</width>
        <height>20</height>
       </rect>

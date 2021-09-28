@@ -37,9 +37,27 @@ MainWindow::MainWindow(QWidget *parent)
     gc = GestionContact();
     this->RefreshLog();
 
-    // Desactivations de l'édition de contact
+    // Edition des controlleurs par défaut
     ui->frameEditContact->setVisible(0);
     ui->ChooseImage->setStyleSheet("QPushButton { background-color: rgba(10, 0, 0, 0); }");
+
+    QPixmap QPFilterContact(":/Ressources/Icons/FilterContact.png");    //gestion de la taille relative des icones des boutons
+    int wfc = ui->BFilterContact->width();
+    int hfc = ui->BFilterContact->height();
+    ui->BFilterContact->setIcon(QPFilterContact);
+    ui->BSaveGestionContact->setIconSize(QSize(wfc,hfc));
+
+    QPixmap QPSaveGestionContact(":/Ressources/Icons/SaveGestionContact.png");
+    int wsgc = ui->BSaveGestionContact->width();
+    int hsgc = ui->BSaveGestionContact->height();
+    ui->BSaveGestionContact->setIcon(QPSaveGestionContact);
+    ui->BSaveGestionContact->setIconSize(QSize(wsgc,hsgc));
+
+    QPixmap QPRequestContact(":/Ressources/Icons/RequestContact.png");
+    int wrc = ui->BRequestContact->width();
+    int hrc = ui->BRequestContact->height();
+    ui->BRequestContact->setIcon(QPRequestContact);
+    ui->BSaveGestionContact->setIconSize(QSize(wrc,hrc));
 }
 /**
  * @brief Destructeur de mainwindow
@@ -57,6 +75,10 @@ void MainWindow::AddContact()
     ModeAjout = 1;
     ui->frameEditContact->setVisible(1);
     ui->editDateCreation->setDisabled(1);
+    QPixmap image = QPixmap::fromImage(QImage(":/Ressources/Icons/unknownContact.png"));
+    int w = ui->Image->width();
+    int h = ui->Image->height();
+    ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
     this->RefreshLog();
 }
 
@@ -226,6 +248,7 @@ void MainWindow::ValiderContact()
         FicheContact contact = FicheContact(nom,prenom,entreprise,mail,telephone,image);
         gc.AddContact(contact);
     }
+    ui->frameEditContact->setVisible(0);
     this->DisplayContactList();
     this->RefreshLog();
 }
@@ -235,35 +258,39 @@ void MainWindow::ValiderContact()
  */
 void MainWindow::SupprimerContact()
 {
-    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
-
-    QStringList slist;
-    foreach(const QModelIndex &index, list)
+    if(gc.GetAllContacts().size() > 0)
     {
-        slist.append( index.data(Qt::DisplayRole ).toString());
+        QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+        QStringList slist;
+        foreach(const QModelIndex &index, list)
+        {
+            slist.append( index.data(Qt::DisplayRole ).toString());
+        }
+        QString qRow = slist[0];
+        std::string row = qRow.toUtf8().constData(); // QString to string
+        int id = GetIdFromRow(row); // Get Id of row
+        gc.SupprContact(id - 1);
+        this->DisplayContactList();
+        ui->frameEditContact->setVisible(0);
+        this->RefreshLog();
     }
-    QString qRow = slist[0];
-    std::string row = qRow.toUtf8().constData(); // QString to string
-    int id = GetIdFromRow(row); // Get Id of row
-    gc.SupprContact(id - 1);
-    this->DisplayContactList();
-    ui->frameEditContact->setVisible(0);
-    this->RefreshLog();
-
 }
 
 /**
- * @brief Permet de changer l'image d'un contact par appui sur celui-ci
+ * @brief Permet de changer l'image d'un contact par appui sur celui-ci par ouverture d'un popup.
  */
 void MainWindow::ChooseImage()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
         tr("Open Image"), "", tr("Image Files (*.png *.jpg *.bmp *.jpeg)"));
 
-    QPixmap image = QPixmap::fromImage(QImage(fileName));
-    int w = ui->Image->width();
-    int h = ui->Image->height();
-    ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+    if(!fileName.isEmpty())
+    {
+        QPixmap image = QPixmap::fromImage(QImage(fileName));
+        int w = ui->Image->width();
+        int h = ui->Image->height();
+        ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+    }
 }
 
 /**
