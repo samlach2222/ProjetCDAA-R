@@ -35,6 +35,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // DEBUT DEFINITION SIGNAUX
+    QObject::connect(this, SIGNAL(sendIdToInteraction(int)), &ic, SLOT(ReceiveIdToInteraction(int)));
+    //FIN DEFINITION SIGNAUX
+
     gc = GestionContact();
     this->RefreshLog();
 
@@ -87,6 +91,13 @@ void MainWindow::AddContact()
     int w = ui->Image->width();
     int h = ui->Image->height();
     ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+
+    ui->editNom->clear();
+    ui->editPrenom->clear();
+    ui->editEntreprise->clear();
+    ui->editMail->clear();
+    ui->editTelephone->clear();
+
     this->RefreshLog();
 }
 
@@ -97,12 +108,12 @@ void MainWindow::DisplayContactList()
 {
     ui->ContactList->clear();
     int tabSize = this->gc.GetAllContacts().size();
-    for(int i =0; i < static_cast<int>(tabSize); i++)
+    for(FicheContact c : gc.GetAllContacts())
     {
-        QString str = QString::fromStdString(gc.GetContact(i).ToString());
+        QString str = QString::fromStdString(c.ToString());
         QListWidgetItem* item = new QListWidgetItem(str);
         QVariant v;
-        v.setValue(gc.GetContact(i).getId());
+        v.setValue(c.getId());
         item->setData(Qt::UserRole, v);
         ui->ContactList->addItem(item);
     }
@@ -157,7 +168,6 @@ void MainWindow::OpenSGC()
 
 /**
  * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'intéraction, si aucune fenêtre n'est ouverte
- * @todo Ajouter signal slot pour partage d'id
  */
 void MainWindow::ListItemDoubleClick()
 {
@@ -167,6 +177,7 @@ void MainWindow::ListItemDoubleClick()
 
     FicheContact contact = gc.GetContact(idContact);
 
+    emit sendIdToInteraction(idContact);
     // Il manque le fait de passer l'id a la nouvelle fenêtre Avec un signal slot
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
         ic.show();
@@ -218,16 +229,11 @@ void MainWindow::ValiderContact()
 {
     if(!ModeAjout)
     {
-        QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
-        QStringList slist;
-        foreach(const QModelIndex &index, list)
-        {
-            slist.append( index.data(Qt::DisplayRole ).toString());
-        }
-        QString qRow = slist[0];
-        std::string row = qRow.toUtf8().constData(); // QString to string
-        int id = GetIdFromRow(row); // Get Id of row
-        FicheContact contact = gc.GetContact(id -1);
+        QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+        QVariant v = selectedItem[0]->data(Qt::UserRole);
+        int idContact = v.value<int>();
+
+        FicheContact contact = gc.GetContact(idContact);
         contact.setNom(ui->editNom->text().toStdString());
         contact.setPrenom(ui->editPrenom->text().toStdString());
         contact.setEntreprise(ui->editEntreprise->text().toStdString());
@@ -258,16 +264,11 @@ void MainWindow::SupprimerContact()
 {
     if(gc.GetAllContacts().size() > 0)
     {
-        QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
-        QStringList slist;
-        foreach(const QModelIndex &index, list)
-        {
-            slist.append( index.data(Qt::DisplayRole ).toString());
-        }
-        QString qRow = slist[0];
-        std::string row = qRow.toUtf8().constData(); // QString to string
-        int id = GetIdFromRow(row); // Get Id of row
-        gc.SupprContact(id - 1);
+        QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+        QVariant v = selectedItem[0]->data(Qt::UserRole);
+        int idContact = v.value<int>();
+
+        gc.SupprContact(idContact);
         this->DisplayContactList();
         ui->frameEditContact->setVisible(0);
         this->RefreshLog();

@@ -52,5 +52,8 @@ public slots:
     void ValiderContact();
     void SupprimerContact();
     void ChooseImage();
+
+signals :
+    void sendIdToInteraction(int);
 };
 #endif // MAINWINDOW_H

@@ -33,6 +33,7 @@ public slots:
     void ButtonAddInteraction();
     void ButtonRemoveInteraction();
     void ButtonValidateInteraction();
+    void ReceiveIdToInteraction(int);
 };
 
 #endif // UI_INTERACTIONCONTACT_H

@@ -71,3 +71,10 @@ void UI_InteractionContact::ButtonValidateInteraction()
 {
     //TODO
 }
+
+void UI_InteractionContact::ReceiveIdToInteraction(int idreceive)
+{
+    this->id = idreceive;
+    QString str = QString::number(this->id);
+    ui->label->setText(str);
+}
