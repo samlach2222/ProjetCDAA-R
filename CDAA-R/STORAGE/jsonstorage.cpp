@@ -20,9 +20,9 @@
  * @brief Constructeur de la classe JSonStorage
  * @param[in] filename      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
  */
-JSonStorage::JSonStorage(std::string filename)
+JSonStorage::JSonStorage(std::string filepath)
 {
-    this->file = filename;
+    this->filepath = filepath;
 }
 
 /**
@@ -80,7 +80,7 @@ void JSonStorage::Save(GestionContact gc)
         appDataDir.mkpath(".");
     }
 
-    QFile file(QString::fromStdString(this->file));
+    QFile file(QString::fromStdString(this->filepath));
     file.open(QIODevice::WriteOnly);
     file.write(json_string.toLocal8Bit());
     file.close();
