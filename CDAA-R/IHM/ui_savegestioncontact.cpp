@@ -38,10 +38,20 @@ UI_SaveGestionContact::~UI_SaveGestionContact()
 
 /**
  * @brief Méthode d'import des données pour modifier le paramètre de classe **gestioncontact**
+ * @todo Exporter le GestionContact dans le mainwindow
+ * @bug Affectation à *this->gc crash
  */
 void UI_SaveGestionContact::Import()
 {
-    *gc = this->jss.Load();
+    GestionContact gc = this->jss.Load();
+
+    //Ne pas charger si le fichier n'existait pas ou était vide
+    if (gc.GetAllContacts().size() == 0 && gc.getLog().getTabLog().size() == 0){
+        ui->informationLabel->setText("Fichier inexistant ou vide");
+        return;
+    }
+
+    *this->gc = this->jss.Load();
     // ON DOIT EXPORTER MAINENANT LA CLASSE GC
 
     ui->informationLabel->setText("Import effectué");
