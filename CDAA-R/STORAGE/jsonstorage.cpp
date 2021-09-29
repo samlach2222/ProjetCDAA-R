@@ -42,11 +42,12 @@ void JSonStorage::Save(GestionContact gc)
 
         id++;
     }
+    json["logTotal"] = id;
 
     //contacts
     id = 0;
     foreach(FicheContact fc, gc.GetAllContacts()){
-        json["contact"+QString::number(id)+"id"] = QString::number(fc.getId());
+        json["contact"+QString::number(id)+"id"] = fc.getId();
         json["contact"+QString::number(id)+"nom"] = QString::fromStdString(fc.getNom());
         json["contact"+QString::number(id)+"prenom"] = QString::fromStdString(fc.getPrenom());
         json["contact"+QString::number(id)+"entreprise"] = QString::fromStdString(fc.getEntreprise());
@@ -67,6 +68,7 @@ void JSonStorage::Save(GestionContact gc)
 
         id++;
     }
+    json["contactTotal"] = id;
 
     QJsonDocument json_doc(json);
     QString json_string = json_doc.toJson();
