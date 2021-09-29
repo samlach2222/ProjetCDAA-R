@@ -19,6 +19,7 @@
 #include <QPixmap>
 #include <QFileDialog>
 #include <QHBoxLayout>
+#include <QMessageBox>
 
 
 
@@ -107,7 +108,6 @@ void MainWindow::AddContact()
 void MainWindow::DisplayContactList()
 {
     ui->ContactList->clear();
-    int tabSize = this->gc.GetAllContacts().size();
     for(FicheContact c : gc.GetAllContacts())
     {
         QString str = QString::fromStdString(c.ToString());
@@ -228,34 +228,57 @@ void MainWindow::LogsDoubleClick()  // disable Logs edition
  */
 void MainWindow::ValiderContact()
 {
-    if(!ModeAjout)
+    if(ui->editNom->text().isEmpty() && !(ui->editPrenom->text().isEmpty()))    // si Champ NOM vide
     {
-        QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
-        QVariant v = selectedItem[0]->data(Qt::UserRole);
-        int idContact = v.value<int>();
-
-        FicheContact contact = gc.GetContact(idContact);
-        contact.setNom(ui->editNom->text().toStdString());
-        contact.setPrenom(ui->editPrenom->text().toStdString());
-        contact.setEntreprise(ui->editEntreprise->text().toStdString());
-        contact.setMail(ui->editMail->text().toStdString());
-        contact.setTelephone(ui->editTelephone->text().toStdString());
-        contact.setPhoto(ui->Image->pixmap()->toImage());
-        gc.ModifyContact(contact);
+        ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
+        ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+        QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"nom\" est obligatoire.") );
+    }
+    else if(ui->editPrenom->text().isEmpty() && !(ui->editNom->text().isEmpty()))   // si Champ PRENOM vide
+    {
+        ui->editPrenom->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
+        ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+        QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"prénom\" est obligatoire.") );
+    }
+    else if(ui->editNom->text().isEmpty() && ui->editPrenom->text().isEmpty())  // si les champs NOM et PRENOM sont vides
+    {
+        ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
+        ui->editPrenom->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
+        QMessageBox::warning(this, tr("Erreur champs"), tr("Les champs \"nom\" et \"prénom\" sont obligatoires.") );
     }
     else
     {
-        std::string nom = ui->editNom->text().toStdString();
-        std::string prenom = ui->editPrenom->text().toStdString();
-        std::string entreprise = ui->editEntreprise->text().toStdString();
-        std::string mail = ui->editMail->text().toStdString();
-        std::string telephone = ui->editTelephone->text().toStdString();
-        QImage image = ui->Image->pixmap()->toImage();
-        gc.AddContact(nom,prenom,entreprise,mail,telephone,image);
+        if(!ModeAjout)
+        {
+            QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+            QVariant v = selectedItem[0]->data(Qt::UserRole);
+            int idContact = v.value<int>();
+
+            FicheContact contact = gc.GetContact(idContact);
+            contact.setNom(ui->editNom->text().toStdString());
+            contact.setPrenom(ui->editPrenom->text().toStdString());
+            contact.setEntreprise(ui->editEntreprise->text().toStdString());
+            contact.setMail(ui->editMail->text().toStdString());
+            contact.setTelephone(ui->editTelephone->text().toStdString());
+            contact.setPhoto(ui->Image->pixmap()->toImage());
+            gc.ModifyContact(contact);
+        }
+        else
+        {
+            std::string nom = ui->editNom->text().toStdString();
+            std::string prenom = ui->editPrenom->text().toStdString();
+            std::string entreprise = ui->editEntreprise->text().toStdString();
+            std::string mail = ui->editMail->text().toStdString();
+            std::string telephone = ui->editTelephone->text().toStdString();
+            QImage image = ui->Image->pixmap()->toImage();
+            gc.AddContact(nom,prenom,entreprise,mail,telephone,image);
+        }
+        ui->frameEditContact->setVisible(0);
+        this->DisplayContactList();
+        this->RefreshLog();
+        ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+        ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
     }
-    ui->frameEditContact->setVisible(0);
-    this->DisplayContactList();
-    this->RefreshLog();
 }
 
 /**
@@ -281,8 +304,7 @@ void MainWindow::SupprimerContact()
  */
 void MainWindow::ChooseImage()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,
-        tr("Open Image"), "", tr("Image Files (*.png *.jpg *.bmp *.jpeg)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open Image"), "", tr("Image Files (*.png *.jpg *.bmp *.jpeg)"));
 
     if(!fileName.isEmpty())
     {
