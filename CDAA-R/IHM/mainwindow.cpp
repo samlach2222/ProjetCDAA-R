@@ -224,6 +224,7 @@ void MainWindow::LogsDoubleClick()  // disable Logs edition
 
 /**
  * @brief Permet de sauvegarder un nouveau contact ou la modification d'un contact déjà existant avec le bouton valider
+ * @todo Fèrer le fait que le nom et le prénom soient obligatoires avec un popup d'info avec un bouton OK
  */
 void MainWindow::ValiderContact()
 {
