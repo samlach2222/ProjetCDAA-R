@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="ContactList">
+   <widget class="QListWidget" name="ContactList">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -332,7 +332,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -405,22 +405,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>ContactList</sender>
-   <signal>doubleClicked(QModelIndex)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>ListItemDoubleClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>116</x>
-     <y>330</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>483</x>
-     <y>335</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>LogsList</sender>
    <signal>doubleClicked(QModelIndex)</signal>
    <receiver>MainWindow</receiver>
@@ -433,22 +417,6 @@
     <hint type="destinationlabel">
      <x>497</x>
      <y>250</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ContactList</sender>
-   <signal>clicked(QModelIndex)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>ListItemClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>201</x>
-     <y>403</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>383</x>
-     <y>538</y>
     </hint>
    </hints>
   </connection>
@@ -497,6 +465,38 @@
     <hint type="destinationlabel">
      <x>331</x>
      <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ContactList</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ListItemClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ContactList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ListItemDoubleClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>33</y>
     </hint>
    </hints>
   </connection>

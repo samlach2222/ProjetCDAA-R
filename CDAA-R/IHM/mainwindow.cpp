@@ -18,6 +18,7 @@
 #include <QVector>
 #include <QPixmap>
 #include <QFileDialog>
+#include <QHBoxLayout>
 
 
 
@@ -94,16 +95,17 @@ void MainWindow::AddContact()
  */
 void MainWindow::DisplayContactList()
 {
-    QStringListModel* model = new QStringListModel(this);
-    QStringList list;
-    int tabSize = gc.GetAllContacts().size();
+    ui->ContactList->clear();
+    int tabSize = this->gc.GetAllContacts().size();
     for(int i =0; i < static_cast<int>(tabSize); i++)
     {
-        QString text = QString::fromStdString(gc.GetAllContacts()[i].ToString());
-        list.append(text);
+        QString str = QString::fromStdString(gc.GetContact(i).ToString());
+        QListWidgetItem* item = new QListWidgetItem(str);
+        QVariant v;
+        v.setValue(gc.GetContact(i).getId());
+        item->setData(Qt::UserRole, v);
+        ui->ContactList->addItem(item);
     }
-    model->setStringList(list);
-    ui->ContactList->setModel(model);
 }
 
 /**
@@ -155,21 +157,17 @@ void MainWindow::OpenSGC()
 
 /**
  * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'intéraction, si aucune fenêtre n'est ouverte
+ * @todo Ajouter signal slot pour partage d'id
  */
 void MainWindow::ListItemDoubleClick()
 {
-    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+    QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+    QVariant v = selectedItem[0]->data(Qt::UserRole);
+    int idContact = v.value<int>();
 
-    QStringList slist;
-    foreach(const QModelIndex &index, list)
-    {
-        slist.append( index.data(Qt::DisplayRole ).toString());
-    }
-    QString qRow = slist[0];
-    std::string row = qRow.toUtf8().constData(); // QString to string
-    int id = GetIdFromRow(row); // Get Id of row
+    FicheContact contact = gc.GetContact(idContact);
 
-    // Il manque le fait de passer l'id a la nouvelle fenêtre
+    // Il manque le fait de passer l'id a la nouvelle fenêtre Avec un signal slot
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
         ic.show();
     }
@@ -182,17 +180,11 @@ void MainWindow::ListItemClick()
 {
 
     ModeAjout = 0;
-    QModelIndexList list =ui->ContactList->selectionModel()->selectedIndexes();
+    QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+    QVariant v = selectedItem[0]->data(Qt::UserRole);
+    int idContact = v.value<int>();
 
-    QStringList slist;
-    foreach(const QModelIndex &index, list)
-    {
-        slist.append( index.data(Qt::DisplayRole ).toString());
-    }
-    QString qRow = slist[0];
-    std::string row = qRow.toUtf8().constData(); // QString to string
-    int id = GetIdFromRow(row); // Get Id of row
-    FicheContact contact = gc.GetContact(id -1);
+    FicheContact contact = gc.GetContact(idContact);
 
     ui->frameEditContact->setVisible(1);
 

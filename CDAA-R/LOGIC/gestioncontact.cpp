@@ -115,7 +115,7 @@ FicheContact GestionContact::GetContact(int id)
     FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage());
     for (int index = 0; index < static_cast<int>(this->TabContacts.size()); index++){
         if (this->TabContacts[index].getId() == id){
-            FicheContact c = this->TabContacts[index];
+            c = this->TabContacts[index];
         }
     }
     return c;

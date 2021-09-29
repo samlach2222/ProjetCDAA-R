@@ -27,7 +27,6 @@ class FicheContact
         int interactionHighestId;
     public:
         FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo);
-
         //Getters & Setters
         int getId();
         std::string getNom();
@@ -49,5 +48,4 @@ class FicheContact
         void RemoveInteraction(int id);
         std::string ToString();
 };
-
 #endif // FICHECONTACT_H
