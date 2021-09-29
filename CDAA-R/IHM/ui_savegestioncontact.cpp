@@ -38,10 +38,20 @@ UI_SaveGestionContact::~UI_SaveGestionContact()
 
 /**
  * @brief Méthode d'import des données pour modifier le paramètre de classe **gestioncontact**
+ * @todo Exporter le GestionContact dans le mainwindow
+ * @bug Affectation à *this->gc crash
  */
 void UI_SaveGestionContact::Import()
 {
-    *gc = this->jss.Load();
+    GestionContact gc = this->jss.Load();
+
+    //Ne pas charger si le fichier n'existait pas ou était vide
+    if (gc.GetAllContacts().size() == 0 && gc.getLog().getTabLog().size() == 0){
+        ui->informationLabel->setText("Fichier inexistant ou vide");
+        return;
+    }
+
+    *this->gc = this->jss.Load();
     // ON DOIT EXPORTER MAINENANT LA CLASSE GC
 
     ui->informationLabel->setText("Import effectué");
@@ -54,9 +64,8 @@ void UI_SaveGestionContact::Export()
 {
 
 //    GestionContact gc0 = GestionContact();
-//    FicheContact fc = FicheContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
-//    gc0.AddContact(fc);
-//    gc0.AddContact(fc);
+//    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
+//    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
 
 //    this->jss.Save(gc0);
     this->jss.Save(*gc);

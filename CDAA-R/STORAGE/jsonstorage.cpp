@@ -18,11 +18,11 @@
 
 /**
  * @brief Constructeur de la classe JSonStorage
- * @param[in] filename      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
+ * @param[in] filepath      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
  */
-JSonStorage::JSonStorage(std::string filename)
+JSonStorage::JSonStorage(std::string filepath)
 {
-    this->file = filename;
+    this->filepath = filepath;
 }
 
 /**
@@ -42,11 +42,12 @@ void JSonStorage::Save(GestionContact gc)
 
         id++;
     }
+    json["logTotal"] = id;
 
     //contacts
     id = 0;
     foreach(FicheContact fc, gc.GetAllContacts()){
-        json["contact"+QString::number(id)+"id"] = QString::number(fc.getId());
+        json["contact"+QString::number(id)+"id"] = fc.getId();
         json["contact"+QString::number(id)+"nom"] = QString::fromStdString(fc.getNom());
         json["contact"+QString::number(id)+"prenom"] = QString::fromStdString(fc.getPrenom());
         json["contact"+QString::number(id)+"entreprise"] = QString::fromStdString(fc.getEntreprise());
@@ -67,6 +68,7 @@ void JSonStorage::Save(GestionContact gc)
 
         id++;
     }
+    json["contactTotal"] = id;
 
     QJsonDocument json_doc(json);
     QString json_string = json_doc.toJson();
@@ -78,7 +80,7 @@ void JSonStorage::Save(GestionContact gc)
         appDataDir.mkpath(".");
     }
 
-    QFile file(QString::fromStdString(this->file));
+    QFile file(QString::fromStdString(this->filepath));
     file.open(QIODevice::WriteOnly);
     file.write(json_string.toLocal8Bit());
     file.close();
