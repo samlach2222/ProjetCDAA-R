@@ -18,7 +18,7 @@
 
 /**
  * @brief Constructeur de la classe JSonStorage
- * @param[in] filename      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
+ * @param[in] filepath      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
  */
 JSonStorage::JSonStorage(std::string filepath)
 {
