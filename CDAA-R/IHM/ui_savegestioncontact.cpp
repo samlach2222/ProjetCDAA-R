@@ -51,7 +51,7 @@ void UI_SaveGestionContact::Import()
         return;
     }
 
-    *this->gc = this->jss.Load();
+    *this->gc = gc;
     // ON DOIT EXPORTER MAINENANT LA CLASSE GC
 
     ui->informationLabel->setText("Import effectué");
@@ -66,6 +66,8 @@ void UI_SaveGestionContact::Export()
 //    GestionContact gc0 = GestionContact();
 //    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
 //    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
+//    gc0.getLog().AddToTabLog("log 0");
+//    gc0.getLog().AddToTabLog("log 1");
 
 //    this->jss.Save(gc0);
     this->jss.Save(*gc);
