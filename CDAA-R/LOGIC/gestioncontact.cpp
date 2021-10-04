@@ -51,12 +51,12 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
         lastId = sortedId;
     }
 
-    FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo, horodatage);
+    FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo, dateCreation);
 
     this->TabContacts.push_back(c);
     // sort here By ID
     DatabaseStorage::Create(c);
-    this->log.AddToTabLog("Contact Added");
+    //this->log.AddToTabLog("Contact Added");
 }
 
 /**
