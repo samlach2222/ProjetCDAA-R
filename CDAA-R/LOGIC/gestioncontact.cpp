@@ -137,6 +137,15 @@ Log GestionContact::getLog()
 */
 
 /**
+ * @brief Setter de log
+ * @param log       Le nouveau log
+ */
+void GestionContact::SetLog(Log log)
+{
+    this->log = log;
+}
+
+/**
  * @brief Getter du vecteur de logs
  * @return Retourne le vecteur de logs
  */
