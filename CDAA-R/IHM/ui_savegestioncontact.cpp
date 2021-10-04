@@ -3,7 +3,7 @@
  * @brief Permet l'import et l'export des informations au format JSON
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.1
+ * @version 1.2
  * @date 23/09/2021
  */
 
@@ -39,19 +39,18 @@ UI_SaveGestionContact::~UI_SaveGestionContact()
 /**
  * @brief Méthode d'import des données pour modifier le paramètre de classe **gestioncontact**
  * @todo Exporter le GestionContact dans le mainwindow
- * @bug Affectation à *this->gc crash
  */
 void UI_SaveGestionContact::Import()
 {
     GestionContact gc = this->jss.Load();
 
     //Ne pas charger si le fichier n'existait pas ou était vide
-    if (gc.GetAllContacts().size() == 0 && gc.getTabLog().size() == 0){
+    if (gc.GetAllContacts().size() == 0 && gc.GetLog().getTabLog().size() == 0){
         ui->informationLabel->setText("Fichier inexistant ou vide");
         return;
     }
 
-    *this->gc = gc;
+    this->gc = &gc;
     // ON DOIT EXPORTER MAINENANT LA CLASSE GC
 
     ui->informationLabel->setText("Import effectué");
@@ -62,14 +61,12 @@ void UI_SaveGestionContact::Import()
  */
 void UI_SaveGestionContact::Export()
 {
-
-//    GestionContact gc0 = GestionContact();
-//    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
-//    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
-//    gc0.AddToTabLog("log 0");
-//    gc0.AddToTabLog("log 1");
-
-//    this->jss.Save(gc0);
+//    GestionContact gc0;
+//    gc = &gc0;
+//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
+//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
+//    gc->GetLog().AddToTabLog("log 0");
+//    gc->GetLog().AddToTabLog("log 1");
     this->jss.Save(*gc);
 
     ui->informationLabel->setText("Export effectué");

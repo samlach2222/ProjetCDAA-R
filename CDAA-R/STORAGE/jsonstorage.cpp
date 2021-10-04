@@ -3,7 +3,7 @@
  * @brief La classe de gestion de l'import et l'export au format JSon des informations du programme
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.1
+ * @version 1.2
  * @date 22/09/2021
  */
 
@@ -15,6 +15,7 @@
 #include <QBuffer>
 #include <QStandardPaths>
 #include <QDir>
+#include <QTextStream>
 
 /**
  * @brief Constructeur de la classe JSonStorage
@@ -27,17 +28,17 @@ JSonStorage::JSonStorage(std::string filepath)
 
 /**
  * @brief Permet de sauvegarder l'ensemble des contacts et logs de **gc** dans le fichier JSon afin **d'assurer l'interopérabilité**
- * @param[in] gc    Ensemble des contacts de l'application
+ * @param[in] gc        Ensemble des contacts et logs de l'application
  */
 void JSonStorage::Save(GestionContact gc)
 {
-    /*QJsonObject json;
+    QJsonObject json;
     int id = 0;
 
     //log
     id = 0;
-    Log log = gc.getTabLog();
-    foreach (std::string logStr, log.getTabLog()){
+    std::vector<std::string> tabLog = gc.GetLog().getTabLog();
+    foreach (std::string logStr, tabLog){
         json["log"+QString::number(id)] = QString::fromStdString(logStr);
 
         id++;
@@ -83,16 +84,59 @@ void JSonStorage::Save(GestionContact gc)
     QFile file(QString::fromStdString(this->filepath));
     file.open(QIODevice::WriteOnly);
     file.write(json_string.toLocal8Bit());
-    file.close();*/
+    file.close();
 }
 
 /**
- * @brief Permer de Charger depuis le fichier JSon toutes les informations des contacts et des logs afin **d'assurer l'interopérabilité**
+ * @brief Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin **d'assurer l'interopérabilité**
  * @return Retourne l'ensemble des informations des contacts et des logs sauvegardées
- * @todo METHODE A ECRIRE
  */
 GestionContact JSonStorage::Load()
 {
-    //TODO
+    GestionContact gc = GestionContact();
+
+    //Lecture du fichier de sauvegarde
+    QFile file(QString::fromStdString(this->filepath));
+    if(!file.open(QIODevice::ReadOnly)){
+        //Quitte prématurément si le fichier n'existe pas
+        return gc;
+    }
+    QTextStream fileText(&file);
+    QString jsonText = fileText.readAll();
+    file.close();
+
+    //Conversion en QJsonObject
+    QByteArray jsonData = jsonText.toLocal8Bit();
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
+    QJsonObject json = jsonDoc.object();
+
+    for (int cId = 0; cId < json["contactTotal"].toInt(); cId++){
+        int id = json["contact"+QString::number(cId)+"id"].toInt();
+        std::string nom = json["contact"+QString::number(cId)+"nom"].toString().toStdString();
+        std::string prenom = json["contact"+QString::number(cId)+"prenom"].toString().toStdString();
+        std::string entreprise = json["contact"+QString::number(cId)+"entreprise"].toString().toStdString();
+        std::string mail = json["contact"+QString::number(cId)+"mail"].toString().toStdString();
+        std::string telephone = json["contact"+QString::number(cId)+"telephone"].toString().toStdString();
+
+        std::string strDateCreation = json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString();
+        Horodatage dateCreation = Horodatage(strDateCreation);
+
+        //Conversion du base64 en QImage
+        QString b64str = json["contact"+QString::number(id)+"photo"].toString();
+        QByteArray b64ba = b64str.toLocal8Bit();
+        QImage photo;
+        photo.loadFromData(QByteArray::fromBase64(b64ba));
+
+        gc.AddContact(nom, prenom, entreprise, mail, telephone, photo, dateCreation);
+    }
+
+    std::vector<std::string> logs;
+    for (int Lid = 0; Lid < json["logTotal"].toInt(); Lid++){
+        std::string log = json["log"+QString::number(Lid)].toString().toStdString();
+        logs.push_back(log);
+    }
+    gc.GetLog().SetTabLog(logs);
+
+    return gc;
 }
 
