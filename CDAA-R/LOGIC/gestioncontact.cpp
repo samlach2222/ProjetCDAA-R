@@ -129,7 +129,23 @@ FicheContact GestionContact::GetContact(int id)
  * @brief Getter de Log
  * @return Retourne la classe Log instanciée
  */
+/*
 Log GestionContact::getLog()
 {
-    return log;
+    return this->log;
+}
+*/
+
+/**
+ * @brief Getter du vecteur de logs
+ * @return Retourne le vecteur de logs
+ */
+std::vector<std::string> GestionContact::getTabLog()
+{
+    return this->log.getTabLog();
+}
+
+void GestionContact::AddToTabLog(std::string log)
+{
+    this->log.AddToTabLog(log);
 }
