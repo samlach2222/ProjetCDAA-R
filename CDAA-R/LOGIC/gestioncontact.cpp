@@ -25,7 +25,7 @@ GestionContact::GestionContact()
  * @bug On doit trier par id le tableau
  * @todo Trier par id le tableau
  */
-void GestionContact::AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
+void GestionContact::AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage horodatage = Horodatage())
 {
     std::vector<FicheContact> allContacts = GetAllContacts();
     int firstAvailableId = allContacts.size();
@@ -47,7 +47,7 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
         lastId = sortedId;
     }
 
-    FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo);
+    FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo, horodatage);
 
     this->TabContacts.push_back(c);
     // sort here By ID

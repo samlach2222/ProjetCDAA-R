@@ -18,7 +18,7 @@
  * @param[in] telephone     Numéro de téléphone du contact
  * @param[in] photo     Photo de profile du contact
  */
-FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)
+FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage horodatage)
 {
     this->id = id;
     this->setNom(nom);
@@ -27,7 +27,7 @@ FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::str
     this->setMail(mail);
     this->setTelephone(telephone);
     this->setPhoto(photo);
-    this->dateCreation = Horodatage();
+    this->dateCreation = horodatage;
 }
 
 /**
