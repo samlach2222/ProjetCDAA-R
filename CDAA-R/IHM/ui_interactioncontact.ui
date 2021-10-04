@@ -6,27 +6,286 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>604</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QListWidget" name="InteractionList">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>80</y>
-     <width>47</width>
-     <height>13</height>
+     <x>10</x>
+     <y>10</y>
+     <width>260</width>
+     <height>441</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BAddInteraction">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>260</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameEditInteraction">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>10</y>
+     <width>311</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="labelTitre">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Titre* :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editTitre">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>80</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDescription">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>120</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Description *:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editDateCreation">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Validate">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>440</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Valider</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Delete">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>440</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Supprimer</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="editDescription">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>271</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="BValider">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>500</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Valider</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BAnnuler">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>500</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Annuler</string>
    </property>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>BAddInteraction</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>AddInteraction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>469</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>InteractionList</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ListItemClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>InteractionList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ListItemDoubleClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BValider</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ValidateAllInteractions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BAnnuler</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>CancelAllInteractions()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>514</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Validate</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ValiderInteraction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>368</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Delete</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>SupprimerInteraction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>AddInteraction()</slot>
+  <slot>ListItemClick()</slot>
+  <slot>ListItemDoubleClick()</slot>
+  <slot>ValidateAllInteractions()</slot>
+  <slot>CancelAllInteractions()</slot>
+  <slot>ValiderInteraction()</slot>
+  <slot>SupprimerInteraction()</slot>
+ </slots>
 </ui>
