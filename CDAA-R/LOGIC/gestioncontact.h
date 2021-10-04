@@ -21,7 +21,7 @@ class GestionContact
         Log log;
     public:
         GestionContact();
-        void AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage horodatage = Horodatage());
+        void AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation = Horodatage());
         void SupprContact(int id);
         void ModifyContact(FicheContact c);
         std::vector<FicheContact> GetAllContacts();

@@ -50,7 +50,7 @@ Horodatage::Horodatage()
 
 /**
  * @brief Constructeur de la classe Horodatage à partir d'un string généré par le \p ToString()
- * @param strDate       La date sous forme de string qui sera convertie
+ * @param[in] strDate       La date sous forme de string qui sera convertie
  */
 Horodatage::Horodatage(std::string strDate)
 {
