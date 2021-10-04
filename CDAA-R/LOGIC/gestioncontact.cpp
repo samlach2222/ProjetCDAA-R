@@ -112,7 +112,7 @@ std::vector<FicheContact> GestionContact::GetAllContacts()
  */
 FicheContact GestionContact::GetContact(int id)
 {
-    FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage());
+    FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage(), Horodatage());
     for (int index = 0; index < static_cast<int>(this->TabContacts.size()); index++){
         if (this->TabContacts[index].getId() == id){
             c = this->TabContacts[index];
