@@ -31,12 +31,12 @@ JSonStorage::JSonStorage(std::string filepath)
  */
 void JSonStorage::Save(GestionContact gc)
 {
-    QJsonObject json;
+    /*QJsonObject json;
     int id = 0;
 
     //log
     id = 0;
-    Log log = gc.getLog();
+    Log log = gc.getTabLog();
     foreach (std::string logStr, log.getTabLog()){
         json["log"+QString::number(id)] = QString::fromStdString(logStr);
 
@@ -83,7 +83,7 @@ void JSonStorage::Save(GestionContact gc)
     QFile file(QString::fromStdString(this->filepath));
     file.open(QIODevice::WriteOnly);
     file.write(json_string.toLocal8Bit());
-    file.close();
+    file.close();*/
 }
 
 /**

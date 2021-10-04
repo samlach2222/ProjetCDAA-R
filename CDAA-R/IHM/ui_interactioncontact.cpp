@@ -23,8 +23,8 @@ UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::UI_InteractionContact)
 {
-    ui->frameEditInteraction->setVisible(0);
     ui->setupUi(this);
+    ui->frameEditInteraction->setVisible(0);
 }
 /**
  * @brief Destructeur de UI_InteractionContact
