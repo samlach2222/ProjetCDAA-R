@@ -46,7 +46,7 @@ void UI_SaveGestionContact::Import()
     GestionContact gc = this->jss.Load();
 
     //Ne pas charger si le fichier n'existait pas ou était vide
-    if (gc.GetAllContacts().size() == 0 && gc.getLog().getTabLog().size() == 0){
+    if (gc.GetAllContacts().size() == 0 && gc.getTabLog().size() == 0){
         ui->informationLabel->setText("Fichier inexistant ou vide");
         return;
     }
@@ -66,8 +66,8 @@ void UI_SaveGestionContact::Export()
 //    GestionContact gc0 = GestionContact();
 //    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
 //    gc0.AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
-//    gc0.getLog().AddToTabLog("log 0");
-//    gc0.getLog().AddToTabLog("log 1");
+//    gc0.AddToTabLog("log 0");
+//    gc0.AddToTabLog("log 1");
 
 //    this->jss.Save(gc0);
     this->jss.Save(*gc);
