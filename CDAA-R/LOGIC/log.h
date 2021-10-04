@@ -16,6 +16,7 @@ class Log
         Log();
         void AddToTabLog(std::string log);
         std::vector<std::string> getTabLog();
+        void SetTabLog(std::vector<std::string> logs);
 };
 
 #endif // LOG_H

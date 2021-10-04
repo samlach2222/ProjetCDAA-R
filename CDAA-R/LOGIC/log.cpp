@@ -27,6 +27,11 @@ std::vector<std::string> Log::getTabLog()
     return tabLog;
 }
 
+void Log::SetTabLog(std::vector<std::string> logs)
+{
+    this->tabLog.assign(logs.begin(), logs.end());
+}
+
 /**
  * @brief Ajoute un log \p log à la liste de logs
  * @param[in] log       Le log à ajouter
