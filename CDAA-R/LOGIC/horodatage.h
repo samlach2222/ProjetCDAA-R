@@ -25,6 +25,7 @@ class Horodatage
     public:
         Horodatage(int j, int m, int a, int heu, int min, int sec);
         Horodatage();
+        Horodatage(std::string strDate);
         std::string ToString();
         int GetJour();
         int GetMois();

@@ -49,6 +49,25 @@ Horodatage::Horodatage()
 }
 
 /**
+ * @brief Constructeur de la classe Horodatage à partir d'un string généré par le \p ToString()
+ * @param strDate       La date sous forme de string qui sera convertie
+ */
+Horodatage::Horodatage(std::string strDate)
+{
+    QDateTime dt = QDateTime::fromString(QString::fromStdString(strDate), "dd/MM/yyyy hh:mm:ss");
+    QDate date = dt.date();
+    QTime time = dt.time();
+
+    this->SetJour(date.day());
+    this->SetMois(date.month());
+    this->SetAnnee(date.year());
+
+    this->SetHeure(time.hour());
+    this->SetMinute(time.minute());
+    this->SetSeconde(time.second());
+}
+
+/**
  * @brief Renvoie en chaine de caractère la date et l'heure de l'horodatage afin de le rendre affichable
  * @return Retourne la date et l'heure au format **dd/MM/yyyy hh:mm:ss** en chaine de caractère
  */
