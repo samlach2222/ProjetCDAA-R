@@ -140,27 +140,14 @@
   <widget class="QPushButton" name="BValider">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>260</x>
      <y>500</y>
      <width>80</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Valider</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BAnnuler">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>500</y>
-     <width>80</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Annuler</string>
+    <string>Fermer</string>
    </property>
   </widget>
  </widget>
@@ -199,22 +186,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>InteractionList</sender>
-   <signal>doubleClicked(QModelIndex)</signal>
-   <receiver>UI_InteractionContact</receiver>
-   <slot>ListItemDoubleClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>186</x>
-     <y>201</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>95</x>
-     <y>2</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>BValider</sender>
    <signal>clicked()</signal>
    <receiver>UI_InteractionContact</receiver>
@@ -227,22 +198,6 @@
     <hint type="destinationlabel">
      <x>172</x>
      <y>532</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>BAnnuler</sender>
-   <signal>clicked()</signal>
-   <receiver>UI_InteractionContact</receiver>
-   <slot>CancelAllInteractions()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>383</x>
-     <y>514</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>504</x>
-     <y>530</y>
     </hint>
    </hints>
   </connection>

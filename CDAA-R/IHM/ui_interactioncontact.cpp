@@ -21,7 +21,8 @@ bool ModeAjoutInteraction = 1;
  */
 UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::UI_InteractionContact)
+    ui(new Ui::UI_InteractionContact),
+    contact(NULL, "","","","","",QImage(), Horodatage())
 {
     ui->setupUi(this);
     ui->frameEditInteraction->setVisible(0);
@@ -39,15 +40,6 @@ UI_InteractionContact::~UI_InteractionContact()
  * @todo A PROGRAMMER
  */
 void UI_InteractionContact::ValidateAllInteractions()
-{
-    //TODO
-}
-
-/**
- * @brief Methode liée au bouton permettant d'annuler l'ajout et de fermer la fenêtre
- * @todo A PROGRAMMER
- */
-void UI_InteractionContact::CancelAllInteractions()
 {
     this->~UI_InteractionContact();
 }
@@ -71,27 +63,37 @@ void UI_InteractionContact::AddInteraction()
  */
 void UI_InteractionContact::SupprimerInteraction()
 {
-    //TODO
+    if(this->contact.GetListInteraction().size() > 0)
+    {
+        QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
+        QVariant v = selectedItem[0]->data(Qt::UserRole);
+        int idInteraction = v.value<int>();
+
+        this->contact.RemoveInteraction(idInteraction);
+        this->DisplayInteractionList();
+        ui->frameEditInteraction->setVisible(0);
+    }
 }
 
 /**
  * @brief Methode liée au bouton permettant de valider l'ajout d'une interaction
+ * @todo changer pour le constr et l'ajout par fiche contact
  */
 void UI_InteractionContact::ValiderInteraction()
 {
-    /*if(ui->editTitre->text().isEmpty() && !(ui->editDescription->text().isEmpty()))    // si Champ NOM vide
+    if(ui->editTitre->text().isEmpty() && !(ui->editDescription->toPlainText().isEmpty()))    // si Champ NOM vide
     {
         ui->editTitre->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editDescription->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"nom\" est obligatoire.") );
     }
-    else if(ui->editDescription->text().isEmpty() && !(ui->editTitre->text().isEmpty()))   // si Champ PRENOM vide
+    else if(ui->editDescription->toPlainText().isEmpty() && !(ui->editTitre->text().isEmpty()))   // si Champ PRENOM vide
     {
         ui->editDescription->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
         ui->editTitre->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"prénom\" est obligatoire.") );
     }
-    else if(ui->editTitre->text().isEmpty() && ui->editDescription->text().isEmpty())  // si les champs NOM et PRENOM sont vides
+    else if(ui->editTitre->text().isEmpty() && ui->editDescription->toPlainText().isEmpty())  // si les champs NOM et PRENOM sont vides
     {
         ui->editTitre->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editDescription->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
@@ -99,52 +101,53 @@ void UI_InteractionContact::ValiderInteraction()
     }
     else
     {
-        if(!ModeAjout)
+        if(!ModeAjoutInteraction)
         {
-            QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+            QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
             QVariant v = selectedItem[0]->data(Qt::UserRole);
-            int idContact = v.value<int>();
+            int idInteraction = v.value<int>();
 
-            FicheContact contact = gc.GetContact(idContact);
-            contact.setNom(ui->editNom->text().toStdString());
-            contact.setPrenom(ui->editPrenom->text().toStdString());
-            contact.setEntreprise(ui->editEntreprise->text().toStdString());
-            contact.setMail(ui->editMail->text().toStdString());
-            contact.setTelephone(ui->editTelephone->text().toStdString());
-            contact.setPhoto(ui->Image->pixmap()->toImage());
-            gc.ModifyContact(contact);
+            for(Interaction i : this->contact.GetListInteraction())
+            {
+                if(i.GetId() == idInteraction)
+                {
+                    i.setTitre(ui->editTitre->text().toStdString());
+                    i.SetContenu(ui->editDescription->toPlainText().toStdString());
+                }
+            }
         }
         else
         {
-            std::string nom = ui->editNom->text().toStdString();
-            std::string prenom = ui->editPrenom->text().toStdString();
-            std::string entreprise = ui->editEntreprise->text().toStdString();
-            std::string mail = ui->editMail->text().toStdString();
-            std::string telephone = ui->editTelephone->text().toStdString();
-            QImage image = ui->Image->pixmap()->toImage();
-            gc.AddContact(nom,prenom,entreprise,mail,telephone,image);
+
+            std::string titre = ui->editTitre->text().toStdString();
+            std::string contenu = ui->editDescription->toPlainText().toStdString();
+
+            contact.AddInteraction(contenu, titre);
+
         }
-        ui->frameEditContact->setVisible(0);
-        this->DisplayContactList();
-        this->RefreshLog();
-        ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
-        ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
-    }*/
+        ui->frameEditInteraction->setVisible(0);
+        this->DisplayInteractionList();
+        ui->editDescription->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+        ui->editTitre->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+    }
 }
 
-void UI_InteractionContact::ReceiveIdToInteraction(int idreceive, GestionContact gc)
+void UI_InteractionContact::ReceiveIdToInteraction(int idreceive,GestionContact gc)
 {
-    this->listInteractions = gc.GetContact(idreceive).GetListInteraction();
-    this->DisplayContactList();
+    this->contact = gc.GetContact(idreceive);
+    this->DisplayInteractionList();
 }
 
-void UI_InteractionContact::DisplayContactList()
+void UI_InteractionContact::DisplayInteractionList()
 {
     ui->InteractionList->clear();
-    for(Interaction i : this->listInteractions)
+    for(Interaction i : this->contact.GetListInteraction())
     {
         QString str = QString::fromStdString(i.getTitre());
         QListWidgetItem* item = new QListWidgetItem(str);
+        QVariant v;
+        v.setValue(i.GetId());
+        item->setData(Qt::UserRole, v);
         ui->InteractionList->addItem(item);
     }
 }
@@ -152,26 +155,22 @@ void UI_InteractionContact::DisplayContactList()
 void UI_InteractionContact::ListItemClick()
 {
 
-    /*ModeAjout = 0;
-    QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
+    ModeAjoutInteraction = 0;
+    QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
     QVariant v = selectedItem[0]->data(Qt::UserRole);
-    int idContact = v.value<int>();
+    int idInteraction = v.value<int>();
 
-    FicheContact contact = gc.GetContact(idContact);
 
-    ui->frameEditContact->setVisible(1);
+    ui->frameEditInteraction->setVisible(1);
 
-    ui->editNom->setText(QString::fromStdString(contact.getNom()));
-    ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
-    ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
-    ui->editMail->setText(QString::fromStdString(contact.getMail()));
-    ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
-
-    ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
-    ui->editDateCreation->setEnabled(0);
-
-    QPixmap image = QPixmap::fromImage(contact.getPhoto());
-    int w = ui->Image->width();
-    int h = ui->Image->height();
-    ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));*/
+    for(Interaction i : this->contact.GetListInteraction())
+    {
+        if(i.GetId() == idInteraction)
+        {
+            ui->editTitre->setText(QString::fromStdString(i.getTitre()));
+            ui->editDescription->setPlainText(QString::fromStdString(i.GetContenu()));
+            ui->editDateCreation->setText(QString::fromStdString(i.GetHorodatage().ToString()));
+            ui->editDateCreation->setEnabled(0);
+        }
+    }
 }

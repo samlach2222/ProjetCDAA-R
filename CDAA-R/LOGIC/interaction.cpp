@@ -13,21 +13,13 @@
  * @param[in] id        L'id de l'interaction
  * @param[in] c     Le contenu de l'interaction
  */
-std::string Interaction::getTitre()
-{
-    return this->titre;
-}
 
-void Interaction::setTitre(std::string titre)
-{
-    this->titre = titre;
-}
-
-Interaction::Interaction(int id, std::string c)
+Interaction::Interaction(int id, std::string c, std::string titre)
 {
     this->SetContenu(c);
     this->id = id;
     this->horodatage = Horodatage();
+    this->titre = titre;
 }
 
 /**
@@ -61,3 +53,14 @@ Horodatage Interaction::GetHorodatage()
 {
     return this->horodatage;
 }
+
+std::string Interaction::getTitre()
+{
+    return this->titre;
+}
+
+void Interaction::setTitre(std::string titre)
+{
+    this->titre = titre;
+}
+

@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // DEBUT DEFINITION SIGNAUX
-    QObject::connect(this, SIGNAL(sendIdToInteraction(int)), &ic, SLOT(ReceiveIdToInteraction(int)));
+    QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), &ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
     //FIN DEFINITION SIGNAUX
 
     gc = GestionContact();
@@ -168,6 +168,7 @@ void MainWindow::OpenSGC()
 
 /**
  * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'intéraction, si aucune fenêtre n'est ouverte
+ * @bug sigseg segmentation fault 2ème fois
  */
 void MainWindow::ListItemDoubleClick()
 {
@@ -177,7 +178,7 @@ void MainWindow::ListItemDoubleClick()
 
     FicheContact contact = gc.GetContact(idContact);
 
-    emit sendIdToInteraction(idContact, this->gc);
+    emit sendIdToInteraction(idContact,this->gc);
     // Il manque le fait de passer l'id a la nouvelle fenêtre Avec un signal slot
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
         ic.show();
@@ -283,6 +284,7 @@ void MainWindow::ValiderContact()
 
 /**
  * @brief Méthode permettant du supprimer le contact séléctionné a partir du bouton
+ * @bug Crash lors de suppression de temps en temps
  */
 void MainWindow::SupprimerContact()
 {

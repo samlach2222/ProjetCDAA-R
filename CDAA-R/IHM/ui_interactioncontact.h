@@ -29,17 +29,16 @@ public:
 private:
     Ui::UI_InteractionContact *ui;
     int id;
-    std::vector<Interaction> listInteractions;
-    void DisplayContactList();
+    FicheContact contact;
+    void DisplayInteractionList();
 
 public slots:
     void ValidateAllInteractions();
-    void CancelAllInteractions();
     void AddInteraction();
     void SupprimerInteraction();
     void ListItemClick();
     void ValiderInteraction();
-    void ReceiveIdToInteraction(int, GestionContact);
+    void ReceiveIdToInteraction(int,GestionContact);
 };
 
 #endif // UI_INTERACTIONCONTACT_H
