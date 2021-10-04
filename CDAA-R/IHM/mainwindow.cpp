@@ -177,7 +177,7 @@ void MainWindow::ListItemDoubleClick()
 
     FicheContact contact = gc.GetContact(idContact);
 
-    emit sendIdToInteraction(idContact);
+    emit sendIdToInteraction(idContact, this->gc);
     // Il manque le fait de passer l'id a la nouvelle fenêtre Avec un signal slot
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
         ic.show();

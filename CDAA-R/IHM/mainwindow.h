@@ -54,6 +54,6 @@ public slots:
     void ChooseImage();
 
 signals :
-    void sendIdToInteraction(int);
+    void sendIdToInteraction(int, GestionContact);
 };
 #endif // MAINWINDOW_H

@@ -9,6 +9,9 @@
 
 #include <QWidget>
 
+#include <LOGIC/interaction.h>
+#include <LOGIC/gestioncontact.h>
+
 namespace Ui {
 class UI_InteractionContact;
 }
@@ -26,14 +29,17 @@ public:
 private:
     Ui::UI_InteractionContact *ui;
     int id;
+    std::vector<Interaction> listInteractions;
+    void DisplayContactList();
 
 public slots:
-    void ButtonValidate();
-    void ButtonCancel();
-    void ButtonAddInteraction();
-    void ButtonRemoveInteraction();
-    void ButtonValidateInteraction();
-    void ReceiveIdToInteraction(int);
+    void ValidateAllInteractions();
+    void CancelAllInteractions();
+    void AddInteraction();
+    void SupprimerInteraction();
+    void ListItemClick();
+    void ValiderInteraction();
+    void ReceiveIdToInteraction(int, GestionContact);
 };
 
 #endif // UI_INTERACTIONCONTACT_H
