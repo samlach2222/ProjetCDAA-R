@@ -12,13 +12,17 @@ class Interaction
 {
     private:
         int id;
+        std::string titre;
         std::string contenu;
         Horodatage horodatage;
     public:
-        Interaction(int id, std::string c);
+        Interaction(int id, std::string);
         int GetId();
         std::string GetContenu();
-        void SetContenu(std::string c);
+        void SetContenu(std::string);
+        Horodatage GetHorodatage();
+        std::string getTitre();
+        void setTitre(std::string);
 };
 
 #endif // INTERACTION_H
