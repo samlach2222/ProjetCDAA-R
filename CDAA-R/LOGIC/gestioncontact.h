@@ -26,10 +26,7 @@ class GestionContact
         void ModifyContact(FicheContact c);
         std::vector<FicheContact> GetAllContacts();
         FicheContact GetContact(int id);
-        //Log getLog();
-        void SetLog(Log log);
-        std::vector<std::string> getTabLog();
-        void AddToTabLog(std::string log);
+        Log &GetLog();
 };
 
 #endif // GESTIONCONTACT_H

@@ -126,10 +126,10 @@ void MainWindow::RefreshLog()
 {
     QStringListModel* model = new QStringListModel(this);
     QStringList list;
-    int tabSize = gc.getTabLog().size();
+    int tabSize = gc.GetLog().getTabLog().size();
     for(int i =0; i < static_cast<int>(tabSize); i++)
     {
-        QString text = QString::fromStdString(gc.getTabLog()[i]);
+        QString text = QString::fromStdString(gc.GetLog().getTabLog()[i]);
         list.append(text);
     }
     model->setStringList(list);
