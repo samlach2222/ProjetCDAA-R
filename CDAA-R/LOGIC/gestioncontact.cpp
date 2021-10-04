@@ -56,7 +56,7 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
     this->TabContacts.push_back(c);
     // sort here By ID
     DatabaseStorage::Create(c);
-    //this->log.AddToTabLog("Contact Added");
+    this->log.AddToTabLog("Contact Added");
 }
 
 /**
