@@ -78,7 +78,7 @@ void FicheContact::setPrenom(std::string newPrenom)
 
 /**
  * @brief Retourne l'entreprise
- * @return  l'entreprise
+ * @return l'entreprise
  */
 std::string FicheContact::getEntreprise()
 {

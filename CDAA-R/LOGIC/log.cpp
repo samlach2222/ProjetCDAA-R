@@ -28,6 +28,10 @@ std::vector<std::string> Log::getTabLog()
     return tabLog;
 }
 
+/**
+ * @brief Remplace la liste de logs
+ * @param[in] logs      La nouvelle liste de logs
+ */
 void Log::SetTabLog(std::vector<std::string> logs)
 {
     this->tabLog.assign(logs.begin(), logs.end());
