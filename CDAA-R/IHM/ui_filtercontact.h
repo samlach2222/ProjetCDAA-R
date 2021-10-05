@@ -3,7 +3,6 @@
  * @brief Fichier header pour la fenêtre d'application de filtre sur une recherche de contacts
  * @author Samuel LACHAUD
  */
-
 #ifndef UI_FILTERCONTACT_H
 #define UI_FILTERCONTACT_H
 

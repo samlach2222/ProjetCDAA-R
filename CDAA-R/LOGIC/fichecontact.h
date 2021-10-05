@@ -5,6 +5,7 @@
  */
 #ifndef FICHECONTACT_H
 #define FICHECONTACT_H
+
 #include <string>
 #include <QImage>
 #include <vector>

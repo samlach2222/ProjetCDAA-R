@@ -5,6 +5,7 @@
  */
 #ifndef INTERACTION_H
 #define INTERACTION_H
+
 #include <string>
 #include "horodatage.h"
 
