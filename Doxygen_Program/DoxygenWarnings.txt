@@ -1,0 +1,48 @@
+warning: The selected output language "french" has not been updated
+since release 1.8.15.  As a result some sentences may appear in English.
+
+STORAGE/databasestorage.h:13: warning: Compound DatabaseStorage is not documented.
+LOGIC/fichecontact.h:15: warning: Compound FicheContact is not documented.
+LOGIC/gestioncontact.h:16: warning: Compound GestionContact is not documented.
+LOGIC/horodatage.h:13: warning: Compound Horodatage is not documented.
+LOGIC/interaction.h:12: warning: Compound Interaction is not documented.
+STORAGE/jsonstorage.h:15: warning: Compound JSonStorage is not documented.
+LOGIC/log.h:12: warning: Compound Log is not documented.
+IHM/mainwindow.h:22: warning: Compound MainWindow is not documented.
+LOGIC/soundplayer.h:5: warning: Compound SoundPlayer is not documented.
+IHM/ui_filtercontact.h:15: warning: Compound UI_FilterContact is not documented.
+IHM/ui_interactioncontact.h:17: warning: Compound UI_InteractionContact is not documented.
+IHM/ui_requestcontact.h:15: warning: Compound UI_RequestContact is not documented.
+IHM/ui_savegestioncontact.h:18: warning: Compound UI_SaveGestionContact is not documented.
+IHM/mainwindow.cpp:25: warning: Member ModeAjout (variable) of file mainwindow.cpp is not documented.
+IHM/ui_interactioncontact.cpp:15: warning: Member ModeAjoutInteraction (variable) of file ui_interactioncontact.cpp is not documented.
+LOGIC/fichecontact.h:48: warning: The following parameter of FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction) is not documented:
+  parameter 'titreInteraction'
+LOGIC/horodatage.cpp:175: warning: argument 'j' of command @param is not found in the argument list of Horodatage::SetHeure(int heu)
+LOGIC/horodatage.h:37: warning: The following parameter of Horodatage::SetHeure(int heu) is not documented:
+  parameter 'heu'
+LOGIC/horodatage.cpp:184: warning: argument 'm' of command @param is not found in the argument list of Horodatage::SetMinute(int min)
+LOGIC/horodatage.h:38: warning: The following parameter of Horodatage::SetMinute(int min) is not documented:
+  parameter 'min'
+LOGIC/horodatage.cpp:193: warning: argument 'a' of command @param is not found in the argument list of Horodatage::SetSeconde(int sec)
+LOGIC/horodatage.h:39: warning: The following parameter of Horodatage::SetSeconde(int sec) is not documented:
+  parameter 'sec'
+LOGIC/interaction.h:24: warning: Member GetHorodatage() (function) of class Interaction is not documented.
+LOGIC/interaction.h:25: warning: Member getTitre() (function) of class Interaction is not documented.
+LOGIC/interaction.h:26: warning: Member setTitre(std::string) (function) of class Interaction is not documented.
+LOGIC/interaction.h:20: warning: The following parameter of Interaction::Interaction(int id, std::string c, std::string titre) is not documented:
+  parameter 'titre'
+IHM/mainwindow.h:57: warning: Member sendIdToInteraction(int, GestionContact) (signal) of class MainWindow is not documented.
+LOGIC/soundplayer.h:8: warning: Member PlayButtonSound() (function) of class SoundPlayer is not documented.
+LOGIC/soundplayer.h:9: warning: Member PlayButtonSound2() (function) of class SoundPlayer is not documented.
+LOGIC/soundplayer.h:10: warning: Member PlayErrorSound() (function) of class SoundPlayer is not documented.
+IHM/ui_interactioncontact.h:42: warning: Member sendContactToMainWindow(FicheContact) (signal) of class UI_InteractionContact is not documented.
+IHM/ui_interactioncontact.h:43: warning: Member AddOperationToLog(std::string) (signal) of class UI_InteractionContact is not documented.
+IHM/ui_interactioncontact.h:24: warning: Member SetId(int) (function) of class UI_InteractionContact is not documented.
+IHM/ui_interactioncontact.h:25: warning: Member GetId() (function) of class UI_InteractionContact is not documented.
+IHM/ui_interactioncontact.cpp:18: warning: argument 'ou' of command @param is not found in the argument list of UI_InteractionContact::UI_InteractionContact(QWidget *parent=nullptr)
+IHM/ui_interactioncontact.h:22: warning: The following parameter of UI_InteractionContact::UI_InteractionContact(QWidget *parent=nullptr) is not documented:
+  parameter 'parent'
+IHM/ui_requestcontact.cpp:13: warning: argument 'ou' of command @param is not found in the argument list of UI_RequestContact::UI_RequestContact(QWidget *parent=nullptr)
+IHM/ui_requestcontact.h:20: warning: The following parameter of UI_RequestContact::UI_RequestContact(QWidget *parent=nullptr) is not documented:
+  parameter 'parent'
