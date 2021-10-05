@@ -6,7 +6,7 @@
  * @date 22/09/2021
  */
 #include "interaction.h"
-#include "horodatage.h"
+//#include "horodatage.h"
 
 /**
  * @brief Constructeur de la classe Interaction
