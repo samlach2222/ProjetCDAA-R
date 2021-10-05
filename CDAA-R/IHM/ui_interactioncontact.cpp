@@ -8,8 +8,7 @@
 
 #include "ui_interactioncontact.h"
 #include "ui_ui_interactioncontact.h"
-
-#include <LOGIC/gestioncontact.h>
+//#include <LOGIC/gestioncontact.h>
 
 #include <QMessageBox>
 

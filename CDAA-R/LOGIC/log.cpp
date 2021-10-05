@@ -7,8 +7,9 @@
  */
 #include "log.h"
 #include "horodatage.h"
-#include <vector>
-#include <string>
+
+//#include <vector>
+//#include <string>
 
 /**
  * @brief Constructeur de la classe Log

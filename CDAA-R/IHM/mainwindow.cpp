@@ -9,19 +9,17 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "LOGIC/fichecontact.h"
-#include "ui_interactioncontact.h"
+//#include "LOGIC/gestioncontact.h"
+//#include "ui_interactioncontact.h"
 
-#include <QStandardItemModel>
-#include <QString>
-#include <QStringListModel>
-#include <QVector>
-#include <QPixmap>
 #include <QFileDialog>
-#include <QHBoxLayout>
+////#include <QHBoxLayout>
 #include <QMessageBox>
-
-
+#include <QPixmap>
+////#include <QStandardItemModel>
+#include <QString>
+#include <QStringListModel>  //inclus <QtCore/qstringlist.h>
+////#include <QVector>
 
 bool ModeAjout = 0;
 

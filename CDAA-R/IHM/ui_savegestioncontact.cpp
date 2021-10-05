@@ -9,7 +9,8 @@
 
 #include "ui_savegestioncontact.h"
 #include "ui_ui_savegestioncontact.h"
-#include "STORAGE/jsonstorage.h"
+//#include "STORAGE/jsonstorage.h"
+
 #include <QStandardPaths>
 
 /**
