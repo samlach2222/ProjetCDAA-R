@@ -3,7 +3,6 @@
  * @brief Fichier header pour la fenêtre de requêtes sur la base de donnée
  * @author Samuel LACHAUD
  */
-
 #ifndef UI_REQUESTCONTACT_H
 #define UI_REQUESTCONTACT_H
 

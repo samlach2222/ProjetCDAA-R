@@ -3,14 +3,12 @@
  * @brief Fichier header pour la fenêtre de gestion des intéractions d'un contact
  * @author Samuel LACHAUD
  */
-
 #ifndef UI_INTERACTIONCONTACT_H
 #define UI_INTERACTIONCONTACT_H
 
 #include <QWidget>
 
-#include <LOGIC/interaction.h>
-#include <LOGIC/gestioncontact.h>
+#include <LOGIC/gestioncontact.h>  //inclus LOGIC/fichecontact.h
 
 namespace Ui {
 class UI_InteractionContact;

@@ -4,12 +4,12 @@
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
  */
-
 #ifndef UI_SAVEGESTIONCONTACT_H
 #define UI_SAVEGESTIONCONTACT_H
 
 #include <QWidget>
-#include "STORAGE/jsonstorage.h"
+
+#include "STORAGE/jsonstorage.h"  //Inclus LOGIC/gestioncontact.h
 
 namespace Ui {
 class UI_SaveGestionContact;

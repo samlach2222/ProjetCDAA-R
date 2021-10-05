@@ -4,14 +4,12 @@
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
  */
-
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 
 #include "LOGIC/gestioncontact.h"
-#include "LOGIC/log.h"
 #include "ui_filtercontact.h"
 #include "ui_requestcontact.h"
 #include "ui_savegestioncontact.h"

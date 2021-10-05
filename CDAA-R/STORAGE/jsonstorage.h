@@ -5,11 +5,10 @@
  *
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- *
  */
-
 #ifndef JSONSTORAGE_H
 #define JSONSTORAGE_H
+
 #include <string>
 #include "LOGIC/gestioncontact.h"
 

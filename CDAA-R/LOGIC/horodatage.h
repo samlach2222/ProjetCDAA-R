@@ -4,14 +4,11 @@
  * @brief Le fichier header pour la gestion du temps et de l'heure d'une action
  *
  * @author Samuel LACHAUD
- *
  */
-
 #ifndef HORODATAGE_H
 #define HORODATAGE_H
-#include <string>
-#include <QDateTime>
 
+#include <string>
 
 class Horodatage
 {
