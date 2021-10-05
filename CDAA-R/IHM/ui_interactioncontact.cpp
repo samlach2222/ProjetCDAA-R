@@ -70,7 +70,7 @@ void UI_InteractionContact::AddInteraction()
  */
 void UI_InteractionContact::SupprimerInteraction()
 {
-    if(this->contact.GetListInteraction().size() > 0)
+    if(this->contact.GetListInteraction().size() > 0 && !ModeAjoutInteraction)
     {
         QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
         QVariant v = selectedItem[0]->data(Qt::UserRole);

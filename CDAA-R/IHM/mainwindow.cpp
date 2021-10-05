@@ -283,11 +283,10 @@ void MainWindow::ValiderContact()
 
 /**
  * @brief Méthode permettant du supprimer le contact séléctionné a partir du bouton
- * @bug Crash lors de suppression de temps en temps
  */
 void MainWindow::SupprimerContact()
 {
-    if(gc.GetAllContacts().size() > 0)
+    if(gc.GetAllContacts().size() > 0 && !ModeAjout)
     {
         QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
         QVariant v = selectedItem[0]->data(Qt::UserRole);
