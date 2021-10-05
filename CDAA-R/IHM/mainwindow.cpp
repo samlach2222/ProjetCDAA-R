@@ -11,6 +11,7 @@
 #include "ui_mainwindow.h"
 //#include "LOGIC/gestioncontact.h"
 //#include "ui_interactioncontact.h"
+#include "LOGIC/soundplayer.h"
 
 #include <QFileDialog>
 ////#include <QHBoxLayout>
@@ -85,6 +86,10 @@ MainWindow::~MainWindow()
  */
 void MainWindow::AddContact()
 {
+    // On joue le son du bouton
+    SoundPlayer s;
+    s.PlayButtonSound();
+
     ModeAjout = 1;
     ui->frameEditContact->setVisible(1);
     ui->editDateCreation->setDisabled(1);
@@ -228,9 +233,12 @@ void MainWindow::ValiderContact()
 {
     if(ui->editNom->text().isEmpty() && !(ui->editPrenom->text().isEmpty()))    // si Champ NOM vide
     {
+        SoundPlayer s;
+        s.PlayErrorSound();
         ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"nom\" est obligatoire.") );
+
     }
     else if(ui->editPrenom->text().isEmpty() && !(ui->editNom->text().isEmpty()))   // si Champ PRENOM vide
     {

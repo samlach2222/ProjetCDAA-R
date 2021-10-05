@@ -1,4 +1,5 @@
-QT       += core gui
+QT       += core gui \
+         multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,6 +20,7 @@ SOURCES += \
     LOGIC/horodatage.cpp \
     LOGIC/interaction.cpp \
     LOGIC/log.cpp \
+    LOGIC/soundplayer.cpp \
     STORAGE/databasestorage.cpp \
     STORAGE/jsonstorage.cpp \
     main.cpp \
@@ -35,6 +37,7 @@ HEADERS += \
     LOGIC/horodatage.h \
     LOGIC/interaction.h \
     LOGIC/log.h \
+    LOGIC/soundplayer.h \
     STORAGE/databasestorage.h \
     STORAGE/jsonstorage.h
 
@@ -52,3 +55,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     ressources.qrc
+

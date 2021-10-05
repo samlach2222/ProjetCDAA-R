@@ -6,5 +6,8 @@
         <file>Ressources/Icons/SaveGestionContact.png</file>
         <file>Ressources/Icons/RequestContact.png</file>
         <file>Ressources/Icons/AddContact.png</file>
+        <file>Ressources/Sounds/ButtonSound.wav</file>
+        <file>Ressources/Sounds/ButtonSound2.wav</file>
+        <file>Ressources/Sounds/ErrorSound.wav</file>
     </qresource>
 </RCC>
