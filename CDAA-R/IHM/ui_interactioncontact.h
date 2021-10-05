@@ -39,6 +39,11 @@ public slots:
     void ListItemClick();
     void ValiderInteraction();
     void ReceiveIdToInteraction(int,GestionContact);
+
+signals :
+    void sendContactToMainWindow(FicheContact);
+    void AddOperationToLog(std::string);
 };
+
 
 #endif // UI_INTERACTIONCONTACT_H

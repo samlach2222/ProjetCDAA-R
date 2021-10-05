@@ -38,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     // DEBUT DEFINITION SIGNAUX
     QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), &ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
+    QObject::connect(&ic, SIGNAL(sendContactToMainWindow(FicheContact)), this, SLOT(ReceiveContactToMainWindow(FicheContact)));
+    QObject::connect(&ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
     //FIN DEFINITION SIGNAUX
 
     gc = GestionContact();
@@ -168,7 +170,6 @@ void MainWindow::OpenSGC()
 
 /**
  * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'intéraction, si aucune fenêtre n'est ouverte
- * @bug sigseg segmentation fault 2ème fois
  */
 void MainWindow::ListItemDoubleClick()
 {
@@ -179,7 +180,6 @@ void MainWindow::ListItemDoubleClick()
     FicheContact contact = gc.GetContact(idContact);
 
     emit sendIdToInteraction(idContact,this->gc);
-    // Il manque le fait de passer l'id a la nouvelle fenêtre Avec un signal slot
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
         ic.show();
     }
@@ -225,7 +225,6 @@ void MainWindow::LogsDoubleClick()  // disable Logs edition
 
 /**
  * @brief Permet de sauvegarder un nouveau contact ou la modification d'un contact déjà existant avec le bouton valider
- * @todo Fèrer le fait que le nom et le prénom soient obligatoires avec un popup d'info avec un bouton OK
  */
 void MainWindow::ValiderContact()
 {
@@ -329,4 +328,23 @@ int MainWindow::GetIdFromRow(std::string row)
     std::string rowId = row.substr(0, posPoint);
 
     return std::stoi(rowId);
+}
+
+/**
+ * @brief Slot permettant de mettre à jour le contact après édition de ses intéractions
+ * @param contact
+ */
+void MainWindow::ReceiveContactToMainWindow(FicheContact contact)
+{
+    this->gc.ModifyContact(contact);
+}
+
+/**
+ * @brief Slot permettant de mettre a jour les logs avec l'ajout, suppression ou modification d'une interaction
+ * @param str
+ */
+void MainWindow::AddOperationToLog(std::string str)
+{
+    this->gc.GetLog().AddToTabLog(str);
+    this->RefreshLog();
 }

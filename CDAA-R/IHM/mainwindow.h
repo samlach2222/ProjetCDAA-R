@@ -52,6 +52,8 @@ public slots:
     void ValiderContact();
     void SupprimerContact();
     void ChooseImage();
+    void ReceiveContactToMainWindow(FicheContact);
+    void AddOperationToLog(std::string);
 
 signals :
     void sendIdToInteraction(int,GestionContact);
