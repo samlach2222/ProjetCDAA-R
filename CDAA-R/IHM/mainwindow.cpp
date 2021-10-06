@@ -87,8 +87,7 @@ MainWindow::~MainWindow()
 void MainWindow::AddContact()
 {
     // On joue le son du bouton
-    SoundPlayer s;
-    s.PlayButtonSound();
+    SoundPlayer::PlayButtonSound();
 
     ModeAjout = 1;
     ui->frameEditContact->setVisible(1);
@@ -146,6 +145,9 @@ void MainWindow::RefreshLog()
  */
 void MainWindow::OpenFC()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
         fc.show();
     }
@@ -156,6 +158,9 @@ void MainWindow::OpenFC()
  */
 void MainWindow::OpenRC()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     if(!(fc.isVisible() || sgc.isVisible() || ic.isVisible())){
         rc.show();
     }
@@ -166,6 +171,9 @@ void MainWindow::OpenRC()
  */
 void MainWindow::OpenSGC()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     if(!(fc.isVisible() || rc.isVisible() || ic.isVisible())){
         sgc.show();
     }
@@ -176,6 +184,9 @@ void MainWindow::OpenSGC()
  */
 void MainWindow::ListItemDoubleClick()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
     QVariant v = selectedItem[0]->data(Qt::UserRole);
     int idContact = v.value<int>();
@@ -193,6 +204,8 @@ void MainWindow::ListItemDoubleClick()
  */
 void MainWindow::ListItemClick()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
 
     ModeAjout = 0;
     QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
@@ -233,8 +246,9 @@ void MainWindow::ValiderContact()
 {
     if(ui->editNom->text().isEmpty() && !(ui->editPrenom->text().isEmpty()))    // si Champ NOM vide
     {
-        SoundPlayer s;
-        s.PlayErrorSound();
+        // On joue le son de l'erreur
+        SoundPlayer::PlayErrorSound();
+
         ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"nom\" est obligatoire.") );
@@ -242,18 +256,27 @@ void MainWindow::ValiderContact()
     }
     else if(ui->editPrenom->text().isEmpty() && !(ui->editNom->text().isEmpty()))   // si Champ PRENOM vide
     {
+        // On joue le son de l'erreur
+        SoundPlayer::PlayErrorSound();
+
         ui->editPrenom->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
         ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"prénom\" est obligatoire.") );
     }
     else if(ui->editNom->text().isEmpty() && ui->editPrenom->text().isEmpty())  // si les champs NOM et PRENOM sont vides
     {
+        // On joue le son de l'erreur
+        SoundPlayer::PlayErrorSound();
+
         ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editPrenom->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Les champs \"nom\" et \"prénom\" sont obligatoires.") );
     }
     else
     {
+        // On joue le son du bouton
+        SoundPlayer::PlayButtonSound();
+
         if(!ModeAjout)
         {
             QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
@@ -292,6 +315,9 @@ void MainWindow::ValiderContact()
  */
 void MainWindow::SupprimerContact()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     if(gc.GetAllContacts().size() > 0 && !ModeAjout)
     {
         QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
@@ -310,6 +336,9 @@ void MainWindow::SupprimerContact()
  */
 void MainWindow::ChooseImage()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open Image"), "", tr("Image Files (*.png *.jpg *.bmp *.jpeg)"));
 
     if(!fileName.isEmpty())

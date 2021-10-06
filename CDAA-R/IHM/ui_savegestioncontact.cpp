@@ -9,7 +9,7 @@
 
 #include "ui_savegestioncontact.h"
 #include "ui_ui_savegestioncontact.h"
-//#include "STORAGE/jsonstorage.h"
+#include "LOGIC/soundplayer.h"
 
 #include <QStandardPaths>
 
@@ -43,6 +43,9 @@ UI_SaveGestionContact::~UI_SaveGestionContact()
  */
 void UI_SaveGestionContact::Import()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     GestionContact gc = this->jss.Load();
 
     //Ne pas charger si le fichier n'existait pas ou était vide
@@ -62,6 +65,9 @@ void UI_SaveGestionContact::Import()
  */
 void UI_SaveGestionContact::Export()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
 //    GestionContact gc0;
 //    gc = &gc0;
 //    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
@@ -78,5 +84,8 @@ void UI_SaveGestionContact::Export()
  */
 void UI_SaveGestionContact::Fermer()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     this->close();
 }

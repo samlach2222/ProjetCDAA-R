@@ -8,7 +8,7 @@
 
 #include "ui_interactioncontact.h"
 #include "ui_ui_interactioncontact.h"
-//#include <LOGIC/gestioncontact.h>
+#include <LOGIC/soundplayer.h>
 
 #include <QMessageBox>
 
@@ -47,6 +47,9 @@ UI_InteractionContact::~UI_InteractionContact()
  */
 void UI_InteractionContact::ValidateAllInteractions()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     emit sendContactToMainWindow(this->contact);
     this->close();
 }
@@ -56,6 +59,9 @@ void UI_InteractionContact::ValidateAllInteractions()
  */
 void UI_InteractionContact::AddInteraction()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     ModeAjoutInteraction = 1;
     ui->frameEditInteraction->setVisible(1);
     ui->editDateCreation->setDisabled(1);
@@ -69,6 +75,9 @@ void UI_InteractionContact::AddInteraction()
  */
 void UI_InteractionContact::SupprimerInteraction()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     if(this->contact.GetListInteraction().size() > 0 && !ModeAjoutInteraction)
     {
         QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
@@ -89,24 +98,36 @@ void UI_InteractionContact::ValiderInteraction()
 {
     if(ui->editTitre->text().isEmpty() && !(ui->editDescription->toPlainText().isEmpty()))    // si Champ NOM vide
     {
+        // On joue le son de l'erreur
+        SoundPlayer::PlayErrorSound();
+
         ui->editTitre->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editDescription->setStyleSheet("QPlainTextEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"titre\" est obligatoire.") );
     }
     else if(ui->editDescription->toPlainText().isEmpty() && !(ui->editTitre->text().isEmpty()))   // si Champ PRENOM vide
     {
+        // On joue le son de l'erreur
+        SoundPlayer::PlayErrorSound();
+
         ui->editDescription->setStyleSheet("QPlainTextEdit { border-style: outset; border-width: 2px; border-color: red;}");
         ui->editTitre->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"description\" est obligatoire.") );
     }
     else if(ui->editTitre->text().isEmpty() && ui->editDescription->toPlainText().isEmpty())  // si les champs NOM et PRENOM sont vides
     {
+        // On joue le son de l'erreur
+        SoundPlayer::PlayErrorSound();
+
         ui->editTitre->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editDescription->setStyleSheet("QPlainTextEdit { border-style: outset; border-width: 2px; border-color: red;}");
         QMessageBox::warning(this, tr("Erreur champs"), tr("Les champs \"titre\" et \"description\" sont obligatoires.") );
     }
     else
     {
+        // On joue le son du bouton
+        SoundPlayer::PlayButtonSound();
+
         if(!ModeAjoutInteraction)
         {
             QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
@@ -173,6 +194,8 @@ void UI_InteractionContact::DisplayInteractionList()
  */
 void UI_InteractionContact::ListItemClick()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
 
     ModeAjoutInteraction = 0;
     QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
