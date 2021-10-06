@@ -10,6 +10,9 @@
 
 #include <string>
 
+/**
+ * @brief La classe pour la gestion du temps et de l'heure d'une action
+ */
 class Horodatage
 {
     private:

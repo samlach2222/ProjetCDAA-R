@@ -1,7 +1,7 @@
 /**
  * @file STORAGE/jsonstorage.cpp
  *
- * @brief Le fichier header pour la sauvegarde des informations en fichier JSON
+ * @brief Le fichier header de gestion de l'import et l'export au format JSon des informations du programme
  *
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
@@ -12,6 +12,9 @@
 #include <string>
 #include "LOGIC/gestioncontact.h"
 
+/**
+ * @brief Classe pour la gestion de l'import et l'export au format JSon des informations du programme
+ */
 class JSonStorage
 {
     private:

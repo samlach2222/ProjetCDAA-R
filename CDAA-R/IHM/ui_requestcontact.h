@@ -12,6 +12,9 @@ namespace Ui {
 class UI_RequestContact;
 }
 
+/**
+ * @brief Classe pour la fenêtre de requêtes sur la base de donnée
+ */
 class UI_RequestContact : public QWidget
 {
     Q_OBJECT

@@ -12,6 +12,9 @@ namespace Ui {
 class UI_FilterContact;
 }
 
+/**
+ * @brief Classe pour la fenêtre d'application de filtre sur une recherche de contacts
+ */
 class UI_FilterContact : public QWidget
 {
     Q_OBJECT

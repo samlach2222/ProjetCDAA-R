@@ -11,7 +11,7 @@
 
 /**
  * @brief Constructeur de UI_RequestContact
- * @param[ou] parent    QWidget de création de classe
+ * @param[out] parent    QWidget de création de classe
  */
 UI_RequestContact::UI_RequestContact(QWidget *parent) :
     QWidget(parent),

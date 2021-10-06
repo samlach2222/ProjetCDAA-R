@@ -12,6 +12,7 @@
  * @brief Constructeur de la classe Interaction
  * @param[in] id        L'id de l'interaction
  * @param[in] c     Le contenu de l'interaction
+ * @param[in] titre     Le titre de l'interaction
  */
 
 Interaction::Interaction(int id, std::string c, std::string titre)
@@ -49,16 +50,28 @@ void Interaction::SetContenu(std::string c)
     this->contenu = c;
 }
 
+/**
+ * @brief Retourne l'horodatage de l'interaction
+ * @return l'horodatage de l'interaction
+ */
 Horodatage Interaction::GetHorodatage()
 {
     return this->horodatage;
 }
 
+/**
+ * @brief Retourne le titre de l'interaction
+ * @return le titre de l'interaction
+ */
 std::string Interaction::getTitre()
 {
     return this->titre;
 }
 
+/**
+ * @brief Remplace le titre de l'interaction
+ * @param[in] titre     Le nouveau titre
+ */
 void Interaction::setTitre(std::string titre)
 {
     this->titre = titre;

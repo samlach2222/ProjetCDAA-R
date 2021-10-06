@@ -10,6 +10,9 @@
 #include "LOGIC/gestioncontact.h"  //inclus LOGIC/fichecontact.h
 #include <string>
 
+/**
+ * @brief Classe pour la gestion de la base de données
+ */
 class DatabaseStorage
 {
     public:

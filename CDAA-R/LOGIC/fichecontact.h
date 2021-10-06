@@ -12,6 +12,9 @@
 #include "horodatage.h"
 #include "interaction.h"
 
+/**
+ * @brief Classe pour les détails d'un contact et ses interactions
+ */
 class FicheContact
 {
     private:

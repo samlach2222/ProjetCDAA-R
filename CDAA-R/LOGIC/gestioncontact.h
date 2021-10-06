@@ -13,6 +13,9 @@
 #include "log.h"
 #include <vector>
 
+/**
+ * @brief Classe pour la gestion des contacts de l'application
+ */
 class GestionContact
 {
     private:

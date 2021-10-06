@@ -9,6 +9,9 @@
 #include <vector>
 #include <string>
 
+/**
+ * @brief Classe pour les logs de l'application
+ */
 class Log
 {
     private :

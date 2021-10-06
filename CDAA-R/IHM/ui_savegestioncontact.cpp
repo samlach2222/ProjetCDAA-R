@@ -1,6 +1,6 @@
 /**
  * @file IHM/ui_savegestioncontact.cpp
- * @brief Permet l'import et l'export des informations au format JSON
+ * @brief Permet de gérer l'import et l'export des informations au format JSON
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
  * @version 1.2

@@ -9,6 +9,9 @@
 #include <string>
 #include "horodatage.h"
 
+/**
+ * @brief Classe pour une intéraction
+ */
 class Interaction
 {
     private:

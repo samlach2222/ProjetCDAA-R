@@ -169,6 +169,7 @@ std::vector<Interaction> FicheContact::GetListInteraction()
 /**
  * @brief Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions
  * @param[in] contenuInteraction        Le contenu à partir duquel l'interaction sera créé
+ * @param[in] titreInteraction        Le titre de l'interaction
  */
 void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction)
 {

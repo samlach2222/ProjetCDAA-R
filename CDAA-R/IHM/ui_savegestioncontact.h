@@ -1,6 +1,6 @@
 /**
  * @file IHM/ui_savegestioncontact.h
- * @brief Fichier header pour l'import export des données en Json depuis l'interface graphique
+ * @brief Fichier header pour l'import et export des données en Json depuis l'interface graphique
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
  */
@@ -15,6 +15,9 @@ namespace Ui {
 class UI_SaveGestionContact;
 }
 
+/**
+ * @brief Classe pour l'import et export des données en Json depuis l'interface graphique
+ */
 class UI_SaveGestionContact : public QWidget
 {
     Q_OBJECT
