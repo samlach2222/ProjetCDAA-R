@@ -21,6 +21,7 @@ SOURCES += \
     LOGIC/interaction.cpp \
     LOGIC/log.cpp \
     LOGIC/soundplayer.cpp \
+    LOGIC/tagsinteraction.cpp \
     STORAGE/databasestorage.cpp \
     STORAGE/jsonstorage.cpp \
     main.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     LOGIC/interaction.h \
     LOGIC/log.h \
     LOGIC/soundplayer.h \
+    LOGIC/tagsinteraction.h \
     STORAGE/databasestorage.h \
     STORAGE/jsonstorage.h
 

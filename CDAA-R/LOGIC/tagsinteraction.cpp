@@ -1,0 +1,34 @@
+/**
+ * @file LOGIC/tagsInteraction.cpp
+ * @brief Contient le tableau pour gèrer les tags des intéractions
+ * @author Samuel LACHAUD
+ * @version 1.0
+ * @date 06/10/2021
+ */
+#include "tagsinteraction.h"
+
+/**
+ * @brief Constructeur de la classe de gestion des tags d'intéraction
+ */
+tagsInteraction::tagsInteraction()
+{
+    this->tags = std::vector<std::tuple<std::string, QDate>>();
+}
+
+/**
+ * @brief retourne le tableaux des couple (todo et date)
+ * @return tableau de couple todo date
+ */
+std::vector<std::tuple<std::string, QDate>> tagsInteraction::getTags()
+{
+    return this->tags;
+}
+
+/**
+ * @brief Interaction::setTags
+ * @param tags
+ */
+void tagsInteraction::setTags(std::vector<std::tuple<std::string, QDate>> tags)
+{
+    this->tags = tags;
+}

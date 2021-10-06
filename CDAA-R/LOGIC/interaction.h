@@ -8,6 +8,7 @@
 
 #include <string>
 #include "horodatage.h"
+#include "tagsinteraction.h"
 
 /**
  * @brief Classe pour une intéraction
@@ -19,6 +20,7 @@ class Interaction
         std::string titre;
         std::string contenu;
         Horodatage horodatage;
+        tagsInteraction tags;
     public:
         Interaction(int id, std::string, std::string);
         int GetId();
@@ -27,6 +29,8 @@ class Interaction
         Horodatage GetHorodatage();
         std::string getTitre();
         void setTitre(std::string);
+        tagsInteraction getTags();
+        void setTags(tagsInteraction);
 };
 
 #endif // INTERACTION_H

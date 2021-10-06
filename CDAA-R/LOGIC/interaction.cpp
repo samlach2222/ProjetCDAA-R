@@ -20,6 +20,7 @@ Interaction::Interaction(int id, std::string c, std::string titre)
     this->id = id;
     this->horodatage = Horodatage();
     this->titre = titre;
+    this->tags = tagsInteraction();
 }
 
 /**
@@ -76,3 +77,20 @@ void Interaction::setTitre(std::string titre)
     this->titre = titre;
 }
 
+/**
+ * @brief Permet de récupérer les tags d'un intéraction
+ * @return classe des tags d'intéraction
+ */
+tagsInteraction Interaction::getTags()
+{
+    return this->tags;
+}
+
+/**
+ * @brief Permet de changer la valeur des tags d'une intéraction
+ * @param[in] tags d'une intéraction
+ */
+void Interaction::setTags(tagsInteraction tags)
+{
+    this->tags = tags;
+}
