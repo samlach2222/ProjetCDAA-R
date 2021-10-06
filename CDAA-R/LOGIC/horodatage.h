@@ -23,9 +23,9 @@ class Horodatage
         int minute;
         int seconde;
     public:
-        Horodatage(int j, int m, int a, int heu, int min, int sec);
+        Horodatage(int, int, int, int, int, int);
         Horodatage();
-        Horodatage(std::string strDate);
+        Horodatage(std::string);
         std::string ToString();
         int GetJour();
         int GetMois();
@@ -34,12 +34,12 @@ class Horodatage
         int GetMinute();
         int GetSeconde();
 
-        void SetJour(int j);
-        void SetMois(int m);
-        void SetAnnee(int a);
-        void SetHeure(int heu);
-        void SetMinute(int min);
-        void SetSeconde(int sec);
+        void SetJour(int);
+        void SetMois(int);
+        void SetAnnee(int);
+        void SetHeure(int);
+        void SetMinute(int);
+        void SetSeconde(int);
 
 };
 
