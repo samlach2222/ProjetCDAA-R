@@ -70,12 +70,17 @@ $(function() {
   <div class="headertitle"><div class="title">Référence de la classe FicheContact</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe pour les détails d'un contact et ses interactions.  
+ <a href="class_fiche_contact.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fichecontact_8h_source.html">fichecontact.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a08d85b3af9bb7b02a0b45645b29e7879"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a08d85b3af9bb7b02a0b45645b29e7879">FicheContact</a> (std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo)</td></tr>
-<tr class="memdesc:a08d85b3af9bb7b02a0b45645b29e7879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_fiche_contact.html">FicheContact</a>.  <a href="class_fiche_contact.html#a08d85b3af9bb7b02a0b45645b29e7879">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a08d85b3af9bb7b02a0b45645b29e7879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589941a66f9d5bed3aecfa36e54b1ae2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a589941a66f9d5bed3aecfa36e54b1ae2">FicheContact</a> (int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, <a class="el" href="class_horodatage.html">Horodatage</a> dateCreation)</td></tr>
+<tr class="memdesc:a589941a66f9d5bed3aecfa36e54b1ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d&#39;un contact et ses interactions.">FicheContact</a>.  <a href="class_fiche_contact.html#a589941a66f9d5bed3aecfa36e54b1ae2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a589941a66f9d5bed3aecfa36e54b1ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47ddfe7eea58d73f8ec1e9474f6876c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5">getId</a> ()</td></tr>
 <tr class="memdesc:a47ddfe7eea58d73f8ec1e9474f6876c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne l'id.  <a href="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a47ddfe7eea58d73f8ec1e9474f6876c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,19 +126,21 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a843826ee1b8b4e5c446f71c930ef556e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_interaction.html">Interaction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e">GetListInteraction</a> ()</td></tr>
 <tr class="memdesc:a843826ee1b8b4e5c446f71c930ef556e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la liste des intéractions du contact.  <a href="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a843826ee1b8b4e5c446f71c930ef556e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71fa7eac025c91a38b0384f7840da4a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a71fa7eac025c91a38b0384f7840da4a9">AddInteraction</a> (<a class="el" href="class_interaction.html">Interaction</a> i)</td></tr>
-<tr class="memdesc:a71fa7eac025c91a38b0384f7840da4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute l'interaction <code>i</code> à la liste des interactions.  <a href="class_fiche_contact.html#a71fa7eac025c91a38b0384f7840da4a9">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a71fa7eac025c91a38b0384f7840da4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061c41baf9e2372e8b980f08f00bf709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a061c41baf9e2372e8b980f08f00bf709">AddInteraction</a> (std::string contenuInteraction, std::string titreInteraction)</td></tr>
+<tr class="memdesc:a061c41baf9e2372e8b980f08f00bf709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions.  <a href="class_fiche_contact.html#a061c41baf9e2372e8b980f08f00bf709">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a061c41baf9e2372e8b980f08f00bf709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd76648ba180fd53fcb5e3853a12a9c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#afd76648ba180fd53fcb5e3853a12a9c1">RemoveInteraction</a> (int id)</td></tr>
 <tr class="memdesc:afd76648ba180fd53fcb5e3853a12a9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlève l'interaction d'id <code>id</code> de la liste des interactions.  <a href="class_fiche_contact.html#afd76648ba180fd53fcb5e3853a12a9c1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afd76648ba180fd53fcb5e3853a12a9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f6b0c7e3dda229b3ccf320cc8ea3b1d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d">ToString</a> ()</td></tr>
-<tr class="memdesc:a9f6b0c7e3dda229b3ccf320cc8ea3b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne un string contenant le nom et le prénom.  <a href="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a9f6b0c7e3dda229b3ccf320cc8ea3b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule.  <a href="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a9f6b0c7e3dda229b3ccf320cc8ea3b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a08d85b3af9bb7b02a0b45645b29e7879" name="a08d85b3af9bb7b02a0b45645b29e7879"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08d85b3af9bb7b02a0b45645b29e7879">&#9670;&nbsp;</a></span>FicheContact()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Classe pour les détails d'un contact et ses interactions. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a589941a66f9d5bed3aecfa36e54b1ae2" name="a589941a66f9d5bed3aecfa36e54b1ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589941a66f9d5bed3aecfa36e54b1ae2">&#9670;&nbsp;</a></span>FicheContact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,6 +148,12 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="memname">FicheContact::FicheContact </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>nom</em>, </td>
         </tr>
@@ -172,7 +185,13 @@ Fonctions membres publiques</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QImage&#160;</td>
-          <td class="paramname"><em>photo</em>&#160;</td>
+          <td class="paramname"><em>photo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_horodatage.html">Horodatage</a>&#160;</td>
+          <td class="paramname"><em>dateCreation</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,26 +201,26 @@ Fonctions membres publiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructeur de la classe <a class="el" href="class_fiche_contact.html">FicheContact</a>. </p>
+<p>Constructeur de la classe <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d&#39;un contact et ses interactions.">FicheContact</a>. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>L'id du contact </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nom</td><td>Nom du contact </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">prenom</td><td>Prénom du contact </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">entreprise</td><td>Entreprise du contact </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mail</td><td>Mail du contact </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">telephone</td><td>Numéro de téléphone du contact </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">photo</td><td>Photo de profile du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dateCreation</td><td>Date de création </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bogue:</a></b></dt><dd>id non géré </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">A faire:</a></b></dt><dd>récupérer le plus grand id unique </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a71fa7eac025c91a38b0384f7840da4a9" name="a71fa7eac025c91a38b0384f7840da4a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71fa7eac025c91a38b0384f7840da4a9">&#9670;&nbsp;</a></span>AddInteraction()</h2>
+<a id="a061c41baf9e2372e8b980f08f00bf709" name="a061c41baf9e2372e8b980f08f00bf709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061c41baf9e2372e8b980f08f00bf709">&#9670;&nbsp;</a></span>AddInteraction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,17 +228,28 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="memname">void FicheContact::AddInteraction </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_interaction.html">Interaction</a>&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>contenuInteraction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>titreInteraction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ajoute l'interaction <code>i</code> à la liste des interactions. </p>
+<p>Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>L'interaction à ajouter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">contenuInteraction</td><td>Le contenu à partir duquel l'interaction sera créé </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">titreInteraction</td><td>Le titre de l'interaction </td></tr>
   </table>
   </dd>
 </dl>
@@ -283,15 +313,6 @@ Fonctions membres publiques</h2></td></tr>
 
 <p>Retourne l'id. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>l'id </dd></dl>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5_icgraph.png" border="0" usemap="#aclass_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5_icgraph" alt=""/></div>
-<map name="aclass_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5_icgraph" id="aclass_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5_icgraph">
-<area shape="rect" title="Retourne l&#39;id." alt="" coords="256,5,391,32"/>
-<area shape="rect" href="class_gestion_contact.html#a6850914e2d978856ceaa806120c38e8d" title="Permet de modifier un contact en le remplacant par un contact c" alt="" coords="5,5,208,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -612,7 +633,7 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Retourne un string contenant le nom et le prénom. </p>
+<p>Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>un string contenant le nom et le prénom </dd></dl>
 
 </div>

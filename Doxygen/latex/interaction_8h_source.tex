@@ -5,22 +5,27 @@
 \DoxyCodeLine{1 }
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef INTERACTION\_H}}
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#define INTERACTION\_H}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}horodatage.h"{}}}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_interaction}{Interaction}}}
-\DoxyCodeLine{12 \{}
-\DoxyCodeLine{13     \textcolor{keyword}{private}:}
-\DoxyCodeLine{14         \textcolor{keywordtype}{int} id;}
-\DoxyCodeLine{15         std::string contenu;}
-\DoxyCodeLine{16         \mbox{\hyperlink{class_horodatage}{Horodatage}} horodatage;}
-\DoxyCodeLine{17     \textcolor{keyword}{public}:}
-\DoxyCodeLine{18         \mbox{\hyperlink{class_interaction_a2f95b43ad63c3a18f61f1c49efc070df}{Interaction}}(std::string c);}
-\DoxyCodeLine{19         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_interaction_a3a5ec7b4c2b0dd43305288db0ab4afbc}{GetId}}();}
-\DoxyCodeLine{20         std::string \mbox{\hyperlink{class_interaction_a6080d109220d28d490c9d61b5710ebfc}{GetContenu}}();}
-\DoxyCodeLine{21         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_interaction_ac4a8ce43183b666deae658dc61639fda}{SetContenu}}(std::string c);}
-\DoxyCodeLine{22 \};}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INTERACTION\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}horodatage.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_interaction}{Interaction}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keyword}{private}:}
+\DoxyCodeLine{18         \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{19         std::string titre;}
+\DoxyCodeLine{20         std::string contenu;}
+\DoxyCodeLine{21         \mbox{\hyperlink{class_horodatage}{Horodatage}} horodatage;}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}{Interaction}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, std::string, std::string);}
+\DoxyCodeLine{24         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_interaction_a3a5ec7b4c2b0dd43305288db0ab4afbc}{GetId}}();}
+\DoxyCodeLine{25         std::string \mbox{\hyperlink{class_interaction_a6080d109220d28d490c9d61b5710ebfc}{GetContenu}}();}
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_interaction_a7fa16276ece67880fdba83723e75d96c}{SetContenu}}(std::string);}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_horodatage}{Horodatage}} \mbox{\hyperlink{class_interaction_aed63b112cb40fb85bd5ca5e8127c1433}{GetHorodatage}}();}
+\DoxyCodeLine{28         std::string \mbox{\hyperlink{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}{getTitre}}();}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}{setTitre}}(std::string);}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INTERACTION\_H}}
 
 \end{DoxyCode}

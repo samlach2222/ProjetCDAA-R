@@ -1,7 +1,17 @@
+/**
+ * @file LOGIC/soundplayer.h
+ *
+ * @brief Fichier Header pour la gestion des sons et musiques de l'application
+ *
+ * @author Samuel LACHAUD
+ */
+
 #ifndef SOUNDPLAYER_H
 #define SOUNDPLAYER_H
-#include <QtMultimedia/QMediaPlayer>
 
+/**
+ * @brief Classe pour la gestion des sons de l'application
+ */
 class SoundPlayer
 {
 public:

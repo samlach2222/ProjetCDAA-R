@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modifycontact_0',['ModifyContact',['../class_gestion_contact.html#a6850914e2d978856ceaa806120c38e8d',1,'GestionContact']]]
+  ['jsonstorage_0',['JSonStorage',['../class_j_son_storage.html#a06f4e63b46301013d6ec08b2a678ae9c',1,'JSonStorage']]]
 ];

@@ -1,5 +1,14 @@
 \hypertarget{class_horodatage}{}\doxysection{Référence de la classe Horodatage}
 \label{class_horodatage}\index{Horodatage@{Horodatage}}
+
+
+La classe pour la gestion du temps et de l\textquotesingle{}heure d\textquotesingle{}une action.  
+
+
+
+
+{\ttfamily \#include $<$horodatage.\+h$>$}
+
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -8,6 +17,8 @@
 \mbox{\Hypertarget{class_horodatage_a8c9ebdc5bd52f17e6cc180d892960c95}\label{class_horodatage_a8c9ebdc5bd52f17e6cc180d892960c95}} 
 {\bfseries Horodatage} ()
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_horodatage}{Horodatage}} avec date et heure {\bfseries{automatique}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_horodatage_a7d6f66fa42e7f90ad145f7413a8b0b2b}{Horodatage}} (std\+::string str\+Date)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_horodatage}{Horodatage}} à partir d\textquotesingle{}un string généré par le {\ttfamily \mbox{\hyperlink{class_horodatage_a433b52bcac9fdad6c460421a063175ca}{To\+String()}}} \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_horodatage_a433b52bcac9fdad6c460421a063175ca}{To\+String}} ()
 \begin{DoxyCompactList}\small\item\em Renvoie en chaine de caractère la date et l\textquotesingle{}heure de l\textquotesingle{}horodatage afin de le rendre affichable. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_horodatage_a606ae08a8b82fd9c2aa3db106208db06}{Get\+Jour}} ()
@@ -36,11 +47,14 @@ void \mbox{\hyperlink{class_horodatage_a8d4af859408b896ddb17ad20e4a39c81}{Set\+S
 \begin{DoxyCompactList}\small\item\em Setter de Secondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Description détaillée}
+La classe pour la gestion du temps et de l\textquotesingle{}heure d\textquotesingle{}une action. 
+
 \doxysubsection{Documentation des constructeurs et destructeur}
 \mbox{\Hypertarget{class_horodatage_a47f1312c886a43ecee77f4454f180b42}\label{class_horodatage_a47f1312c886a43ecee77f4454f180b42}} 
 \index{Horodatage@{Horodatage}!Horodatage@{Horodatage}}
 \index{Horodatage@{Horodatage}!Horodatage@{Horodatage}}
-\doxysubsubsection{\texorpdfstring{Horodatage()}{Horodatage()}}
+\doxysubsubsection{\texorpdfstring{Horodatage()}{Horodatage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Horodatage\+::\+Horodatage (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{int}]{m,  }\item[{int}]{a,  }\item[{int}]{heu,  }\item[{int}]{min,  }\item[{int}]{sec }\end{DoxyParamCaption})}
 
 
@@ -60,6 +74,21 @@ Constructeur de la classe \mbox{\hyperlink{class_horodatage}{Horodatage}} avec l
 \mbox{\texttt{ in}}  & {\em min} & Variable stockant les minutes en {\bfseries{entier}} \\
 \hline
 \mbox{\texttt{ in}}  & {\em sec} & Variable stockant les secondes en {\bfseries{entier}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_horodatage_a7d6f66fa42e7f90ad145f7413a8b0b2b}\label{class_horodatage_a7d6f66fa42e7f90ad145f7413a8b0b2b}} 
+\index{Horodatage@{Horodatage}!Horodatage@{Horodatage}}
+\index{Horodatage@{Horodatage}!Horodatage@{Horodatage}}
+\doxysubsubsection{\texorpdfstring{Horodatage()}{Horodatage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Horodatage\+::\+Horodatage (\begin{DoxyParamCaption}\item[{std\+::string}]{str\+Date }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_horodatage}{Horodatage}} à partir d\textquotesingle{}un string généré par le {\ttfamily \mbox{\hyperlink{class_horodatage_a433b52bcac9fdad6c460421a063175ca}{To\+String()}}} 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em str\+Date} & La date sous forme de string qui sera convertie \\
 \hline
 \end{DoxyParams}
 
@@ -154,8 +183,8 @@ Retourne les secondes en {\bfseries{entier}}
 Setter d\textquotesingle{}Annee. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em a} & Variable que l\textquotesingle{}on assigne à l\textquotesingle{}annee \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em a} & Variable que l\textquotesingle{}on assigne à l\textquotesingle{}annee \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_horodatage_aada1a9212cc751c32e9494b12fba7689}\label{class_horodatage_aada1a9212cc751c32e9494b12fba7689}} 
@@ -169,8 +198,8 @@ Setter d\textquotesingle{}Annee.
 Setter de l\textquotesingle{}Heure. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em j} & Variable que l\textquotesingle{}on assigne au l\textquotesingle{}Heure \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em heu} & Variable que l\textquotesingle{}on assigne au l\textquotesingle{}Heure \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_horodatage_abf99b3ec558b99e8bb2c503aea95fee0}\label{class_horodatage_abf99b3ec558b99e8bb2c503aea95fee0}} 
@@ -184,8 +213,8 @@ Setter de l\textquotesingle{}Heure.
 Setter de Jour. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em j} & Variable que l\textquotesingle{}on assigne au Jour \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em j} & Variable que l\textquotesingle{}on assigne au Jour \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_horodatage_a3bb0fb1f632019ad5378026d8f1d0482}\label{class_horodatage_a3bb0fb1f632019ad5378026d8f1d0482}} 
@@ -199,8 +228,8 @@ Setter de Jour.
 Setter des Minutes. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em m} & Variable que l\textquotesingle{}on assigne aux Minutes \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em min} & Variable que l\textquotesingle{}on assigne aux Minutes \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_horodatage_a66e2131205420fc47c3bdb5bf2329be3}\label{class_horodatage_a66e2131205420fc47c3bdb5bf2329be3}} 
@@ -214,8 +243,8 @@ Setter des Minutes.
 Setter de Mois. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em m} & Variable que l\textquotesingle{}on assigne au Mois \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em m} & Variable que l\textquotesingle{}on assigne au Mois \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_horodatage_a8d4af859408b896ddb17ad20e4a39c81}\label{class_horodatage_a8d4af859408b896ddb17ad20e4a39c81}} 
@@ -229,8 +258,8 @@ Setter de Mois.
 Setter de Secondes. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em a} & Variable que l\textquotesingle{}on assigne aux secondes \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em sec} & Variable que l\textquotesingle{}on assigne aux secondes \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_horodatage_a433b52bcac9fdad6c460421a063175ca}\label{class_horodatage_a433b52bcac9fdad6c460421a063175ca}} 
@@ -246,14 +275,6 @@ Renvoie en chaine de caractère la date et l\textquotesingle{}heure de l\textquo
 \begin{DoxyReturn}{Renvoie}
 Retourne la date et l\textquotesingle{}heure au format {\bfseries{dd/\+MM/yyyy hh\+:mm\+:ss}} en chaine de caractère 
 \end{DoxyReturn}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_horodatage_a433b52bcac9fdad6c460421a063175ca_icgraph}
-\end{center}
-\end{figure}
 
 
 La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}

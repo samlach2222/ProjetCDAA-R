@@ -6,27 +6,19 @@ La classe de gestion de l\textquotesingle{}import et l\textquotesingle{}export a
 
 
 {\ttfamily \#include \char`\"{}jsonstorage.\+h\char`\"{}}\newline
-Graphe des dépendances par inclusion de jsonstorage.\+cpp\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{jsonstorage_8cpp__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Fonctions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{jsonstorage_8cpp_a2dacb0dcbe09431888fc55adae62c040}{Save}} (\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} gc)
-\begin{DoxyCompactList}\small\item\em Permet de sauvegarder l\textquotesingle{}ensemble des contacts {\bfseries{gc}} dans le fichier Json afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} \mbox{\hyperlink{jsonstorage_8cpp_a080dd8000867a317128cc29755b418c2}{Load}} ()
-\begin{DoxyCompactList}\small\item\em Permer de Charger depuis le fichier Json toutes les informations des contacts afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\ttfamily \#include $<$QBuffer$>$}\newline
+{\ttfamily \#include $<$QDir$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$QJson\+Document$>$}\newline
+{\ttfamily \#include $<$QJson\+Object$>$}\newline
+{\ttfamily \#include $<$QStandard\+Paths$>$}\newline
+{\ttfamily \#include $<$QText\+Stream$>$}\newline
 
 
 \doxysubsection{Description détaillée}
 La classe de gestion de l\textquotesingle{}import et l\textquotesingle{}export au format JSon des informations du programme. 
 
-Le fichier header pour la sauvegarde des informations en fichier JSON.
+Le fichier header de gestion de l\textquotesingle{}import et l\textquotesingle{}export au format JSon des informations du programme.
 
 \begin{DoxyAuthor}{Auteur}
 Samuel LACHAUD 
@@ -34,7 +26,7 @@ Samuel LACHAUD
 Loïs PAZOLA 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.\+0 
+1.\+2 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
 22/09/2021
@@ -44,38 +36,3 @@ Samuel LACHAUD
 
 Loïs PAZOLA 
 \end{DoxyAuthor}
-
-
-\doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{jsonstorage_8cpp_a080dd8000867a317128cc29755b418c2}\label{jsonstorage_8cpp_a080dd8000867a317128cc29755b418c2}} 
-\index{jsonstorage.cpp@{jsonstorage.cpp}!Load@{Load}}
-\index{Load@{Load}!jsonstorage.cpp@{jsonstorage.cpp}}
-\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Permer de Charger depuis le fichier Json toutes les informations des contacts afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} 
-
-\begin{DoxyReturn}{Renvoie}
-Retourne l\textquotesingle{}ensemble des informations de contacts sauvegardées 
-\end{DoxyReturn}
-\begin{DoxyRefDesc}{A faire}
-\item[\mbox{\hyperlink{todo__todo000008}{A faire}}]METHODE A ECRIRE \end{DoxyRefDesc}
-\mbox{\Hypertarget{jsonstorage_8cpp_a2dacb0dcbe09431888fc55adae62c040}\label{jsonstorage_8cpp_a2dacb0dcbe09431888fc55adae62c040}} 
-\index{jsonstorage.cpp@{jsonstorage.cpp}!Save@{Save}}
-\index{Save@{Save}!jsonstorage.cpp@{jsonstorage.cpp}}
-\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
-{\footnotesize\ttfamily void Save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}}}]{gc }\end{DoxyParamCaption})}
-
-
-
-Permet de sauvegarder l\textquotesingle{}ensemble des contacts {\bfseries{gc}} dans le fichier Json afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em gc} & Ensemble des contacts de l\textquotesingle{}application \\
-\hline
-\end{DoxyParams}
-\begin{DoxyRefDesc}{A faire}
-\item[\mbox{\hyperlink{todo__todo000007}{A faire}}]METHODE A ECRIRE \end{DoxyRefDesc}

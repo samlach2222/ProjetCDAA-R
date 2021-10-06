@@ -12,6 +12,9 @@
 
 #include <QMessageBox>
 
+/**
+ * @brief Variable Booléenne pour savoir si on modifie ou si on crée une intéraction
+ */
 bool ModeAjoutInteraction = 1;
 
 /**
@@ -163,8 +166,8 @@ void UI_InteractionContact::ValiderInteraction()
 
 /**
  * @brief Slot permettant de récupérer la gestion contact et l'id du contact courant pour les interactions
- * @param idreceive id du contact courant
- * @param gc    Gestion contact
+ * @param[in] idreceive id du contact courant
+ * @param[in] gc    Gestion contact
  */
 void UI_InteractionContact::ReceiveIdToInteraction(int idreceive,GestionContact gc)
 {

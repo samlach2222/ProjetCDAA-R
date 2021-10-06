@@ -57,6 +57,9 @@ public slots:
     void AddOperationToLog(std::string);
 
 signals :
+    /**
+     * @brief Signal permettant d'envoyer l'id du contact auquel on met des intéraction, ainsi que la classe de gestion de contacts
+     */
     void sendIdToInteraction(int,GestionContact);
 };
 #endif // MAINWINDOW_H

@@ -1,5 +1,14 @@
 \hypertarget{class_log}{}\doxysection{Référence de la classe Log}
 \label{class_log}\index{Log@{Log}}
+
+
+Classe pour les logs de l\textquotesingle{}application.  
+
+
+
+
+{\ttfamily \#include $<$log.\+h$>$}
+
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,8 +18,13 @@
 void \mbox{\hyperlink{class_log_ab71cc07949289808dd1d8f088a0e2964}{Add\+To\+Tab\+Log}} (std\+::string log)
 \begin{DoxyCompactList}\small\item\em Ajoute un log {\ttfamily log} à la liste de logs. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_log_ae9cb1313929015d31b2298c0d1b5bf64}{get\+Tab\+Log}} ()
-\begin{DoxyCompactList}\small\item\em Retourne la liste de logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retourne la liste de logs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_a014a3cae21344cb68308059a53ecc506}{Set\+Tab\+Log}} (std\+::vector$<$ std\+::string $>$ logs)
+\begin{DoxyCompactList}\small\item\em Remplace la liste de logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Description détaillée}
+Classe pour les logs de l\textquotesingle{}application. 
 
 \doxysubsection{Documentation des fonctions membres}
 \mbox{\Hypertarget{class_log_ab71cc07949289808dd1d8f088a0e2964}\label{class_log_ab71cc07949289808dd1d8f088a0e2964}} 
@@ -28,22 +42,6 @@ Ajoute un log {\ttfamily log} à la liste de logs.
 \mbox{\texttt{ in}}  & {\em log} & Le log à ajouter \\
 \hline
 \end{DoxyParams}
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=322pt]{class_log_ab71cc07949289808dd1d8f088a0e2964_cgraph}
-\end{center}
-\end{figure}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_log_ab71cc07949289808dd1d8f088a0e2964_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_log_ae9cb1313929015d31b2298c0d1b5bf64}\label{class_log_ae9cb1313929015d31b2298c0d1b5bf64}} 
 \index{Log@{Log}!getTabLog@{getTabLog}}
 \index{getTabLog@{getTabLog}!Log@{Log}}
@@ -57,6 +55,21 @@ Retourne la liste de logs.
 \begin{DoxyReturn}{Renvoie}
 la liste de logs 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_log_a014a3cae21344cb68308059a53ecc506}\label{class_log_a014a3cae21344cb68308059a53ecc506}} 
+\index{Log@{Log}!SetTabLog@{SetTabLog}}
+\index{SetTabLog@{SetTabLog}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{SetTabLog()}{SetTabLog()}}
+{\footnotesize\ttfamily void Log\+::\+Set\+Tab\+Log (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{logs }\end{DoxyParamCaption})}
+
+
+
+Remplace la liste de logs. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em logs} & La nouvelle liste de logs \\
+\hline
+\end{DoxyParams}
 
 
 La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}

@@ -68,8 +68,6 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle"><div class="title">Référence du fichier jsonstorage.cpp</div></div>
 </div><!--header-->
 <div class="contents">
@@ -77,95 +75,25 @@ $(function() {
 <p>La classe de gestion de l'import et l'export au format JSon des informations du programme.  
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &quot;jsonstorage.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de jsonstorage.cpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="jsonstorage_8cpp__incl.png" border="0" usemap="#a_d_1_2_w_i_n_d_o_w_s_2_documents_2_git_hub_2_projet_c_d_a_a-_r_2_c_d_a_a-_r_2_s_t_o_r_a_g_e_2jsonstorage_8cpp" alt=""/></div>
-<map name="a_d_1_2_w_i_n_d_o_w_s_2_documents_2_git_hub_2_projet_c_d_a_a-_r_2_c_d_a_a-_r_2_s_t_o_r_a_g_e_2jsonstorage_8cpp" id="a_d_1_2_w_i_n_d_o_w_s_2_documents_2_git_hub_2_projet_c_d_a_a-_r_2_c_d_a_a-_r_2_s_t_o_r_a_g_e_2jsonstorage_8cpp">
-<area shape="rect" title="La classe de gestion de l&#39;import et l&#39;export au format JSon des informations du programme." alt="" coords="244,5,482,61"/>
-<area shape="rect" href="jsonstorage_8h_source.html" title=" " alt="" coords="313,109,413,136"/>
-<area shape="rect" title=" " alt="" coords="217,483,272,509"/>
-<area shape="rect" href="gestioncontact_8h.html" title="Fichier Header pour la gestion des contacts de l&#39;application." alt="" coords="224,184,385,211"/>
-<area shape="rect" href="fichecontact_8h.html" title="Fichier header pour les détails d&#39;un contact et ses interactions." alt="" coords="134,259,237,285"/>
-<area shape="rect" title=" " alt="" coords="282,333,338,360"/>
-<area shape="rect" href="log_8h.html" title="Fichier header pour les logs de l&#39;application." alt="" coords="338,259,388,285"/>
-<area shape="rect" title=" " alt="" coords="23,333,90,360"/>
-<area shape="rect" href="horodatage_8h_source.html" title=" " alt="" coords="58,408,156,435"/>
-<area shape="rect" href="interaction_8h.html" title="Fichier header pour une intéraction." alt="" coords="114,333,207,360"/>
-<area shape="rect" title=" " alt="" coords="64,483,150,509"/>
-</map>
-</div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Fonctions</h2></td></tr>
-<tr class="memitem:a2dacb0dcbe09431888fc55adae62c040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jsonstorage_8cpp.html#a2dacb0dcbe09431888fc55adae62c040">Save</a> (<a class="el" href="class_gestion_contact.html">GestionContact</a> gc)</td></tr>
-<tr class="memdesc:a2dacb0dcbe09431888fc55adae62c040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de sauvegarder l'ensemble des contacts <b>gc</b> dans le fichier Json afin <b>d'assurer l'interopérabilité</b>  <a href="jsonstorage_8cpp.html#a2dacb0dcbe09431888fc55adae62c040">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2dacb0dcbe09431888fc55adae62c040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a080dd8000867a317128cc29755b418c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_gestion_contact.html">GestionContact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jsonstorage_8cpp.html#a080dd8000867a317128cc29755b418c2">Load</a> ()</td></tr>
-<tr class="memdesc:a080dd8000867a317128cc29755b418c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permer de Charger depuis le fichier Json toutes les informations des contacts afin <b>d'assurer l'interopérabilité</b>  <a href="jsonstorage_8cpp.html#a080dd8000867a317128cc29755b418c2">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a080dd8000867a317128cc29755b418c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<code>#include &lt;QBuffer&gt;</code><br />
+<code>#include &lt;QDir&gt;</code><br />
+<code>#include &lt;QFile&gt;</code><br />
+<code>#include &lt;QJsonDocument&gt;</code><br />
+<code>#include &lt;QJsonObject&gt;</code><br />
+<code>#include &lt;QStandardPaths&gt;</code><br />
+<code>#include &lt;QTextStream&gt;</code><br />
+</div><a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p >La classe de gestion de l'import et l'export au format JSon des informations du programme. </p>
-<p >Le fichier header pour la sauvegarde des informations en fichier JSON.</p>
+<p >Le fichier header de gestion de l'import et l'export au format JSon des informations du programme.</p>
 <dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
 <dd>
 Loïs PAZOLA </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.2 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>22/09/2021</dd></dl>
 <dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
 <dd>
 Loïs PAZOLA </dd></dl>
-</div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a080dd8000867a317128cc29755b418c2" name="a080dd8000867a317128cc29755b418c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a080dd8000867a317128cc29755b418c2">&#9670;&nbsp;</a></span>Load()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_gestion_contact.html">GestionContact</a> Load </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Permer de Charger depuis le fichier Json toutes les informations des contacts afin <b>d'assurer l'interopérabilité</b> </p>
-<dl class="section return"><dt>Renvoie</dt><dd>Retourne l'ensemble des informations de contacts sauvegardées </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">A faire:</a></b></dt><dd>METHODE A ECRIRE </dd></dl>
-
-</div>
-</div>
-<a id="a2dacb0dcbe09431888fc55adae62c040" name="a2dacb0dcbe09431888fc55adae62c040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dacb0dcbe09431888fc55adae62c040">&#9670;&nbsp;</a></span>Save()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Save </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_gestion_contact.html">GestionContact</a>&#160;</td>
-          <td class="paramname"><em>gc</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Permet de sauvegarder l'ensemble des contacts <b>gc</b> dans le fichier Json afin <b>d'assurer l'interopérabilité</b> </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gc</td><td>Ensemble des contacts de l'application </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">A faire:</a></b></dt><dd>METHODE A ECRIRE </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

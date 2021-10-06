@@ -66,45 +66,191 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Connecteurs publics</a> &#124;
+<a href="#signals">Signaux</a> &#124;
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="class_main_window-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle"><div class="title">Référence de la classe MainWindow</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe pour la fenêtre principale de l'application.  
+ <a href="class_main_window.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de MainWindow:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_main_window__inherit__graph.png" border="0" usemap="#a_main_window_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_main_window_inherit__map" id="a_main_window_inherit__map">
-<area shape="rect" title=" " alt="" coords="11,80,107,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
-<div class="dynheader">
-Graphe de collaboration de MainWindow:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_main_window__coll__graph.png" border="0" usemap="#a_main_window_coll__map" alt="Collaboration graph"/></div>
-<map name="a_main_window_coll__map" id="a_main_window_coll__map">
-<area shape="rect" title=" " alt="" coords="11,80,107,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+ <div class="center">
+  <img src="class_main_window.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
 <tr class="memitem:a87e68f992e94d358a4fc3e2d388c9dcc"><td class="memItemLeft" align="right" valign="top"><a id="a87e68f992e94d358a4fc3e2d388c9dcc" name="a87e68f992e94d358a4fc3e2d388c9dcc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AddContact</b> ()</td></tr>
+<tr class="memdesc:a87e68f992e94d358a4fc3e2d388c9dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode associée au bouton d'ajout de contact permettant d'ajouter un contact à la gestion de contact. <br /></td></tr>
 <tr class="separator:a87e68f992e94d358a4fc3e2d388c9dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e3859336456027de52cb8d1d3760cd"><td class="memItemLeft" align="right" valign="top"><a id="a62e3859336456027de52cb8d1d3760cd" name="a62e3859336456027de52cb8d1d3760cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenFC</b> ()</td></tr>
+<tr class="memdesc:a62e3859336456027de52cb8d1d3760cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode permettant l'ouverte de FilterContact si aucune fenêtre n'est ouverte. <br /></td></tr>
+<tr class="separator:a62e3859336456027de52cb8d1d3760cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a301d13721bbe313ee57308271b2e85"><td class="memItemLeft" align="right" valign="top"><a id="a5a301d13721bbe313ee57308271b2e85" name="a5a301d13721bbe313ee57308271b2e85"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenRC</b> ()</td></tr>
+<tr class="memdesc:a5a301d13721bbe313ee57308271b2e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode permettant l'ouverte de RequestContact si aucune fenêtre n'est ouverte. <br /></td></tr>
+<tr class="separator:a5a301d13721bbe313ee57308271b2e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1199a7e4c3ac89afed5c373f2d4048b2"><td class="memItemLeft" align="right" valign="top"><a id="a1199a7e4c3ac89afed5c373f2d4048b2" name="a1199a7e4c3ac89afed5c373f2d4048b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenSGC</b> ()</td></tr>
+<tr class="memdesc:a1199a7e4c3ac89afed5c373f2d4048b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode permettant l'ouverte de SaveGestionContact si aucune fenêtre n'est ouverte. <br /></td></tr>
+<tr class="separator:a1199a7e4c3ac89afed5c373f2d4048b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe03af91aefcd7625865ccf6f2e3267"><td class="memItemLeft" align="right" valign="top"><a id="afbe03af91aefcd7625865ccf6f2e3267" name="afbe03af91aefcd7625865ccf6f2e3267"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ListItemDoubleClick</b> ()</td></tr>
+<tr class="memdesc:afbe03af91aefcd7625865ccf6f2e3267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'intéraction, si aucune fenêtre n'est ouverte. <br /></td></tr>
+<tr class="separator:afbe03af91aefcd7625865ccf6f2e3267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ca629263c613454cfefc0c518c4ad2"><td class="memItemLeft" align="right" valign="top"><a id="ab8ca629263c613454cfefc0c518c4ad2" name="ab8ca629263c613454cfefc0c518c4ad2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LogsDoubleClick</b> ()</td></tr>
+<tr class="memdesc:ab8ca629263c613454cfefc0c518c4ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode permettant de supprimer l'intéraction des logs. <br /></td></tr>
+<tr class="separator:ab8ca629263c613454cfefc0c518c4ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e183b8ba1bcfad51ed48a81d94ed8c"><td class="memItemLeft" align="right" valign="top"><a id="a30e183b8ba1bcfad51ed48a81d94ed8c" name="a30e183b8ba1bcfad51ed48a81d94ed8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ListItemClick</b> ()</td></tr>
+<tr class="memdesc:a30e183b8ba1bcfad51ed48a81d94ed8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode liée au clic sur un contact permettant l'édition de celui-ci. <br /></td></tr>
+<tr class="separator:a30e183b8ba1bcfad51ed48a81d94ed8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa4f17b6785193c45f23196b953844c"><td class="memItemLeft" align="right" valign="top"><a id="abfa4f17b6785193c45f23196b953844c" name="abfa4f17b6785193c45f23196b953844c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ValiderContact</b> ()</td></tr>
+<tr class="memdesc:abfa4f17b6785193c45f23196b953844c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de sauvegarder un nouveau contact ou la modification d'un contact déjà existant avec le bouton valider. <br /></td></tr>
+<tr class="separator:abfa4f17b6785193c45f23196b953844c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd432e37a1121b9377db225c7f7ff300"><td class="memItemLeft" align="right" valign="top"><a id="acd432e37a1121b9377db225c7f7ff300" name="acd432e37a1121b9377db225c7f7ff300"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SupprimerContact</b> ()</td></tr>
+<tr class="memdesc:acd432e37a1121b9377db225c7f7ff300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode permettant du supprimer le contact séléctionné a partir du bouton. <br /></td></tr>
+<tr class="separator:acd432e37a1121b9377db225c7f7ff300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1ebd0dab99fb187071fd3f0cf9a8a9"><td class="memItemLeft" align="right" valign="top"><a id="aad1ebd0dab99fb187071fd3f0cf9a8a9" name="aad1ebd0dab99fb187071fd3f0cf9a8a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ChooseImage</b> ()</td></tr>
+<tr class="memdesc:aad1ebd0dab99fb187071fd3f0cf9a8a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de changer l'image d'un contact par appui sur celui-ci par ouverture d'un popup. <br /></td></tr>
+<tr class="separator:aad1ebd0dab99fb187071fd3f0cf9a8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35f62a002e2f5301d3526ece23071ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae">ReceiveContactToMainWindow</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
+<tr class="memdesc:aa35f62a002e2f5301d3526ece23071ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot permettant de mettre à jour le contact après édition de ses intéractions.  <a href="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa35f62a002e2f5301d3526ece23071ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb9ceab65944f3a685a9d9d236e3a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f">AddOperationToLog</a> (std::string)</td></tr>
+<tr class="memdesc:a4fb9ceab65944f3a685a9d9d236e3a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot permettant de mettre a jour les logs avec l'ajout, suppression ou modification d'une interaction.  <a href="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4fb9ceab65944f3a685a9d9d236e3a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Signaux</h2></td></tr>
+<tr class="memitem:adecf9e057eb5bf497047254018d048c6"><td class="memItemLeft" align="right" valign="top"><a id="adecf9e057eb5bf497047254018d048c6" name="adecf9e057eb5bf497047254018d048c6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sendIdToInteraction</b> (int, <a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
+<tr class="memdesc:adecf9e057eb5bf497047254018d048c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal permettant d'envoyer l'id du contact auquel on met des intéraction, ainsi que la classe de gestion de contacts. <br /></td></tr>
+<tr class="separator:adecf9e057eb5bf497047254018d048c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top"><a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MainWindow</b> (QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de mainwindows.  <a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top"><a id="ae98d00a93bc118200eeef9f9bba1dba7" name="ae98d00a93bc118200eeef9f9bba1dba7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~MainWindow</b> ()</td></tr>
+<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de mainwindow. <br /></td></tr>
+<tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Classe pour la fenêtre principale de l'application. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&nbsp;</a></span>MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::MainWindow </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur de mainwindows. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">parent</td><td>QWidget de création de classe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a4fb9ceab65944f3a685a9d9d236e3a6f" name="a4fb9ceab65944f3a685a9d9d236e3a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb9ceab65944f3a685a9d9d236e3a6f">&#9670;&nbsp;</a></span>AddOperationToLog</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::AddOperationToLog </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot permettant de mettre a jour les logs avec l'ajout, suppression ou modification d'une interaction. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa35f62a002e2f5301d3526ece23071ae" name="aa35f62a002e2f5301d3526ece23071ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35f62a002e2f5301d3526ece23071ae">&#9670;&nbsp;</a></span>ReceiveContactToMainWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::ReceiveContactToMainWindow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fiche_contact.html">FicheContact</a>&#160;</td>
+          <td class="paramname"><em>contact</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot permettant de mettre à jour le contact après édition de ses intéractions. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contact</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>D:/WINDOWS/Documents/GitHub/ProjetCDAA-R/CDAA-R/IHM/<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a></li>
-<li>D:/WINDOWS/Documents/GitHub/ProjetCDAA-R/CDAA-R/IHM/mainwindow.cpp</li>
+<li>D:/WINDOWS/Documents/GitHub/ProjetCDAA-R/CDAA-R/IHM/<a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

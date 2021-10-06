@@ -3,21 +3,22 @@
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef JSONSTORAGE\_H}}
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#define JSONSTORAGE\_H}}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{gestioncontact_8h}{LOGIC/gestioncontact.h}}>}}
-\DoxyCodeLine{15 }
-\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_j_son_storage}{JSonStorage}}}
-\DoxyCodeLine{17 \{}
-\DoxyCodeLine{18     \textcolor{keyword}{private}:}
-\DoxyCodeLine{19         std::string file;}
-\DoxyCodeLine{20     \textcolor{keyword}{public}:}
-\DoxyCodeLine{21         \mbox{\hyperlink{class_j_son_storage_a91b41978e094cc19921fb3ba3b44e70a}{JSonStorage}}(std::string filename);}
-\DoxyCodeLine{22         \textcolor{keywordtype}{void} Save(\mbox{\hyperlink{class_gestion_contact}{GestionContact}} gc);}
-\DoxyCodeLine{23         \mbox{\hyperlink{class_gestion_contact}{GestionContact}} Load();}
-\DoxyCodeLine{24 \};}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// JSONSTORAGE\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef JSONSTORAGE\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define JSONSTORAGE\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gestioncontact_8h}{LOGIC/gestioncontact.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_j_son_storage}{JSonStorage}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keyword}{private}:}
+\DoxyCodeLine{21         std::string filepath;}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_j_son_storage_a06f4e63b46301013d6ec08b2a678ae9c}{JSonStorage}}(std::string filepath);}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_j_son_storage_a82dde0620d971d53750241e9eed05279}{Save}}(\mbox{\hyperlink{class_gestion_contact}{GestionContact}} gc);}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_gestion_contact}{GestionContact}} \mbox{\hyperlink{class_j_son_storage_a31ee906612e6aca4c1b5fdd3a034a1a4}{Load}}();}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// JSONSTORAGE\_H}}
 
 \end{DoxyCode}

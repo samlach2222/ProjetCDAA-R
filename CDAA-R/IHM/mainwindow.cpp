@@ -22,6 +22,9 @@
 #include <QStringListModel>  //inclus <QtCore/qstringlist.h>
 ////#include <QVector>
 
+/**
+ * @brief Valeur booléenne pour savoir si on ajoute un contact ou si on l'édite
+ */
 bool ModeAjout = 0;
 
 
@@ -366,7 +369,7 @@ int MainWindow::GetIdFromRow(std::string row)
 
 /**
  * @brief Slot permettant de mettre à jour le contact après édition de ses intéractions
- * @param contact
+ * @param[in] contact
  */
 void MainWindow::ReceiveContactToMainWindow(FicheContact contact)
 {
@@ -375,7 +378,7 @@ void MainWindow::ReceiveContactToMainWindow(FicheContact contact)
 
 /**
  * @brief Slot permettant de mettre a jour les logs avec l'ajout, suppression ou modification d'une interaction
- * @param str
+ * @param[in] str
  */
 void MainWindow::AddOperationToLog(std::string str)
 {

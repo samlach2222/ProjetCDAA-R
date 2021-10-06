@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tostring_0',['ToString',['../class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d',1,'FicheContact::ToString()'],['../class_horodatage.html#a433b52bcac9fdad6c460421a063175ca',1,'Horodatage::ToString()']]]
+  ['openfc_0',['OpenFC',['../class_main_window.html#a62e3859336456027de52cb8d1d3760cd',1,'MainWindow']]],
+  ['openrc_1',['OpenRC',['../class_main_window.html#a5a301d13721bbe313ee57308271b2e85',1,'MainWindow']]],
+  ['opensgc_2',['OpenSGC',['../class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2',1,'MainWindow']]]
 ];

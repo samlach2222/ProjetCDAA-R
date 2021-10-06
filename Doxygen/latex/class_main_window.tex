@@ -2,22 +2,17 @@
 \label{class_main_window}\index{MainWindow@{MainWindow}}
 
 
-Graphe d\textquotesingle{}héritage de Main\+Window\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=160pt]{class_main_window__inherit__graph}
-\end{center}
-\end{figure}
+Classe pour la fenêtre principale de l\textquotesingle{}application.  
 
 
-Graphe de collaboration de Main\+Window\+:
-\nopagebreak
-\begin{figure}[H]
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Main\+Window\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=160pt]{class_main_window__coll__graph}
+\includegraphics[height=2.000000cm]{class_main_window}
 \end{center}
 \end{figure}
 \doxysubsection*{Connecteurs publics}
@@ -25,16 +20,109 @@ Graphe de collaboration de Main\+Window\+:
 \item 
 \mbox{\Hypertarget{class_main_window_a87e68f992e94d358a4fc3e2d388c9dcc}\label{class_main_window_a87e68f992e94d358a4fc3e2d388c9dcc}} 
 void {\bfseries Add\+Contact} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Méthode associée au bouton d\textquotesingle{}ajout de contact permettant d\textquotesingle{}ajouter un contact à la gestion de contact. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a62e3859336456027de52cb8d1d3760cd}\label{class_main_window_a62e3859336456027de52cb8d1d3760cd}} 
+void {\bfseries Open\+FC} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant l\textquotesingle{}ouverte de Filter\+Contact si aucune fenêtre n\textquotesingle{}est ouverte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a5a301d13721bbe313ee57308271b2e85}\label{class_main_window_a5a301d13721bbe313ee57308271b2e85}} 
+void {\bfseries Open\+RC} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant l\textquotesingle{}ouverte de Request\+Contact si aucune fenêtre n\textquotesingle{}est ouverte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a1199a7e4c3ac89afed5c373f2d4048b2}\label{class_main_window_a1199a7e4c3ac89afed5c373f2d4048b2}} 
+void {\bfseries Open\+SGC} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant l\textquotesingle{}ouverte de Save\+Gestion\+Contact si aucune fenêtre n\textquotesingle{}est ouverte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_afbe03af91aefcd7625865ccf6f2e3267}\label{class_main_window_afbe03af91aefcd7625865ccf6f2e3267}} 
+void {\bfseries List\+Item\+Double\+Click} ()
+\begin{DoxyCompactList}\small\item\em Méthode liée au double clic sur un contact permettant l\textquotesingle{}ouverture de la fiche d\textquotesingle{}intéraction, si aucune fenêtre n\textquotesingle{}est ouverte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_ab8ca629263c613454cfefc0c518c4ad2}\label{class_main_window_ab8ca629263c613454cfefc0c518c4ad2}} 
+void {\bfseries Logs\+Double\+Click} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant de supprimer l\textquotesingle{}intéraction des logs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a30e183b8ba1bcfad51ed48a81d94ed8c}\label{class_main_window_a30e183b8ba1bcfad51ed48a81d94ed8c}} 
+void {\bfseries List\+Item\+Click} ()
+\begin{DoxyCompactList}\small\item\em Méthode liée au clic sur un contact permettant l\textquotesingle{}édition de celui-\/ci. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_abfa4f17b6785193c45f23196b953844c}\label{class_main_window_abfa4f17b6785193c45f23196b953844c}} 
+void {\bfseries Valider\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Permet de sauvegarder un nouveau contact ou la modification d\textquotesingle{}un contact déjà existant avec le bouton valider. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_acd432e37a1121b9377db225c7f7ff300}\label{class_main_window_acd432e37a1121b9377db225c7f7ff300}} 
+void {\bfseries Supprimer\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant du supprimer le contact séléctionné a partir du bouton. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_aad1ebd0dab99fb187071fd3f0cf9a8a9}\label{class_main_window_aad1ebd0dab99fb187071fd3f0cf9a8a9}} 
+void {\bfseries Choose\+Image} ()
+\begin{DoxyCompactList}\small\item\em Permet de changer l\textquotesingle{}image d\textquotesingle{}un contact par appui sur celui-\/ci par ouverture d\textquotesingle{}un popup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa35f62a002e2f5301d3526ece23071ae}{Receive\+Contact\+To\+Main\+Window}} (\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}})
+\begin{DoxyCompactList}\small\item\em Slot permettant de mettre à jour le contact après édition de ses intéractions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4fb9ceab65944f3a685a9d9d236e3a6f}{Add\+Operation\+To\+Log}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Slot permettant de mettre a jour les logs avec l\textquotesingle{}ajout, suppression ou modification d\textquotesingle{}une interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_adecf9e057eb5bf497047254018d048c6}\label{class_main_window_adecf9e057eb5bf497047254018d048c6}} 
+void {\bfseries send\+Id\+To\+Interaction} (int, \mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}})
+\begin{DoxyCompactList}\small\item\em Signal permettant d\textquotesingle{}envoyer l\textquotesingle{}id du contact auquel on met des intéraction, ainsi que la classe de gestion de contacts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur de mainwindows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+{\bfseries $\sim$\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de mainwindow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe pour la fenêtre principale de l\textquotesingle{}application. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
 \mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
-{\bfseries Main\+Window} (QWidget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructeur de mainwindows. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ out}}  & {\em parent} & QWidget de création de classe \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_main_window_a4fb9ceab65944f3a685a9d9d236e3a6f}\label{class_main_window_a4fb9ceab65944f3a685a9d9d236e3a6f}} 
+\index{MainWindow@{MainWindow}!AddOperationToLog@{AddOperationToLog}}
+\index{AddOperationToLog@{AddOperationToLog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{AddOperationToLog}{AddOperationToLog}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Add\+Operation\+To\+Log (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot permettant de mettre a jour les logs avec l\textquotesingle{}ajout, suppression ou modification d\textquotesingle{}une interaction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em str} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_aa35f62a002e2f5301d3526ece23071ae}\label{class_main_window_aa35f62a002e2f5301d3526ece23071ae}} 
+\index{MainWindow@{MainWindow}!ReceiveContactToMainWindow@{ReceiveContactToMainWindow}}
+\index{ReceiveContactToMainWindow@{ReceiveContactToMainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ReceiveContactToMainWindow}{ReceiveContactToMainWindow}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Receive\+Contact\+To\+Main\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}}]{contact }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot permettant de mettre à jour le contact après édition de ses intéractions. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em contact} & \\
+\hline
+\end{DoxyParams}
 
 
 La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+IHM/mainwindow.\+h\item 
-D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+IHM/mainwindow.\+cpp\end{DoxyCompactItemize}
+D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+IHM/\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+IHM/\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

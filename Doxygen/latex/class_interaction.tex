@@ -1,24 +1,42 @@
 \hypertarget{class_interaction}{}\doxysection{Référence de la classe Interaction}
 \label{class_interaction}\index{Interaction@{Interaction}}
+
+
+Classe pour une intéraction.  
+
+
+
+
+{\ttfamily \#include $<$interaction.\+h$>$}
+
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_interaction_a2f95b43ad63c3a18f61f1c49efc070df}{Interaction}} (std\+::string c)
+\mbox{\hyperlink{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}{Interaction}} (int id, std\+::string, std\+::string)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_interaction}{Interaction}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_interaction_a3a5ec7b4c2b0dd43305288db0ab4afbc}{Get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}id. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_interaction_a6080d109220d28d490c9d61b5710ebfc}{Get\+Contenu}} ()
 \begin{DoxyCompactList}\small\item\em Retourne le contenu de l\textquotesingle{}intéraction. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_interaction_ac4a8ce43183b666deae658dc61639fda}{Set\+Contenu}} (std\+::string c)
-\begin{DoxyCompactList}\small\item\em Remplace le contenu de l\textquotesingle{}intéraction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_interaction_a7fa16276ece67880fdba83723e75d96c}{Set\+Contenu}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Remplace le contenu de l\textquotesingle{}intéraction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_horodatage}{Horodatage}} \mbox{\hyperlink{class_interaction_aed63b112cb40fb85bd5ca5e8127c1433}{Get\+Horodatage}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}horodatage de l\textquotesingle{}interaction. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}{get\+Titre}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le titre de l\textquotesingle{}interaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}{set\+Titre}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Remplace le titre de l\textquotesingle{}interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Description détaillée}
+Classe pour une intéraction. 
 
 \doxysubsection{Documentation des constructeurs et destructeur}
-\mbox{\Hypertarget{class_interaction_a2f95b43ad63c3a18f61f1c49efc070df}\label{class_interaction_a2f95b43ad63c3a18f61f1c49efc070df}} 
+\mbox{\Hypertarget{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}\label{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}} 
 \index{Interaction@{Interaction}!Interaction@{Interaction}}
 \index{Interaction@{Interaction}!Interaction@{Interaction}}
 \doxysubsubsection{\texorpdfstring{Interaction()}{Interaction()}}
-{\footnotesize\ttfamily Interaction\+::\+Interaction (\begin{DoxyParamCaption}\item[{std\+::string}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Interaction\+::\+Interaction (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{c,  }\item[{std\+::string}]{titre }\end{DoxyParamCaption})}
 
 
 
@@ -26,7 +44,11 @@ Constructeur de la classe \mbox{\hyperlink{class_interaction}{Interaction}}.
 
 
 \begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em id} & L\textquotesingle{}id de l\textquotesingle{}interaction \\
+\hline
 \mbox{\texttt{ in}}  & {\em c} & Le contenu de l\textquotesingle{}interaction \\
+\hline
+\mbox{\texttt{ in}}  & {\em titre} & Le titre de l\textquotesingle{}interaction \\
 \hline
 \end{DoxyParams}
 
@@ -45,6 +67,19 @@ Retourne le contenu de l\textquotesingle{}intéraction.
 \begin{DoxyReturn}{Renvoie}
 le contenu de l\textquotesingle{}intéraction 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_interaction_aed63b112cb40fb85bd5ca5e8127c1433}\label{class_interaction_aed63b112cb40fb85bd5ca5e8127c1433}} 
+\index{Interaction@{Interaction}!GetHorodatage@{GetHorodatage}}
+\index{GetHorodatage@{GetHorodatage}!Interaction@{Interaction}}
+\doxysubsubsection{\texorpdfstring{GetHorodatage()}{GetHorodatage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_horodatage}{Horodatage}} Interaction\+::\+Get\+Horodatage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}horodatage de l\textquotesingle{}interaction. 
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}horodatage de l\textquotesingle{}interaction 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_interaction_a3a5ec7b4c2b0dd43305288db0ab4afbc}\label{class_interaction_a3a5ec7b4c2b0dd43305288db0ab4afbc}} 
 \index{Interaction@{Interaction}!GetId@{GetId}}
 \index{GetId@{GetId}!Interaction@{Interaction}}
@@ -58,7 +93,20 @@ Retourne l\textquotesingle{}id.
 \begin{DoxyReturn}{Renvoie}
 l\textquotesingle{}id 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_interaction_ac4a8ce43183b666deae658dc61639fda}\label{class_interaction_ac4a8ce43183b666deae658dc61639fda}} 
+\mbox{\Hypertarget{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}\label{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}} 
+\index{Interaction@{Interaction}!getTitre@{getTitre}}
+\index{getTitre@{getTitre}!Interaction@{Interaction}}
+\doxysubsubsection{\texorpdfstring{getTitre()}{getTitre()}}
+{\footnotesize\ttfamily std\+::string Interaction\+::get\+Titre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le titre de l\textquotesingle{}interaction. 
+
+\begin{DoxyReturn}{Renvoie}
+le titre de l\textquotesingle{}interaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_interaction_a7fa16276ece67880fdba83723e75d96c}\label{class_interaction_a7fa16276ece67880fdba83723e75d96c}} 
 \index{Interaction@{Interaction}!SetContenu@{SetContenu}}
 \index{SetContenu@{SetContenu}!Interaction@{Interaction}}
 \doxysubsubsection{\texorpdfstring{SetContenu()}{SetContenu()}}
@@ -71,6 +119,21 @@ Remplace le contenu de l\textquotesingle{}intéraction.
 
 \begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em c} & Le nouveau contenu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}\label{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}} 
+\index{Interaction@{Interaction}!setTitre@{setTitre}}
+\index{setTitre@{setTitre}!Interaction@{Interaction}}
+\doxysubsubsection{\texorpdfstring{setTitre()}{setTitre()}}
+{\footnotesize\ttfamily void Interaction\+::set\+Titre (\begin{DoxyParamCaption}\item[{std\+::string}]{titre }\end{DoxyParamCaption})}
+
+
+
+Remplace le titre de l\textquotesingle{}interaction. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em titre} & Le nouveau titre \\
 \hline
 \end{DoxyParams}
 

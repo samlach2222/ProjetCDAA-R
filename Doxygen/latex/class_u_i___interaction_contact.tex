@@ -1,0 +1,103 @@
+\hypertarget{class_u_i___interaction_contact}{}\doxysection{Référence de la classe UI\+\_\+\+Interaction\+Contact}
+\label{class_u_i___interaction_contact}\index{UI\_InteractionContact@{UI\_InteractionContact}}
+
+
+Classe pour la fenêtre de gestion des intéractions d\textquotesingle{}un contact.  
+
+
+
+
+{\ttfamily \#include $<$ui\+\_\+interactioncontact.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de UI\+\_\+\+Interaction\+Contact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i___interaction_contact}
+\end{center}
+\end{figure}
+\doxysubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_a1d4945cb3c17ace6646d305afc4eb917}\label{class_u_i___interaction_contact_a1d4945cb3c17ace6646d305afc4eb917}} 
+void {\bfseries Validate\+All\+Interactions} ()
+\begin{DoxyCompactList}\small\item\em Methode liée au bouton permettant de valider la liste des intégrations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_af3449fb03ec40e49ab0ffaedef327d07}\label{class_u_i___interaction_contact_af3449fb03ec40e49ab0ffaedef327d07}} 
+void {\bfseries Add\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Methode liée au bouton permettant d\textquotesingle{}ajouter une interaction à un contact. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_af753a2f25c6c378649af496c4a4a2432}\label{class_u_i___interaction_contact_af753a2f25c6c378649af496c4a4a2432}} 
+void {\bfseries Supprimer\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Methode liée au bouton permettant de supprimer l\textquotesingle{}ajout une interaction d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_af56bfb5abb38f4330912e389fa018f74}\label{class_u_i___interaction_contact_af56bfb5abb38f4330912e389fa018f74}} 
+void {\bfseries List\+Item\+Click} ()
+\begin{DoxyCompactList}\small\item\em Méthode reliée à l\textquotesingle{}action d\textquotesingle{}un click sur un élément de la liste, permet d\textquotesingle{}afficher la fenêtre d\textquotesingle{}édition d\textquotesingle{}une interaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_acc567bcc2581925d1edc3fd8927f5292}\label{class_u_i___interaction_contact_acc567bcc2581925d1edc3fd8927f5292}} 
+void {\bfseries Valider\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Methode liée au bouton permettant de valider l\textquotesingle{}ajout d\textquotesingle{}une interaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i___interaction_contact_a8eeff65e3e9db9d73425a4b4b92537a7}{Receive\+Id\+To\+Interaction}} (int, \mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}})
+\begin{DoxyCompactList}\small\item\em Slot permettant de récupérer la gestion contact et l\textquotesingle{}id du contact courant pour les interactions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_a27514ddb0a7f993101daa6a7bc7c72eb}\label{class_u_i___interaction_contact_a27514ddb0a7f993101daa6a7bc7c72eb}} 
+void {\bfseries send\+Contact\+To\+Main\+Window} (\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}})
+\begin{DoxyCompactList}\small\item\em Signal permettant de renvoyer le contact vers le \mbox{\hyperlink{class_main_window}{Main\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_afeb35cf1c32ced10745233f5c214d13a}\label{class_u_i___interaction_contact_afeb35cf1c32ced10745233f5c214d13a}} 
+void {\bfseries Add\+Operation\+To\+Log} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Signal permettant d\textquotesingle{}envoyer les modifications, ajout et suppression d\textquotesingle{}intéraction vers les logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i___interaction_contact_a64db9f94d34aab0e65b3ae68e4f8023f}{UI\+\_\+\+Interaction\+Contact}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_u_i___interaction_contact}{UI\+\_\+\+Interaction\+Contact}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_i___interaction_contact_a3fb798a9c5725785b6bec394a524d231}\label{class_u_i___interaction_contact_a3fb798a9c5725785b6bec394a524d231}} 
+{\bfseries $\sim$\+UI\+\_\+\+Interaction\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \mbox{\hyperlink{class_u_i___interaction_contact}{UI\+\_\+\+Interaction\+Contact}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe pour la fenêtre de gestion des intéractions d\textquotesingle{}un contact. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_u_i___interaction_contact_a64db9f94d34aab0e65b3ae68e4f8023f}\label{class_u_i___interaction_contact_a64db9f94d34aab0e65b3ae68e4f8023f}} 
+\index{UI\_InteractionContact@{UI\_InteractionContact}!UI\_InteractionContact@{UI\_InteractionContact}}
+\index{UI\_InteractionContact@{UI\_InteractionContact}!UI\_InteractionContact@{UI\_InteractionContact}}
+\doxysubsubsection{\texorpdfstring{UI\_InteractionContact()}{UI\_InteractionContact()}}
+{\footnotesize\ttfamily UI\+\_\+\+Interaction\+Contact\+::\+UI\+\_\+\+Interaction\+Contact (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructeur de \mbox{\hyperlink{class_u_i___interaction_contact}{UI\+\_\+\+Interaction\+Contact}}. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ out}}  & {\em parent} & QWidget de création de classe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{A faire}
+\item[\mbox{\hyperlink{todo__todo000004}{A faire}}]Gèrer les tags comme dans la consigne \end{DoxyRefDesc}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_u_i___interaction_contact_a8eeff65e3e9db9d73425a4b4b92537a7}\label{class_u_i___interaction_contact_a8eeff65e3e9db9d73425a4b4b92537a7}} 
+\index{UI\_InteractionContact@{UI\_InteractionContact}!ReceiveIdToInteraction@{ReceiveIdToInteraction}}
+\index{ReceiveIdToInteraction@{ReceiveIdToInteraction}!UI\_InteractionContact@{UI\_InteractionContact}}
+\doxysubsubsection{\texorpdfstring{ReceiveIdToInteraction}{ReceiveIdToInteraction}}
+{\footnotesize\ttfamily void UI\+\_\+\+Interaction\+Contact\+::\+Receive\+Id\+To\+Interaction (\begin{DoxyParamCaption}\item[{int}]{idreceive,  }\item[{\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}}}]{gc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot permettant de récupérer la gestion contact et l\textquotesingle{}id du contact courant pour les interactions. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em idreceive} & id du contact courant \\
+\hline
+{\em gc} & Gestion contact \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+IHM/\mbox{\hyperlink{ui__interactioncontact_8h}{ui\+\_\+interactioncontact.\+h}}\item 
+D\+:/\+WINDOWS/\+Documents/\+Git\+Hub/\+Projet\+CDAA-\/\+R/\+CDAA-\/\+R/\+IHM/\mbox{\hyperlink{ui__interactioncontact_8cpp}{ui\+\_\+interactioncontact.\+cpp}}\end{DoxyCompactItemize}

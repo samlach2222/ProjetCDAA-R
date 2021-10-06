@@ -70,6 +70,11 @@ $(function() {
   <div class="headertitle"><div class="title">Référence de la classe GestionContact</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe pour la gestion des contacts de l'application.  
+ <a href="class_gestion_contact.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="gestioncontact_8h_source.html">gestioncontact.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -77,9 +82,9 @@ Fonctions membres publiques</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>GestionContact</b> ()</td></tr>
 <tr class="memdesc:a0d42db3777c1e15d557979c897acf344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe. <br /></td></tr>
 <tr class="separator:a0d42db3777c1e15d557979c897acf344"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ea367ebf9fb7e67fb19f7b5b7cb898d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a3ea367ebf9fb7e67fb19f7b5b7cb898d">AddContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a> c)</td></tr>
-<tr class="memdesc:a3ea367ebf9fb7e67fb19f7b5b7cb898d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'ajouter un contact <b>c</b> à la liste de contacts.  <a href="class_gestion_contact.html#a3ea367ebf9fb7e67fb19f7b5b7cb898d">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3ea367ebf9fb7e67fb19f7b5b7cb898d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a881babca3fe134d4ab3cb340dda14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#ad4a881babca3fe134d4ab3cb340dda14">AddContact</a> (std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, <a class="el" href="class_horodatage.html">Horodatage</a> dateCreation=<a class="el" href="class_horodatage.html">Horodatage</a>())</td></tr>
+<tr class="memdesc:ad4a881babca3fe134d4ab3cb340dda14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres.  <a href="class_gestion_contact.html#ad4a881babca3fe134d4ab3cb340dda14">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad4a881babca3fe134d4ab3cb340dda14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ef361cff471b5dcb80fbb28857a91f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a45ef361cff471b5dcb80fbb28857a91f">SupprContact</a> (int id)</td></tr>
 <tr class="memdesc:a45ef361cff471b5dcb80fbb28857a91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de supprimer un contact par son <b>id</b> de la liste de contacts.  <a href="class_gestion_contact.html#a45ef361cff471b5dcb80fbb28857a91f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a45ef361cff471b5dcb80fbb28857a91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,13 +97,15 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ae22cc27cbf912262b2716c334a12f5fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fiche_contact.html">FicheContact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#ae22cc27cbf912262b2716c334a12f5fe">GetContact</a> (int id)</td></tr>
 <tr class="memdesc:ae22cc27cbf912262b2716c334a12f5fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récupérer le contact à partir de son identifiant <b>id</b>  <a href="class_gestion_contact.html#ae22cc27cbf912262b2716c334a12f5fe">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae22cc27cbf912262b2716c334a12f5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1969594dbc9431e39aa7f955f21171be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_log.html">Log</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a1969594dbc9431e39aa7f955f21171be">getLog</a> ()</td></tr>
-<tr class="memdesc:a1969594dbc9431e39aa7f955f21171be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de <a class="el" href="class_log.html">Log</a>.  <a href="class_gestion_contact.html#a1969594dbc9431e39aa7f955f21171be">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a1969594dbc9431e39aa7f955f21171be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c5a7add4cea7ba13a06ad6349c6405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_log.html">Log</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a41c5a7add4cea7ba13a06ad6349c6405">GetLog</a> ()</td></tr>
+<tr class="memdesc:a41c5a7add4cea7ba13a06ad6349c6405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de <a class="el" href="class_log.html" title="Classe pour les logs de l&#39;application.">Log</a>.  <a href="class_gestion_contact.html#a41c5a7add4cea7ba13a06ad6349c6405">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a41c5a7add4cea7ba13a06ad6349c6405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a3ea367ebf9fb7e67fb19f7b5b7cb898d" name="a3ea367ebf9fb7e67fb19f7b5b7cb898d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ea367ebf9fb7e67fb19f7b5b7cb898d">&#9670;&nbsp;</a></span>AddContact()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Classe pour la gestion des contacts de l'application. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="ad4a881babca3fe134d4ab3cb340dda14" name="ad4a881babca3fe134d4ab3cb340dda14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a881babca3fe134d4ab3cb340dda14">&#9670;&nbsp;</a></span>AddContact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -106,31 +113,66 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="memname">void GestionContact::AddContact </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_fiche_contact.html">FicheContact</a>&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>prenom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>entreprise</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>mail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>telephone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QImage&#160;</td>
+          <td class="paramname"><em>photo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_horodatage.html">Horodatage</a>&#160;</td>
+          <td class="paramname"><em>dateCreation</em> = <code><a class="el" href="class_horodatage.html">Horodatage</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet d'ajouter un contact <b>c</b> à la liste de contacts. </p>
+<p>Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Contact à ajouter à la liste </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nom</td><td>Nom du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prenom</td><td>Prénom du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">entreprise</td><td>Entreprise du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mail</td><td>Mail du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">telephone</td><td>Numéro de téléphone du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">photo</td><td>Photo de profile du contact </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dateCreation</td><td>Date de création (<b>optionelle</b>) </td></tr>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d_cgraph.png" border="0" usemap="#aclass_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d_cgraph" alt=""/></div>
-<map name="aclass_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d_cgraph" id="aclass_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d_cgraph">
-<area shape="rect" title="Permet d&#39;ajouter un contact c à la liste de contacts." alt="" coords="5,31,193,57"/>
-<area shape="rect" href="class_log.html#ab71cc07949289808dd1d8f088a0e2964" title="Ajoute un log log à la liste de logs." alt="" coords="260,5,391,32"/>
-<area shape="rect" href="class_database_storage.html#a039a97c1437a8bba5ad64a53edb1ccf3" title="Créé une FicheContact dans la base de données." alt="" coords="241,56,409,83"/>
-<area shape="rect" href="class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="457,5,601,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -181,14 +223,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<a id="a1969594dbc9431e39aa7f955f21171be" name="a1969594dbc9431e39aa7f955f21171be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1969594dbc9431e39aa7f955f21171be">&#9670;&nbsp;</a></span>getLog()</h2>
+<a id="a41c5a7add4cea7ba13a06ad6349c6405" name="a41c5a7add4cea7ba13a06ad6349c6405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c5a7add4cea7ba13a06ad6349c6405">&#9670;&nbsp;</a></span>GetLog()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_log.html">Log</a> GestionContact::getLog </td>
+          <td class="memname"><a class="el" href="class_log.html">Log</a> &amp; GestionContact::GetLog </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -196,8 +238,8 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Getter de <a class="el" href="class_log.html">Log</a>. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>Retourne la classe <a class="el" href="class_log.html">Log</a> instanciée </dd></dl>
+<p>Getter de <a class="el" href="class_log.html" title="Classe pour les logs de l&#39;application.">Log</a>. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne la classe <a class="el" href="class_log.html" title="Classe pour les logs de l&#39;application.">Log</a> instanciée </dd></dl>
 
 </div>
 </div>
@@ -224,18 +266,6 @@ Voici le graphe d'appel pour cette fonction :</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gestion_contact_a6850914e2d978856ceaa806120c38e8d_cgraph.png" border="0" usemap="#aclass_gestion_contact_a6850914e2d978856ceaa806120c38e8d_cgraph" alt=""/></div>
-<map name="aclass_gestion_contact_a6850914e2d978856ceaa806120c38e8d_cgraph" id="aclass_gestion_contact_a6850914e2d978856ceaa806120c38e8d_cgraph">
-<area shape="rect" title="Permet de modifier un contact en le remplacant par un contact c" alt="" coords="5,56,208,83"/>
-<area shape="rect" href="class_log.html#ab71cc07949289808dd1d8f088a0e2964" title="Ajoute un log log à la liste de logs." alt="" coords="276,5,407,32"/>
-<area shape="rect" href="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" title="Retourne l&#39;id." alt="" coords="274,56,409,83"/>
-<area shape="rect" href="class_database_storage.html#aa565847ae485948e2a0d5e4f3dcbc1c9" title="Met à jour une FicheContact dans la base de données." alt="" coords="256,107,427,133"/>
-<area shape="rect" href="class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="475,5,619,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -262,17 +292,6 @@ Voici le graphe d'appel pour cette fonction :</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f_cgraph.png" border="0" usemap="#aclass_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f_cgraph" alt=""/></div>
-<map name="aclass_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f_cgraph" id="aclass_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f_cgraph">
-<area shape="rect" title="Permet de supprimer un contact par son id de la liste de contacts." alt="" coords="5,31,204,57"/>
-<area shape="rect" href="class_log.html#ab71cc07949289808dd1d8f088a0e2964" title="Ajoute un log log à la liste de logs." alt="" coords="270,5,401,32"/>
-<area shape="rect" href="class_database_storage.html#ae84daac0e80043617a9f8aedd3cbe0f8" title="Supprime une FicheContact dans la base de données." alt="" coords="252,56,419,83"/>
-<area shape="rect" href="class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="467,5,611,32"/>
-</map>
-</div>
 
 </div>
 </div>

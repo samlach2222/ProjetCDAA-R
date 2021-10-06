@@ -40,7 +40,14 @@ public slots:
     void ReceiveIdToInteraction(int,GestionContact);
 
 signals :
+    /**
+     * @brief Signal permettant de renvoyer le contact vers le MainWindow
+     */
     void sendContactToMainWindow(FicheContact);
+
+    /**
+     * @brief Signal permettant d'envoyer les modifications, ajout et suppression d'intéraction vers les logs
+     */
     void AddOperationToLog(std::string);
 };
 

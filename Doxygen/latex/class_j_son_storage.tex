@@ -1,32 +1,73 @@
 \hypertarget{class_j_son_storage}{}\doxysection{Référence de la classe JSon\+Storage}
 \label{class_j_son_storage}\index{JSonStorage@{JSonStorage}}
+
+
+Classe pour la gestion de l\textquotesingle{}import et l\textquotesingle{}export au format JSon des informations du programme.  
+
+
+
+
+{\ttfamily \#include $<$jsonstorage.\+h$>$}
+
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_j_son_storage_a91b41978e094cc19921fb3ba3b44e70a}{JSon\+Storage}} (std\+::string filename)
+\mbox{\hyperlink{class_j_son_storage_a06f4e63b46301013d6ec08b2a678ae9c}{JSon\+Storage}} (std\+::string filepath)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_j_son_storage}{JSon\+Storage}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_j_son_storage_a82dde0620d971d53750241e9eed05279}\label{class_j_son_storage_a82dde0620d971d53750241e9eed05279}} 
-void {\bfseries Save} (\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} gc)
-\item 
-\mbox{\Hypertarget{class_j_son_storage_a31ee906612e6aca4c1b5fdd3a034a1a4}\label{class_j_son_storage_a31ee906612e6aca4c1b5fdd3a034a1a4}} 
-\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} {\bfseries Load} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_j_son_storage_a82dde0620d971d53750241e9eed05279}{Save}} (\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} gc)
+\begin{DoxyCompactList}\small\item\em Permet de sauvegarder l\textquotesingle{}ensemble des contacts et logs de {\bfseries{gc}} dans le fichier JSon afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} \mbox{\hyperlink{class_j_son_storage_a31ee906612e6aca4c1b5fdd3a034a1a4}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Description détaillée}
+Classe pour la gestion de l\textquotesingle{}import et l\textquotesingle{}export au format JSon des informations du programme. 
 
 \doxysubsection{Documentation des constructeurs et destructeur}
-\mbox{\Hypertarget{class_j_son_storage_a91b41978e094cc19921fb3ba3b44e70a}\label{class_j_son_storage_a91b41978e094cc19921fb3ba3b44e70a}} 
+\mbox{\Hypertarget{class_j_son_storage_a06f4e63b46301013d6ec08b2a678ae9c}\label{class_j_son_storage_a06f4e63b46301013d6ec08b2a678ae9c}} 
 \index{JSonStorage@{JSonStorage}!JSonStorage@{JSonStorage}}
 \index{JSonStorage@{JSonStorage}!JSonStorage@{JSonStorage}}
 \doxysubsubsection{\texorpdfstring{JSonStorage()}{JSonStorage()}}
-{\footnotesize\ttfamily JSon\+Storage\+::\+JSon\+Storage (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily JSon\+Storage\+::\+JSon\+Storage (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
 
 
 
 Constructeur de la classe \mbox{\hyperlink{class_j_son_storage}{JSon\+Storage}}. 
 
 
-\begin{DoxyParams}{Paramètres}
-{\em filename} & Nom du fichier dans lequel va être sauvegardé les informations du programme {\bfseries{au format JSon}} \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em filepath} & Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme {\bfseries{au format JSon}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_j_son_storage_a31ee906612e6aca4c1b5fdd3a034a1a4}\label{class_j_son_storage_a31ee906612e6aca4c1b5fdd3a034a1a4}} 
+\index{JSonStorage@{JSonStorage}!Load@{Load}}
+\index{Load@{Load}!JSonStorage@{JSonStorage}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}} JSon\+Storage\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} 
+
+\begin{DoxyReturn}{Renvoie}
+Retourne l\textquotesingle{}ensemble des informations des contacts et des logs sauvegardées 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_son_storage_a82dde0620d971d53750241e9eed05279}\label{class_j_son_storage_a82dde0620d971d53750241e9eed05279}} 
+\index{JSonStorage@{JSonStorage}!Save@{Save}}
+\index{Save@{Save}!JSonStorage@{JSonStorage}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void JSon\+Storage\+::\+Save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gestion_contact}{Gestion\+Contact}}}]{gc }\end{DoxyParamCaption})}
+
+
+
+Permet de sauvegarder l\textquotesingle{}ensemble des contacts et logs de {\bfseries{gc}} dans le fichier JSon afin {\bfseries{d\textquotesingle{}assurer l\textquotesingle{}interopérabilité}} 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em gc} & Ensemble des contacts et logs de l\textquotesingle{}application \\
 \hline
 \end{DoxyParams}
 

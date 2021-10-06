@@ -14,7 +14,6 @@
  * @param[in] c     Le contenu de l'interaction
  * @param[in] titre     Le titre de l'interaction
  */
-
 Interaction::Interaction(int id, std::string c, std::string titre)
 {
     this->SetContenu(c);

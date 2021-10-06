@@ -1,0 +1,48 @@
+\hypertarget{ui__interactioncontact_8h_source}{}\doxysection{ui\+\_\+interactioncontact.\+h}
+\label{ui__interactioncontact_8h_source}\index{D:/WINDOWS/Documents/GitHub/ProjetCDAA-\/R/CDAA-\/R/IHM/ui\_interactioncontact.h@{D:/WINDOWS/Documents/GitHub/ProjetCDAA-\/R/CDAA-\/R/IHM/ui\_interactioncontact.h}}
+\mbox{\hyperlink{ui__interactioncontact_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef UI\_INTERACTIONCONTACT\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define UI\_INTERACTIONCONTACT\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{gestioncontact_8h}{LOGIC/gestioncontact.h}}>}  \textcolor{comment}{//inclus LOGIC/fichecontact.h}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i___interaction_contact}{UI\_InteractionContact}};}
+\DoxyCodeLine{15 \}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i___interaction_contact}{UI\_InteractionContact}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     Q\_OBJECT}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_u_i___interaction_contact_a64db9f94d34aab0e65b3ae68e4f8023f}{UI\_InteractionContact}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_u_i___interaction_contact_a3fb798a9c5725785b6bec394a524d231}{\string~UI\_InteractionContact}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     Ui::UI\_InteractionContact *ui;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_fiche_contact}{FicheContact}} contact;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} DisplayInteractionList();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_a1d4945cb3c17ace6646d305afc4eb917}{ValidateAllInteractions}}();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_af3449fb03ec40e49ab0ffaedef327d07}{AddInteraction}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_af753a2f25c6c378649af496c4a4a2432}{SupprimerInteraction}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_af56bfb5abb38f4330912e389fa018f74}{ListItemClick}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_acc567bcc2581925d1edc3fd8927f5292}{ValiderInteraction}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_a8eeff65e3e9db9d73425a4b4b92537a7}{ReceiveIdToInteraction}}(\textcolor{keywordtype}{int},\mbox{\hyperlink{class_gestion_contact}{GestionContact}});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 signals :}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_a27514ddb0a7f993101daa6a7bc7c72eb}{sendContactToMainWindow}}(\mbox{\hyperlink{class_fiche_contact}{FicheContact}});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i___interaction_contact_afeb35cf1c32ced10745233f5c214d13a}{AddOperationToLog}}(std::string);}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UI\_INTERACTIONCONTACT\_H}}
+
+\end{DoxyCode}

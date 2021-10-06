@@ -1,9 +1,18 @@
 \hypertarget{class_fiche_contact}{}\doxysection{Référence de la classe Fiche\+Contact}
 \label{class_fiche_contact}\index{FicheContact@{FicheContact}}
+
+
+Classe pour les détails d\textquotesingle{}un contact et ses interactions.  
+
+
+
+
+{\ttfamily \#include $<$fichecontact.\+h$>$}
+
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_fiche_contact_a08d85b3af9bb7b02a0b45645b29e7879}{Fiche\+Contact}} (std\+::string nom, std\+::string prenom, std\+::string entreprise, std\+::string mail, std\+::string telephone, QImage photo)
+\mbox{\hyperlink{class_fiche_contact_a589941a66f9d5bed3aecfa36e54b1ae2}{Fiche\+Contact}} (int id, std\+::string nom, std\+::string prenom, std\+::string entreprise, std\+::string mail, std\+::string telephone, QImage photo, \mbox{\hyperlink{class_horodatage}{Horodatage}} date\+Creation)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5}{get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}id. \end{DoxyCompactList}\item 
@@ -35,20 +44,23 @@ void \mbox{\hyperlink{class_fiche_contact_acb5911eaa0d3323c5446f2675b6441ba}{set
 \begin{DoxyCompactList}\small\item\em Retourne la date de création de la fiche contact. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{class_interaction}{Interaction}} $>$ \mbox{\hyperlink{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}{Get\+List\+Interaction}} ()
 \begin{DoxyCompactList}\small\item\em Retourne la liste des intéractions du contact. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_fiche_contact_a71fa7eac025c91a38b0384f7840da4a9}{Add\+Interaction}} (\mbox{\hyperlink{class_interaction}{Interaction}} i)
-\begin{DoxyCompactList}\small\item\em Ajoute l\textquotesingle{}interaction {\ttfamily i} à la liste des interactions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fiche_contact_a061c41baf9e2372e8b980f08f00bf709}{Add\+Interaction}} (std\+::string contenu\+Interaction, std\+::string titre\+Interaction)
+\begin{DoxyCompactList}\small\item\em Crée une interaction à partir d\textquotesingle{}un contenu passé en paramètre et l\textquotesingle{}ajoute à la liste des interactions. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fiche_contact_afd76648ba180fd53fcb5e3853a12a9c1}{Remove\+Interaction}} (int id)
 \begin{DoxyCompactList}\small\item\em Enlève l\textquotesingle{}interaction d\textquotesingle{}id {\ttfamily id} de la liste des interactions. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_fiche_contact_a9f6b0c7e3dda229b3ccf320cc8ea3b1d}{To\+String}} ()
-\begin{DoxyCompactList}\small\item\em Retourne un string contenant le nom et le prénom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Description détaillée}
+Classe pour les détails d\textquotesingle{}un contact et ses interactions. 
 
 \doxysubsection{Documentation des constructeurs et destructeur}
-\mbox{\Hypertarget{class_fiche_contact_a08d85b3af9bb7b02a0b45645b29e7879}\label{class_fiche_contact_a08d85b3af9bb7b02a0b45645b29e7879}} 
+\mbox{\Hypertarget{class_fiche_contact_a589941a66f9d5bed3aecfa36e54b1ae2}\label{class_fiche_contact_a589941a66f9d5bed3aecfa36e54b1ae2}} 
 \index{FicheContact@{FicheContact}!FicheContact@{FicheContact}}
 \index{FicheContact@{FicheContact}!FicheContact@{FicheContact}}
 \doxysubsubsection{\texorpdfstring{FicheContact()}{FicheContact()}}
-{\footnotesize\ttfamily Fiche\+Contact\+::\+Fiche\+Contact (\begin{DoxyParamCaption}\item[{std\+::string}]{nom,  }\item[{std\+::string}]{prenom,  }\item[{std\+::string}]{entreprise,  }\item[{std\+::string}]{mail,  }\item[{std\+::string}]{telephone,  }\item[{QImage}]{photo }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Fiche\+Contact\+::\+Fiche\+Contact (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nom,  }\item[{std\+::string}]{prenom,  }\item[{std\+::string}]{entreprise,  }\item[{std\+::string}]{mail,  }\item[{std\+::string}]{telephone,  }\item[{QImage}]{photo,  }\item[{\mbox{\hyperlink{class_horodatage}{Horodatage}}}]{date\+Creation }\end{DoxyParamCaption})}
 
 
 
@@ -56,6 +68,8 @@ Constructeur de la classe \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}
 
 
 \begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em id} & L\textquotesingle{}id du contact \\
+\hline
 \mbox{\texttt{ in}}  & {\em nom} & Nom du contact \\
 \hline
 \mbox{\texttt{ in}}  & {\em prenom} & Prénom du contact \\
@@ -68,27 +82,27 @@ Constructeur de la classe \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}
 \hline
 \mbox{\texttt{ in}}  & {\em photo} & Photo de profile du contact \\
 \hline
+\mbox{\texttt{ in}}  & {\em date\+Creation} & Date de création \\
+\hline
 \end{DoxyParams}
-\begin{DoxyRefDesc}{Bogue}
-\item[\mbox{\hyperlink{bug__bug000001}{Bogue}}]id non géré \end{DoxyRefDesc}
-\begin{DoxyRefDesc}{A faire}
-\item[\mbox{\hyperlink{todo__todo000001}{A faire}}]récupérer le plus grand id unique \end{DoxyRefDesc}
 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\Hypertarget{class_fiche_contact_a71fa7eac025c91a38b0384f7840da4a9}\label{class_fiche_contact_a71fa7eac025c91a38b0384f7840da4a9}} 
+\mbox{\Hypertarget{class_fiche_contact_a061c41baf9e2372e8b980f08f00bf709}\label{class_fiche_contact_a061c41baf9e2372e8b980f08f00bf709}} 
 \index{FicheContact@{FicheContact}!AddInteraction@{AddInteraction}}
 \index{AddInteraction@{AddInteraction}!FicheContact@{FicheContact}}
 \doxysubsubsection{\texorpdfstring{AddInteraction()}{AddInteraction()}}
-{\footnotesize\ttfamily void Fiche\+Contact\+::\+Add\+Interaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interaction}{Interaction}}}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Fiche\+Contact\+::\+Add\+Interaction (\begin{DoxyParamCaption}\item[{std\+::string}]{contenu\+Interaction,  }\item[{std\+::string}]{titre\+Interaction }\end{DoxyParamCaption})}
 
 
 
-Ajoute l\textquotesingle{}interaction {\ttfamily i} à la liste des interactions. 
+Crée une interaction à partir d\textquotesingle{}un contenu passé en paramètre et l\textquotesingle{}ajoute à la liste des interactions. 
 
 
 \begin{DoxyParams}[1]{Paramètres}
-\mbox{\texttt{ in}}  & {\em i} & L\textquotesingle{}interaction à ajouter \\
+\mbox{\texttt{ in}}  & {\em contenu\+Interaction} & Le contenu à partir duquel l\textquotesingle{}interaction sera créé \\
+\hline
+\mbox{\texttt{ in}}  & {\em titre\+Interaction} & Le titre de l\textquotesingle{}interaction \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_fiche_contact_ab5f1935a57e35838dc8296104f137f9c}\label{class_fiche_contact_ab5f1935a57e35838dc8296104f137f9c}} 
@@ -130,14 +144,6 @@ Retourne l\textquotesingle{}id.
 \begin{DoxyReturn}{Renvoie}
 l\textquotesingle{}id 
 \end{DoxyReturn}
-Voici le graphe des appelants de cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}\label{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}} 
 \index{FicheContact@{FicheContact}!GetListInteraction@{GetListInteraction}}
 \index{GetListInteraction@{GetListInteraction}!FicheContact@{FicheContact}}
@@ -329,7 +335,7 @@ Remplace le numéro de téléphone.
 
 
 
-Retourne un string contenant le nom et le prénom. 
+Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule. 
 
 \begin{DoxyReturn}{Renvoie}
 un string contenant le nom et le prénom 

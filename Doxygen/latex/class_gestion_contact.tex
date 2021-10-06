@@ -1,13 +1,22 @@
 \hypertarget{class_gestion_contact}{}\doxysection{Référence de la classe Gestion\+Contact}
 \label{class_gestion_contact}\index{GestionContact@{GestionContact}}
+
+
+Classe pour la gestion des contacts de l\textquotesingle{}application.  
+
+
+
+
+{\ttfamily \#include $<$gestioncontact.\+h$>$}
+
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_gestion_contact_a0d42db3777c1e15d557979c897acf344}\label{class_gestion_contact_a0d42db3777c1e15d557979c897acf344}} 
 {\bfseries Gestion\+Contact} ()
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d}{Add\+Contact}} (\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} c)
-\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter un contact {\bfseries{c}} à la liste de contacts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestion_contact_ad4a881babca3fe134d4ab3cb340dda14}{Add\+Contact}} (std\+::string nom, std\+::string prenom, std\+::string entreprise, std\+::string mail, std\+::string telephone, QImage photo, \mbox{\hyperlink{class_horodatage}{Horodatage}} date\+Creation=\mbox{\hyperlink{class_horodatage}{Horodatage}}())
+\begin{DoxyCompactList}\small\item\em Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}{Suppr\+Contact}} (int id)
 \begin{DoxyCompactList}\small\item\em Permet de supprimer un contact par son {\bfseries{id}} de la liste de contacts. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_gestion_contact_a6850914e2d978856ceaa806120c38e8d}{Modify\+Contact}} (\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} c)
@@ -16,34 +25,41 @@ std\+::vector$<$ \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} $>$ \mbo
 \begin{DoxyCompactList}\small\item\em Permet de retourner tout les contacts. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} \mbox{\hyperlink{class_gestion_contact_ae22cc27cbf912262b2716c334a12f5fe}{Get\+Contact}} (int id)
 \begin{DoxyCompactList}\small\item\em Permet de récupérer le contact à partir de son identifiant {\bfseries{id}} \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_log}{Log}} \mbox{\hyperlink{class_gestion_contact_a1969594dbc9431e39aa7f955f21171be}{get\+Log}} ()
+\mbox{\hyperlink{class_log}{Log}} \& \mbox{\hyperlink{class_gestion_contact_a41c5a7add4cea7ba13a06ad6349c6405}{Get\+Log}} ()
 \begin{DoxyCompactList}\small\item\em Getter de \mbox{\hyperlink{class_log}{Log}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Description détaillée}
+Classe pour la gestion des contacts de l\textquotesingle{}application. 
+
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\Hypertarget{class_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d}\label{class_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d}} 
+\mbox{\Hypertarget{class_gestion_contact_ad4a881babca3fe134d4ab3cb340dda14}\label{class_gestion_contact_ad4a881babca3fe134d4ab3cb340dda14}} 
 \index{GestionContact@{GestionContact}!AddContact@{AddContact}}
 \index{AddContact@{AddContact}!GestionContact@{GestionContact}}
 \doxysubsubsection{\texorpdfstring{AddContact()}{AddContact()}}
-{\footnotesize\ttfamily void Gestion\+Contact\+::\+Add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Gestion\+Contact\+::\+Add\+Contact (\begin{DoxyParamCaption}\item[{std\+::string}]{nom,  }\item[{std\+::string}]{prenom,  }\item[{std\+::string}]{entreprise,  }\item[{std\+::string}]{mail,  }\item[{std\+::string}]{telephone,  }\item[{QImage}]{photo,  }\item[{\mbox{\hyperlink{class_horodatage}{Horodatage}}}]{date\+Creation = {\ttfamily \mbox{\hyperlink{class_horodatage}{Horodatage}}()} }\end{DoxyParamCaption})}
 
 
 
-Permet d\textquotesingle{}ajouter un contact {\bfseries{c}} à la liste de contacts. 
+Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres. 
 
 
 \begin{DoxyParams}[1]{Paramètres}
-\mbox{\texttt{ in}}  & {\em c} & Contact à ajouter à la liste \\
+\mbox{\texttt{ in}}  & {\em nom} & Nom du contact \\
+\hline
+\mbox{\texttt{ in}}  & {\em prenom} & Prénom du contact \\
+\hline
+\mbox{\texttt{ in}}  & {\em entreprise} & Entreprise du contact \\
+\hline
+\mbox{\texttt{ in}}  & {\em mail} & Mail du contact \\
+\hline
+\mbox{\texttt{ in}}  & {\em telephone} & Numéro de téléphone du contact \\
+\hline
+\mbox{\texttt{ in}}  & {\em photo} & Photo de profile du contact \\
+\hline
+\mbox{\texttt{ in}}  & {\em date\+Creation} & Date de création ({\bfseries{optionelle}}) \\
 \hline
 \end{DoxyParams}
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_gestion_contact_a3ea367ebf9fb7e67fb19f7b5b7cb898d_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_gestion_contact_a9e696fc5d63a8cae7dc19652d470f62f}\label{class_gestion_contact_a9e696fc5d63a8cae7dc19652d470f62f}} 
 \index{GestionContact@{GestionContact}!GetAllContacts@{GetAllContacts}}
 \index{GetAllContacts@{GetAllContacts}!GestionContact@{GestionContact}}
@@ -75,11 +91,11 @@ Permet de récupérer le contact à partir de son identifiant {\bfseries{id}}
 \begin{DoxyReturn}{Renvoie}
 Retourne le contact qui a pour {\bfseries{id}} le paramètre 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_gestion_contact_a1969594dbc9431e39aa7f955f21171be}\label{class_gestion_contact_a1969594dbc9431e39aa7f955f21171be}} 
-\index{GestionContact@{GestionContact}!getLog@{getLog}}
-\index{getLog@{getLog}!GestionContact@{GestionContact}}
-\doxysubsubsection{\texorpdfstring{getLog()}{getLog()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_log}{Log}} Gestion\+Contact\+::get\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_gestion_contact_a41c5a7add4cea7ba13a06ad6349c6405}\label{class_gestion_contact_a41c5a7add4cea7ba13a06ad6349c6405}} 
+\index{GestionContact@{GestionContact}!GetLog@{GetLog}}
+\index{GetLog@{GetLog}!GestionContact@{GestionContact}}
+\doxysubsubsection{\texorpdfstring{GetLog()}{GetLog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_log}{Log}} \& Gestion\+Contact\+::\+Get\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -103,14 +119,6 @@ Permet de modifier un contact en le remplacant par un contact {\bfseries{c}}
 \mbox{\texttt{ in}}  & {\em c} & Contact qu\textquotesingle{}on modifie dans la liste des contacts \\
 \hline
 \end{DoxyParams}
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_gestion_contact_a6850914e2d978856ceaa806120c38e8d_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}\label{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}} 
 \index{GestionContact@{GestionContact}!SupprContact@{SupprContact}}
 \index{SupprContact@{SupprContact}!GestionContact@{GestionContact}}
@@ -126,14 +134,6 @@ Permet de supprimer un contact par son {\bfseries{id}} de la liste de contacts.
 \mbox{\texttt{ in}}  & {\em id} & Identifiant du contact à supprimer \\
 \hline
 \end{DoxyParams}
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f_cgraph}
-\end{center}
-\end{figure}
 
 
 La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
