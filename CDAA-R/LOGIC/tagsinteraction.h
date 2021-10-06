@@ -1,5 +1,5 @@
 /**
- * @file LOGIC/tagsIntegration.h
+ * @file LOGIC/tagsInteraction.h
  * @brief Fichier header pour la gestion des tags des intéractions
  * @author Samuel LACHAUD
  */
