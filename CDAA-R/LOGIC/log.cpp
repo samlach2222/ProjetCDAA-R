@@ -44,6 +44,6 @@ void Log::SetTabLog(std::vector<std::string> logs)
 void Log::AddToTabLog(std::string log)
 {
     Horodatage h = Horodatage();
-    tabLog.push_back("( " + h.ToString() + " ) "+ "\n" + log);
+    tabLog.push_back('(' + h.ToString() + ')' + '\n' + log);
 }
 

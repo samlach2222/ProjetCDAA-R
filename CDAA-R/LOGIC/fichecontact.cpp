@@ -227,5 +227,5 @@ void FicheContact::RemoveInteraction(int id)
  */
 std::string FicheContact::ToString()
 {
-    return this->nom + " " + this->prenom;
+    return this->nom + ' ' + this->prenom;
 }
