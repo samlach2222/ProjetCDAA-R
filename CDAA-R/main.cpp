@@ -12,9 +12,9 @@
 
 /**
  * @brief Gère le lancement de l'application
- * @param argc
- * @param argv
- * @return Retourne le lancement de l'application
+ * @param[in] argc      Le nombre d'arguments
+ * @param[in] argv      Tableau contenant les arguments
+ * @return le code de sortie
  */
 int main(int argc, char *argv[])
 {

@@ -78,7 +78,7 @@ void FicheContact::setPrenom(std::string newPrenom)
 
 /**
  * @brief Retourne l'entreprise
- * @return  l'entreprise
+ * @return l'entreprise
  */
 std::string FicheContact::getEntreprise()
 {
@@ -227,5 +227,5 @@ void FicheContact::RemoveInteraction(int id)
  */
 std::string FicheContact::ToString()
 {
-    return this->nom + " " + this->prenom;
+    return this->nom + ' ' + this->prenom;
 }

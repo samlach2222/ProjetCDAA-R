@@ -352,7 +352,7 @@ void MainWindow::ChooseImage()
 
 /**
  * @brief Retourne l'id à partir d'une ligne complète
- * @param row       La ligne complète
+ * @param[in] row       La ligne complète
  * @return l'id obtenu
  */
 int MainWindow::GetIdFromRow(std::string row)
