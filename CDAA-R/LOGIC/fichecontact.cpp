@@ -222,10 +222,16 @@ void FicheContact::RemoveInteraction(int id)
 }
 
 /**
- * @brief Retourne un string contenant le nom et le prénom
+ * @brief Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule
  * @return un string contenant le nom et le prénom
  */
 std::string FicheContact::ToString()
 {
-    return this->nom + ' ' + this->prenom;
+    std::string nom = this->nom;
+    std::string prenom = this->prenom;
+
+    std::transform(nom.begin(), nom.end(), nom.begin(), ::toupper);  //Ne veut pas std::toupper
+    prenom[0] = std::toupper(prenom[0]);
+
+    return nom + ' ' + prenom;
 }
