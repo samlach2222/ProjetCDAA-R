@@ -33,12 +33,20 @@ void tagsInteraction::setTags(std::vector<std::tuple<std::string, std::string>> 
     this->tags = tags;
 }
 
+/**
+ * @brief Méthode pour ajouter les tags d'un ligne dans le tableau
+ * @param[in] todo  chaine de caractère liée au [At]todo
+ * @param[in] date  chaine de caractère liée au [At]date
+ */
 void tagsInteraction::addTag(std::string todo, std::string date)
 {
     std::tuple<std::string, std::string> tuple = std::tuple<std::string, std::string>(todo, date);
     this->tags.push_back(tuple);
 }
 
+/**
+ * @brief Permet de réinitialiser la liste des tags
+ */
 void tagsInteraction::resetTags()
 {
     this->tags.clear();

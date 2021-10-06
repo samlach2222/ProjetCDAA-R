@@ -22,33 +22,31 @@
 \DoxyCodeLine{25         std::string mail;}
 \DoxyCodeLine{26         std::string telephone;}
 \DoxyCodeLine{27         QImage photo;}
-\DoxyCodeLine{28         \mbox{\hyperlink{class_horodatage}{Horodatage}} dateCreation;}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_horodatage}{Horodatage}} dateCreation;  \textcolor{comment}{//Readonly}}
 \DoxyCodeLine{29         std::vector<Interaction> listInteraction;}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31         \textcolor{keywordtype}{int} interactionHighestId;}
-\DoxyCodeLine{32     \textcolor{keyword}{public}:}
-\DoxyCodeLine{33         \mbox{\hyperlink{class_fiche_contact_a589941a66f9d5bed3aecfa36e54b1ae2}{FicheContact}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, \mbox{\hyperlink{class_horodatage}{Horodatage}} dateCreation);}
-\DoxyCodeLine{34         \textcolor{comment}{//Getters \& Setters}}
-\DoxyCodeLine{35         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5}{getId}}();}
-\DoxyCodeLine{36         std::string \mbox{\hyperlink{class_fiche_contact_a85ad2b5d62fb4340340dece092dd13c9}{getNom}}();}
-\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_add4325b34806e1168913479e26b5f862}{setNom}}(std::string newNom);}
-\DoxyCodeLine{38         std::string \mbox{\hyperlink{class_fiche_contact_ac4c06ce54b176fe56b111be7d635f31a}{getPrenom}}();}
-\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a43424446f19852d04ca81fa7a0c73969}{setPrenom}}(std::string newPrenom);}
-\DoxyCodeLine{40         std::string \mbox{\hyperlink{class_fiche_contact_a2a009232da5fcc324d77c9f61a4e22a0}{getEntreprise}}();}
-\DoxyCodeLine{41         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a692c3df53000618c84a9fb09ac1e2234}{setEntreprise}}(std::string newEntreprise);}
-\DoxyCodeLine{42         std::string \mbox{\hyperlink{class_fiche_contact_a599ab1c40101f1dc18cb27440e7a4a61}{getMail}}();}
-\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a57f78e2d830690e73b9da2588d0dfb97}{setMail}}(std::string newMail);}
-\DoxyCodeLine{44         std::string \mbox{\hyperlink{class_fiche_contact_a19a999c780fefd9a9ee2e1e7acd3728c}{getTelephone}}();}
-\DoxyCodeLine{45         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_aa0bab9bc4ec523c97066676b0ffd0c77}{setTelephone}}(std::string newTelephone);}
-\DoxyCodeLine{46         QImage \mbox{\hyperlink{class_fiche_contact_adf6b877158a63870a832f4ee5aab0973}{getPhoto}}();}
-\DoxyCodeLine{47         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_acb5911eaa0d3323c5446f2675b6441ba}{setPhoto}}(QImage newPhoto);}
-\DoxyCodeLine{48         \mbox{\hyperlink{class_horodatage}{Horodatage}} \mbox{\hyperlink{class_fiche_contact_ab5f1935a57e35838dc8296104f137f9c}{getDateCreation}}();}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50         std::vector<Interaction> \mbox{\hyperlink{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}{GetListInteraction}}();}
-\DoxyCodeLine{51         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a061c41baf9e2372e8b980f08f00bf709}{AddInteraction}}(std::string contenuInteraction, std::string titreInteraction);}
-\DoxyCodeLine{52         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_afd76648ba180fd53fcb5e3853a12a9c1}{RemoveInteraction}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
-\DoxyCodeLine{53         std::string \mbox{\hyperlink{class_fiche_contact_a9f6b0c7e3dda229b3ccf320cc8ea3b1d}{ToString}}();}
-\DoxyCodeLine{54 \};}
-\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FICHECONTACT\_H}}
+\DoxyCodeLine{30     \textcolor{keyword}{public}:}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_fiche_contact_a1c7bd5f54d53ea5ac2a14b4e46abb6ba}{FicheContact}}(\textcolor{keywordtype}{int}, std::string, std::string, std::string, std::string, std::string, QImage, \mbox{\hyperlink{class_horodatage}{Horodatage}});}
+\DoxyCodeLine{32         \textcolor{comment}{//Getters \& Setters}}
+\DoxyCodeLine{33         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_fiche_contact_a47ddfe7eea58d73f8ec1e9474f6876c5}{getId}}();}
+\DoxyCodeLine{34         std::string \mbox{\hyperlink{class_fiche_contact_a85ad2b5d62fb4340340dece092dd13c9}{getNom}}();}
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a0b584d300e3bfe9d03f64cd46c9f8f7a}{setNom}}(std::string);}
+\DoxyCodeLine{36         std::string \mbox{\hyperlink{class_fiche_contact_ac4c06ce54b176fe56b111be7d635f31a}{getPrenom}}();}
+\DoxyCodeLine{37         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a8858e8c0d456582c71225bd0ad6e0bf0}{setPrenom}}(std::string);}
+\DoxyCodeLine{38         std::string \mbox{\hyperlink{class_fiche_contact_a2a009232da5fcc324d77c9f61a4e22a0}{getEntreprise}}();}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_ae11ddaff658ea4f17969dfb4b5389b5c}{setEntreprise}}(std::string);}
+\DoxyCodeLine{40         std::string \mbox{\hyperlink{class_fiche_contact_a599ab1c40101f1dc18cb27440e7a4a61}{getMail}}();}
+\DoxyCodeLine{41         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_abd150575c67c60de997e044a44c2cfbc}{setMail}}(std::string);}
+\DoxyCodeLine{42         std::string \mbox{\hyperlink{class_fiche_contact_a19a999c780fefd9a9ee2e1e7acd3728c}{getTelephone}}();}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_adf50f581c8349a70c25cde7bfdb33b75}{setTelephone}}(std::string);}
+\DoxyCodeLine{44         QImage \mbox{\hyperlink{class_fiche_contact_adf6b877158a63870a832f4ee5aab0973}{getPhoto}}();}
+\DoxyCodeLine{45         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_ae79356b499aaafa19f3db3d85f345c35}{setPhoto}}(QImage);}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_horodatage}{Horodatage}} \mbox{\hyperlink{class_fiche_contact_ab5f1935a57e35838dc8296104f137f9c}{getDateCreation}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         std::vector<Interaction> \mbox{\hyperlink{class_fiche_contact_a843826ee1b8b4e5c446f71c930ef556e}{GetListInteraction}}();}
+\DoxyCodeLine{49         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_a125f25f4bba1be6d87a0d7b9423fcdcf}{AddInteraction}}(std::string, std::string);}
+\DoxyCodeLine{50         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fiche_contact_af98ff7bffb58db9262bba69e11c7143c}{RemoveInteraction}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{51         std::string \mbox{\hyperlink{class_fiche_contact_a9f6b0c7e3dda229b3ccf320cc8ea3b1d}{ToString}}();}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FICHECONTACT\_H}}
 
 \end{DoxyCode}

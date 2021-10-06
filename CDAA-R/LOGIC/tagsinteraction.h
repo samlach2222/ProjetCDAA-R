@@ -6,7 +6,9 @@
 #ifndef TAGSINTERACTION_H
 #define TAGSINTERACTION_H
 
-
+/**
+ * @brief Classe gérant le tableau des tags
+ */
 class tagsInteraction
 {
 private:

@@ -15,15 +15,15 @@ Classe pour la gestion des contacts de l\textquotesingle{}application.
 \mbox{\Hypertarget{class_gestion_contact_a0d42db3777c1e15d557979c897acf344}\label{class_gestion_contact_a0d42db3777c1e15d557979c897acf344}} 
 {\bfseries Gestion\+Contact} ()
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_gestion_contact_ad4a881babca3fe134d4ab3cb340dda14}{Add\+Contact}} (std\+::string nom, std\+::string prenom, std\+::string entreprise, std\+::string mail, std\+::string telephone, QImage photo, \mbox{\hyperlink{class_horodatage}{Horodatage}} date\+Creation=\mbox{\hyperlink{class_horodatage}{Horodatage}}())
+void \mbox{\hyperlink{class_gestion_contact_a3e46dc0b2954a6de8856efac2c0d11ca}{Add\+Contact}} (std\+::string, std\+::string, std\+::string, std\+::string, std\+::string, QImage, \mbox{\hyperlink{class_horodatage}{Horodatage}}=\mbox{\hyperlink{class_horodatage}{Horodatage}}())
 \begin{DoxyCompactList}\small\item\em Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}{Suppr\+Contact}} (int id)
+void \mbox{\hyperlink{class_gestion_contact_a5937c3b951b6382120a5484656a72f25}{Suppr\+Contact}} (int)
 \begin{DoxyCompactList}\small\item\em Permet de supprimer un contact par son {\bfseries{id}} de la liste de contacts. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_gestion_contact_a6850914e2d978856ceaa806120c38e8d}{Modify\+Contact}} (\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} c)
+void \mbox{\hyperlink{class_gestion_contact_a18ca180223e793a022e26b6e8abfc60e}{Modify\+Contact}} (\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}})
 \begin{DoxyCompactList}\small\item\em Permet de modifier un contact en le remplacant par un contact {\bfseries{c}} \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} $>$ \mbox{\hyperlink{class_gestion_contact_a9e696fc5d63a8cae7dc19652d470f62f}{Get\+All\+Contacts}} ()
 \begin{DoxyCompactList}\small\item\em Permet de retourner tout les contacts. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} \mbox{\hyperlink{class_gestion_contact_ae22cc27cbf912262b2716c334a12f5fe}{Get\+Contact}} (int id)
+\mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} \mbox{\hyperlink{class_gestion_contact_ac16d89f1b702d3456ce954c481507e8d}{Get\+Contact}} (int)
 \begin{DoxyCompactList}\small\item\em Permet de récupérer le contact à partir de son identifiant {\bfseries{id}} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_log}{Log}} \& \mbox{\hyperlink{class_gestion_contact_a41c5a7add4cea7ba13a06ad6349c6405}{Get\+Log}} ()
 \begin{DoxyCompactList}\small\item\em Getter de \mbox{\hyperlink{class_log}{Log}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -33,7 +33,7 @@ std\+::vector$<$ \mbox{\hyperlink{class_fiche_contact}{Fiche\+Contact}} $>$ \mbo
 Classe pour la gestion des contacts de l\textquotesingle{}application. 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\Hypertarget{class_gestion_contact_ad4a881babca3fe134d4ab3cb340dda14}\label{class_gestion_contact_ad4a881babca3fe134d4ab3cb340dda14}} 
+\mbox{\Hypertarget{class_gestion_contact_a3e46dc0b2954a6de8856efac2c0d11ca}\label{class_gestion_contact_a3e46dc0b2954a6de8856efac2c0d11ca}} 
 \index{GestionContact@{GestionContact}!AddContact@{AddContact}}
 \index{AddContact@{AddContact}!GestionContact@{GestionContact}}
 \doxysubsubsection{\texorpdfstring{AddContact()}{AddContact()}}
@@ -73,7 +73,7 @@ Permet de retourner tout les contacts.
 \begin{DoxyReturn}{Renvoie}
 Retourne un tableau avec tout les contacts de l\textquotesingle{}application 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_gestion_contact_ae22cc27cbf912262b2716c334a12f5fe}\label{class_gestion_contact_ae22cc27cbf912262b2716c334a12f5fe}} 
+\mbox{\Hypertarget{class_gestion_contact_ac16d89f1b702d3456ce954c481507e8d}\label{class_gestion_contact_ac16d89f1b702d3456ce954c481507e8d}} 
 \index{GestionContact@{GestionContact}!GetContact@{GetContact}}
 \index{GetContact@{GetContact}!GestionContact@{GestionContact}}
 \doxysubsubsection{\texorpdfstring{GetContact()}{GetContact()}}
@@ -104,7 +104,7 @@ Getter de \mbox{\hyperlink{class_log}{Log}}.
 \begin{DoxyReturn}{Renvoie}
 Retourne la classe \mbox{\hyperlink{class_log}{Log}} instanciée 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_gestion_contact_a6850914e2d978856ceaa806120c38e8d}\label{class_gestion_contact_a6850914e2d978856ceaa806120c38e8d}} 
+\mbox{\Hypertarget{class_gestion_contact_a18ca180223e793a022e26b6e8abfc60e}\label{class_gestion_contact_a18ca180223e793a022e26b6e8abfc60e}} 
 \index{GestionContact@{GestionContact}!ModifyContact@{ModifyContact}}
 \index{ModifyContact@{ModifyContact}!GestionContact@{GestionContact}}
 \doxysubsubsection{\texorpdfstring{ModifyContact()}{ModifyContact()}}
@@ -119,7 +119,7 @@ Permet de modifier un contact en le remplacant par un contact {\bfseries{c}}
 \mbox{\texttt{ in}}  & {\em c} & Contact qu\textquotesingle{}on modifie dans la liste des contacts \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}\label{class_gestion_contact_a45ef361cff471b5dcb80fbb28857a91f}} 
+\mbox{\Hypertarget{class_gestion_contact_a5937c3b951b6382120a5484656a72f25}\label{class_gestion_contact_a5937c3b951b6382120a5484656a72f25}} 
 \index{GestionContact@{GestionContact}!SupprContact@{SupprContact}}
 \index{SupprContact@{SupprContact}!GestionContact@{GestionContact}}
 \doxysubsubsection{\texorpdfstring{SupprContact()}{SupprContact()}}

@@ -158,9 +158,11 @@ void UI_InteractionContact::ValiderInteraction()
 
             contact.AddInteraction(contenu, titre);
 
-            Interaction* i = this->contact.GetListInteraction().data();
-            Interaction inte = i[this->contact.GetListInteraction().size()-1];
-            Interaction* ptr = &inte;
+            //Interaction* i = this->contact.GetListInteraction().data();
+            //Interaction inte = i[this->contact.GetListInteraction().size()-1];
+            //Interaction* ptr = &inte;
+
+            Interaction* ptr = &this->contact.GetListInteraction().data()[this->contact.GetListInteraction().size()-1];
 
             this->addTags(ptr);
             emit AddOperationToLog("Interaction Added");
@@ -229,6 +231,10 @@ void UI_InteractionContact::ListItemClick()
     }
 }
 
+/**
+ * @brief Méthode pour ajouter les tags dans liste des tags
+ * @param[out] i Interaction à laquelle on rajoute les tags
+ */
 void UI_InteractionContact::addTags(Interaction *i)
 {
     tagsInteraction tags = tagsInteraction();

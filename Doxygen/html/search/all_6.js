@@ -5,14 +5,14 @@ var searchData=
   ['gestioncontact_2eh_2',['gestioncontact.h',['../gestioncontact_8h.html',1,'']]],
   ['getallcontacts_3',['GetAllContacts',['../class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f',1,'GestionContact']]],
   ['getannee_4',['GetAnnee',['../class_horodatage.html#a788438a0e71b1544df640faf6a1e7d40',1,'Horodatage']]],
-  ['getcontact_5',['GetContact',['../class_gestion_contact.html#ae22cc27cbf912262b2716c334a12f5fe',1,'GestionContact']]],
+  ['getcontact_5',['GetContact',['../class_gestion_contact.html#ac16d89f1b702d3456ce954c481507e8d',1,'GestionContact']]],
   ['getcontenu_6',['GetContenu',['../class_interaction.html#a6080d109220d28d490c9d61b5710ebfc',1,'Interaction']]],
   ['getdatecreation_7',['getDateCreation',['../class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c',1,'FicheContact']]],
   ['getentreprise_8',['getEntreprise',['../class_fiche_contact.html#a2a009232da5fcc324d77c9f61a4e22a0',1,'FicheContact']]],
   ['getheure_9',['GetHeure',['../class_horodatage.html#aa46bca80d6c44387582320804366dcac',1,'Horodatage']]],
   ['gethorodatage_10',['GetHorodatage',['../class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433',1,'Interaction']]],
-  ['getid_11',['getId',['../class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5',1,'FicheContact']]],
-  ['getid_12',['GetId',['../class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc',1,'Interaction']]],
+  ['getid_11',['GetId',['../class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc',1,'Interaction']]],
+  ['getid_12',['getId',['../class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5',1,'FicheContact']]],
   ['getjour_13',['GetJour',['../class_horodatage.html#a606ae08a8b82fd9c2aa3db106208db06',1,'Horodatage']]],
   ['getlistinteraction_14',['GetListInteraction',['../class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e',1,'FicheContact']]],
   ['getlog_15',['GetLog',['../class_gestion_contact.html#a41c5a7add4cea7ba13a06ad6349c6405',1,'GestionContact']]],
@@ -24,6 +24,7 @@ var searchData=
   ['getprenom_21',['getPrenom',['../class_fiche_contact.html#ac4c06ce54b176fe56b111be7d635f31a',1,'FicheContact']]],
   ['getseconde_22',['GetSeconde',['../class_horodatage.html#ac55d8fa3c87e0740f535d0faa0b3bd08',1,'Horodatage']]],
   ['gettablog_23',['getTabLog',['../class_log.html#ae9cb1313929015d31b2298c0d1b5bf64',1,'Log']]],
-  ['gettelephone_24',['getTelephone',['../class_fiche_contact.html#a19a999c780fefd9a9ee2e1e7acd3728c',1,'FicheContact']]],
-  ['gettitre_25',['getTitre',['../class_interaction.html#a5ab660c1a9fef1a00880cad573dfdc5b',1,'Interaction']]]
+  ['gettags_24',['getTags',['../class_interaction.html#af2de44e87e631cc95ca31daf6c8a97db',1,'Interaction::getTags()'],['../classtags_interaction.html#af5656f39f9d8c0943de4626de2e628fc',1,'tagsInteraction::getTags()']]],
+  ['gettelephone_25',['getTelephone',['../class_fiche_contact.html#a19a999c780fefd9a9ee2e1e7acd3728c',1,'FicheContact']]],
+  ['gettitre_26',['getTitre',['../class_interaction.html#a5ab660c1a9fef1a00880cad573dfdc5b',1,'Interaction']]]
 ];

@@ -12,7 +12,7 @@ Classe pour une intéraction.
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}{Interaction}} (int id, std\+::string, std\+::string)
+\mbox{\hyperlink{class_interaction_a532aa52016d9e7dde3431a9781be3962}{Interaction}} (int, std\+::string, std\+::string)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_interaction}{Interaction}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_interaction_a3a5ec7b4c2b0dd43305288db0ab4afbc}{Get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}id. \end{DoxyCompactList}\item 
@@ -25,14 +25,18 @@ void \mbox{\hyperlink{class_interaction_a7fa16276ece67880fdba83723e75d96c}{Set\+
 std\+::string \mbox{\hyperlink{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}{get\+Titre}} ()
 \begin{DoxyCompactList}\small\item\em Retourne le titre de l\textquotesingle{}interaction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}{set\+Titre}} (std\+::string)
-\begin{DoxyCompactList}\small\item\em Remplace le titre de l\textquotesingle{}interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Remplace le titre de l\textquotesingle{}interaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtags_interaction}{tags\+Interaction}} \mbox{\hyperlink{class_interaction_af2de44e87e631cc95ca31daf6c8a97db}{get\+Tags}} ()
+\begin{DoxyCompactList}\small\item\em Permet de récupérer les tags d\textquotesingle{}un intéraction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interaction_a0da2ecaf5908017a5525396da09e9c36}{set\+Tags}} (\mbox{\hyperlink{classtags_interaction}{tags\+Interaction}})
+\begin{DoxyCompactList}\small\item\em Permet de changer la valeur des tags d\textquotesingle{}une intéraction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
 Classe pour une intéraction. 
 
 \doxysubsection{Documentation des constructeurs et destructeur}
-\mbox{\Hypertarget{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}\label{class_interaction_ad30c1206d8ddde56643b64c15b6af9e7}} 
+\mbox{\Hypertarget{class_interaction_a532aa52016d9e7dde3431a9781be3962}\label{class_interaction_a532aa52016d9e7dde3431a9781be3962}} 
 \index{Interaction@{Interaction}!Interaction@{Interaction}}
 \index{Interaction@{Interaction}!Interaction@{Interaction}}
 \doxysubsubsection{\texorpdfstring{Interaction()}{Interaction()}}
@@ -93,6 +97,19 @@ Retourne l\textquotesingle{}id.
 \begin{DoxyReturn}{Renvoie}
 l\textquotesingle{}id 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_interaction_af2de44e87e631cc95ca31daf6c8a97db}\label{class_interaction_af2de44e87e631cc95ca31daf6c8a97db}} 
+\index{Interaction@{Interaction}!getTags@{getTags}}
+\index{getTags@{getTags}!Interaction@{Interaction}}
+\doxysubsubsection{\texorpdfstring{getTags()}{getTags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtags_interaction}{tags\+Interaction}} Interaction\+::get\+Tags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de récupérer les tags d\textquotesingle{}un intéraction. 
+
+\begin{DoxyReturn}{Renvoie}
+classe des tags d\textquotesingle{}intéraction 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}\label{class_interaction_a5ab660c1a9fef1a00880cad573dfdc5b}} 
 \index{Interaction@{Interaction}!getTitre@{getTitre}}
 \index{getTitre@{getTitre}!Interaction@{Interaction}}
@@ -119,6 +136,21 @@ Remplace le contenu de l\textquotesingle{}intéraction.
 
 \begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ in}}  & {\em c} & Le nouveau contenu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_interaction_a0da2ecaf5908017a5525396da09e9c36}\label{class_interaction_a0da2ecaf5908017a5525396da09e9c36}} 
+\index{Interaction@{Interaction}!setTags@{setTags}}
+\index{setTags@{setTags}!Interaction@{Interaction}}
+\doxysubsubsection{\texorpdfstring{setTags()}{setTags()}}
+{\footnotesize\ttfamily void Interaction\+::set\+Tags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtags_interaction}{tags\+Interaction}}}]{tags }\end{DoxyParamCaption})}
+
+
+
+Permet de changer la valeur des tags d\textquotesingle{}une intéraction. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em tags} & d\textquotesingle{}une intéraction \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}\label{class_interaction_a986dc0c1ccfb1d52c6c5cf56122d850e}} 
