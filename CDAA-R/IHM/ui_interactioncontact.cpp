@@ -143,6 +143,9 @@ void UI_InteractionContact::ValiderInteraction()
                 {
                     i.setTitre(ui->editTitre->text().toStdString());
                     i.SetContenu(ui->editDescription->toPlainText().toStdString());
+
+                    Interaction *pointeurVersI = &i;
+                    this->addTags(pointeurVersI);
                 }
             }
             emit AddOperationToLog("Interaction Modified");
@@ -154,6 +157,12 @@ void UI_InteractionContact::ValiderInteraction()
             std::string contenu = ui->editDescription->toPlainText().toStdString();
 
             contact.AddInteraction(contenu, titre);
+
+            Interaction* i = this->contact.GetListInteraction().data();
+            Interaction inte = i[this->contact.GetListInteraction().size()-1];
+            Interaction* ptr = &inte;
+
+            this->addTags(ptr);
             emit AddOperationToLog("Interaction Added");
 
         }
@@ -218,4 +227,35 @@ void UI_InteractionContact::ListItemClick()
             ui->editDateCreation->setEnabled(0);
         }
     }
+}
+
+void UI_InteractionContact::addTags(Interaction *i)
+{
+    tagsInteraction tags = tagsInteraction();
+    QStringList text_in_lines = ui->editDescription->toPlainText().split( "\n" );
+    for( int j = 0; j < text_in_lines.count(); j++ )
+    {
+        std::string currentLine = text_in_lines.at( j ).toStdString();
+        if(((int) currentLine.find("@todo")) != -1)
+        {
+            if(((int) currentLine.find("@date")) != -1) // cas où il y a un tag TODO puis un tag DATE
+            {
+                int firstDelPos = currentLine.find("@todo");
+                int secondDelPos = currentLine.find("@date");
+                std::string tagTodo = currentLine.substr(firstDelPos+6, secondDelPos-firstDelPos-6);
+                std::string strDate = currentLine.substr (secondDelPos+6);
+
+                tags.addTag(tagTodo,strDate);
+            }
+            else // cas où il y a un tag TODO mais pas de tag DATE
+            {
+                int firstDelPos = currentLine.find("@todo");
+                std::string tagTodo = currentLine.substr (firstDelPos+6);
+                std::string strDate = QDate::currentDate().toString("dd/MM/yyyy").toStdString();
+
+                tags.addTag(tagTodo,strDate);
+            }
+        }
+    }
+    i->setTags(tags);
 }

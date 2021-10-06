@@ -10,11 +10,13 @@
 class tagsInteraction
 {
 private:
-    std::vector<std::tuple<std::string, QDate>> tags;
+    std::vector<std::tuple<std::string, std::string>> tags;
 public:
     tagsInteraction();
-    std::vector<std::tuple<std::string, QDate>> getTags();
-    void setTags(std::vector<std::tuple<std::string, QDate>>);
+    void addTag(std::string, std::string);
+    void resetTags();
+    std::vector<std::tuple<std::string, std::string>> getTags();
+    void setTags(std::vector<std::tuple<std::string, std::string>>);
 };
 
 #endif // TAGSINTERACTION_H

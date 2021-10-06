@@ -30,6 +30,7 @@ private:
     int id;
     FicheContact contact;
     void DisplayInteractionList();
+    void addTags(Interaction*);
 
 public slots:
     void ValidateAllInteractions();
