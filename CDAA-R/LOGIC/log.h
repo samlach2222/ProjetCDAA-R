@@ -18,9 +18,9 @@ class Log
         std::vector<std::string> tabLog;
     public:
         Log();
-        void AddToTabLog(std::string log);
+        void AddToTabLog(std::string);
         std::vector<std::string> getTabLog();
-        void SetTabLog(std::vector<std::string> logs);
+        void SetTabLog(std::vector<std::string>);
 };
 
 #endif // LOG_H

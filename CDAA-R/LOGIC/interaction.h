@@ -22,7 +22,7 @@ class Interaction
         Horodatage horodatage;
         tagsInteraction tags;
     public:
-        Interaction(int id, std::string, std::string);
+        Interaction(int, std::string, std::string);
         int GetId();
         std::string GetContenu();
         void SetContenu(std::string);

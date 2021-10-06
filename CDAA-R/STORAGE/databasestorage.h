@@ -16,11 +16,11 @@
 class DatabaseStorage
 {
     public:
-        static void Create(FicheContact c);
-        static void Update(FicheContact c);
-        static void Delete(int id);
+        static void Create(FicheContact);
+        static void Update(FicheContact);
+        static void Delete(int);
         static GestionContact Load();
-        static std::string Request(std::string sqlRequest);
+        static std::string Request(std::string);
 };
 
 #endif // DATABASESTORAGE_H

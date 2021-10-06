@@ -25,31 +25,29 @@ class FicheContact
         std::string mail;
         std::string telephone;
         QImage photo;
-        Horodatage dateCreation;
+        Horodatage dateCreation;  //Readonly
         std::vector<Interaction> listInteraction;
-
-        int interactionHighestId;
     public:
-        FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation);
+        FicheContact(int, std::string, std::string, std::string, std::string, std::string, QImage, Horodatage);
         //Getters & Setters
         int getId();
         std::string getNom();
-        void setNom(std::string newNom);
+        void setNom(std::string);
         std::string getPrenom();
-        void setPrenom(std::string newPrenom);
+        void setPrenom(std::string);
         std::string getEntreprise();
-        void setEntreprise(std::string newEntreprise);
+        void setEntreprise(std::string);
         std::string getMail();
-        void setMail(std::string newMail);
+        void setMail(std::string);
         std::string getTelephone();
-        void setTelephone(std::string newTelephone);
+        void setTelephone(std::string);
         QImage getPhoto();
-        void setPhoto(QImage newPhoto);
+        void setPhoto(QImage);
         Horodatage getDateCreation();
 
         std::vector<Interaction> GetListInteraction();
-        void AddInteraction(std::string contenuInteraction, std::string titreInteraction);
-        void RemoveInteraction(int id);
+        void AddInteraction(std::string, std::string);
+        void RemoveInteraction(int);
         std::string ToString();
 };
 #endif // FICHECONTACT_H
