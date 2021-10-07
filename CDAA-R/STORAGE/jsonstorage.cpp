@@ -3,7 +3,7 @@
  * @brief La classe de gestion de l'import et l'export au format JSon des informations du programme
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.2
+ * @version 1.3
  * @date 22/09/2021
  */
 
@@ -72,12 +72,12 @@ void JSonStorage::Save(GestionContact gc)
     }
     json["contactTotal"] = id;
 
-    QJsonDocument json_doc(json);
-    QString json_string = json_doc.toJson();
+    //QJsonDocument json_doc = QJsonDocument(json);
+    //QString json_string = json_doc.toJson();
+    QString json_string = QJsonDocument(json).toJson();
 
     //Création du dossier %AppData%/CDAA-R
-    QString appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir appDataDir(appDataPath);  //Ne pas donner GetFilepath() car cela créerait un DOSSIER %appdata%/CDAA-R/Save.json/
+    QDir appDataDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));  //Ne pas donner GetFilepath() car cela créerait un DOSSIER %appdata%/CDAA-R/Save.json/
     if (!appDataDir.exists()){
         appDataDir.mkpath(".");
     }
@@ -107,9 +107,10 @@ GestionContact JSonStorage::Load()
     file.close();
 
     //Conversion en QJsonObject
-    QByteArray jsonData = jsonText.toLocal8Bit();
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
-    QJsonObject json = jsonDoc.object();
+    //QByteArray jsonData = jsonText.toLocal8Bit();
+    //QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
+    //QJsonObject json = jsonDoc.object();
+    QJsonObject json = QJsonDocument::fromJson(jsonText.toLocal8Bit()).object();
 
     for (int cId = 0; cId < json["contactTotal"].toInt(); cId++){
         int id = json["contact"+QString::number(cId)+"id"].toInt();
@@ -120,14 +121,16 @@ GestionContact JSonStorage::Load()
         std::string telephone = json["contact"+QString::number(cId)+"telephone"].toString().toStdString();
 
         //Conversion du string en Horodatage
-        std::string strDateCreation = json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString();
-        Horodatage dateCreation = Horodatage(strDateCreation);
+        //std::string strDateCreation = json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString();
+        //Horodatage dateCreation = Horodatage(strDateCreation);
+        Horodatage dateCreation = Horodatage(json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString());
 
         //Conversion du base64 en QImage
-        QString b64str = json["contact"+QString::number(id)+"photo"].toString();
-        QByteArray b64ba = b64str.toLocal8Bit();
         QImage photo;
-        photo.loadFromData(QByteArray::fromBase64(b64ba));
+        //QString b64str = json["contact"+QString::number(id)+"photo"].toString();
+        //QByteArray b64ba = b64str.toLocal8Bit();
+        //photo.loadFromData(QByteArray::fromBase64(b64ba));
+        photo.loadFromData(QByteArray::fromBase64(json["contact"+QString::number(id)+"photo"].toString().toLocal8Bit()));
 
         gc.AddContact(nom, prenom, entreprise, mail, telephone, photo, dateCreation);
     }
