@@ -17,12 +17,9 @@
  */
 class JSonStorage
 {
-    private:
-        std::string filepath;
     public:
-        JSonStorage(std::string);
-        void Save(GestionContact);
-        GestionContact Load();
+        static void Save(GestionContact);
+        static GestionContact Load();
 };
 
 #endif // JSONSTORAGE_H

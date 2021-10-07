@@ -18,12 +18,13 @@
 #include <QTextStream>
 
 /**
- * @brief Constructeur de la classe JSonStorage
- * @param[in] filepath      Nom et chemin du fichier dans lequel va être sauvegardé les informations du programme **au format JSon**
+ * @brief Retourne le chemin et nom du fichier de sauvegarde
+ * @return le chemin et nom du fichier de sauvegarde
  */
-JSonStorage::JSonStorage(std::string filepath)
-{
-    this->filepath = filepath;
+const QString GetFilepath(){
+    //Ne peut pas être une variable globale constante car sinon donne le chemin %appdata%/Save.json
+    //Ne peut pas être une fonction publique ou variable publique de la classe car sinon il faut créer une variable de type JSonStorage exprès pour (les méthodes static n'ont pas directement accès aux éléments de la classe), ni privé car les méthodes static n'y auraient pas accès du tout
+    return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"/Save.json";
 }
 
 /**
@@ -76,12 +77,12 @@ void JSonStorage::Save(GestionContact gc)
 
     //Création du dossier %AppData%/CDAA-R
     QString appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir appDataDir(appDataPath);
+    QDir appDataDir(appDataPath);  //Ne pas donner GetFilepath() car cela créerait un DOSSIER %appdata%/CDAA-R/Save.json/
     if (!appDataDir.exists()){
         appDataDir.mkpath(".");
     }
 
-    QFile file(QString::fromStdString(this->filepath));
+    QFile file(GetFilepath());
     file.open(QIODevice::WriteOnly);
     file.write(json_string.toLocal8Bit());
     file.close();
@@ -89,14 +90,14 @@ void JSonStorage::Save(GestionContact gc)
 
 /**
  * @brief Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin **d'assurer l'interopérabilité**
- * @return Retourne l'ensemble des informations des contacts et des logs sauvegardées
+ * @return l'ensemble des informations des contacts et des logs sauvegardées
  */
 GestionContact JSonStorage::Load()
 {
     GestionContact gc = GestionContact();
 
     //Lecture du fichier de sauvegarde
-    QFile file(QString::fromStdString(this->filepath));
+    QFile file(GetFilepath());
     if(!file.open(QIODevice::ReadOnly)){
         //Quitte prématurément si le fichier n'existe pas
         return gc;
@@ -118,6 +119,7 @@ GestionContact JSonStorage::Load()
         std::string mail = json["contact"+QString::number(cId)+"mail"].toString().toStdString();
         std::string telephone = json["contact"+QString::number(cId)+"telephone"].toString().toStdString();
 
+        //Conversion du string en Horodatage
         std::string strDateCreation = json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString();
         Horodatage dateCreation = Horodatage(strDateCreation);
 
@@ -139,4 +141,3 @@ GestionContact JSonStorage::Load()
 
     return gc;
 }
-

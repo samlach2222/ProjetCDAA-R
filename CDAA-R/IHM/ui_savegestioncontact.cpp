@@ -24,9 +24,6 @@ UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *ge
 {
     ui->setupUi(this);
     this->gc = gestionContact; // On récupère la valeur de gestionContact
-
-    QString appDataPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    this->jss = JSonStorage(appDataPath.toStdString()+"/Save.json");
 }
 
 /**
@@ -46,7 +43,7 @@ void UI_SaveGestionContact::Import()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    GestionContact gc = this->jss.Load();
+    GestionContact gc = JSonStorage::Load();
 
     //Ne pas charger si le fichier n'existait pas ou était vide
     if (gc.GetAllContacts().size() == 0 && gc.GetLog().getTabLog().size() == 0){
@@ -74,7 +71,7 @@ void UI_SaveGestionContact::Export()
 //    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
 //    gc->GetLog().AddToTabLog("log 0");
 //    gc->GetLog().AddToTabLog("log 1");
-    this->jss.Save(*gc);
+    JSonStorage::Save(*gc);
 
     ui->informationLabel->setText("Export effectué");
 }

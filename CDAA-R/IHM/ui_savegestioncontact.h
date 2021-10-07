@@ -28,7 +28,6 @@ public:
 
 private:
     Ui::UI_SaveGestionContact *ui;
-    JSonStorage jss = JSonStorage("Save.json");
     GestionContact* gc;
 
 
