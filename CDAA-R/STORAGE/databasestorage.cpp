@@ -16,10 +16,10 @@
  */
 static const QSqlDatabase GetBDD(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setHostName("ConnexionDB");  //Nom de la connexion, à ne pas confondre avec...
-    db.setDatabaseName("ContactDB");  //..Nom de la base de données
-    db.setUserName("root");
-    db.setPassword("root");
+    db.setHostName("localhost");  //Nom de l'host
+    db.setDatabaseName("ContactDB");  //Nom de la base de données
+    //db.setUserName("root");
+    //db.setPassword("root");
 
     if (!db.open()){
         throw std::runtime_error("La connexion à la base de données à échoué");
