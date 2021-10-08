@@ -24,9 +24,8 @@ CREATE TABLE IF NOT EXISTS CONTACT(
     contactEntreprise VARCHAR(50),
     contactMail VARCHAR(50),
     contactPhone VARCHAR(15), -- longest phone number worldwide
-    contactPicture BLOB,  -- to stock Base64 image
-    contactCreationDate VARCHAR(19), -- 19 chars for xx/xx/xxxx xx:xx:xx
-    age INT DEFAULT NULL);
+    contactPicture BLOB,  -- to stock Base64(data) image
+    contactCreationDate VARCHAR(19)); -- 19 chars for xx/xx/xxxx xx:xx:xx
 
 CREATE TABLE IF NOT EXISTS INTERACTION(
     interactionId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
