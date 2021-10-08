@@ -21,7 +21,7 @@
  * @brief Retourne le chemin et nom du fichier de sauvegarde
  * @return le chemin et nom du fichier de sauvegarde
  */
-const QString GetFilepath(){
+static const QString GetFilepath(){
     //Ne peut pas être une variable globale constante car sinon donne le chemin %appdata%/Save.json
     //Ne peut pas être une fonction publique ou variable publique de la classe car sinon il faut créer une variable de type JSonStorage exprès pour (les méthodes static n'ont pas directement accès aux éléments de la classe), ni privé car les méthodes static n'y auraient pas accès du tout
     return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"/Save.json";
