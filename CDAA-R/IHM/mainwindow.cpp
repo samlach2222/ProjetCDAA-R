@@ -391,4 +391,14 @@ void MainWindow::AddOperationToLog(std::string str)
 
 void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 {
-    // Modifier liste courant en sauvegardant l'ancienne
+    ui->ContactList->clear();
+    for(FicheContact c :listContact)
+    {
+        QString str = QString::fromStdString(c.ToString());
+        QListWidgetItem* item = new QListWidgetItem(str);
+        QVariant v;
+        v.setValue(c.getId());
+        item->setData(Qt::UserRole, v);
+        ui->ContactList->addItem(item);
+    }
+}

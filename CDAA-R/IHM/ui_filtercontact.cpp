@@ -105,7 +105,7 @@ void UI_FilterContact::ButtonValidate()
                 });
             }
         }
-        emit sendListContactToMainWindow(std::vector<FicheContact> listContact);
+        emit sendListContactToMainWindow(listContact);
     }
 }
 

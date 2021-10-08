@@ -45,7 +45,7 @@
     <string>Nom</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="editEntreprise">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -113,7 +113,7 @@
     <string>Date de fin</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="triAlphabetique">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -132,7 +132,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QRadioButton" name="triDateCreation">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -151,7 +151,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="boutonValider">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -164,7 +164,7 @@
     <string>Valider</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="boutonAnnuler">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -181,7 +181,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>boutonValider</sender>
    <signal>clicked()</signal>
    <receiver>UI_FilterContact</receiver>
    <slot>ButtonValidate()</slot>
@@ -197,7 +197,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>boutonAnnuler</sender>
    <signal>clicked()</signal>
    <receiver>UI_FilterContact</receiver>
    <slot>ButtonCancel()</slot>
