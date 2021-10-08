@@ -56,6 +56,7 @@ public slots:
     void ReceiveContactToMainWindow(FicheContact);
     void AddOperationToLog(std::string);
     void ReceiveFromFilterContact(std::vector<FicheContact>);
+    void resetFilters();
 
 signals :
     /**

@@ -46,10 +46,10 @@ void UI_FilterContact::ButtonValidate()
         for(FicheContact fc : this->gc.GetAllContacts())
         {
             //Check de la validité de la date
-            std::string fcAnnee = std::to_string(fc.getDateCreation().GetAnnee());
-            std::string fcMois = std::to_string(fc.getDateCreation().GetMois());
-            std::string fcJour = std::to_string(fc.getDateCreation().GetJour());
-            QDate date = QDate::fromString(QString::fromStdString(fcJour + "/" + fcMois + "/" + fcAnnee),"dd/MM/yyyy");
+            int fcAnnee = fc.getDateCreation().GetAnnee();
+            int fcMois = fc.getDateCreation().GetMois();
+            int fcJour = fc.getDateCreation().GetJour();
+            QDate date = QDate(fcAnnee,fcMois, fcJour);
             if(date >= dateMin && date <= dateMax) // date souhaitée
             {
                 // check nom (si non vide)
@@ -88,7 +88,8 @@ void UI_FilterContact::ButtonValidate()
         }
         else if(ui->triDateCreation->isChecked())   // tri par date de création
         {
-            for(FicheContact fc : listContact)
+            const std::vector<FicheContact> liste = listContact;
+            for(FicheContact fc : liste)
             {
                 std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
                     // fiche1
@@ -106,6 +107,7 @@ void UI_FilterContact::ButtonValidate()
             }
         }
         emit sendListContactToMainWindow(listContact);
+        this->close();
     }
 }
 
@@ -201,4 +203,27 @@ bool UI_FilterContact::VerificationChamps()
 void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
 {
     this->gc = gc;
+    QDate minDate;
+    QDate maxDate;
+    for(FicheContact fc : gc.GetAllContacts())
+    {
+        if(minDate.toString().isEmpty() && maxDate.toString().isEmpty()){
+            minDate = QDate(fc.getDateCreation().GetAnnee(), fc.getDateCreation().GetMois(), fc.getDateCreation().GetJour());
+            maxDate = QDate(fc.getDateCreation().GetAnnee(), fc.getDateCreation().GetMois(), fc.getDateCreation().GetJour());
+        }
+        else
+        {
+            QDate curDate = QDate(fc.getDateCreation().GetAnnee(), fc.getDateCreation().GetMois(), fc.getDateCreation().GetJour());
+            if(curDate < minDate)
+            {
+                minDate = curDate;
+            }
+            else if(curDate > maxDate)
+            {
+                maxDate = curDate;
+            }
+        }
+    }
+    ui->editDateDebut->setDate(minDate);
+    ui->editDateFin->setDate(maxDate);
 }
