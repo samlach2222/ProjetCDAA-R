@@ -187,8 +187,7 @@ void MainWindow::OpenSGC()
  */
 void MainWindow::ListItemDoubleClick()
 {
-    // On joue le son du bouton
-    SoundPlayer::PlayButtonSound();
+    // son non nécéssaire car déjà mis pour le simple clic
 
     QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
     QVariant v = selectedItem[0]->data(Qt::UserRole);
