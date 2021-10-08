@@ -55,11 +55,17 @@ public slots:
     void ChooseImage();
     void ReceiveContactToMainWindow(FicheContact);
     void AddOperationToLog(std::string);
+    void ReceiveFromFilterContact(std::vector<FicheContact>);
 
 signals :
     /**
      * @brief Signal permettant d'envoyer l'id du contact auquel on met des intéraction, ainsi que la classe de gestion de contacts
      */
     void sendIdToInteraction(int,GestionContact);
+
+    /**
+     * @brief Signal permettant d'envoyer la classe de gestion de contact à la classe FilterContact
+     */
+    void sendToFilterContact(GestionContact);
 };
 #endif // MAINWINDOW_H

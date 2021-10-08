@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>FilterContact</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelFiltrage">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -26,7 +26,7 @@
     <string>Filtrage :</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="editNom">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -58,7 +58,7 @@
     <string>Entreprise</string>
    </property>
   </widget>
-  <widget class="QDateEdit" name="dateEdit">
+  <widget class="QDateEdit" name="editDateDebut">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -71,7 +71,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QDateEdit" name="dateEdit_2">
+  <widget class="QDateEdit" name="editDateFin">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -87,7 +87,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="labelDateDebut">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -100,7 +100,7 @@
     <string>Date de début</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="labelDateFin">
    <property name="geometry">
     <rect>
      <x>360</x>

@@ -42,6 +42,8 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), &ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
     QObject::connect(&ic, SIGNAL(sendContactToMainWindow(FicheContact)), this, SLOT(ReceiveContactToMainWindow(FicheContact)));
     QObject::connect(&ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
+    QObject::connect(this, SIGNAL(sendToFilterContact(GestionContact)), &fc, SLOT(ReceiveFromMainWindow(GestionContact)));
+    QObject::connect(&fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
     //FIN DEFINITION SIGNAUX
 
     gc = GestionContact();
@@ -152,6 +154,7 @@ void MainWindow::OpenFC()
     SoundPlayer::PlayButtonSound();
 
     if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
+        emit sendToFilterContact(this->gc);
         fc.show();
     }
 }
@@ -385,3 +388,7 @@ void MainWindow::AddOperationToLog(std::string str)
     this->gc.GetLog().AddToTabLog(str);
     this->RefreshLog();
 }
+
+void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
+{
+    // Modifier liste courant en sauvegardant l'ancienne
