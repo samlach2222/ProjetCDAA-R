@@ -29,24 +29,6 @@ UI_FilterContact::~UI_FilterContact()
 }
 
 /**
- * @brief Permet de choisir la date de départ du filtre à partir du bouton lié
- * @todo A PROGRAMMER
- */
-void UI_FilterContact::ButtonStartDate()
-{
-    //TODO
-}
-
-/**
- * @brief Permet de choisir la date de fin du filtre à partir du bouton lié
- * @todo A PROGRAMMER
- */
-void UI_FilterContact::ButtonStopDate()
-{
-    //TODO
-}
-
-/**
  * @brief Permet de valider le filtre à partir du bouton lié
  * @todo A PROGRAMMER
  */

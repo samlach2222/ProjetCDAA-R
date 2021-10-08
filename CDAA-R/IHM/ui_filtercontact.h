@@ -27,8 +27,6 @@ private:
     Ui::UI_FilterContact *ui;
 
 public slots:
-    void ButtonStartDate();
-    void ButtonStopDate();
     void ButtonValidate();
     void ButtonCancel();
 };
