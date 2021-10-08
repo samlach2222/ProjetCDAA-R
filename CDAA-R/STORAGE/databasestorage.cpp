@@ -8,6 +8,27 @@
  */
 #include "databasestorage.h"
 
+#include <QtSql>
+
+/**
+ * @brief Fonction constante qui renvoie une base de données \p QSqlDatabase initialisé
+ * @return une base de données \p QSqlDatabase initialisé
+ */
+static const QSqlDatabase GetBDD(){
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setHostName("ConnexionDB");  //Nom de la connexion, à ne pas confondre avec...
+    db.setDatabaseName("ContactDB");  //..Nom de la base de données
+    db.setUserName("root");
+    db.setPassword("root");
+
+    if (!db.open()){
+        throw std::runtime_error("La connexion à la base de données à échoué");
+    }
+
+
+    return db;
+}
+
 /**
  * @brief Créé une FicheContact dans la base de données
  * @param[in] c     La FicheContact à créé dans la base de données
