@@ -84,7 +84,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a18ca180223e793a022e26b6e8abfc60e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e">ModifyContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
 <tr class="memdesc:a18ca180223e793a022e26b6e8abfc60e"><td class="mdescLeft"> </td><td class="mdescRight">Permet de modifier un contact en le remplacant par un contact <b>c</b> <a href="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a18ca180223e793a022e26b6e8abfc60e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9e696fc5d63a8cae7dc19652d470f62f"><td align="right" class="memItemLeft" valign="top">std::vector&lt; <a class="el" href="class_fiche_contact.html">FicheContact</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f">GetAllContacts</a> ()</td></tr>
+<tr class="memitem:a9e696fc5d63a8cae7dc19652d470f62f"><td align="right" class="memItemLeft" valign="top">std::vector&lt;<a class="el" href="class_fiche_contact.html">FicheContact</a>&gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f">GetAllContacts</a> ()</td></tr>
 <tr class="memdesc:a9e696fc5d63a8cae7dc19652d470f62f"><td class="mdescLeft"> </td><td class="mdescRight">Permet de retourner tout les contacts.  <a href="class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a9e696fc5d63a8cae7dc19652d470f62f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac16d89f1b702d3456ce954c481507e8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="class_fiche_contact.html">FicheContact</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#ac16d89f1b702d3456ce954c481507e8d">GetContact</a> (int)</td></tr>
@@ -150,7 +150,7 @@ Fonctions membres publiques</h2></td></tr>
 <td></td><td></td>
 </tr>
 </table>
-</div><!-- $$$AddContact[overload1]$$$voidGestionContact::AddContact(std::string nom,std::string prenom,std::string entreprise,std::string mail,std::string telephone,QImage photo,Horodatage dateCreation=Horodatage() ) --><div class="memdoc"><div style="display: none">void GestionContact::AddContact (std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation = Horodatage() )</div>
+</div><!-- $$$AddContact[overload1]$$$voidGestionContact::AddContact(std::string nom,std::string prenom,std::string entreprise,std::string mail,std::string telephone,QImage photo,Horodatage dateCreation=Horodatage() ) --><div class="memdoc"><div style="display: none">void GestionContact::AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation = Horodatage() )</div>
 <p>Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
@@ -172,13 +172,13 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">std::vector&lt; <a class="el" href="class_fiche_contact.html">FicheContact</a> &gt; GestionContact::GetAllContacts </td>
+<td class="memname">std::vector&lt;<a class="el" href="class_fiche_contact.html">FicheContact</a>&gt; GestionContact::GetAllContacts </td>
 <td>(</td>
 <td class="paramname"></td><td>)</td>
 <td></td>
 </tr>
 </table>
-</div><!-- $$$GetAllContacts[overload1]$$$std::vector<FicheContact>GestionContact::GetAllContacts() --><div class="memdoc"><div style="display: none">std::vector&lt; FicheContact &gt; GestionContact::GetAllContacts ()</div>
+</div><!-- $$$GetAllContacts[overload1]$$$std::vector<FicheContact>GestionContact::GetAllContacts() --><div class="memdoc"><div style="display: none">std::vector&lt;FicheContact&gt; GestionContact::GetAllContacts()</div>
 <p>Permet de retourner tout les contacts. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Retourne un tableau avec tout les contacts de l'application </dd></dl>
 </div><!-- @@@GetAllContacts -->
@@ -196,7 +196,7 @@ Fonctions membres publiques</h2></td></tr>
 <td></td>
 </tr>
 </table>
-</div><!-- $$$GetContact[overload1]$$$FicheContactGestionContact::GetContact(int id) --><div class="memdoc"><div style="display: none">FicheContact GestionContact::GetContact (int id)</div>
+</div><!-- $$$GetContact[overload1]$$$FicheContactGestionContact::GetContact(int id) --><div class="memdoc"><div style="display: none">FicheContact GestionContact::GetContact(int id)</div>
 <p>Permet de récupérer le contact à partir de son identifiant <b>id</b> </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
@@ -219,7 +219,7 @@ Fonctions membres publiques</h2></td></tr>
 <td></td>
 </tr>
 </table>
-</div><!-- $$$GetLog[overload1]$$$Log&GestionContact::GetLog() --><div class="memdoc"><div style="display: none">Log &amp; GestionContact::GetLog ()</div>
+</div><!-- $$$GetLog[overload1]$$$Log&GestionContact::GetLog() --><div class="memdoc"><div style="display: none">Log &amp; GestionContact::GetLog()</div>
 <p>Getter de <a class="el" href="class_log.html" title="Classe pour les logs de l'application.">Log</a>. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Retourne la classe <a class="el" href="class_log.html" title="Classe pour les logs de l'application.">Log</a> instanciée </dd></dl>
 </div><!-- @@@GetLog -->
@@ -237,7 +237,7 @@ Fonctions membres publiques</h2></td></tr>
 <td></td>
 </tr>
 </table>
-</div><!-- $$$ModifyContact[overload1]$$$voidGestionContact::ModifyContact(FicheContact c) --><div class="memdoc"><div style="display: none">void GestionContact::ModifyContact (FicheContact c)</div>
+</div><!-- $$$ModifyContact[overload1]$$$voidGestionContact::ModifyContact(FicheContact c) --><div class="memdoc"><div style="display: none">void GestionContact::ModifyContact(FicheContact c)</div>
 <p>Permet de modifier un contact en le remplacant par un contact <b>c</b> </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
@@ -260,7 +260,7 @@ Fonctions membres publiques</h2></td></tr>
 <td></td>
 </tr>
 </table>
-</div><!-- $$$SupprContact[overload1]$$$voidGestionContact::SupprContact(int id) --><div class="memdoc"><div style="display: none">void GestionContact::SupprContact (int id)</div>
+</div><!-- $$$SupprContact[overload1]$$$voidGestionContact::SupprContact(int id) --><div class="memdoc"><div style="display: none">void GestionContact::SupprContact(int id)</div>
 <p>Permet de supprimer un contact par son <b>id</b> de la liste de contacts. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">

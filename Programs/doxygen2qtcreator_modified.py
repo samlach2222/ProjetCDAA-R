@@ -102,6 +102,18 @@ def process(filename, output):
         # write output
         with open(output, "wb") as out:
             out.write(str(soup).encode("utf-8"))
+            
+    # replace " (" with "("
+    import re
+    file = open(output,'r')
+    filedata = file.read()
+    file.close()
+    newdata = re.sub(r'(::[\S]*) \(', r'\1(', filedata)
+    newnewdata = newdata.replace("&lt; ", "&lt;")
+    newnewnewdata = newnewdata.replace(" &gt;", "&gt;")
+    file = open(output,'w')
+    file.write(newnewnewdata)
+    file.close()
 
 
 def is_class_file(filename):
