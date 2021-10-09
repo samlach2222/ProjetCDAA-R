@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+  <namespace>org.doxygen.cdaa-r</namespace>
+  <virtualFolder>doc</virtualFolder>
+  <filterSection>
+    <filterAttribute>doxygen</filterAttribute>
+    <toc>
+      <section title="CDAA-R 1.0" ref="index.html">
+        <section title="Liste des choses à faire" ref="todo.html" />
+        <section title="Classes" ref="annotated.html">
+          <section title="Liste des classes" ref="annotated.html">
+            <section title="DatabaseStorage" ref="class_database_storage.html" />
+            <section title="FicheContact" ref="class_fiche_contact.html">
+              <section title="FicheContact" ref="class_fiche_contact.html#a1c7bd5f54d53ea5ac2a14b4e46abb6ba" />
+              <section title="AddInteraction" ref="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf" />
+              <section title="getDateCreation" ref="class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c" />
+              <section title="getEntreprise" ref="class_fiche_contact.html#a2a009232da5fcc324d77c9f61a4e22a0" />
+              <section title="getId" ref="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" />
+              <section title="GetListInteraction" ref="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e" />
+              <section title="getMail" ref="class_fiche_contact.html#a599ab1c40101f1dc18cb27440e7a4a61" />
+              <section title="getNom" ref="class_fiche_contact.html#a85ad2b5d62fb4340340dece092dd13c9" />
+              <section title="getPhoto" ref="class_fiche_contact.html#adf6b877158a63870a832f4ee5aab0973" />
+              <section title="getPrenom" ref="class_fiche_contact.html#ac4c06ce54b176fe56b111be7d635f31a" />
+              <section title="getTelephone" ref="class_fiche_contact.html#a19a999c780fefd9a9ee2e1e7acd3728c" />
+              <section title="RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
+              <section title="setEntreprise" ref="class_fiche_contact.html#ae11ddaff658ea4f17969dfb4b5389b5c" />
+              <section title="setMail" ref="class_fiche_contact.html#abd150575c67c60de997e044a44c2cfbc" />
+              <section title="setNom" ref="class_fiche_contact.html#a0b584d300e3bfe9d03f64cd46c9f8f7a" />
+              <section title="setPhoto" ref="class_fiche_contact.html#ae79356b499aaafa19f3db3d85f345c35" />
+              <section title="setPrenom" ref="class_fiche_contact.html#a8858e8c0d456582c71225bd0ad6e0bf0" />
+              <section title="setTelephone" ref="class_fiche_contact.html#adf50f581c8349a70c25cde7bfdb33b75" />
+              <section title="ToString" ref="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d" />
+            </section>
+            <section title="GestionContact" ref="class_gestion_contact.html">
+              <section title="GestionContact" ref="class_gestion_contact.html#a0d42db3777c1e15d557979c897acf344" />
+              <section title="AddContact" ref="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca" />
+              <section title="GetAllContacts" ref="class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f" />
+              <section title="GetContact" ref="class_gestion_contact.html#ac16d89f1b702d3456ce954c481507e8d" />
+              <section title="GetLog" ref="class_gestion_contact.html#a41c5a7add4cea7ba13a06ad6349c6405" />
+              <section title="ModifyContact" ref="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e" />
+              <section title="SupprContact" ref="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25" />
+            </section>
+            <section title="Horodatage" ref="class_horodatage.html">
+              <section title="Horodatage" ref="class_horodatage.html#a70dabea293e9cc1cc45788701511544d" />
+              <section title="Horodatage" ref="class_horodatage.html#a8c9ebdc5bd52f17e6cc180d892960c95" />
+              <section title="Horodatage" ref="class_horodatage.html#ac76fd9cdedfc2ddd89977123ecc60903" />
+              <section title="GetAnnee" ref="class_horodatage.html#a788438a0e71b1544df640faf6a1e7d40" />
+              <section title="GetHeure" ref="class_horodatage.html#aa46bca80d6c44387582320804366dcac" />
+              <section title="GetJour" ref="class_horodatage.html#a606ae08a8b82fd9c2aa3db106208db06" />
+              <section title="GetMinute" ref="class_horodatage.html#aec858fb5001798c5bca107e51a8f3177" />
+              <section title="GetMois" ref="class_horodatage.html#adac7dfb0d8804cac40336a0b5663eeb3" />
+              <section title="GetSeconde" ref="class_horodatage.html#ac55d8fa3c87e0740f535d0faa0b3bd08" />
+              <section title="SetAnnee" ref="class_horodatage.html#aeaa6d35b7df70d1ac486d062eb09316e" />
+              <section title="SetHeure" ref="class_horodatage.html#a4b99616ecd7cb4894bd6950329f7f970" />
+              <section title="SetJour" ref="class_horodatage.html#ae9b97222bf489d54a1ae9a9501d3a1c8" />
+              <section title="SetMinute" ref="class_horodatage.html#aa63385c41dc72ab2ee468f8bcbb5021a" />
+              <section title="SetMois" ref="class_horodatage.html#ab88dc2625d103b01a067d80bc59d372b" />
+              <section title="SetSeconde" ref="class_horodatage.html#a315e5232ebcb5cf142f86ba70d2df4c6" />
+              <section title="ToString" ref="class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" />
+            </section>
+            <section title="Interaction" ref="class_interaction.html">
+              <section title="Interaction" ref="class_interaction.html#a532aa52016d9e7dde3431a9781be3962" />
+              <section title="GetContenu" ref="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc" />
+              <section title="GetHorodatage" ref="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433" />
+              <section title="GetId" ref="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc" />
+              <section title="getTags" ref="class_interaction.html#af2de44e87e631cc95ca31daf6c8a97db" />
+              <section title="getTitre" ref="class_interaction.html#a5ab660c1a9fef1a00880cad573dfdc5b" />
+              <section title="SetContenu" ref="class_interaction.html#a7fa16276ece67880fdba83723e75d96c" />
+              <section title="setTags" ref="class_interaction.html#a0da2ecaf5908017a5525396da09e9c36" />
+              <section title="setTitre" ref="class_interaction.html#a986dc0c1ccfb1d52c6c5cf56122d850e" />
+            </section>
+            <section title="JSonStorage" ref="class_j_son_storage.html" />
+            <section title="Log" ref="class_log.html">
+              <section title="Log" ref="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe" />
+              <section title="AddToTabLog" ref="class_log.html#a4050169bc981bc21b5848ba2b0687f74" />
+              <section title="getTabLog" ref="class_log.html#ae9cb1313929015d31b2298c0d1b5bf64" />
+              <section title="SetTabLog" ref="class_log.html#abad5db349faab0e0f2cf29314a5153c1" />
+            </section>
+            <section title="MainWindow" ref="class_main_window.html">
+              <section title="MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
+              <section title="~MainWindow" ref="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" />
+              <section title="AddContact" ref="class_main_window.html#a87e68f992e94d358a4fc3e2d388c9dcc" />
+              <section title="AddOperationToLog" ref="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f" />
+              <section title="ChooseImage" ref="class_main_window.html#aad1ebd0dab99fb187071fd3f0cf9a8a9" />
+              <section title="ListItemClick" ref="class_main_window.html#a30e183b8ba1bcfad51ed48a81d94ed8c" />
+              <section title="ListItemDoubleClick" ref="class_main_window.html#afbe03af91aefcd7625865ccf6f2e3267" />
+              <section title="LogsDoubleClick" ref="class_main_window.html#ab8ca629263c613454cfefc0c518c4ad2" />
+              <section title="OpenFC" ref="class_main_window.html#a62e3859336456027de52cb8d1d3760cd" />
+              <section title="OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
+              <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
+              <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
+              <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
+              <section title="sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
+              <section title="SupprimerContact" ref="class_main_window.html#acd432e37a1121b9377db225c7f7ff300" />
+              <section title="ValiderContact" ref="class_main_window.html#abfa4f17b6785193c45f23196b953844c" />
+            </section>
+            <section title="SoundPlayer" ref="class_sound_player.html" />
+            <section title="tagsInteraction" ref="classtags_interaction.html">
+              <section title="tagsInteraction" ref="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e" />
+              <section title="addTag" ref="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8" />
+              <section title="getTags" ref="classtags_interaction.html#af5656f39f9d8c0943de4626de2e628fc" />
+              <section title="resetTags" ref="classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23" />
+              <section title="setTags" ref="classtags_interaction.html#a89e2801c69f3f9badd15a1b5b6c855a5" />
+            </section>
+            <section title="UI_FilterContact" ref="class_u_i___filter_contact.html">
+              <section title="UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
+              <section title="~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
+              <section title="ButtonCancel" ref="class_u_i___filter_contact.html#a46d4f2d85ad30b43c977091f9a291f42" />
+              <section title="ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+            </section>
+            <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html">
+              <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html#a64db9f94d34aab0e65b3ae68e4f8023f" />
+              <section title="~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
+              <section title="AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
+              <section title="AddOperationToLog" ref="class_u_i___interaction_contact.html#afeb35cf1c32ced10745233f5c214d13a" />
+              <section title="ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
+              <section title="ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
+              <section title="sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
+              <section title="SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
+              <section title="ValidateAllInteractions" ref="class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917" />
+              <section title="ValiderInteraction" ref="class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292" />
+            </section>
+            <section title="UI_RequestContact" ref="class_u_i___request_contact.html">
+              <section title="UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
+              <section title="~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
+              <section title="ButtonCancel" ref="class_u_i___request_contact.html#a09a669c9f9e649a4a2ed983073299787" />
+              <section title="ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
+            </section>
+            <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html">
+              <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007" />
+              <section title="~UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a0858aa26aeb5d4ab170f5720d74b3633" />
+              <section title="Export" ref="class_u_i___save_gestion_contact.html#a8cd8c8ba4ae982bc5afd6b5f1f29db22" />
+              <section title="Fermer" ref="class_u_i___save_gestion_contact.html#a6f865b4b5708968fbbc1f117c2a2c801" />
+              <section title="Import" ref="class_u_i___save_gestion_contact.html#a76561b3ea083786098a48b4b2b86ad1f" />
+            </section>
+          </section>
+          <section title="Index des classes" ref="classes.html" />
+          <section title="Hiérarchie des classes" ref="hierarchy.html">
+            <section title="DatabaseStorage" ref="class_database_storage.html" />
+            <section title="FicheContact" ref="class_fiche_contact.html" />
+            <section title="GestionContact" ref="class_gestion_contact.html" />
+            <section title="Horodatage" ref="class_horodatage.html" />
+            <section title="Interaction" ref="class_interaction.html" />
+            <section title="JSonStorage" ref="class_j_son_storage.html" />
+            <section title="Log" ref="class_log.html" />
+            <section title="QMainWindow" ref="">
+              <section title="MainWindow" ref="class_main_window.html" />
+            </section>
+            <section title="QWidget" ref="">
+              <section title="UI_FilterContact" ref="class_u_i___filter_contact.html" />
+              <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html" />
+              <section title="UI_RequestContact" ref="class_u_i___request_contact.html" />
+              <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html" />
+            </section>
+            <section title="SoundPlayer" ref="class_sound_player.html" />
+            <section title="tagsInteraction" ref="classtags_interaction.html" />
+          </section>
+          <section title="Membres de classe" ref="functions.html">
+            <section title="Tout" ref="functions.html" />
+            <section title="Fonctions" ref="functions_func.html" />
+          </section>
+        </section>
+        <section title="Fichiers" ref="files.html">
+          <section title="Liste des fichiers" ref="files.html">
+            <section title="IHM" ref="dir_926e0c9a7e60d81df2cb602836b89be3.html">
+              <section title="mainwindow.cpp" ref="mainwindow_8cpp.html">
+                <section title="ModeAjout" ref="mainwindow_8cpp.html#ae7d91d2759414e644fb54e14bb6cc921" />
+              </section>
+              <section title="mainwindow.h" ref="mainwindow_8h.html">
+                <section title="MainWindow" ref="class_main_window.html">
+                  <section title="MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
+                  <section title="~MainWindow" ref="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" />
+                  <section title="AddContact" ref="class_main_window.html#a87e68f992e94d358a4fc3e2d388c9dcc" />
+                  <section title="AddOperationToLog" ref="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f" />
+                  <section title="ChooseImage" ref="class_main_window.html#aad1ebd0dab99fb187071fd3f0cf9a8a9" />
+                  <section title="ListItemClick" ref="class_main_window.html#a30e183b8ba1bcfad51ed48a81d94ed8c" />
+                  <section title="ListItemDoubleClick" ref="class_main_window.html#afbe03af91aefcd7625865ccf6f2e3267" />
+                  <section title="LogsDoubleClick" ref="class_main_window.html#ab8ca629263c613454cfefc0c518c4ad2" />
+                  <section title="OpenFC" ref="class_main_window.html#a62e3859336456027de52cb8d1d3760cd" />
+                  <section title="OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
+                  <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
+                  <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
+                  <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
+                  <section title="sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
+                  <section title="SupprimerContact" ref="class_main_window.html#acd432e37a1121b9377db225c7f7ff300" />
+                  <section title="ValiderContact" ref="class_main_window.html#abfa4f17b6785193c45f23196b953844c" />
+                </section>
+              </section>
+              <section title="ui_filtercontact.cpp" ref="ui__filtercontact_8cpp.html" />
+              <section title="ui_filtercontact.h" ref="ui__filtercontact_8h.html">
+                <section title="UI_FilterContact" ref="class_u_i___filter_contact.html">
+                  <section title="UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
+                  <section title="~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
+                  <section title="ButtonCancel" ref="class_u_i___filter_contact.html#a46d4f2d85ad30b43c977091f9a291f42" />
+                  <section title="ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+                </section>
+              </section>
+              <section title="ui_interactioncontact.cpp" ref="ui__interactioncontact_8cpp.html">
+                <section title="ModeAjoutInteraction" ref="ui__interactioncontact_8cpp.html#a579bb1b05542dea6b06db789a60394c7" />
+              </section>
+              <section title="ui_interactioncontact.h" ref="ui__interactioncontact_8h.html">
+                <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html">
+                  <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html#a64db9f94d34aab0e65b3ae68e4f8023f" />
+                  <section title="~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
+                  <section title="AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
+                  <section title="AddOperationToLog" ref="class_u_i___interaction_contact.html#afeb35cf1c32ced10745233f5c214d13a" />
+                  <section title="ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
+                  <section title="ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
+                  <section title="sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
+                  <section title="SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
+                  <section title="ValidateAllInteractions" ref="class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917" />
+                  <section title="ValiderInteraction" ref="class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292" />
+                </section>
+              </section>
+              <section title="ui_requestcontact.cpp" ref="ui__requestcontact_8cpp.html" />
+              <section title="ui_requestcontact.h" ref="ui__requestcontact_8h.html">
+                <section title="UI_RequestContact" ref="class_u_i___request_contact.html">
+                  <section title="UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
+                  <section title="~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
+                  <section title="ButtonCancel" ref="class_u_i___request_contact.html#a09a669c9f9e649a4a2ed983073299787" />
+                  <section title="ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
+                </section>
+              </section>
+              <section title="ui_savegestioncontact.cpp" ref="ui__savegestioncontact_8cpp.html" />
+              <section title="ui_savegestioncontact.h" ref="ui__savegestioncontact_8h.html">
+                <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html">
+                  <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007" />
+                  <section title="~UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a0858aa26aeb5d4ab170f5720d74b3633" />
+                  <section title="Export" ref="class_u_i___save_gestion_contact.html#a8cd8c8ba4ae982bc5afd6b5f1f29db22" />
+                  <section title="Fermer" ref="class_u_i___save_gestion_contact.html#a6f865b4b5708968fbbc1f117c2a2c801" />
+                  <section title="Import" ref="class_u_i___save_gestion_contact.html#a76561b3ea083786098a48b4b2b86ad1f" />
+                </section>
+              </section>
+            </section>
+            <section title="LOGIC" ref="dir_f7b269915b002652e8fce37c3f975c99.html">
+              <section title="fichecontact.cpp" ref="fichecontact_8cpp.html" />
+              <section title="fichecontact.h" ref="fichecontact_8h.html">
+                <section title="FicheContact" ref="class_fiche_contact.html">
+                  <section title="FicheContact" ref="class_fiche_contact.html#a1c7bd5f54d53ea5ac2a14b4e46abb6ba" />
+                  <section title="AddInteraction" ref="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf" />
+                  <section title="getDateCreation" ref="class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c" />
+                  <section title="getEntreprise" ref="class_fiche_contact.html#a2a009232da5fcc324d77c9f61a4e22a0" />
+                  <section title="getId" ref="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" />
+                  <section title="GetListInteraction" ref="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e" />
+                  <section title="getMail" ref="class_fiche_contact.html#a599ab1c40101f1dc18cb27440e7a4a61" />
+                  <section title="getNom" ref="class_fiche_contact.html#a85ad2b5d62fb4340340dece092dd13c9" />
+                  <section title="getPhoto" ref="class_fiche_contact.html#adf6b877158a63870a832f4ee5aab0973" />
+                  <section title="getPrenom" ref="class_fiche_contact.html#ac4c06ce54b176fe56b111be7d635f31a" />
+                  <section title="getTelephone" ref="class_fiche_contact.html#a19a999c780fefd9a9ee2e1e7acd3728c" />
+                  <section title="RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
+                  <section title="setEntreprise" ref="class_fiche_contact.html#ae11ddaff658ea4f17969dfb4b5389b5c" />
+                  <section title="setMail" ref="class_fiche_contact.html#abd150575c67c60de997e044a44c2cfbc" />
+                  <section title="setNom" ref="class_fiche_contact.html#a0b584d300e3bfe9d03f64cd46c9f8f7a" />
+                  <section title="setPhoto" ref="class_fiche_contact.html#ae79356b499aaafa19f3db3d85f345c35" />
+                  <section title="setPrenom" ref="class_fiche_contact.html#a8858e8c0d456582c71225bd0ad6e0bf0" />
+                  <section title="setTelephone" ref="class_fiche_contact.html#adf50f581c8349a70c25cde7bfdb33b75" />
+                  <section title="ToString" ref="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d" />
+                </section>
+              </section>
+              <section title="gestioncontact.cpp" ref="gestioncontact_8cpp.html" />
+              <section title="gestioncontact.h" ref="gestioncontact_8h.html">
+                <section title="GestionContact" ref="class_gestion_contact.html">
+                  <section title="GestionContact" ref="class_gestion_contact.html#a0d42db3777c1e15d557979c897acf344" />
+                  <section title="AddContact" ref="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca" />
+                  <section title="GetAllContacts" ref="class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f" />
+                  <section title="GetContact" ref="class_gestion_contact.html#ac16d89f1b702d3456ce954c481507e8d" />
+                  <section title="GetLog" ref="class_gestion_contact.html#a41c5a7add4cea7ba13a06ad6349c6405" />
+                  <section title="ModifyContact" ref="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e" />
+                  <section title="SupprContact" ref="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25" />
+                </section>
+              </section>
+              <section title="horodatage.cpp" ref="horodatage_8cpp.html" />
+              <section title="horodatage.h" ref="horodatage_8h_source.html" />
+              <section title="interaction.cpp" ref="interaction_8cpp.html" />
+              <section title="interaction.h" ref="interaction_8h.html">
+                <section title="Interaction" ref="class_interaction.html">
+                  <section title="Interaction" ref="class_interaction.html#a532aa52016d9e7dde3431a9781be3962" />
+                  <section title="GetContenu" ref="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc" />
+                  <section title="GetHorodatage" ref="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433" />
+                  <section title="GetId" ref="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc" />
+                  <section title="getTags" ref="class_interaction.html#af2de44e87e631cc95ca31daf6c8a97db" />
+                  <section title="getTitre" ref="class_interaction.html#a5ab660c1a9fef1a00880cad573dfdc5b" />
+                  <section title="SetContenu" ref="class_interaction.html#a7fa16276ece67880fdba83723e75d96c" />
+                  <section title="setTags" ref="class_interaction.html#a0da2ecaf5908017a5525396da09e9c36" />
+                  <section title="setTitre" ref="class_interaction.html#a986dc0c1ccfb1d52c6c5cf56122d850e" />
+                </section>
+              </section>
+              <section title="log.cpp" ref="log_8cpp.html" />
+              <section title="log.h" ref="log_8h.html">
+                <section title="Log" ref="class_log.html">
+                  <section title="Log" ref="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe" />
+                  <section title="AddToTabLog" ref="class_log.html#a4050169bc981bc21b5848ba2b0687f74" />
+                  <section title="getTabLog" ref="class_log.html#ae9cb1313929015d31b2298c0d1b5bf64" />
+                  <section title="SetTabLog" ref="class_log.html#abad5db349faab0e0f2cf29314a5153c1" />
+                </section>
+              </section>
+              <section title="soundplayer.h" ref="soundplayer_8h.html">
+                <section title="SoundPlayer" ref="class_sound_player.html" />
+              </section>
+              <section title="tagsinteraction.cpp" ref="tagsinteraction_8cpp.html" />
+              <section title="tagsinteraction.h" ref="tagsinteraction_8h.html">
+                <section title="tagsInteraction" ref="classtags_interaction.html">
+                  <section title="tagsInteraction" ref="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e" />
+                  <section title="addTag" ref="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8" />
+                  <section title="getTags" ref="classtags_interaction.html#af5656f39f9d8c0943de4626de2e628fc" />
+                  <section title="resetTags" ref="classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23" />
+                  <section title="setTags" ref="classtags_interaction.html#a89e2801c69f3f9badd15a1b5b6c855a5" />
+                </section>
+              </section>
+            </section>
+            <section title="STORAGE" ref="dir_4c89bc01d92c6eac37a40728a323d0a9.html">
+              <section title="databasestorage.cpp" ref="databasestorage_8cpp.html" />
+              <section title="databasestorage.h" ref="databasestorage_8h.html">
+                <section title="DatabaseStorage" ref="class_database_storage.html" />
+              </section>
+              <section title="jsonstorage.cpp" ref="jsonstorage_8cpp.html" />
+              <section title="jsonstorage.h" ref="jsonstorage_8h_source.html" />
+            </section>
+            <section title="main.cpp" ref="main_8cpp.html">
+              <section title="main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
+            </section>
+            <section title="precompiled-header.h" ref="precompiled-header_8h_source.html" />
+          </section>
+          <section title="Membres de fichier" ref="globals.html">
+            <section title="Tout" ref="globals.html" />
+            <section title="Fonctions" ref="globals_func.html" />
+            <section title="Variables" ref="globals_vars.html" />
+          </section>
+        </section>
+      </section>
+    </toc>
+    <keywords>
+      <keyword name="ModeAjout" id="mainwindow.cpp::ModeAjout" ref="mainwindow_8cpp.html#ae7d91d2759414e644fb54e14bb6cc921" />
+      <keyword name="ModeAjoutInteraction" id="ui_interactioncontact.cpp::ModeAjoutInteraction" ref="ui__interactioncontact_8cpp.html#a579bb1b05542dea6b06db789a60394c7" />
+      <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
+      <keyword name="Liste des choses à faire" id="Liste des choses à faire" ref="todo.html" />
+      <keyword name="DatabaseStorage" id="DatabaseStorage" ref="class_database_storage.html" />
+      <keyword name="Create" id="DatabaseStorage::Create" ref="class_database_storage.html#a859a5356c6eab52156b442d86f848895" />
+      <keyword name="Update" id="DatabaseStorage::Update" ref="class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92" />
+      <keyword name="Delete" id="DatabaseStorage::Delete" ref="class_database_storage.html#a7d1eec8934bee30d43b37a6e6087b796" />
+      <keyword name="Load" id="DatabaseStorage::Load" ref="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c" />
+      <keyword name="Request" id="DatabaseStorage::Request" ref="class_database_storage.html#a3664bba7d22a573f8ae56666c2beb29e" />
+      <keyword name="FicheContact" id="FicheContact" ref="class_fiche_contact.html" />
+      <keyword name="FicheContact" id="FicheContact::FicheContact" ref="class_fiche_contact.html#a1c7bd5f54d53ea5ac2a14b4e46abb6ba" />
+      <keyword name="getId" id="FicheContact::getId" ref="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" />
+      <keyword name="getNom" id="FicheContact::getNom" ref="class_fiche_contact.html#a85ad2b5d62fb4340340dece092dd13c9" />
+      <keyword name="setNom" id="FicheContact::setNom" ref="class_fiche_contact.html#a0b584d300e3bfe9d03f64cd46c9f8f7a" />
+      <keyword name="getPrenom" id="FicheContact::getPrenom" ref="class_fiche_contact.html#ac4c06ce54b176fe56b111be7d635f31a" />
+      <keyword name="setPrenom" id="FicheContact::setPrenom" ref="class_fiche_contact.html#a8858e8c0d456582c71225bd0ad6e0bf0" />
+      <keyword name="getEntreprise" id="FicheContact::getEntreprise" ref="class_fiche_contact.html#a2a009232da5fcc324d77c9f61a4e22a0" />
+      <keyword name="setEntreprise" id="FicheContact::setEntreprise" ref="class_fiche_contact.html#ae11ddaff658ea4f17969dfb4b5389b5c" />
+      <keyword name="getMail" id="FicheContact::getMail" ref="class_fiche_contact.html#a599ab1c40101f1dc18cb27440e7a4a61" />
+      <keyword name="setMail" id="FicheContact::setMail" ref="class_fiche_contact.html#abd150575c67c60de997e044a44c2cfbc" />
+      <keyword name="getTelephone" id="FicheContact::getTelephone" ref="class_fiche_contact.html#a19a999c780fefd9a9ee2e1e7acd3728c" />
+      <keyword name="setTelephone" id="FicheContact::setTelephone" ref="class_fiche_contact.html#adf50f581c8349a70c25cde7bfdb33b75" />
+      <keyword name="getPhoto" id="FicheContact::getPhoto" ref="class_fiche_contact.html#adf6b877158a63870a832f4ee5aab0973" />
+      <keyword name="setPhoto" id="FicheContact::setPhoto" ref="class_fiche_contact.html#ae79356b499aaafa19f3db3d85f345c35" />
+      <keyword name="getDateCreation" id="FicheContact::getDateCreation" ref="class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c" />
+      <keyword name="GetListInteraction" id="FicheContact::GetListInteraction" ref="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e" />
+      <keyword name="AddInteraction" id="FicheContact::AddInteraction" ref="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf" />
+      <keyword name="RemoveInteraction" id="FicheContact::RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
+      <keyword name="ToString" id="FicheContact::ToString" ref="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d" />
+      <keyword name="GestionContact" id="GestionContact" ref="class_gestion_contact.html" />
+      <keyword name="GestionContact" id="GestionContact::GestionContact" ref="class_gestion_contact.html#a0d42db3777c1e15d557979c897acf344" />
+      <keyword name="AddContact" id="GestionContact::AddContact" ref="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca" />
+      <keyword name="SupprContact" id="GestionContact::SupprContact" ref="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25" />
+      <keyword name="ModifyContact" id="GestionContact::ModifyContact" ref="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e" />
+      <keyword name="GetAllContacts" id="GestionContact::GetAllContacts" ref="class_gestion_contact.html#a9e696fc5d63a8cae7dc19652d470f62f" />
+      <keyword name="GetContact" id="GestionContact::GetContact" ref="class_gestion_contact.html#ac16d89f1b702d3456ce954c481507e8d" />
+      <keyword name="GetLog" id="GestionContact::GetLog" ref="class_gestion_contact.html#a41c5a7add4cea7ba13a06ad6349c6405" />
+      <keyword name="Horodatage" id="Horodatage" ref="class_horodatage.html" />
+      <keyword name="Horodatage" id="Horodatage::Horodatage" ref="class_horodatage.html#a70dabea293e9cc1cc45788701511544d" />
+      <keyword name="Horodatage" id="Horodatage::Horodatage" ref="class_horodatage.html#a8c9ebdc5bd52f17e6cc180d892960c95" />
+      <keyword name="Horodatage" id="Horodatage::Horodatage" ref="class_horodatage.html#ac76fd9cdedfc2ddd89977123ecc60903" />
+      <keyword name="ToString" id="Horodatage::ToString" ref="class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" />
+      <keyword name="GetJour" id="Horodatage::GetJour" ref="class_horodatage.html#a606ae08a8b82fd9c2aa3db106208db06" />
+      <keyword name="GetMois" id="Horodatage::GetMois" ref="class_horodatage.html#adac7dfb0d8804cac40336a0b5663eeb3" />
+      <keyword name="GetAnnee" id="Horodatage::GetAnnee" ref="class_horodatage.html#a788438a0e71b1544df640faf6a1e7d40" />
+      <keyword name="GetHeure" id="Horodatage::GetHeure" ref="class_horodatage.html#aa46bca80d6c44387582320804366dcac" />
+      <keyword name="GetMinute" id="Horodatage::GetMinute" ref="class_horodatage.html#aec858fb5001798c5bca107e51a8f3177" />
+      <keyword name="GetSeconde" id="Horodatage::GetSeconde" ref="class_horodatage.html#ac55d8fa3c87e0740f535d0faa0b3bd08" />
+      <keyword name="SetJour" id="Horodatage::SetJour" ref="class_horodatage.html#ae9b97222bf489d54a1ae9a9501d3a1c8" />
+      <keyword name="SetMois" id="Horodatage::SetMois" ref="class_horodatage.html#ab88dc2625d103b01a067d80bc59d372b" />
+      <keyword name="SetAnnee" id="Horodatage::SetAnnee" ref="class_horodatage.html#aeaa6d35b7df70d1ac486d062eb09316e" />
+      <keyword name="SetHeure" id="Horodatage::SetHeure" ref="class_horodatage.html#a4b99616ecd7cb4894bd6950329f7f970" />
+      <keyword name="SetMinute" id="Horodatage::SetMinute" ref="class_horodatage.html#aa63385c41dc72ab2ee468f8bcbb5021a" />
+      <keyword name="SetSeconde" id="Horodatage::SetSeconde" ref="class_horodatage.html#a315e5232ebcb5cf142f86ba70d2df4c6" />
+      <keyword name="Interaction" id="Interaction" ref="class_interaction.html" />
+      <keyword name="Interaction" id="Interaction::Interaction" ref="class_interaction.html#a532aa52016d9e7dde3431a9781be3962" />
+      <keyword name="GetId" id="Interaction::GetId" ref="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc" />
+      <keyword name="GetContenu" id="Interaction::GetContenu" ref="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc" />
+      <keyword name="SetContenu" id="Interaction::SetContenu" ref="class_interaction.html#a7fa16276ece67880fdba83723e75d96c" />
+      <keyword name="GetHorodatage" id="Interaction::GetHorodatage" ref="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433" />
+      <keyword name="getTitre" id="Interaction::getTitre" ref="class_interaction.html#a5ab660c1a9fef1a00880cad573dfdc5b" />
+      <keyword name="setTitre" id="Interaction::setTitre" ref="class_interaction.html#a986dc0c1ccfb1d52c6c5cf56122d850e" />
+      <keyword name="getTags" id="Interaction::getTags" ref="class_interaction.html#af2de44e87e631cc95ca31daf6c8a97db" />
+      <keyword name="setTags" id="Interaction::setTags" ref="class_interaction.html#a0da2ecaf5908017a5525396da09e9c36" />
+      <keyword name="JSonStorage" id="JSonStorage" ref="class_j_son_storage.html" />
+      <keyword name="Save" id="JSonStorage::Save" ref="class_j_son_storage.html#a5d679870947fef13252e180967641726" />
+      <keyword name="Load" id="JSonStorage::Load" ref="class_j_son_storage.html#a31ee906612e6aca4c1b5fdd3a034a1a4" />
+      <keyword name="Log" id="Log" ref="class_log.html" />
+      <keyword name="Log" id="Log::Log" ref="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe" />
+      <keyword name="AddToTabLog" id="Log::AddToTabLog" ref="class_log.html#a4050169bc981bc21b5848ba2b0687f74" />
+      <keyword name="getTabLog" id="Log::getTabLog" ref="class_log.html#ae9cb1313929015d31b2298c0d1b5bf64" />
+      <keyword name="SetTabLog" id="Log::SetTabLog" ref="class_log.html#abad5db349faab0e0f2cf29314a5153c1" />
+      <keyword name="MainWindow" id="MainWindow" ref="class_main_window.html" />
+      <keyword name="AddContact" id="MainWindow::AddContact" ref="class_main_window.html#a87e68f992e94d358a4fc3e2d388c9dcc" />
+      <keyword name="OpenFC" id="MainWindow::OpenFC" ref="class_main_window.html#a62e3859336456027de52cb8d1d3760cd" />
+      <keyword name="OpenRC" id="MainWindow::OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
+      <keyword name="OpenSGC" id="MainWindow::OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
+      <keyword name="ListItemDoubleClick" id="MainWindow::ListItemDoubleClick" ref="class_main_window.html#afbe03af91aefcd7625865ccf6f2e3267" />
+      <keyword name="LogsDoubleClick" id="MainWindow::LogsDoubleClick" ref="class_main_window.html#ab8ca629263c613454cfefc0c518c4ad2" />
+      <keyword name="ListItemClick" id="MainWindow::ListItemClick" ref="class_main_window.html#a30e183b8ba1bcfad51ed48a81d94ed8c" />
+      <keyword name="ValiderContact" id="MainWindow::ValiderContact" ref="class_main_window.html#abfa4f17b6785193c45f23196b953844c" />
+      <keyword name="SupprimerContact" id="MainWindow::SupprimerContact" ref="class_main_window.html#acd432e37a1121b9377db225c7f7ff300" />
+      <keyword name="ChooseImage" id="MainWindow::ChooseImage" ref="class_main_window.html#aad1ebd0dab99fb187071fd3f0cf9a8a9" />
+      <keyword name="ReceiveContactToMainWindow" id="MainWindow::ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
+      <keyword name="AddOperationToLog" id="MainWindow::AddOperationToLog" ref="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f" />
+      <keyword name="ReceiveFromFilterContact" id="MainWindow::ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
+      <keyword name="resetFilters" id="MainWindow::resetFilters" ref="class_main_window.html#a47f4eaf9bf802041b3087d6ee60040b7" />
+      <keyword name="sendIdToInteraction" id="MainWindow::sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
+      <keyword name="sendToFilterContact" id="MainWindow::sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
+      <keyword name="MainWindow" id="MainWindow::MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
+      <keyword name="~MainWindow" id="MainWindow::~MainWindow" ref="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" />
+      <keyword name="SoundPlayer" id="SoundPlayer" ref="class_sound_player.html" />
+      <keyword name="PlayButtonSound" id="SoundPlayer::PlayButtonSound" ref="class_sound_player.html#a5b61a3ff5528a289d5483f07a469eb4f" />
+      <keyword name="PlayButtonSound2" id="SoundPlayer::PlayButtonSound2" ref="class_sound_player.html#a6213c0a75f974975aa817d0ea6eb1c50" />
+      <keyword name="PlayErrorSound" id="SoundPlayer::PlayErrorSound" ref="class_sound_player.html#ad15b7390dda09d3a8821a497574c3781" />
+      <keyword name="tagsInteraction" id="tagsInteraction" ref="classtags_interaction.html" />
+      <keyword name="tagsInteraction" id="tagsInteraction::tagsInteraction" ref="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e" />
+      <keyword name="addTag" id="tagsInteraction::addTag" ref="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8" />
+      <keyword name="resetTags" id="tagsInteraction::resetTags" ref="classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23" />
+      <keyword name="getTags" id="tagsInteraction::getTags" ref="classtags_interaction.html#af5656f39f9d8c0943de4626de2e628fc" />
+      <keyword name="setTags" id="tagsInteraction::setTags" ref="classtags_interaction.html#a89e2801c69f3f9badd15a1b5b6c855a5" />
+      <keyword name="UI_FilterContact" id="UI_FilterContact" ref="class_u_i___filter_contact.html" />
+      <keyword name="ButtonValidate" id="UI_FilterContact::ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+      <keyword name="ButtonCancel" id="UI_FilterContact::ButtonCancel" ref="class_u_i___filter_contact.html#a46d4f2d85ad30b43c977091f9a291f42" />
+      <keyword name="ReceiveFromMainWindow" id="UI_FilterContact::ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
+      <keyword name="sendListContactToMainWindow" id="UI_FilterContact::sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
+      <keyword name="UI_FilterContact" id="UI_FilterContact::UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
+      <keyword name="~UI_FilterContact" id="UI_FilterContact::~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
+      <keyword name="UI_InteractionContact" id="UI_InteractionContact" ref="class_u_i___interaction_contact.html" />
+      <keyword name="ValidateAllInteractions" id="UI_InteractionContact::ValidateAllInteractions" ref="class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917" />
+      <keyword name="AddInteraction" id="UI_InteractionContact::AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
+      <keyword name="SupprimerInteraction" id="UI_InteractionContact::SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
+      <keyword name="ListItemClick" id="UI_InteractionContact::ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
+      <keyword name="ValiderInteraction" id="UI_InteractionContact::ValiderInteraction" ref="class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292" />
+      <keyword name="ReceiveIdToInteraction" id="UI_InteractionContact::ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
+      <keyword name="sendContactToMainWindow" id="UI_InteractionContact::sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
+      <keyword name="AddOperationToLog" id="UI_InteractionContact::AddOperationToLog" ref="class_u_i___interaction_contact.html#afeb35cf1c32ced10745233f5c214d13a" />
+      <keyword name="UI_InteractionContact" id="UI_InteractionContact::UI_InteractionContact" ref="class_u_i___interaction_contact.html#a64db9f94d34aab0e65b3ae68e4f8023f" />
+      <keyword name="~UI_InteractionContact" id="UI_InteractionContact::~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
+      <keyword name="UI_RequestContact" id="UI_RequestContact" ref="class_u_i___request_contact.html" />
+      <keyword name="ButtonDoRequest" id="UI_RequestContact::ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
+      <keyword name="ButtonCancel" id="UI_RequestContact::ButtonCancel" ref="class_u_i___request_contact.html#a09a669c9f9e649a4a2ed983073299787" />
+      <keyword name="UI_RequestContact" id="UI_RequestContact::UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
+      <keyword name="~UI_RequestContact" id="UI_RequestContact::~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
+      <keyword name="UI_SaveGestionContact" id="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html" />
+      <keyword name="Import" id="UI_SaveGestionContact::Import" ref="class_u_i___save_gestion_contact.html#a76561b3ea083786098a48b4b2b86ad1f" />
+      <keyword name="Export" id="UI_SaveGestionContact::Export" ref="class_u_i___save_gestion_contact.html#a8cd8c8ba4ae982bc5afd6b5f1f29db22" />
+      <keyword name="Fermer" id="UI_SaveGestionContact::Fermer" ref="class_u_i___save_gestion_contact.html#a6f865b4b5708968fbbc1f117c2a2c801" />
+      <keyword name="UI_SaveGestionContact" id="UI_SaveGestionContact::UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007" />
+      <keyword name="~UI_SaveGestionContact" id="UI_SaveGestionContact::~UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a0858aa26aeb5d4ab170f5720d74b3633" />
+    </keywords>
+    <files>
+      <file>tabs.css</file>
+      <file>tab_a.png</file>
+      <file>tab_b.png</file>
+      <file>tab_h.png</file>
+      <file>tab_s.png</file>
+      <file>nav_h.png</file>
+      <file>nav_f.png</file>
+      <file>bc_s.png</file>
+      <file>closed.png</file>
+      <file>open.png</file>
+      <file>bdwn.png</file>
+      <file>sync_on.png</file>
+      <file>sync_off.png</file>
+      <file>doxygen.css</file>
+      <file>jquery.js</file>
+      <file>dynsections.js</file>
+      <file>search/search_l.png</file>
+      <file>search/search_m.png</file>
+      <file>search/search_r.png</file>
+      <file>search/close.svg</file>
+      <file>search/mag_sel.svg</file>
+      <file>search/search.css</file>
+      <file>search/search.js</file>
+      <file>mainwindow_8h_source.html</file>
+      <file>ui__filtercontact_8h_source.html</file>
+      <file>ui__interactioncontact_8h_source.html</file>
+      <file>ui__requestcontact_8h_source.html</file>
+      <file>ui__savegestioncontact_8h_source.html</file>
+      <file>fichecontact_8h_source.html</file>
+      <file>gestioncontact_8h_source.html</file>
+      <file>horodatage_8h_source.html</file>
+      <file>interaction_8h_source.html</file>
+      <file>log_8h_source.html</file>
+      <file>soundplayer_8h_source.html</file>
+      <file>tagsinteraction_8h_source.html</file>
+      <file>precompiled-header_8h_source.html</file>
+      <file>databasestorage_8h_source.html</file>
+      <file>jsonstorage_8h_source.html</file>
+      <file>mainwindow_8cpp.html</file>
+      <file>mainwindow_8h.html</file>
+      <file>ui__filtercontact_8cpp.html</file>
+      <file>ui__filtercontact_8h.html</file>
+      <file>ui__interactioncontact_8cpp.html</file>
+      <file>ui__interactioncontact_8h.html</file>
+      <file>ui__requestcontact_8cpp.html</file>
+      <file>ui__requestcontact_8h.html</file>
+      <file>ui__savegestioncontact_8cpp.html</file>
+      <file>ui__savegestioncontact_8h.html</file>
+      <file>fichecontact_8cpp.html</file>
+      <file>fichecontact_8h.html</file>
+      <file>gestioncontact_8cpp.html</file>
+      <file>gestioncontact_8h.html</file>
+      <file>horodatage_8cpp.html</file>
+      <file>interaction_8cpp.html</file>
+      <file>interaction_8h.html</file>
+      <file>log_8cpp.html</file>
+      <file>log_8h.html</file>
+      <file>soundplayer_8h.html</file>
+      <file>tagsinteraction_8cpp.html</file>
+      <file>tagsinteraction_8h.html</file>
+      <file>main_8cpp.html</file>
+      <file>databasestorage_8cpp.html</file>
+      <file>databasestorage_8h.html</file>
+      <file>jsonstorage_8cpp.html</file>
+      <file>todo.html</file>
+      <file>class_database_storage.html</file>
+      <file>class_database_storage-members.html</file>
+      <file>class_fiche_contact.html</file>
+      <file>class_fiche_contact-members.html</file>
+      <file>class_gestion_contact.html</file>
+      <file>class_gestion_contact-members.html</file>
+      <file>class_horodatage.html</file>
+      <file>class_horodatage-members.html</file>
+      <file>class_interaction.html</file>
+      <file>class_interaction-members.html</file>
+      <file>class_j_son_storage.html</file>
+      <file>class_j_son_storage-members.html</file>
+      <file>class_log.html</file>
+      <file>class_log-members.html</file>
+      <file>class_main_window.html</file>
+      <file>class_main_window.png</file>
+      <file>class_main_window-members.html</file>
+      <file>class_sound_player.html</file>
+      <file>class_sound_player-members.html</file>
+      <file>classtags_interaction.html</file>
+      <file>classtags_interaction-members.html</file>
+      <file>class_u_i___filter_contact.html</file>
+      <file>class_u_i___filter_contact.png</file>
+      <file>class_u_i___filter_contact-members.html</file>
+      <file>class_u_i___interaction_contact.html</file>
+      <file>class_u_i___interaction_contact.png</file>
+      <file>class_u_i___interaction_contact-members.html</file>
+      <file>class_u_i___request_contact.html</file>
+      <file>class_u_i___request_contact.png</file>
+      <file>class_u_i___request_contact-members.html</file>
+      <file>class_u_i___save_gestion_contact.html</file>
+      <file>class_u_i___save_gestion_contact.png</file>
+      <file>class_u_i___save_gestion_contact-members.html</file>
+      <file>dir_926e0c9a7e60d81df2cb602836b89be3.html</file>
+      <file>dir_f7b269915b002652e8fce37c3f975c99.html</file>
+      <file>dir_4c89bc01d92c6eac37a40728a323d0a9.html</file>
+      <file>index.html</file>
+      <file>pages.html</file>
+      <file>annotated.html</file>
+      <file>classes.html</file>
+      <file>hierarchy.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>files.html</file>
+      <file>globals.html</file>
+      <file>globals_func.html</file>
+      <file>globals_vars.html</file>
+    </files>
+  </filterSection>
+</QtHelpProject>

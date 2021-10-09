@@ -1,6 +1,0 @@
-<map id="Log::AddToTabLog" name="Log::AddToTabLog">
-<area shape="rect" id="node1" title="Ajoute un log log à la liste de logs." alt="" coords="256,56,387,83"/>
-<area shape="rect" id="node2" href="$class_gestion_contact.html#a3ea367ebf9fb7e67fb19f7b5b7cb898d" title="Permet d&#39;ajouter un contact c à la liste de contacts." alt="" coords="13,5,201,32"/>
-<area shape="rect" id="node3" href="$class_gestion_contact.html#a6850914e2d978856ceaa806120c38e8d" title="Permet de modifier un contact en le remplacant par un contact c" alt="" coords="5,56,208,83"/>
-<area shape="rect" id="node4" href="$class_gestion_contact.html#a45ef361cff471b5dcb80fbb28857a91f" title="Permet de supprimer un contact par son id de la liste de contacts." alt="" coords="7,107,206,133"/>
-</map>

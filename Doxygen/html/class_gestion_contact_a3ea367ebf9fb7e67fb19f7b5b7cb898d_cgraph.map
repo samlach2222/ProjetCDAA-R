@@ -1,6 +1,0 @@
-<map id="GestionContact::AddContact" name="GestionContact::AddContact">
-<area shape="rect" id="node1" title="Permet d&#39;ajouter un contact c à la liste de contacts." alt="" coords="5,31,193,57"/>
-<area shape="rect" id="node2" href="$class_log.html#ab71cc07949289808dd1d8f088a0e2964" title="Ajoute un log log à la liste de logs." alt="" coords="260,5,391,32"/>
-<area shape="rect" id="node4" href="$class_database_storage.html#a039a97c1437a8bba5ad64a53edb1ccf3" title="Créé une FicheContact dans la base de données." alt="" coords="241,56,409,83"/>
-<area shape="rect" id="node3" href="$class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="457,5,601,32"/>
-</map>

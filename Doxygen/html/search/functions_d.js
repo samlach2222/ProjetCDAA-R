@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['playbuttonsound_0',['PlayButtonSound',['../class_sound_player.html#a5b61a3ff5528a289d5483f07a469eb4f',1,'SoundPlayer']]],
-  ['playbuttonsound2_1',['PlayButtonSound2',['../class_sound_player.html#a6213c0a75f974975aa817d0ea6eb1c50',1,'SoundPlayer']]],
-  ['playerrorsound_2',['PlayErrorSound',['../class_sound_player.html#ad15b7390dda09d3a8821a497574c3781',1,'SoundPlayer']]]
+  ['receivecontacttomainwindow_0',['ReceiveContactToMainWindow',['../class_main_window.html#aa35f62a002e2f5301d3526ece23071ae',1,'MainWindow']]],
+  ['receiveidtointeraction_1',['ReceiveIdToInteraction',['../class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7',1,'UI_InteractionContact']]],
+  ['removeinteraction_2',['RemoveInteraction',['../class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c',1,'FicheContact']]],
+  ['request_3',['Request',['../class_database_storage.html#a3664bba7d22a573f8ae56666c2beb29e',1,'DatabaseStorage']]],
+  ['resettags_4',['resetTags',['../classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23',1,'tagsInteraction']]]
 ];

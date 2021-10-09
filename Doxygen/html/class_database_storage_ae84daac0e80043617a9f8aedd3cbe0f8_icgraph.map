@@ -1,4 +1,0 @@
-<map id="DatabaseStorage::Delete" name="DatabaseStorage::Delete">
-<area shape="rect" id="node1" title="Supprime une FicheContact dans la base de données." alt="" coords="252,5,419,32"/>
-<area shape="rect" id="node2" href="$class_gestion_contact.html#a45ef361cff471b5dcb80fbb28857a91f" title="Permet de supprimer un contact par son id de la liste de contacts." alt="" coords="5,5,204,32"/>
-</map>

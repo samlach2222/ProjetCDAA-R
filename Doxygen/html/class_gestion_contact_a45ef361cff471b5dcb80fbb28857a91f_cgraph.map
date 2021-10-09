@@ -1,6 +1,0 @@
-<map id="GestionContact::SupprContact" name="GestionContact::SupprContact">
-<area shape="rect" id="node1" title="Permet de supprimer un contact par son id de la liste de contacts." alt="" coords="5,31,204,57"/>
-<area shape="rect" id="node2" href="$class_log.html#ab71cc07949289808dd1d8f088a0e2964" title="Ajoute un log log à la liste de logs." alt="" coords="270,5,401,32"/>
-<area shape="rect" id="node4" href="$class_database_storage.html#ae84daac0e80043617a9f8aedd3cbe0f8" title="Supprime une FicheContact dans la base de données." alt="" coords="252,56,419,83"/>
-<area shape="rect" id="node3" href="$class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" title="Renvoie en chaine de caractère la date et l&#39;heure de l&#39;horodatage afin de le rendre affichable." alt="" coords="467,5,611,32"/>
-</map>

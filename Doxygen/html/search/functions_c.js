@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['openfc_0',['OpenFC',['../class_main_window.html#a62e3859336456027de52cb8d1d3760cd',1,'MainWindow']]],
-  ['openrc_1',['OpenRC',['../class_main_window.html#a5a301d13721bbe313ee57308271b2e85',1,'MainWindow']]],
-  ['opensgc_2',['OpenSGC',['../class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2',1,'MainWindow']]]
+  ['playbuttonsound_0',['PlayButtonSound',['../class_sound_player.html#a5b61a3ff5528a289d5483f07a469eb4f',1,'SoundPlayer']]],
+  ['playbuttonsound2_1',['PlayButtonSound2',['../class_sound_player.html#a6213c0a75f974975aa817d0ea6eb1c50',1,'SoundPlayer']]],
+  ['playerrorsound_2',['PlayErrorSound',['../class_sound_player.html#ad15b7390dda09d3a8821a497574c3781',1,'SoundPlayer']]]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['ui_5ffiltercontact_0',['UI_FilterContact',['../class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1',1,'UI_FilterContact']]],
-  ['ui_5finteractioncontact_1',['UI_InteractionContact',['../class_u_i___interaction_contact.html#a64db9f94d34aab0e65b3ae68e4f8023f',1,'UI_InteractionContact']]],
-  ['ui_5frequestcontact_2',['UI_RequestContact',['../class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f',1,'UI_RequestContact']]],
-  ['ui_5fsavegestioncontact_3',['UI_SaveGestionContact',['../class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007',1,'UI_SaveGestionContact']]],
-  ['update_4',['Update',['../class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92',1,'DatabaseStorage']]]
+  ['validateallinteractions_0',['ValidateAllInteractions',['../class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917',1,'UI_InteractionContact']]],
+  ['validercontact_1',['ValiderContact',['../class_main_window.html#abfa4f17b6785193c45f23196b953844c',1,'MainWindow']]],
+  ['validerinteraction_2',['ValiderInteraction',['../class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292',1,'UI_InteractionContact']]]
 ];
