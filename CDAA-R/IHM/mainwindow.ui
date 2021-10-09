@@ -325,6 +325,19 @@
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="FilterContactIndicator">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -332,7 +345,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -500,6 +513,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>FilterContactIndicator</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>resetFilters()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>AddContact()</slot>
@@ -512,5 +541,6 @@
   <slot>ValiderContact()</slot>
   <slot>SupprimerContact()</slot>
   <slot>ChooseImage()</slot>
+  <slot>resetFilters()</slot>
  </slots>
 </ui>

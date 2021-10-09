@@ -42,6 +42,8 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), &ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
     QObject::connect(&ic, SIGNAL(sendContactToMainWindow(FicheContact)), this, SLOT(ReceiveContactToMainWindow(FicheContact)));
     QObject::connect(&ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
+    QObject::connect(this, SIGNAL(sendToFilterContact(GestionContact)), &fc, SLOT(ReceiveFromMainWindow(GestionContact)));
+    QObject::connect(&fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
     //FIN DEFINITION SIGNAUX
 
     gc = GestionContact();
@@ -49,6 +51,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Edition des controlleurs par défaut
     ui->frameEditContact->setVisible(0);
+    ui->FilterContactIndicator->setVisible(0);
     ui->ChooseImage->setStyleSheet("QPushButton { background-color: rgba(10, 0, 0, 0); }");
 
     // Gestion de la taille relative des icones des boutons avec 90% du bouton
@@ -75,6 +78,12 @@ MainWindow::MainWindow(QWidget *parent)
     int hac = ui->BAddContact->height() * 90/100;
     ui->BAddContact->setIcon(QPAddContact);
     ui->BAddContact->setIconSize(QSize(wac,hac));
+
+    QPixmap QPFilterContactIndicator(":/Ressources/Icons/FilterContact.png");
+    int wfci = ui->BFilterContact->width() * 90/100;
+    int hfci = ui->BFilterContact->height() * 90/100;
+    ui->FilterContactIndicator->setIcon(QPFilterContactIndicator);
+    ui->FilterContactIndicator->setIconSize(QSize(wfci,hfci));
 }
 /**
  * @brief Destructeur de mainwindow
@@ -152,6 +161,7 @@ void MainWindow::OpenFC()
     SoundPlayer::PlayButtonSound();
 
     if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
+        emit sendToFilterContact(this->gc);
         fc.show();
     }
 }
@@ -383,4 +393,26 @@ void MainWindow::AddOperationToLog(std::string str)
 {
     this->gc.GetLog().AddToTabLog(str);
     this->RefreshLog();
+}
+
+void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
+{
+    ui->FilterContactIndicator->setVisible(1);
+    ui->FilterContactIndicator->setStyleSheet("QPushButton {background-color:red;}");
+    ui->ContactList->clear();
+    for(FicheContact c :listContact)
+    {
+        QString str = QString::fromStdString(c.ToString());
+        QListWidgetItem* item = new QListWidgetItem(str);
+        QVariant v;
+        v.setValue(c.getId());
+        item->setData(Qt::UserRole, v);
+        ui->ContactList->addItem(item);
+    }
+}
+
+void MainWindow::resetFilters()
+{
+    this->DisplayContactList();
+    ui->FilterContactIndicator->setVisible(0);
 }

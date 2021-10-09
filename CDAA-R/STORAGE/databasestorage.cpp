@@ -8,6 +8,27 @@
  */
 #include "databasestorage.h"
 
+#include <QtSql>
+
+/**
+ * @brief Fonction constante qui renvoie une base de données \p QSqlDatabase initialisé
+ * @return une base de données \p QSqlDatabase initialisé
+ */
+static const QSqlDatabase GetBDD(){
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setHostName("localhost");  //Nom de l'host
+    db.setDatabaseName("ContactDB");  //Nom de la base de données
+    //db.setUserName("root");
+    //db.setPassword("root");
+
+    if (!db.open()){
+        throw std::runtime_error("La connexion à la base de données à échoué");
+    }
+
+
+    return db;
+}
+
 /**
  * @brief Créé une FicheContact dans la base de données
  * @param[in] c     La FicheContact à créé dans la base de données
@@ -45,7 +66,46 @@ void DatabaseStorage::Delete(int id)
  */
 GestionContact DatabaseStorage::Load()
 {
-    //TODO
+    GestionContact gc = GestionContact();
+    QSqlQuery query("SELECT logsValue from LOGS");
+
+    if (!query.exec()){
+        //La base de données ne peut pas être accédé donc GestionContact est vide
+        return gc;
+    }
+    else {
+        std::vector<std::string> logs;
+        while (query.next()){
+            logs.push_back(query.value(0).toString().toStdString());
+        }
+
+        query = QSqlQuery("SELECT * from CONTACT");
+        while (query.next()){
+            int idFC = query.value(0).toInt();
+            std::string nom = query.value(1).toString().toStdString();
+            std::string prenom = query.value(2).toString().toStdString();
+            std::string entreprise = query.value(3).toString().toStdString();
+            std::string mail = query.value(4).toString().toStdString();
+            std::string telephone = query.value(5).toString().toStdString();
+
+            //photo
+            QImage photo;
+            //QByteArray baPhoto = query.value(6).toByteArray();
+            //photo.loadFromData(baPhoto);
+            photo.loadFromData(query.value(6).toByteArray());
+
+            //creationDate
+            Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
+
+            //Créer un FicheContact avec GestionContact, puis ajouter les interactions en utilisant idFC
+
+        }
+
+
+
+        //Doit être fait à la fin
+        gc.GetLog().SetTabLog(logs);
+    }
 }
 
 /**

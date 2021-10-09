@@ -8,6 +8,8 @@
 
 #include <QWidget>
 
+#include <LOGIC/gestioncontact.h>
+
 namespace Ui {
 class UI_FilterContact;
 }
@@ -25,12 +27,23 @@ public:
 
 private:
     Ui::UI_FilterContact *ui;
+    std::string filtreNom;
+    std::string filtreEntreprise;
+    QDate filtreDateDebut;
+    QDate filtreDateFin;
+    bool filtreTriAlphabetique;
+    bool filtreTrieDateCreation;
+    GestionContact gc;
 
+private:
+    bool VerificationChamps();
 public slots:
-    void ButtonStartDate();
-    void ButtonStopDate();
     void ButtonValidate();
     void ButtonCancel();
+    void ReceiveFromMainWindow(GestionContact);
+
+signals:
+    void sendListContactToMainWindow(std::vector<FicheContact>);
 };
 
 #endif // UI_FILTERCONTACT_H
