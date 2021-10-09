@@ -171,7 +171,7 @@ std::vector<Interaction> FicheContact::GetListInteraction()
  * @param[in] contenuInteraction        Le contenu à partir duquel l'interaction sera créé
  * @param[in] titreInteraction        Le titre de l'interaction
  */
-void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction)
+void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction, Horodatage horodatage)
 {
     std::vector<Interaction> allInteractions = GetListInteraction();
     int firstAvailableId = allInteractions.size();
@@ -193,7 +193,7 @@ void FicheContact::AddInteraction(std::string contenuInteraction, std::string ti
         lastId = sortedId;
     }
 
-    Interaction i = Interaction(firstAvailableId, contenuInteraction, titreInteraction);
+    Interaction i = Interaction(firstAvailableId, contenuInteraction, titreInteraction, horodatage);
 
     listInteraction.push_back(i);
 }

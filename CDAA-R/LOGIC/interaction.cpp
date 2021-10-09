@@ -13,12 +13,13 @@
  * @param[in] id        L'id de l'interaction
  * @param[in] c     Le contenu de l'interaction
  * @param[in] titre     Le titre de l'interaction
+ * @param[in] horodatage        L'horodatage de l'interaction
  */
-Interaction::Interaction(int id, std::string c, std::string titre)
+Interaction::Interaction(int id, std::string c, std::string titre, Horodatage horodatage)
 {
     this->SetContenu(c);
     this->id = id;
-    this->horodatage = Horodatage();
+    this->horodatage = horodatage;
     this->titre = titre;
     this->tags = tagsInteraction();
 }

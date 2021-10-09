@@ -46,7 +46,7 @@ class FicheContact
         Horodatage getDateCreation();
 
         std::vector<Interaction> GetListInteraction();
-        void AddInteraction(std::string, std::string);
+        void AddInteraction(std::string, std::string, Horodatage = Horodatage());
         void RemoveInteraction(int);
         std::string ToString();
 };
