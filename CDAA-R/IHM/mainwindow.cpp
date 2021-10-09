@@ -413,6 +413,9 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 
 void MainWindow::resetFilters()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     this->DisplayContactList();
     ui->FilterContactIndicator->setVisible(0);
 }

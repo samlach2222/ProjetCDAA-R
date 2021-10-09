@@ -39,6 +39,9 @@ void UI_FilterContact::ButtonValidate()
 {
     if(this->VerificationChamps()) // si les champs sont valides et bien remplis
     {
+        // On joue le son du bouton
+        SoundPlayer::PlayButtonSound();
+
         std::vector<FicheContact> listContact = std::vector<FicheContact>();
         QDate dateMin = QDate::fromString(ui->editDateDebut->text(),"dd/MM/yyyy");
         QDate dateMax = QDate::fromString(ui->editDateFin->text(),"dd/MM/yyyy");
@@ -116,6 +119,9 @@ void UI_FilterContact::ButtonValidate()
  */
 void UI_FilterContact::ButtonCancel()
 {
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
     this->~UI_FilterContact();
 }
 
