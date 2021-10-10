@@ -12,6 +12,7 @@
 #include "LOGIC/soundplayer.h"
 
 #include <QStandardPaths>
+#include <QCloseEvent>
 
 /**
  * @brief Constructeur de UI_SaveGestionContact
@@ -32,6 +33,19 @@ UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *ge
 UI_SaveGestionContact::~UI_SaveGestionContact()
 {
     delete ui;
+}
+
+/**
+ * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ * @param event     Event de fermeture de la fenêtre
+ */
+void UI_SaveGestionContact::closeEvent(QCloseEvent *event)
+{
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
+    //event->ignore();  //Empêche la fermeture de la fenêtre
+    //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }
 
 /**
@@ -74,15 +88,4 @@ void UI_SaveGestionContact::Export()
     JSonStorage::Save(*gc);
 
     ui->informationLabel->setText("Export effectué");
-}
-
-/**
- * @brief Méthode assignée au bouton **Fermer** qui permet de fermer la fenêtre
- */
-void UI_SaveGestionContact::Fermer()
-{
-    // On joue le son du bouton
-    SoundPlayer::PlayButtonSound();
-
-    this->close();
 }

@@ -104,7 +104,7 @@
    <sender>pushButton_3</sender>
    <signal>clicked()</signal>
    <receiver>UI_SaveGestionContact</receiver>
-   <slot>Fermer()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>306</x>

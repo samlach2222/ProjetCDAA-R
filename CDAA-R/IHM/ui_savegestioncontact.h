@@ -27,6 +27,7 @@ public:
     ~UI_SaveGestionContact();
 
 private:
+    void closeEvent(QCloseEvent*);
     Ui::UI_SaveGestionContact *ui;
     GestionContact* gc;
 
@@ -34,6 +35,5 @@ private:
 public slots:
     void Import();
     void Export();
-    void Fermer();
 };
 #endif // UI_SAVEGESTIONCONTACT_H
