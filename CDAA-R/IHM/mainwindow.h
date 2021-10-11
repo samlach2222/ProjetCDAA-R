@@ -37,6 +37,7 @@ private:
     UI_RequestContact rc;
     UI_SaveGestionContact sgc; // Not StarGate Command
     UI_InteractionContact ic;
+    int idContactSelectionne;
 
     void DisplayContactList();
     void RefreshLog();

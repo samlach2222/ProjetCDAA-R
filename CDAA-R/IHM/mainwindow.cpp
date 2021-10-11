@@ -47,6 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
     //FIN DEFINITION SIGNAUX
 
     gc = GestionContact();
+    idContactSelectionne = -1;
     this->RefreshLog();
 
     // Edition des controlleurs par défaut
@@ -197,7 +198,8 @@ void MainWindow::OpenSGC()
  */
 void MainWindow::ListItemDoubleClick()
 {
-    // son non nécéssaire car déjà mis pour le simple clic
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
 
     QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
     QVariant v = selectedItem[0]->data(Qt::UserRole);
@@ -216,31 +218,33 @@ void MainWindow::ListItemDoubleClick()
  */
 void MainWindow::ListItemClick()
 {
-    // On joue le son du bouton
-    SoundPlayer::PlayButtonSound();
-
-    ModeAjout = 0;
     QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
     QVariant v = selectedItem[0]->data(Qt::UserRole);
-    int idContact = v.value<int>();
+    if (idContactSelectionne != v.value<int>()){
+        // On joue le son du bouton
+        SoundPlayer::PlayButtonSound();
 
-    FicheContact contact = gc.GetContact(idContact);
+        ModeAjout = 0;
+        idContactSelectionne = v.value<int>();
 
-    ui->frameEditContact->setVisible(1);
+        FicheContact contact = gc.GetContact(idContactSelectionne);
 
-    ui->editNom->setText(QString::fromStdString(contact.getNom()));
-    ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
-    ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
-    ui->editMail->setText(QString::fromStdString(contact.getMail()));
-    ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
+        ui->frameEditContact->setVisible(1);
 
-    ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
-    ui->editDateCreation->setEnabled(0);
+        ui->editNom->setText(QString::fromStdString(contact.getNom()));
+        ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
+        ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
+        ui->editMail->setText(QString::fromStdString(contact.getMail()));
+        ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
 
-    QPixmap image = QPixmap::fromImage(contact.getPhoto());
-    int w = ui->Image->width();
-    int h = ui->Image->height();
-    ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+        ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
+        ui->editDateCreation->setEnabled(0);
+
+        QPixmap image = QPixmap::fromImage(contact.getPhoto());
+        int w = ui->Image->width();
+        int h = ui->Image->height();
+        ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+    }
 }
 
 /**
@@ -291,11 +295,7 @@ void MainWindow::ValiderContact()
 
         if(!ModeAjout)
         {
-            QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
-            QVariant v = selectedItem[0]->data(Qt::UserRole);
-            int idContact = v.value<int>();
-
-            FicheContact contact = gc.GetContact(idContact);
+            FicheContact contact = gc.GetContact(idContactSelectionne);
             contact.setNom(ui->editNom->text().toStdString());
             contact.setPrenom(ui->editPrenom->text().toStdString());
             contact.setEntreprise(ui->editEntreprise->text().toStdString());
@@ -332,11 +332,7 @@ void MainWindow::SupprimerContact()
 
     if(gc.GetAllContacts().size() > 0 && !ModeAjout)
     {
-        QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
-        QVariant v = selectedItem[0]->data(Qt::UserRole);
-        int idContact = v.value<int>();
-
-        gc.SupprContact(idContact);
+        gc.SupprContact(idContactSelectionne);
         this->DisplayContactList();
         ui->frameEditContact->setVisible(0);
         this->RefreshLog();
