@@ -46,15 +46,18 @@ UI_InteractionContact::~UI_InteractionContact()
 }
 
 /**
- * @brief Methode liée au bouton permettant de valider la liste des intégrations
+ * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ * @param event     Event de fermeture de la fenêtre
  */
-void UI_InteractionContact::ValidateAllInteractions()
+void UI_InteractionContact::closeEvent(QCloseEvent *event)
 {
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
     emit sendContactToMainWindow(this->contact);
-    this->close();
+
+    //event->ignore();  //Empêche la fermeture de la fenêtre
+    //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }
 
 /**

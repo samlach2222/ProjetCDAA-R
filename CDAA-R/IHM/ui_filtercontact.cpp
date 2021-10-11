@@ -39,9 +39,6 @@ void UI_FilterContact::ButtonValidate()
 {
     if(this->VerificationChamps()) // si les champs sont valides et bien remplis
     {
-        // On joue le son du bouton
-        SoundPlayer::PlayButtonSound();
-
         std::vector<FicheContact> listContact = std::vector<FicheContact>();
         QDate dateMin = QDate::fromString(ui->editDateDebut->text(),"dd/MM/yyyy");
         QDate dateMax = QDate::fromString(ui->editDateFin->text(),"dd/MM/yyyy");
@@ -115,14 +112,16 @@ void UI_FilterContact::ButtonValidate()
 }
 
 /**
- * @brief Permet d'annuler le filtre et de fermer la fenêtre
+ * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ * @param event     Event de fermeture de la fenêtre
  */
-void UI_FilterContact::ButtonCancel()
+void UI_FilterContact::closeEvent(QCloseEvent *event)
 {
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    this->~UI_FilterContact();
+    //event->ignore();  //Empêche la fermeture de la fenêtre
+    //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }
 
 /**
@@ -206,6 +205,10 @@ bool UI_FilterContact::VerificationChamps()
     return champsCorrects;
 }
 
+/**
+ * @brief Permet de recevoir la classe de gestion de contact afin d'avoir la liste complête des contacts
+ * @param[in] gc classe de Gestion de contacts
+ */
 void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
 {
     this->gc = gc;

@@ -34,15 +34,16 @@ private:
     bool filtreTriAlphabetique;
     bool filtreTrieDateCreation;
     GestionContact gc;
-
-private:
     bool VerificationChamps();
+    void closeEvent(QCloseEvent*);
 public slots:
     void ButtonValidate();
-    void ButtonCancel();
     void ReceiveFromMainWindow(GestionContact);
 
 signals:
+    /**
+     * @brief Envoie la liste des contacts filtrée à a MainWindow
+     */
     void sendListContactToMainWindow(std::vector<FicheContact>);
 };
 

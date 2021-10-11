@@ -9,6 +9,8 @@
 #include "ui_requestcontact.h"
 #include "ui_ui_requestcontact.h"
 
+#include <LOGIC/soundplayer.h>
+
 /**
  * @brief Constructeur de UI_RequestContact
  * @param[out] parent    QWidget de création de classe
@@ -38,9 +40,14 @@ void UI_RequestContact::ButtonDoRequest()
 }
 
 /**
- * @brief Méthode du bu=outon permettant d'annuler la page de requête et de la fermer
+ * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ * @param event     Event de fermeture de la fenêtre
  */
-void UI_RequestContact::ButtonCancel()
+void UI_RequestContact::closeEvent(QCloseEvent *event)
 {
-    this->~UI_RequestContact();
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
+    //event->ignore();  //Empêche la fermeture de la fenêtre
+    //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }

@@ -25,10 +25,10 @@ public:
 
 private:
     Ui::UI_RequestContact *ui;
+    void closeEvent(QCloseEvent*);
 
 public slots:
     void ButtonDoRequest();
-    void ButtonCancel();
 };
 
 #endif // UI_REQUESTCONTACT_H

@@ -1,7 +1,3 @@
 warning: The selected output language "french" has not been updated
 since release 1.8.15.  As a result some sentences may appear in English.
 
-C:/Users/drago/Desktop/ProjetCDAA-R/CDAA-R/IHM/mainwindow.h:58: warning: Member ReceiveFromFilterContact(std::vector< FicheContact >) (slot) of class MainWindow is not documented.
-C:/Users/drago/Desktop/ProjetCDAA-R/CDAA-R/IHM/mainwindow.h:59: warning: Member resetFilters() (slot) of class MainWindow is not documented.
-C:/Users/drago/Desktop/ProjetCDAA-R/CDAA-R/IHM/ui_filtercontact.h:43: warning: Member ReceiveFromMainWindow(GestionContact) (slot) of class UI_FilterContact is not documented.
-C:/Users/drago/Desktop/ProjetCDAA-R/CDAA-R/IHM/ui_filtercontact.h:46: warning: Member sendListContactToMainWindow(std::vector< FicheContact >) (signal) of class UI_FilterContact is not documented.

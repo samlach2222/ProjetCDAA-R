@@ -200,7 +200,7 @@
    <sender>boutonAnnuler</sender>
    <signal>clicked()</signal>
    <receiver>UI_FilterContact</receiver>
-   <slot>ButtonCancel()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>364</x>

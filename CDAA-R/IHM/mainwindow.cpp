@@ -395,6 +395,10 @@ void MainWindow::AddOperationToLog(std::string str)
     this->RefreshLog();
 }
 
+/**
+ * @brief Slot permettant de recevoir une liste de contact modifiée par les filtres
+ * @param[in] listContact  liste de contacts modifiée par les filtres
+ */
 void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 {
     ui->FilterContactIndicator->setVisible(1);
@@ -411,6 +415,9 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
     }
 }
 
+/**
+ * @brief Permet de retirer les filtres de recherche et de revenir à la liste par défaut
+ */
 void MainWindow::resetFilters()
 {
     // On joue le son du bouton
@@ -418,4 +425,17 @@ void MainWindow::resetFilters()
 
     this->DisplayContactList();
     ui->FilterContactIndicator->setVisible(0);
+}
+
+/**
+ * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ * @param event     Event de fermeture de la fenêtre
+ */
+void UI_FilterContact::closeEvent(QCloseEvent *event)
+{
+    // On joue le son du bouton
+    SoundPlayer::PlayButtonSound();
+
+    //event->ignore();  //Empêche la fermeture de la fenêtre
+    //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }

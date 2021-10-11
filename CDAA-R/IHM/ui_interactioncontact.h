@@ -31,9 +31,9 @@ private:
     FicheContact contact;
     void DisplayInteractionList();
     void addTags(Interaction*);
+    void closeEvent(QCloseEvent*);
 
 public slots:
-    void ValidateAllInteractions();
     void AddInteraction();
     void SupprimerInteraction();
     void ListItemClick();

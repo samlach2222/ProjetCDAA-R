@@ -12,7 +12,7 @@
             <section title="DatabaseStorage" ref="class_database_storage.html" />
             <section title="FicheContact" ref="class_fiche_contact.html">
               <section title="FicheContact" ref="class_fiche_contact.html#a1c7bd5f54d53ea5ac2a14b4e46abb6ba" />
-              <section title="AddInteraction" ref="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf" />
+              <section title="AddInteraction" ref="class_fiche_contact.html#ae6f9d3e86bbec78878413114f3c61d1a" />
               <section title="getDateCreation" ref="class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c" />
               <section title="getEntreprise" ref="class_fiche_contact.html#a2a009232da5fcc324d77c9f61a4e22a0" />
               <section title="getId" ref="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" />
@@ -59,7 +59,7 @@
               <section title="ToString" ref="class_horodatage.html#a433b52bcac9fdad6c460421a063175ca" />
             </section>
             <section title="Interaction" ref="class_interaction.html">
-              <section title="Interaction" ref="class_interaction.html#a532aa52016d9e7dde3431a9781be3962" />
+              <section title="Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
               <section title="GetContenu" ref="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc" />
               <section title="GetHorodatage" ref="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433" />
               <section title="GetId" ref="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc" />
@@ -89,6 +89,8 @@
               <section title="OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
               <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
               <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
+              <section title="ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
+              <section title="resetFilters" ref="class_main_window.html#a47f4eaf9bf802041b3087d6ee60040b7" />
               <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
               <section title="sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
               <section title="SupprimerContact" ref="class_main_window.html#acd432e37a1121b9377db225c7f7ff300" />
@@ -105,8 +107,9 @@
             <section title="UI_FilterContact" ref="class_u_i___filter_contact.html">
               <section title="UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
               <section title="~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
-              <section title="ButtonCancel" ref="class_u_i___filter_contact.html#a46d4f2d85ad30b43c977091f9a291f42" />
               <section title="ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+              <section title="ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
+              <section title="sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
             </section>
             <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html">
               <section title="UI_InteractionContact" ref="class_u_i___interaction_contact.html#a64db9f94d34aab0e65b3ae68e4f8023f" />
@@ -117,20 +120,17 @@
               <section title="ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
               <section title="sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
               <section title="SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
-              <section title="ValidateAllInteractions" ref="class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917" />
               <section title="ValiderInteraction" ref="class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292" />
             </section>
             <section title="UI_RequestContact" ref="class_u_i___request_contact.html">
               <section title="UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
               <section title="~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
-              <section title="ButtonCancel" ref="class_u_i___request_contact.html#a09a669c9f9e649a4a2ed983073299787" />
               <section title="ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
             </section>
             <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html">
               <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007" />
               <section title="~UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a0858aa26aeb5d4ab170f5720d74b3633" />
               <section title="Export" ref="class_u_i___save_gestion_contact.html#a8cd8c8ba4ae982bc5afd6b5f1f29db22" />
-              <section title="Fermer" ref="class_u_i___save_gestion_contact.html#a6f865b4b5708968fbbc1f117c2a2c801" />
               <section title="Import" ref="class_u_i___save_gestion_contact.html#a76561b3ea083786098a48b4b2b86ad1f" />
             </section>
           </section>
@@ -180,6 +180,8 @@
                   <section title="OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
                   <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
                   <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
+                  <section title="ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
+                  <section title="resetFilters" ref="class_main_window.html#a47f4eaf9bf802041b3087d6ee60040b7" />
                   <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
                   <section title="sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
                   <section title="SupprimerContact" ref="class_main_window.html#acd432e37a1121b9377db225c7f7ff300" />
@@ -191,8 +193,9 @@
                 <section title="UI_FilterContact" ref="class_u_i___filter_contact.html">
                   <section title="UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
                   <section title="~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
-                  <section title="ButtonCancel" ref="class_u_i___filter_contact.html#a46d4f2d85ad30b43c977091f9a291f42" />
                   <section title="ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+                  <section title="ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
+                  <section title="sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
                 </section>
               </section>
               <section title="ui_interactioncontact.cpp" ref="ui__interactioncontact_8cpp.html">
@@ -208,7 +211,6 @@
                   <section title="ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
                   <section title="sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
                   <section title="SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
-                  <section title="ValidateAllInteractions" ref="class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917" />
                   <section title="ValiderInteraction" ref="class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292" />
                 </section>
               </section>
@@ -217,7 +219,6 @@
                 <section title="UI_RequestContact" ref="class_u_i___request_contact.html">
                   <section title="UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
                   <section title="~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
-                  <section title="ButtonCancel" ref="class_u_i___request_contact.html#a09a669c9f9e649a4a2ed983073299787" />
                   <section title="ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
                 </section>
               </section>
@@ -227,7 +228,6 @@
                   <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007" />
                   <section title="~UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a0858aa26aeb5d4ab170f5720d74b3633" />
                   <section title="Export" ref="class_u_i___save_gestion_contact.html#a8cd8c8ba4ae982bc5afd6b5f1f29db22" />
-                  <section title="Fermer" ref="class_u_i___save_gestion_contact.html#a6f865b4b5708968fbbc1f117c2a2c801" />
                   <section title="Import" ref="class_u_i___save_gestion_contact.html#a76561b3ea083786098a48b4b2b86ad1f" />
                 </section>
               </section>
@@ -237,7 +237,7 @@
               <section title="fichecontact.h" ref="fichecontact_8h.html">
                 <section title="FicheContact" ref="class_fiche_contact.html">
                   <section title="FicheContact" ref="class_fiche_contact.html#a1c7bd5f54d53ea5ac2a14b4e46abb6ba" />
-                  <section title="AddInteraction" ref="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf" />
+                  <section title="AddInteraction" ref="class_fiche_contact.html#ae6f9d3e86bbec78878413114f3c61d1a" />
                   <section title="getDateCreation" ref="class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c" />
                   <section title="getEntreprise" ref="class_fiche_contact.html#a2a009232da5fcc324d77c9f61a4e22a0" />
                   <section title="getId" ref="class_fiche_contact.html#a47ddfe7eea58d73f8ec1e9474f6876c5" />
@@ -274,7 +274,7 @@
               <section title="interaction.cpp" ref="interaction_8cpp.html" />
               <section title="interaction.h" ref="interaction_8h.html">
                 <section title="Interaction" ref="class_interaction.html">
-                  <section title="Interaction" ref="class_interaction.html#a532aa52016d9e7dde3431a9781be3962" />
+                  <section title="Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
                   <section title="GetContenu" ref="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc" />
                   <section title="GetHorodatage" ref="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433" />
                   <section title="GetId" ref="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc" />
@@ -357,7 +357,7 @@
       <keyword name="setPhoto" id="FicheContact::setPhoto" ref="class_fiche_contact.html#ae79356b499aaafa19f3db3d85f345c35" />
       <keyword name="getDateCreation" id="FicheContact::getDateCreation" ref="class_fiche_contact.html#ab5f1935a57e35838dc8296104f137f9c" />
       <keyword name="GetListInteraction" id="FicheContact::GetListInteraction" ref="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e" />
-      <keyword name="AddInteraction" id="FicheContact::AddInteraction" ref="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf" />
+      <keyword name="AddInteraction" id="FicheContact::AddInteraction" ref="class_fiche_contact.html#ae6f9d3e86bbec78878413114f3c61d1a" />
       <keyword name="RemoveInteraction" id="FicheContact::RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
       <keyword name="ToString" id="FicheContact::ToString" ref="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d" />
       <keyword name="GestionContact" id="GestionContact" ref="class_gestion_contact.html" />
@@ -386,7 +386,7 @@
       <keyword name="SetMinute" id="Horodatage::SetMinute" ref="class_horodatage.html#aa63385c41dc72ab2ee468f8bcbb5021a" />
       <keyword name="SetSeconde" id="Horodatage::SetSeconde" ref="class_horodatage.html#a315e5232ebcb5cf142f86ba70d2df4c6" />
       <keyword name="Interaction" id="Interaction" ref="class_interaction.html" />
-      <keyword name="Interaction" id="Interaction::Interaction" ref="class_interaction.html#a532aa52016d9e7dde3431a9781be3962" />
+      <keyword name="Interaction" id="Interaction::Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
       <keyword name="GetId" id="Interaction::GetId" ref="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc" />
       <keyword name="GetContenu" id="Interaction::GetContenu" ref="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc" />
       <keyword name="SetContenu" id="Interaction::SetContenu" ref="class_interaction.html#a7fa16276ece67880fdba83723e75d96c" />
@@ -434,13 +434,11 @@
       <keyword name="setTags" id="tagsInteraction::setTags" ref="classtags_interaction.html#a89e2801c69f3f9badd15a1b5b6c855a5" />
       <keyword name="UI_FilterContact" id="UI_FilterContact" ref="class_u_i___filter_contact.html" />
       <keyword name="ButtonValidate" id="UI_FilterContact::ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
-      <keyword name="ButtonCancel" id="UI_FilterContact::ButtonCancel" ref="class_u_i___filter_contact.html#a46d4f2d85ad30b43c977091f9a291f42" />
       <keyword name="ReceiveFromMainWindow" id="UI_FilterContact::ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
       <keyword name="sendListContactToMainWindow" id="UI_FilterContact::sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
       <keyword name="UI_FilterContact" id="UI_FilterContact::UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
       <keyword name="~UI_FilterContact" id="UI_FilterContact::~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
       <keyword name="UI_InteractionContact" id="UI_InteractionContact" ref="class_u_i___interaction_contact.html" />
-      <keyword name="ValidateAllInteractions" id="UI_InteractionContact::ValidateAllInteractions" ref="class_u_i___interaction_contact.html#a1d4945cb3c17ace6646d305afc4eb917" />
       <keyword name="AddInteraction" id="UI_InteractionContact::AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
       <keyword name="SupprimerInteraction" id="UI_InteractionContact::SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
       <keyword name="ListItemClick" id="UI_InteractionContact::ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
@@ -452,13 +450,11 @@
       <keyword name="~UI_InteractionContact" id="UI_InteractionContact::~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
       <keyword name="UI_RequestContact" id="UI_RequestContact" ref="class_u_i___request_contact.html" />
       <keyword name="ButtonDoRequest" id="UI_RequestContact::ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
-      <keyword name="ButtonCancel" id="UI_RequestContact::ButtonCancel" ref="class_u_i___request_contact.html#a09a669c9f9e649a4a2ed983073299787" />
       <keyword name="UI_RequestContact" id="UI_RequestContact::UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
       <keyword name="~UI_RequestContact" id="UI_RequestContact::~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
       <keyword name="UI_SaveGestionContact" id="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html" />
       <keyword name="Import" id="UI_SaveGestionContact::Import" ref="class_u_i___save_gestion_contact.html#a76561b3ea083786098a48b4b2b86ad1f" />
       <keyword name="Export" id="UI_SaveGestionContact::Export" ref="class_u_i___save_gestion_contact.html#a8cd8c8ba4ae982bc5afd6b5f1f29db22" />
-      <keyword name="Fermer" id="UI_SaveGestionContact::Fermer" ref="class_u_i___save_gestion_contact.html#a6f865b4b5708968fbbc1f117c2a2c801" />
       <keyword name="UI_SaveGestionContact" id="UI_SaveGestionContact::UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a13aa1ba16b12bed4bc058553a0187007" />
       <keyword name="~UI_SaveGestionContact" id="UI_SaveGestionContact::~UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a0858aa26aeb5d4ab170f5720d74b3633" />
     </keywords>

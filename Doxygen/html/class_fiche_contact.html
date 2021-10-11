@@ -119,9 +119,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a843826ee1b8b4e5c446f71c930ef556e"><td align="right" class="memItemLeft" valign="top">std::vector&lt;<a class="el" href="class_interaction.html">Interaction</a>&gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e">GetListInteraction</a> ()</td></tr>
 <tr class="memdesc:a843826ee1b8b4e5c446f71c930ef556e"><td class="mdescLeft"> </td><td class="mdescRight">Retourne la liste des intéractions du contact.  <a href="class_fiche_contact.html#a843826ee1b8b4e5c446f71c930ef556e">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a843826ee1b8b4e5c446f71c930ef556e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a125f25f4bba1be6d87a0d7b9423fcdcf"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf">AddInteraction</a> (std::string, std::string)</td></tr>
-<tr class="memdesc:a125f25f4bba1be6d87a0d7b9423fcdcf"><td class="mdescLeft"> </td><td class="mdescRight">Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions.  <a href="class_fiche_contact.html#a125f25f4bba1be6d87a0d7b9423fcdcf">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a125f25f4bba1be6d87a0d7b9423fcdcf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae6f9d3e86bbec78878413114f3c61d1a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#ae6f9d3e86bbec78878413114f3c61d1a">AddInteraction</a> (std::string, std::string, <a class="el" href="class_horodatage.html">Horodatage</a>=<a class="el" href="class_horodatage.html">Horodatage</a>())</td></tr>
+<tr class="memdesc:ae6f9d3e86bbec78878413114f3c61d1a"><td class="mdescLeft"> </td><td class="mdescRight">Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions.  <a href="class_fiche_contact.html#ae6f9d3e86bbec78878413114f3c61d1a">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ae6f9d3e86bbec78878413114f3c61d1a"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af98ff7bffb58db9262bba69e11c7143c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c">RemoveInteraction</a> (int)</td></tr>
 <tr class="memdesc:af98ff7bffb58db9262bba69e11c7143c"><td class="mdescLeft"> </td><td class="mdescRight">Enlève l'interaction d'id <code>id</code> de la liste des interactions.  <a href="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c">Plus de détails...</a><br/></td></tr>
 <tr class="separator:af98ff7bffb58db9262bba69e11c7143c"><td class="memSeparator" colspan="2"> </td></tr>
@@ -209,8 +209,8 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- @@@FicheContact -->
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a125f25f4bba1be6d87a0d7b9423fcdcf" name="a125f25f4bba1be6d87a0d7b9423fcdcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a125f25f4bba1be6d87a0d7b9423fcdcf">◆ </a></span>AddInteraction()</h2>
+<a id="ae6f9d3e86bbec78878413114f3c61d1a" name="ae6f9d3e86bbec78878413114f3c61d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f9d3e86bbec78878413114f3c61d1a">◆ </a></span>AddInteraction()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -224,7 +224,13 @@ Fonctions membres publiques</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">std::string </td>
-<td class="paramname"><em>titreInteraction</em> </td>
+<td class="paramname"><em>titreInteraction</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="class_horodatage.html">Horodatage</a> </td>
+<td class="paramname"><em>horodatage</em> = <code><a class="el" href="class_horodatage.html">Horodatage</a>()</code> </td>
 </tr>
 <tr>
 <td></td>
@@ -232,12 +238,13 @@ Fonctions membres publiques</h2></td></tr>
 <td></td><td></td>
 </tr>
 </table>
-</div><!-- $$$AddInteraction[overload1]$$$voidFicheContact::AddInteraction(std::string contenuInteraction,std::string titreInteraction ) --><div class="memdoc"><div style="display: none">void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction )</div>
+</div><!-- $$$AddInteraction[overload1]$$$voidFicheContact::AddInteraction(std::string contenuInteraction,std::string titreInteraction,Horodatage horodatage=Horodatage() ) --><div class="memdoc"><div style="display: none">void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction, Horodatage horodatage = Horodatage() )</div>
 <p>Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">contenuInteraction</td><td>Le contenu à partir duquel l'interaction sera créé </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">titreInteraction</td><td>Le titre de l'interaction </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">horodatage</td><td>L'horodatage de l'interaction (<b>optionelle</b>) </td></tr>
 </table>
 </dd>
 </dl>

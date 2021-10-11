@@ -71,9 +71,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a532aa52016d9e7dde3431a9781be3962"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#a532aa52016d9e7dde3431a9781be3962">Interaction</a> (int, std::string, std::string)</td></tr>
-<tr class="memdesc:a532aa52016d9e7dde3431a9781be3962"><td class="mdescLeft"> </td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_interaction.html" title="Classe pour une intéraction.">Interaction</a>.  <a href="class_interaction.html#a532aa52016d9e7dde3431a9781be3962">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a532aa52016d9e7dde3431a9781be3962"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4074d3ff745bab28bc2bd4727ba03806"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806">Interaction</a> (int, std::string, std::string, <a class="el" href="class_horodatage.html">Horodatage</a>)</td></tr>
+<tr class="memdesc:a4074d3ff745bab28bc2bd4727ba03806"><td class="mdescLeft"> </td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_interaction.html" title="Classe pour une intéraction.">Interaction</a>.  <a href="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a4074d3ff745bab28bc2bd4727ba03806"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a3a5ec7b4c2b0dd43305288db0ab4afbc"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc">GetId</a> ()</td></tr>
 <tr class="memdesc:a3a5ec7b4c2b0dd43305288db0ab4afbc"><td class="mdescLeft"> </td><td class="mdescRight">Retourne l'id.  <a href="class_interaction.html#a3a5ec7b4c2b0dd43305288db0ab4afbc">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a3a5ec7b4c2b0dd43305288db0ab4afbc"><td class="memSeparator" colspan="2"> </td></tr>
@@ -102,8 +102,8 @@ Fonctions membres publiques</h2></td></tr>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe pour une intéraction. </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a532aa52016d9e7dde3431a9781be3962" name="a532aa52016d9e7dde3431a9781be3962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a532aa52016d9e7dde3431a9781be3962">◆ </a></span>Interaction()</h2>
+<a id="a4074d3ff745bab28bc2bd4727ba03806" name="a4074d3ff745bab28bc2bd4727ba03806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4074d3ff745bab28bc2bd4727ba03806">◆ </a></span>Interaction()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -123,7 +123,13 @@ Fonctions membres publiques</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">std::string </td>
-<td class="paramname"><em>titre</em> </td>
+<td class="paramname"><em>titre</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="class_horodatage.html">Horodatage</a> </td>
+<td class="paramname"><em>horodatage</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -131,13 +137,14 @@ Fonctions membres publiques</h2></td></tr>
 <td></td><td></td>
 </tr>
 </table>
-</div><!-- $$$Interaction[overload1]$$$Interaction::Interaction(int id,std::string c,std::string titre ) --><div class="memdoc"><div style="display: none">Interaction::Interaction(int id, std::string c, std::string titre )</div>
+</div><!-- $$$Interaction[overload1]$$$Interaction::Interaction(int id,std::string c,std::string titre,Horodatage horodatage ) --><div class="memdoc"><div style="display: none">Interaction::Interaction(int id, std::string c, std::string titre, Horodatage horodatage )</div>
 <p>Constructeur de la classe <a class="el" href="class_interaction.html" title="Classe pour une intéraction.">Interaction</a>. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>L'id de l'interaction </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Le contenu de l'interaction </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">titre</td><td>Le titre de l'interaction </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">horodatage</td><td>L'horodatage de l'interaction </td></tr>
 </table>
 </dd>
 </dl>
