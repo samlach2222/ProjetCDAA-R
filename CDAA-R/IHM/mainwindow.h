@@ -41,6 +41,7 @@ private:
     void DisplayContactList();
     void RefreshLog();
     int GetIdFromRow(std::string);
+    void closeEvent(QCloseEvent*);
 
 public slots:
     void AddContact();

@@ -189,7 +189,7 @@
    <sender>BValider</sender>
    <signal>clicked()</signal>
    <receiver>UI_InteractionContact</receiver>
-   <slot>ValidateAllInteractions()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>268</x>

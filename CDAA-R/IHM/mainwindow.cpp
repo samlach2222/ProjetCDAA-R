@@ -431,7 +431,7 @@ void MainWindow::resetFilters()
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
  * @param event     Event de fermeture de la fenêtre
  */
-void UI_FilterContact::closeEvent(QCloseEvent *event)
+void MainWindow::closeEvent(QCloseEvent *event)
 {
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
