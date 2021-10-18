@@ -3,8 +3,8 @@
  * @brief La classe de gestion de liste des Contacts
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.1
- * @date 22/09/2021
+ * @version 1.2
+ * @date 08/10/2021
  */
 
 #include "gestioncontact.h"

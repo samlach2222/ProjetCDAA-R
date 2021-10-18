@@ -2,8 +2,9 @@
  * @file LOGIC/interaction.cpp
  * @brief Classe pour une intéraction
  * @author Samuel LACHAUD
- * @version 1.0
- * @date 22/09/2021
+ * @author Loïs PAZOLA
+ * @version 1.1
+ * @date 01/10/2021
  */
 #include "interaction.h"
 //#include "horodatage.h"

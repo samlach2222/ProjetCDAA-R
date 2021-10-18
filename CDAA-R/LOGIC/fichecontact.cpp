@@ -3,7 +3,7 @@
  * @brief Contient les détails d'un contact et ses interactions
  * @author Loïs PAZOLA
  * @version 1.2
- * @date 22/09/2021
+ * @date 04/10/2021
  */
 #include "fichecontact.h"
 //#include "horodatage.h"
@@ -29,6 +29,9 @@ FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::str
     this->setTelephone(telephone);
     this->setPhoto(photo);
     this->dateCreation = dateCreation;
+
+    std::list<int> test;
+    test.remove(10);
 }
 
 /**
