@@ -1,6 +1,6 @@
 # ProjetCDAA-R
 
-[![GitHub version](https://img.shields.io/badge/version-0.1-purple.svg)](https://img.shields.io/badge)
+[![GitHub version](https://img.shields.io/badge/version-1.0-purple.svg)](https://img.shields.io/badge)
 [![Discord](https://img.shields.io/discord/756176190603132959.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/eSRhuNeWCy)
 
 Projet CDAA - L3 Info - Grpe R
