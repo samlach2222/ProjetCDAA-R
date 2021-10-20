@@ -13,3 +13,4 @@ Projet CDAA - L3 Info - Grpe R
 - Ajout en IHM des fonctions basiques des affichages
 - Headers : enlever les noms de variables dans les paramètres de fonctions
 - Voir si on peut redéfinir les opérators et la fonction remove des vector
+- Delete les pointeurs ça serait pas mal
