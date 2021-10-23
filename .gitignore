@@ -1,3 +1,24 @@
+# General files
+*~
+*.core
+*.obj
+*.orig
+*.rej
+*_pch.h.cpp
+*_resource.rc
+.#*
+*.*#
+core
+!core/
+tags
+.DS_Store
+.directory
+*.debug
+*.app
+Thumbs.db
+*.res
+*.rc
+
 # C++ objects and libs
 *.slo
 *.lo
