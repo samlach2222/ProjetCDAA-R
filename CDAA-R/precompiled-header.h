@@ -1,0 +1,27 @@
+//C++ includes
+#include <string>
+#include <tuple>
+#include <vector>
+
+//Qt includes
+#include <QApplication>
+#include <QBuffer>
+#include <QDate>
+#include <QDateTime>
+#include <QDir>
+#include <QFile>
+#include <QFileDialog>
+#include <QIODevice>
+#include <QImage>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QMainWindow>
+#include <QMessageBox>
+#include <QSound>
+#include <QStandardPaths>
+#include <QString>
+#include <QStringListModel>
+#include <QTextStream>
+#include <QVariant>
+#include <QWidget>
+#include <QtSql>
