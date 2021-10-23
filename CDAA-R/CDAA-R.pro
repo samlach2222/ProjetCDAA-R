@@ -12,6 +12,8 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    main.cpp \
+    IHM/mainwindow.cpp \
     IHM/ui_filtercontact.cpp \
     IHM/ui_interactioncontact.cpp \
     IHM/ui_requestcontact.cpp \
@@ -24,9 +26,7 @@ SOURCES += \
     LOGIC/soundplayer.cpp \
     LOGIC/tagsinteraction.cpp \
     STORAGE/databasestorage.cpp \
-    STORAGE/jsonstorage.cpp \
-    main.cpp \
-    IHM/mainwindow.cpp
+    STORAGE/jsonstorage.cpp
 
 HEADERS += \
     IHM/mainwindow.h \
