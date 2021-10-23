@@ -8,7 +8,8 @@
  */
 
 #include "gestioncontact.h"
-#include "STORAGE/databasestorage.h"
+
+#include "../STORAGE/databasestorage.h"
 
 /**
  * @brief Constructeur de la classe

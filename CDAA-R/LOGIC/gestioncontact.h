@@ -9,8 +9,12 @@
 #ifndef GESTIONCONTACT_H
 #define GESTIONCONTACT_H
 
-#include "fichecontact.h"  //inclus LOGIC/horodatage.h
+#include "fichecontact.h"
+#include "horodatage.h"
 #include "log.h"
+
+#include <QImage>
+#include <string>
 #include <vector>
 
 /**

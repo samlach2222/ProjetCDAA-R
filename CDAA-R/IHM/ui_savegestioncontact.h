@@ -9,7 +9,7 @@
 
 #include <QWidget>
 
-#include "STORAGE/jsonstorage.h"  //Inclus LOGIC/gestioncontact.h
+#include "../LOGIC/gestioncontact.h"
 
 namespace Ui {
 class UI_SaveGestionContact;

@@ -5,8 +5,8 @@
  * @version 1.2
  * @date 04/10/2021
  */
+
 #include "fichecontact.h"
-//#include "horodatage.h"
 
 /**
  * @brief Constructeur de la classe FicheContact

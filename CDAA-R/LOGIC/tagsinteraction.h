@@ -6,6 +6,10 @@
 #ifndef TAGSINTERACTION_H
 #define TAGSINTERACTION_H
 
+#include <string>
+#include <tuple>
+#include <vector>
+
 /**
  * @brief Classe gérant le tableau des tags
  */

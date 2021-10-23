@@ -9,18 +9,12 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-//#include "LOGIC/gestioncontact.h"
-//#include "ui_interactioncontact.h"
-#include "LOGIC/soundplayer.h"
+
+#include "../LOGIC/soundplayer.h"
 
 #include <QFileDialog>
-////#include <QHBoxLayout>
 #include <QMessageBox>
-#include <QPixmap>
-////#include <QStandardItemModel>
-#include <QString>
-#include <QStringListModel>  //inclus <QtCore/qstringlist.h>
-////#include <QVector>
+#include <QStringListModel>
 
 /**
  * @brief Valeur booléenne pour savoir si on ajoute un contact ou si on l'édite

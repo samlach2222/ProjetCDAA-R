@@ -9,10 +9,9 @@
 
 #include "ui_savegestioncontact.h"
 #include "ui_ui_savegestioncontact.h"
-#include "LOGIC/soundplayer.h"
 
-#include <QStandardPaths>
-#include <QCloseEvent>
+#include "../LOGIC/soundplayer.h"
+#include "../STORAGE/jsonstorage.h"
 
 /**
  * @brief Constructeur de UI_SaveGestionContact
@@ -81,8 +80,8 @@ void UI_SaveGestionContact::Export()
 
 //    GestionContact gc0;
 //    gc = &gc0;
-//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
-//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\DOxygen_Program\\logo.png"));
+//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\Programs\\logo.png"));
+//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\Programs\\logo.png"));
 //    gc->GetLog().AddToTabLog("log 0");
 //    gc->GetLog().AddToTabLog("log 1");
     JSonStorage::Save(*gc);

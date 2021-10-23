@@ -9,13 +9,21 @@
 
 #include "jsonstorage.h"
 
+#include "../LOGIC/fichecontact.h"
+#include "../LOGIC/horodatage.h"
+
 #include <QBuffer>
 #include <QDir>
 #include <QFile>
+#include <QIODevice>
+#include <QImage>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QStandardPaths>
+#include <QString>
 #include <QTextStream>
+#include <string>
+#include <vector>
 
 /**
  * @brief Retourne le chemin et nom du fichier de sauvegarde

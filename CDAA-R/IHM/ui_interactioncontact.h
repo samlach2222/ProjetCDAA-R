@@ -8,7 +8,9 @@
 
 #include <QWidget>
 
-#include <LOGIC/gestioncontact.h>  //inclus LOGIC/fichecontact.h
+#include "../LOGIC/fichecontact.h"
+#include "../LOGIC/gestioncontact.h"
+#include "../LOGIC/interaction.h"
 
 namespace Ui {
 class UI_InteractionContact;

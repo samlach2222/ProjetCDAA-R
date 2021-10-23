@@ -6,11 +6,12 @@
 #ifndef FICHECONTACT_H
 #define FICHECONTACT_H
 
-#include <string>
-#include <QImage>
-#include <vector>
 #include "horodatage.h"
 #include "interaction.h"
+
+#include <QImage>
+#include <string>
+#include <vector>
 
 /**
  * @brief Classe pour les détails d'un contact et ses interactions

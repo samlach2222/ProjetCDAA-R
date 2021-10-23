@@ -8,7 +8,8 @@
 
 #include "ui_filtercontact.h"
 #include "ui_ui_filtercontact.h"
-#include "LOGIC/soundplayer.h"
+
+#include "../LOGIC/soundplayer.h"
 
 #include <QMessageBox>
 

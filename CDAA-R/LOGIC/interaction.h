@@ -7,9 +7,10 @@
 #ifndef INTERACTION_H
 #define INTERACTION_H
 
-#include <string>
 #include "horodatage.h"
 #include "tagsinteraction.h"
+
+#include <string>
 
 /**
  * @brief Classe pour une intéraction

@@ -6,9 +6,14 @@
  * @version 1.0
  * @date 22/09/2021
  */
+
 #include "databasestorage.h"
 
+#include "../LOGIC/horodatage.h"
+
+#include <QImage>
 #include <QtSql>
+#include <QVariant>
 
 /**
  * @brief Fonction constante qui renvoie une base de données \p QSqlDatabase initialisé
@@ -106,6 +111,8 @@ GestionContact DatabaseStorage::Load()
         //Doit être fait à la fin
         gc.GetLog().SetTabLog(logs);
     }
+
+    return gc;
 }
 
 /**

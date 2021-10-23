@@ -6,8 +6,8 @@
 #ifndef LOG_H
 #define LOG_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 /**
  * @brief Classe pour les logs de l'application

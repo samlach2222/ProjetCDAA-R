@@ -5,11 +5,10 @@
  * @version 1.0
  * @date 22/09/2021
  */
-#include "log.h"
-#include "horodatage.h"
 
-//#include <vector>
-//#include <string>
+#include "log.h"
+
+#include "horodatage.h"
 
 /**
  * @brief Constructeur de la classe Log

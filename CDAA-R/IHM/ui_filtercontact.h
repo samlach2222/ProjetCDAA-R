@@ -8,7 +8,10 @@
 
 #include <QWidget>
 
-#include <LOGIC/gestioncontact.h>
+#include <QDate>
+
+#include "../LOGIC/fichecontact.h"
+#include "../LOGIC/gestioncontact.h"
 
 namespace Ui {
 class UI_FilterContact;

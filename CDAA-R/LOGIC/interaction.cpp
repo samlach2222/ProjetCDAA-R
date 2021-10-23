@@ -6,8 +6,8 @@
  * @version 1.1
  * @date 01/10/2021
  */
+
 #include "interaction.h"
-//#include "horodatage.h"
 
 /**
  * @brief Constructeur de la classe Interaction

@@ -9,11 +9,12 @@
 
 #include <QMainWindow>
 
-#include "LOGIC/gestioncontact.h"
+#include "../LOGIC/fichecontact.h"
+#include "../LOGIC/gestioncontact.h"
 #include "ui_filtercontact.h"
+#include "ui_interactioncontact.h"
 #include "ui_requestcontact.h"
 #include "ui_savegestioncontact.h"
-#include "ui_interactioncontact.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

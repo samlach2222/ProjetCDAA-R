@@ -9,6 +9,7 @@
 #include "horodatage.h"
 
 #include <QDateTime>
+#include <QString>
 
 /**
  * @brief Constructeur de la classe Horodatage avec la date et l'heure **en paramètres**
