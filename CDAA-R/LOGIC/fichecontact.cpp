@@ -164,7 +164,7 @@ Horodatage FicheContact::getDateCreation()
  * @brief Retourne la liste des intéractions du contact
  * @return la liste des interactions du contact
  */
-std::vector<Interaction> FicheContact::GetListInteraction()
+std::vector<Interaction> &FicheContact::GetListInteraction()
 {
     return listInteraction;
 }

@@ -144,7 +144,7 @@ void UI_InteractionContact::ValiderInteraction()
             QVariant v = selectedItem[0]->data(Qt::UserRole);
             int idInteraction = v.value<int>();
 
-            for(Interaction i : this->contact.GetListInteraction())
+            for(Interaction &i : this->contact.GetListInteraction())
             {
                 if(i.GetId() == idInteraction)
                 {
