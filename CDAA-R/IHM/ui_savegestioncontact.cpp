@@ -32,6 +32,7 @@ UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *ge
 UI_SaveGestionContact::~UI_SaveGestionContact()
 {
     delete ui;
+    delete gc;
 }
 
 /**

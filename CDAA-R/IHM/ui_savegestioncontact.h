@@ -28,7 +28,7 @@ public:
 
 private:
     void closeEvent(QCloseEvent*);
-    Ui::UI_SaveGestionContact *ui;
+    Ui::UI_SaveGestionContact* ui;
     GestionContact* gc;
 
 
