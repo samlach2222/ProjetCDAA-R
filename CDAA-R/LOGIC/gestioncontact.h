@@ -31,7 +31,7 @@ class GestionContact
         void SupprContact(int);
         void ModifyContact(FicheContact);
         std::vector<FicheContact> GetAllContacts();
-        FicheContact GetContact(int);
+        FicheContact &GetContact(int);
         Log &GetLog();
 };
 

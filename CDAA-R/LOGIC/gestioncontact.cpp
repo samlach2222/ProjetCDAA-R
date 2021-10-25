@@ -115,14 +115,14 @@ std::vector<FicheContact> GestionContact::GetAllContacts()
  * @param[in] id    Identifiant du contact que l'on veux récupérer dans la liste
  * @return Retourne le contact qui a pour **id** le paramètre
  */
-FicheContact GestionContact::GetContact(int id)
+FicheContact &GestionContact::GetContact(int id)
 {
-    FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage(), Horodatage());
     for (int index = 0; index < static_cast<int>(this->TabContacts.size()); index++){
         if (this->TabContacts[index].getId() == id){
-            c = this->TabContacts[index];
+            return this->TabContacts[index];
         }
     }
+    FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage(), Horodatage());
     return c;
 }
 
