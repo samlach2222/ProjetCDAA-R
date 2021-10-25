@@ -18,12 +18,11 @@
  * @param[out] parent    QWidget de création de classe
  * @param[out] gestionContact    Pointer vers la valeur de la classe GestionContact pour en modifier la valeur en import ou l'exporter
  */
-UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *gestionContact) :
+UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::UI_SaveGestionContact)
 {
     ui->setupUi(this);
-    this->gc = gestionContact; // On récupère la valeur de gestionContact
 }
 
 /**
@@ -32,7 +31,6 @@ UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent, GestionContact *ge
 UI_SaveGestionContact::~UI_SaveGestionContact()
 {
     delete ui;
-    delete gc;
 }
 
 /**
@@ -65,8 +63,8 @@ void UI_SaveGestionContact::Import()
         return;
     }
 
-    this->gc = &gc;
-    // ON DOIT EXPORTER MAINENANT LA CLASSE GC
+    this->gc = gc;
+    emit sendGcToMainWindow(this->gc);
 
     ui->informationLabel->setText("Import effectué");
 }
@@ -79,14 +77,16 @@ void UI_SaveGestionContact::Export()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-//    GestionContact gc0;
-//    gc = &gc0;
-//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\Programs\\logo.png"));
-//    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\Programs\\logo.png"));
-//    gc->GetLog().AddToTabLog("log 0");
-//    gc->GetLog().AddToTabLog("log 1");
-//    gc->GetContact(0).AddInteraction("Préparer la raclette\n@todo Cuire les pommes de terres\n@todo Digérer @date 10/11/2021","Manger de la raclette");
-    JSonStorage::Save(*gc);
+    JSonStorage::Save(gc);
 
     ui->informationLabel->setText("Export effectué");
+}
+
+/**
+ * @brief Récupère le GestionContact envoyé par le MainWindow
+ * @param gc    GestionContact à exporter
+ */
+void UI_SaveGestionContact::getGcFromMainWindow(GestionContact gc)
+{
+    this->gc = gc;
 }

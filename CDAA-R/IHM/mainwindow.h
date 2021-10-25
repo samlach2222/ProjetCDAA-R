@@ -60,6 +60,7 @@ public slots:
     void AddOperationToLog(std::string);
     void ReceiveFromFilterContact(std::vector<FicheContact>);
     void resetFilters();
+    void getGcFromSaveGestionContact(GestionContact);
 
 signals :
     /**
@@ -71,5 +72,10 @@ signals :
      * @brief Signal permettant d'envoyer la classe de gestion de contact à la classe FilterContact
      */
     void sendToFilterContact(GestionContact);
+
+    /**
+     * @brief Envoie le GestionContact à la fenêtre SaveGestionContact
+     */
+    void sendGcToSaveGestionContact(GestionContact);
 };
 #endif // MAINWINDOW_H

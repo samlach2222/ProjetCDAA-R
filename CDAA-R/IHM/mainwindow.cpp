@@ -38,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(&ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
     QObject::connect(this, SIGNAL(sendToFilterContact(GestionContact)), &fc, SLOT(ReceiveFromMainWindow(GestionContact)));
     QObject::connect(&fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
+    QObject::connect(this, SIGNAL(sendGcToSaveGestionContact(GestionContact)), &sgc, SLOT(getGcFromMainWindow(GestionContact)));
+    QObject::connect(&sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
     gc = GestionContact();
@@ -183,6 +185,7 @@ void MainWindow::OpenSGC()
     SoundPlayer::PlayButtonSound();
 
     if(!(fc.isVisible() || rc.isVisible() || ic.isVisible())){
+        emit sendGcToSaveGestionContact(this->gc);
         sgc.show();
     }
 }
@@ -415,6 +418,19 @@ void MainWindow::resetFilters()
 
     this->DisplayContactList();
     ui->FilterContactIndicator->setVisible(0);
+}
+
+/**
+ * @brief Récupère le GestionContact envoyé par la fenêtre SaveGestionContact
+ * @param gc    GestionContact à importer
+ */
+void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
+{
+    this->gc = gc;
+
+    //Rafraichissement de la fenêtre
+    this->DisplayContactList();
+    this->RefreshLog();
 }
 
 /**
