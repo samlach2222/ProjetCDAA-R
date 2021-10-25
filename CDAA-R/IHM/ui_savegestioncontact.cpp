@@ -84,7 +84,6 @@ void UI_SaveGestionContact::Export()
 //    gc->AddContact("LACHAUD","Samuel","UFR","sampletext@gmail.com","06060606",QImage("..\\Programs\\logo.png"));
 //    gc->GetLog().AddToTabLog("log 0");
 //    gc->GetLog().AddToTabLog("log 1");
-//    gc->GetContact(0).AddInteraction("Préparer la raclette\n@todo Cuire les pommes de terres\n@todo Digérer @date 10/11/2021","Manger de la raclette");
     JSonStorage::Save(*gc);
 
     ui->informationLabel->setText("Export effectué");
