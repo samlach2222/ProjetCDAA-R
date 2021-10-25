@@ -22,7 +22,6 @@ Interaction::Interaction(int id, std::string c, std::string titre, Horodatage ho
     this->id = id;
     this->horodatage = horodatage;
     this->titre = titre;
-    this->tags = tagsInteraction();
 }
 
 /**
@@ -44,12 +43,40 @@ std::string Interaction::GetContenu()
 }
 
 /**
- * @brief Remplace le contenu de l'intéraction
+ * @brief Remplace le contenu de l'intéraction et met à jour les tags
  * @param[in] c     Le nouveau contenu
  */
 void Interaction::SetContenu(std::string c)
 {
     this->contenu = c;
+
+    tagsInteraction tags = tagsInteraction();
+    QStringList text_in_lines = QString::fromStdString(c).split( "\n" );
+    for( int j = 0; j < text_in_lines.count(); j++ )
+    {
+        std::string currentLine = text_in_lines.at( j ).toStdString();
+        if(((int) currentLine.find("@todo")) != -1)
+        {
+            if(((int) currentLine.find("@date")) != -1) // cas où il y a un tag TODO puis un tag DATE
+            {
+                int firstDelPos = currentLine.find("@todo");
+                int secondDelPos = currentLine.find("@date");
+                std::string tagTodo = currentLine.substr(firstDelPos+6, secondDelPos-firstDelPos-7);
+                std::string strDate = currentLine.substr(secondDelPos+6);
+
+                tags.addTag(tagTodo,strDate);
+            }
+            else // cas où il y a un tag TODO mais pas de tag DATE
+            {
+                int firstDelPos = currentLine.find("@todo");
+                std::string tagTodo = currentLine.substr(firstDelPos+6);
+                std::string strDate = QDate::currentDate().toString("dd/MM/yyyy").toStdString();
+
+                tags.addTag(tagTodo,strDate);
+            }
+        }
+    }
+    this->setTags(tags);
 }
 
 /**
