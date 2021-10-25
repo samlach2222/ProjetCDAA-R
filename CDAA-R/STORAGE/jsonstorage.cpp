@@ -13,6 +13,7 @@
 #include "../LOGIC/horodatage.h"
 
 #include <QBuffer>
+#include <QByteArray>
 #include <QDir>
 #include <QFile>
 #include <QIODevice>
@@ -50,14 +51,14 @@ void JSonStorage::Save(GestionContact gc)
     foreach (std::string logStr, tabLog){
         json["log"+QString::number(id)] = QString::fromStdString(logStr);
 
-        id++;
+        ++id;
     }
     json["logTotal"] = id;
 
     //contacts
     id = 0;
     foreach(FicheContact fc, gc.GetAllContacts()){
-        json["contact"+QString::number(id)+"id"] = fc.getId();
+        //json["contact"+QString::number(id)+"id"] = fc.getId();
         json["contact"+QString::number(id)+"nom"] = QString::fromStdString(fc.getNom());
         json["contact"+QString::number(id)+"prenom"] = QString::fromStdString(fc.getPrenom());
         json["contact"+QString::number(id)+"entreprise"] = QString::fromStdString(fc.getEntreprise());
@@ -76,7 +77,20 @@ void JSonStorage::Save(GestionContact gc)
         QString b64str = QString::fromLatin1(ba2);
         json["contact"+QString::number(id)+"photo"] = b64str;
 
-        id++;
+        //interactions
+        int idInteraction = 0;
+        foreach (Interaction i, fc.GetListInteraction()){
+            //json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"id"] = i.GetId();  //On a pas besoin d'exporter l'id
+            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"titre"] = QString::fromStdString(i.getTitre());
+            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"contenu"] = QString::fromStdString(i.GetContenu());
+            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"horodatage"] = QString::fromStdString(i.GetHorodatage().ToString());
+
+            ++idInteraction;
+        }
+        json["contact"+QString::number(id)+"interactionTotal"] = idInteraction;
+
+
+        ++id;
     }
     json["contactTotal"] = id;
 
@@ -92,7 +106,7 @@ void JSonStorage::Save(GestionContact gc)
 
     QFile file(GetFilepath());
     file.open(QIODevice::WriteOnly);
-    file.write(json_string.toLocal8Bit());
+    file.write(json_string.toUtf8());
     file.close();
 }
 
@@ -115,13 +129,13 @@ GestionContact JSonStorage::Load()
     file.close();
 
     //Conversion en QJsonObject
-    //QByteArray jsonData = jsonText.toLocal8Bit();
+    //QByteArray jsonData = jsonText.toLatin1();
     //QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
     //QJsonObject json = jsonDoc.object();
-    QJsonObject json = QJsonDocument::fromJson(jsonText.toLocal8Bit()).object();
+    QJsonObject json = QJsonDocument::fromJson(jsonText.toLatin1()).object();
 
-    for (int cId = 0; cId < json["contactTotal"].toInt(); cId++){
-        int id = json["contact"+QString::number(cId)+"id"].toInt();
+    for (int cId = 0; cId < json["contactTotal"].toInt(); ++cId){
+        //int id = json["contact"+QString::number(cId)+"id"].toInt();  //On a pas besoin d'importer l'id
         std::string nom = json["contact"+QString::number(cId)+"nom"].toString().toStdString();
         std::string prenom = json["contact"+QString::number(cId)+"prenom"].toString().toStdString();
         std::string entreprise = json["contact"+QString::number(cId)+"entreprise"].toString().toStdString();
@@ -131,18 +145,34 @@ GestionContact JSonStorage::Load()
         //Conversion du string en Horodatage
         //std::string strDateCreation = json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString();
         //Horodatage dateCreation = Horodatage(strDateCreation);
-        Horodatage dateCreation = Horodatage(json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString());
+        Horodatage dateContact = Horodatage(json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString());
 
         //Conversion du base64 en QImage
         QImage photo;
         //QString b64str = json["contact"+QString::number(id)+"photo"].toString();
         //QByteArray b64ba = b64str.toLocal8Bit();
         //photo.loadFromData(QByteArray::fromBase64(b64ba));
-        photo.loadFromData(QByteArray::fromBase64(json["contact"+QString::number(id)+"photo"].toString().toLocal8Bit()));
+        photo.loadFromData(QByteArray::fromBase64(json["contact"+QString::number(cId)+"photo"].toString().toLocal8Bit()));
 
-        gc.AddContact(nom, prenom, entreprise, mail, telephone, photo, dateCreation);
+        //Ajout du contact
+        gc.AddContact(nom, prenom, entreprise, mail, telephone, photo, dateContact);
+
+        //Ajout des interactions du contact
+        for (int iId = 0; iId < json["contact"+QString::number(cId)+"interactionTotal"].toInt(); ++iId){
+            //int id = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"id"].toInt();
+            std::string titre = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"titre"].toString().toStdString();
+            std::string contenu = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"contenu"].toString().toStdString();
+
+            //Conversion du string en Horodatage
+            //std::string strDateInteraction = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"horodatage"].toString().toStdString();
+            //Horodatage dateInteraction = Horodatage(strDateInteraction);
+            Horodatage dateInteraction = Horodatage(json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"horodatage"].toString().toStdString());
+
+            gc.GetContact(cId).AddInteraction(contenu, titre, dateInteraction);
+        }
     }
 
+    //Les logs doivent être importer à la fin
     std::vector<std::string> logs;
     for (int Lid = 0; Lid < json["logTotal"].toInt(); Lid++){
         std::string log = json["log"+QString::number(Lid)].toString().toStdString();
