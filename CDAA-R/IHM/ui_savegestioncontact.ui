@@ -18,7 +18,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../ressources.qrc">
-    <normaloff>:/Ressources/Icons/SaveGestionContact.png</normaloff>:/Ressources/Icons/SaveGestionContact.png</iconset>
+    <normaloff>:/Ressources/Icons/SaveGestionContact avec fond.png</normaloff>:/Ressources/Icons/SaveGestionContact avec fond.png</iconset>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
