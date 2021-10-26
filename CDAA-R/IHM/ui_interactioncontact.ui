@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>UI_InteractionContact</class>
  <widget class="QWidget" name="UI_InteractionContact">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
