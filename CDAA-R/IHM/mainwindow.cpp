@@ -204,6 +204,7 @@ void MainWindow::ListItemDoubleClick()
 
     FicheContact contact = gc.GetContact(idContact);
 
+    ic.setWindowTitle("Interactions de "+QString::fromStdString(contact.ToString()));
     emit sendIdToInteraction(idContact,this->gc);
     if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
         ic.show();
@@ -406,6 +407,8 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
         item->setData(Qt::UserRole, v);
         ui->ContactList->addItem(item);
     }
+
+    this->setWindowTitle("Projet de CDAA - Groupe R (FILTRAGE ACTIVÉ)");
 }
 
 /**
@@ -418,6 +421,8 @@ void MainWindow::resetFilters()
 
     this->DisplayContactList();
     ui->FilterContactIndicator->setVisible(0);
+
+    this->setWindowTitle("Projet de CDAA - Groupe R");
 }
 
 /**

@@ -4,11 +4,14 @@
         <file>Ressources/Icons/FilterContact.png</file>
         <file>Ressources/Icons/InteractionContact.png</file>
         <file>Ressources/Icons/SaveGestionContact.png</file>
-		<file>Ressources/Icons/SaveGestionContact avec fond.png</file>
+        <file>Ressources/Icons/SaveGestionContact avec fond.png</file>
         <file>Ressources/Icons/RequestContact.png</file>
         <file>Ressources/Icons/AddContact.png</file>
         <file>Ressources/Sounds/ButtonSound.wav</file>
         <file>Ressources/Sounds/ButtonSound2.wav</file>
         <file>Ressources/Sounds/ErrorSound.wav</file>
+        <file>Ressources/Icons/Logo.png</file>
+        <file>Ressources/Icons/FilterContact avec fond.png</file>
+        <file>Ressources/Icons/InteractionContact avec fond.png</file>
     </qresource>
 </RCC>

@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Projet de CDAA - Groupe R</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/Ressources/Icons/Logo.png</normaloff>:/Ressources/Icons/Logo.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="ContactList">
@@ -351,7 +355,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>BAddContact</sender>

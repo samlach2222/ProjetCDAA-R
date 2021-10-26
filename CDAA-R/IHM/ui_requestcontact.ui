@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>UI_RequestContact</class>
  <widget class="QWidget" name="UI_RequestContact">
   <property name="geometry">
@@ -13,9 +11,15 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Requêtes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/Ressources/Icons/RequestContact.png</normaloff>:/Ressources/Icons/RequestContact.png</iconset>
   </property>
  </widget>
- <pixmapfunction/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

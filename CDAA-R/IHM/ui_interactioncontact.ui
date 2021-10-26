@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>InteractionContact</string>
+   <string>Interactions du contact</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/Ressources/Icons/InteractionContact avec fond.png</normaloff>:/Ressources/Icons/InteractionContact avec fond.png</iconset>
   </property>
   <widget class="QListWidget" name="InteractionList">
    <property name="geometry">
@@ -151,7 +155,9 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>BAddInteraction</sender>
