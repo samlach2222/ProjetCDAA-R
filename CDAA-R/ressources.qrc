@@ -16,5 +16,7 @@
         <file>Ressources/Icons/AddInteractionContact.png</file>
         <file>Ressources/Icons/AddContact rogne.png</file>
         <file>Ressources/Icons/AddInteractionContact rogne.png</file>
+        <file>Ressources/Icons/Exporter.png</file>
+        <file>Ressources/Icons/Importer.png</file>
     </qresource>
 </RCC>

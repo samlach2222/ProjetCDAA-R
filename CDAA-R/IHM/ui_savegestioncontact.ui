@@ -20,33 +20,53 @@
    <iconset resource="../ressources.qrc">
     <normaloff>:/Ressources/Icons/SaveGestionContact avec fond.png</normaloff>:/Ressources/Icons/SaveGestionContact avec fond.png</iconset>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="exporterPushButton">
    <property name="geometry">
     <rect>
      <x>60</x>
      <y>190</y>
-     <width>80</width>
-     <height>25</height>
+     <width>92</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
     <string>Exporter</string>
    </property>
+   <property name="icon">
+    <iconset resource="../ressources.qrc">
+     <normaloff>:/Ressources/Icons/Exporter.png</normaloff>:/Ressources/Icons/Exporter.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="importerPushButton">
    <property name="geometry">
     <rect>
      <x>60</x>
      <y>70</y>
-     <width>80</width>
-     <height>25</height>
+     <width>92</width>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
     <string>Importer</string>
    </property>
+   <property name="icon">
+    <iconset resource="../ressources.qrc">
+     <normaloff>:/Ressources/Icons/Importer.png</normaloff>:/Ressources/Icons/Importer.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="fermerPushButton">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -57,6 +77,9 @@
    </property>
    <property name="text">
     <string>Fermer</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
    </property>
   </widget>
   <widget class="QLabel" name="informationLabel">
@@ -78,7 +101,7 @@
  </resources>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>exporterPushButton</sender>
    <signal>clicked()</signal>
    <receiver>UI_SaveGestionContact</receiver>
    <slot>Export()</slot>
@@ -94,7 +117,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>importerPushButton</sender>
    <signal>clicked()</signal>
    <receiver>UI_SaveGestionContact</receiver>
    <slot>Import()</slot>
@@ -110,7 +133,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_3</sender>
+   <sender>fermerPushButton</sender>
    <signal>clicked()</signal>
    <receiver>UI_SaveGestionContact</receiver>
    <slot>close()</slot>
