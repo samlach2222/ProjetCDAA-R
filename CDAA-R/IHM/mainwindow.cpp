@@ -70,9 +70,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->BRequestContact->setIcon(QPRequestContact);
     ui->BRequestContact->setIconSize(QSize(wrc,hrc));
 
-    QPixmap QPAddContact(":/Ressources/Icons/AddContact.png");
-    int wac = ui->BAddContact->width() * 90/100;
-    int hac = ui->BAddContact->height() * 90/100;
+    QPixmap QPAddContact(":/Ressources/Icons/AddContact rogne.png");
+    int wac = ui->BAddContact->width() * 80/100;  //100% dépasse les bords, 90% touche les bords
+    int hac = ui->BAddContact->height() * 80/100;
     ui->BAddContact->setIcon(QPAddContact);
     ui->BAddContact->setIconSize(QSize(wac,hac));
 

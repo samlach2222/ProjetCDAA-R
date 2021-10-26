@@ -33,11 +33,11 @@ UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap QPAddContact(":/Ressources/Icons/InteractionContact.png");
-    int wac = ui->BAddInteraction->width() * 90/100;
-    int hac = ui->BAddInteraction->height() * 90/100;
+    QPixmap QPAddContact(":/Ressources/Icons/AddInteractionContact rogne.png");
+    int wai = ui->BAddInteraction->width() * 80/100;  //100% dépasse les bords, 90% touche les bords
+    int hai = ui->BAddInteraction->height() * 80/100;
     ui->BAddInteraction->setIcon(QPAddContact);
-    ui->BAddInteraction->setIconSize(QSize(wac,hac));
+    ui->BAddInteraction->setIconSize(QSize(wai,hai));
 
     ui->frameEditInteraction->setVisible(0);
 }

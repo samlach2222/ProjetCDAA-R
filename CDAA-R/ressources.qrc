@@ -13,5 +13,8 @@
         <file>Ressources/Icons/Logo.png</file>
         <file>Ressources/Icons/FilterContact avec fond.png</file>
         <file>Ressources/Icons/InteractionContact avec fond.png</file>
+        <file>Ressources/Icons/AddInteractionContact.png</file>
+        <file>Ressources/Icons/AddContact rogne.png</file>
+        <file>Ressources/Icons/AddInteractionContact rogne.png</file>
     </qresource>
 </RCC>
