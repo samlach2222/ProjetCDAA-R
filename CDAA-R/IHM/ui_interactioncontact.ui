@@ -58,14 +58,17 @@
    <widget class="QLabel" name="labelTitre">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>80</y>
-      <width>60</width>
+      <width>80</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>Titre* :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLineEdit" name="editTitre">
@@ -73,7 +76,7 @@
      <rect>
       <x>120</x>
       <y>80</y>
-      <width>113</width>
+      <width>120</width>
       <height>20</height>
      </rect>
     </property>
@@ -81,22 +84,25 @@
    <widget class="QLabel" name="labelDescription">
     <property name="geometry">
      <rect>
-      <x>29</x>
+      <x>30</x>
       <y>120</y>
-      <width>81</width>
+      <width>80</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>Description *:</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
    </widget>
    <widget class="QLineEdit" name="editDateCreation">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>170</x>
       <y>10</y>
-      <width>113</width>
+      <width>130</width>
       <height>20</height>
      </rect>
     </property>

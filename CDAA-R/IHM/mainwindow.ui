@@ -31,10 +31,10 @@
    <widget class="QListView" name="LogsList">
     <property name="geometry">
      <rect>
-      <x>645</x>
+      <x>630</x>
       <y>30</y>
-      <width>161</width>
-      <height>531</height>
+      <width>160</width>
+      <height>530</height>
      </rect>
     </property>
    </widget>
@@ -54,9 +54,9 @@
    <widget class="QLabel" name="LabelLogs">
     <property name="geometry">
      <rect>
-      <x>649</x>
+      <x>630</x>
       <y>0</y>
-      <width>151</width>
+      <width>150</width>
       <height>30</height>
      </rect>
     </property>
@@ -88,7 +88,7 @@
      <rect>
       <x>40</x>
       <y>0</y>
-      <width>41</width>
+      <width>40</width>
       <height>40</height>
      </rect>
     </property>
@@ -107,7 +107,7 @@
      <rect>
       <x>80</x>
       <y>0</y>
-      <width>41</width>
+      <width>40</width>
       <height>40</height>
      </rect>
     </property>
@@ -139,14 +139,20 @@
     <widget class="QLabel" name="labelNom">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>60</x>
        <y>140</y>
-       <width>60</width>
+       <width>70</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
      <property name="text">
       <string>Nom* :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="editNom">
@@ -175,14 +181,17 @@
     <widget class="QLabel" name="labelPrenom">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>60</x>
        <y>190</y>
-       <width>60</width>
+       <width>70</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Prénom* :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="editEntreprise">
@@ -201,14 +210,17 @@
     <widget class="QLabel" name="labelEntreprise">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>60</x>
        <y>240</y>
-       <width>60</width>
+       <width>70</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Entreprise :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="editMail">
@@ -227,14 +239,17 @@
     <widget class="QLabel" name="labelMail">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>60</x>
        <y>290</y>
-       <width>60</width>
+       <width>70</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Mail :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="editTelephone">
@@ -253,22 +268,25 @@
     <widget class="QLabel" name="labelTelephone">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>60</x>
        <y>340</y>
-       <width>60</width>
+       <width>70</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Téléphone :</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
     </widget>
     <widget class="QLineEdit" name="editDateCreation">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>170</x>
        <y>10</y>
-       <width>113</width>
+       <width>130</width>
        <height>20</height>
       </rect>
      </property>
@@ -334,8 +352,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>41</width>
-      <height>41</height>
+      <width>40</width>
+      <height>40</height>
      </rect>
     </property>
     <property name="text">
