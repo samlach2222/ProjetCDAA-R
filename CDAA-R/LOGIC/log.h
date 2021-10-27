@@ -17,10 +17,11 @@ class Log
     private :
         std::vector<std::string> tabLog;
     public:
+        const std::vector<std::string> &getTabLog() const;
+        void setTabLog(const std::vector<std::string> &newTabLog);
+
         Log();
         void AddToTabLog(std::string);
-        std::vector<std::string> getTabLog();
-        void SetTabLog(std::vector<std::string>);
 };
 
 #endif // LOG_H

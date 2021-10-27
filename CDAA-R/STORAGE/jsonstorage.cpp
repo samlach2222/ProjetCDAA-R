@@ -178,7 +178,7 @@ GestionContact JSonStorage::Load()
         std::string log = json["log"+QString::number(Lid)].toString().toStdString();
         logs.push_back(log);
     }
-    gc.GetLog().SetTabLog(logs);
+    gc.GetLog().setTabLog(logs);
 
     return gc;
 }

@@ -11,29 +11,29 @@
 #include "horodatage.h"
 
 /**
- * @brief Constructeur de la classe Log
- */
-Log::Log()
-{
-    tabLog = std::vector<std::string>();
-}
-
-/**
  * @brief Retourne la liste de logs
  * @return la liste de logs
  */
-std::vector<std::string> Log::getTabLog()
+const std::vector<std::string> &Log::getTabLog() const
 {
     return tabLog;
 }
 
 /**
  * @brief Remplace la liste de logs
- * @param[in] logs      La nouvelle liste de logs
+ * @param[in] newTabLog      La nouvelle liste de logs
  */
-void Log::SetTabLog(std::vector<std::string> logs)
+void Log::setTabLog(const std::vector<std::string> &newTabLog)
 {
-    this->tabLog.assign(logs.begin(), logs.end());
+    tabLog = newTabLog;
+}
+
+/**
+ * @brief Constructeur de la classe Log
+ */
+Log::Log()
+{
+    tabLog = std::vector<std::string>();
 }
 
 /**

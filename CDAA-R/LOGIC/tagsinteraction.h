@@ -18,11 +18,12 @@ class tagsInteraction
 private:
     std::vector<std::tuple<std::string, std::string>> tags;
 public:
+    const std::vector<std::tuple<std::string, std::string> > &getTags() const;
+    void setTags(const std::vector<std::tuple<std::string, std::string> > &newTags);
+
     tagsInteraction();
     void addTag(std::string, std::string);
     void resetTags();
-    std::vector<std::tuple<std::string, std::string>> getTags();
-    void setTags(std::vector<std::tuple<std::string, std::string>>);
 };
 
 #endif // TAGSINTERACTION_H

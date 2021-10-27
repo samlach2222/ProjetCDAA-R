@@ -109,7 +109,7 @@ GestionContact DatabaseStorage::Load()
 
 
         //Doit être fait à la fin
-        gc.GetLog().SetTabLog(logs);
+        gc.GetLog().setTabLog(logs);
     }
 
     return gc;

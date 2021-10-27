@@ -9,29 +9,29 @@
 #include "tagsinteraction.h"
 
 /**
- * @brief Constructeur de la classe de gestion des tags d'intéraction
- */
-tagsInteraction::tagsInteraction()
-{
-    this->tags = std::vector<std::tuple<std::string, std::string>>();
-}
-
-/**
  * @brief retourne le tableaux des couple (todo et date)
  * @return tableau de couple todo date
  */
-std::vector<std::tuple<std::string, std::string>> tagsInteraction::getTags()
+const std::vector<std::tuple<std::string, std::string> > &tagsInteraction::getTags() const
 {
-    return this->tags;
+    return tags;
 }
 
 /**
  * @brief Interaction::setTags
  * @param tags
  */
-void tagsInteraction::setTags(std::vector<std::tuple<std::string, std::string>> tags)
+void tagsInteraction::setTags(const std::vector<std::tuple<std::string, std::string> > &newTags)
 {
-    this->tags = tags;
+    tags = newTags;
+}
+
+/**
+ * @brief Constructeur de la classe de gestion des tags d'intéraction
+ */
+tagsInteraction::tagsInteraction()
+{
+    this->tags = std::vector<std::tuple<std::string, std::string>>();
 }
 
 /**
