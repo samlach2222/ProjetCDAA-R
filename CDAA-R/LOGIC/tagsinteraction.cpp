@@ -18,8 +18,8 @@ const std::vector<std::tuple<std::string, std::string> > &tagsInteraction::getTa
 }
 
 /**
- * @brief Interaction::setTags
- * @param tags
+ * @brief Remplace le vecteur de tuple de tags
+ * @param newTags   Nouveau tags
  */
 void tagsInteraction::setTags(const std::vector<std::tuple<std::string, std::string> > &newTags)
 {

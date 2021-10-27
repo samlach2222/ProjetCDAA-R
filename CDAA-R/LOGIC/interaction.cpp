@@ -29,7 +29,7 @@ const std::string &Interaction::getTitre() const
 
 /**
  * @brief Remplace le titre de l'interaction
- * @param[in] titre     Le nouveau titre
+ * @param[in] newTitre     Le nouveau titre
  */
 void Interaction::setTitre(const std::string &newTitre)
 {
@@ -47,7 +47,7 @@ const std::string &Interaction::getContenu() const
 
 /**
  * @brief Remplace le contenu de l'intéraction et met à jour les tags
- * @param[in] c     Le nouveau contenu
+ * @param[in] newContenu     Le nouveau contenu
  */
 void Interaction::setContenu(const std::string &newContenu)
 {
