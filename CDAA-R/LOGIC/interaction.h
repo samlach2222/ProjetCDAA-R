@@ -24,14 +24,15 @@ class Interaction
         Horodatage horodatage;
         tagsInteraction tags;
     public:
+        int getId() const;
+        const std::string &getTitre() const;
+        void setTitre(const std::string &newTitre);
+        const std::string &getContenu() const;
+        void setContenu(const std::string &newContenu);
+        const Horodatage &getHorodatage() const;
+        const tagsInteraction &getTags() const;
+
         Interaction(int, std::string, std::string, Horodatage);
-        int GetId();
-        std::string GetContenu();
-        void SetContenu(std::string);
-        Horodatage GetHorodatage();
-        std::string getTitre();
-        void setTitre(std::string);
-        tagsInteraction getTags();
         void UpdateTags();
 };
 

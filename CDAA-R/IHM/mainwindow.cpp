@@ -139,10 +139,10 @@ void MainWindow::RefreshLog()
 {
     QStringListModel* model = new QStringListModel(this);
     QStringList list;
-    int tabSize = gc.GetLog().getTabLog().size();
+    int tabSize = gc.getLog().getTabLog().size();
     for(int i =0; i < static_cast<int>(tabSize); i++)
     {
-        QString text = QString::fromStdString(gc.GetLog().getTabLog()[i]);
+        QString text = QString::fromStdString(gc.getLog().getTabLog()[i]);
         list.append(text);
     }
     model->setStringList(list);
@@ -385,7 +385,7 @@ void MainWindow::ReceiveContactToMainWindow(FicheContact contact)
  */
 void MainWindow::AddOperationToLog(std::string str)
 {
-    this->gc.GetLog().AddToTabLog(str);
+    this->gc.getLog().AddToTabLog(str);
     this->RefreshLog();
 }
 

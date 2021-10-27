@@ -12,6 +12,24 @@
 #include "../STORAGE/databasestorage.h"
 
 /**
+ * @brief Permet de retourner tout les contacts
+ * @return Retourne un tableau avec tout les contacts de l'application
+ */
+const std::vector<FicheContact> &GestionContact::GetAllContacts() const
+{
+    return TabContacts;
+}
+
+/**
+ * @brief Getter de Log
+ * @return Retourne la classe Log instanciée
+ */
+Log &GestionContact::getLog()
+{
+    return log;
+}
+
+/**
  * @brief Constructeur de la classe
  */
 GestionContact::GestionContact()
@@ -101,15 +119,6 @@ void GestionContact::ModifyContact(FicheContact c)
 }
 
 /**
- * @brief Permet de retourner tout les contacts
- * @return Retourne un tableau avec tout les contacts de l'application
- */
-std::vector<FicheContact> GestionContact::GetAllContacts()
-{
-    return this->TabContacts;
-}
-
-/**
  * @brief Permet de récupérer le contact à partir de son identifiant **id**
  * @param[in] id    Identifiant du contact que l'on veux récupérer dans la liste
  * @return Retourne le contact qui a pour **id** le paramètre
@@ -123,13 +132,4 @@ FicheContact &GestionContact::GetContact(int id)
     }
     FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage(), Horodatage());
     return c;
-}
-
-/**
- * @brief Getter de Log
- * @return Retourne la classe Log instanciée
- */
-Log &GestionContact::GetLog()
-{
-    return log;
 }

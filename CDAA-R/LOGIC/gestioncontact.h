@@ -26,13 +26,14 @@ class GestionContact
         std::vector<FicheContact> TabContacts;
         Log log;
     public:
+        const std::vector<FicheContact> &GetAllContacts() const;
+        Log &getLog();
+
         GestionContact();
         void AddContact(std::string, std::string, std::string, std::string, std::string, QImage, Horodatage = Horodatage());
         void SupprContact(int);
         void ModifyContact(FicheContact);
-        std::vector<FicheContact> GetAllContacts();
         FicheContact &GetContact(int);
-        Log &GetLog();
 };
 
 #endif // GESTIONCONTACT_H

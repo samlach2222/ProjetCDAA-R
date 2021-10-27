@@ -16,78 +16,76 @@
  * @param[in] titre     Le titre de l'interaction
  * @param[in] horodatage        L'horodatage de l'interaction
  */
-Interaction::Interaction(int id, std::string c, std::string titre, Horodatage horodatage)
-{
-    this->SetContenu(c);
-    this->id = id;
-    this->horodatage = horodatage;
-    this->titre = titre;
-}
 
 /**
  * @brief Retourne l'id
  * @return l'id
  */
-int Interaction::GetId()
+int Interaction::getId() const
 {
-    return this->id;
-}
-
-/**
- * @brief Retourne le contenu de l'intéraction
- * @return le contenu de l'intéraction
- */
-std::string Interaction::GetContenu()
-{
-    return this->contenu;
-}
-
-/**
- * @brief Remplace le contenu de l'intéraction et met à jour les tags
- * @param[in] c     Le nouveau contenu
- */
-void Interaction::SetContenu(std::string c)
-{
-    this->contenu = c;
-
-    //Il faut mettre à jour les tags à chaque fois que le contenu est modifié
-    UpdateTags();
-}
-
-/**
- * @brief Retourne l'horodatage de l'interaction
- * @return l'horodatage de l'interaction
- */
-Horodatage Interaction::GetHorodatage()
-{
-    return this->horodatage;
+    return id;
 }
 
 /**
  * @brief Retourne le titre de l'interaction
  * @return le titre de l'interaction
  */
-std::string Interaction::getTitre()
+const std::string &Interaction::getTitre() const
 {
-    return this->titre;
+    return titre;
 }
 
 /**
  * @brief Remplace le titre de l'interaction
  * @param[in] titre     Le nouveau titre
  */
-void Interaction::setTitre(std::string titre)
+void Interaction::setTitre(const std::string &newTitre)
 {
-    this->titre = titre;
+    titre = newTitre;
+}
+
+/**
+ * @brief Retourne le contenu de l'intéraction
+ * @return le contenu de l'intéraction
+ */
+const std::string &Interaction::getContenu() const
+{
+    return contenu;
+}
+
+/**
+ * @brief Remplace le contenu de l'intéraction et met à jour les tags
+ * @param[in] c     Le nouveau contenu
+ */
+void Interaction::setContenu(const std::string &newContenu)
+{
+    contenu = newContenu;
+}
+
+/**
+ * @brief Retourne l'horodatage de l'interaction
+ * @return l'horodatage de l'interaction
+ */
+const Horodatage &Interaction::getHorodatage() const
+{
+    return horodatage;
 }
 
 /**
  * @brief Permet de récupérer les tags d'un intéraction
  * @return classe des tags d'intéraction
  */
-tagsInteraction Interaction::getTags()
+const tagsInteraction &Interaction::getTags() const
 {
-    return this->tags;
+    return tags;
+}
+
+Interaction::Interaction(int id, std::string c, std::string titre, Horodatage horodatage)
+{
+    this->setContenu(c);
+    this->id = id;
+    this->horodatage = horodatage;
+    this->titre = titre;
 }
 
 /**

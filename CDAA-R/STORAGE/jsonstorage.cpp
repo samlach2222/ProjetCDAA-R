@@ -47,7 +47,7 @@ void JSonStorage::Save(GestionContact gc)
 
     //log
     id = 0;
-    std::vector<std::string> tabLog = gc.GetLog().getTabLog();
+    std::vector<std::string> tabLog = gc.getLog().getTabLog();
     foreach (std::string logStr, tabLog){
         json["log"+QString::number(id)] = QString::fromStdString(logStr);
 
@@ -178,7 +178,7 @@ GestionContact JSonStorage::Load()
         std::string log = json["log"+QString::number(Lid)].toString().toStdString();
         logs.push_back(log);
     }
-    gc.GetLog().setTabLog(logs);
+    gc.getLog().setTabLog(logs);
 
     return gc;
 }

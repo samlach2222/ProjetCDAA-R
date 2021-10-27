@@ -57,7 +57,7 @@ void UI_SaveGestionContact::Import()
     GestionContact gc = JSonStorage::Load();
 
     //Ne pas charger si le fichier n'existait pas ou était vide
-    if (gc.GetAllContacts().size() == 0 && gc.GetLog().getTabLog().size() == 0){
+    if (gc.GetAllContacts().size() == 0 && gc.getLog().getTabLog().size() == 0){
         ui->informationLabel->setText("Fichier inexistant ou vide");
         return;
     }
