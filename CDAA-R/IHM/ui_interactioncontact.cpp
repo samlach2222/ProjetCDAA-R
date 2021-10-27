@@ -146,10 +146,10 @@ void UI_InteractionContact::ValiderInteraction()
 
             for(Interaction &i : this->contact.getListInteraction())
             {
-                if(i.GetId() == idInteraction)
+                if(i.getId() == idInteraction)
                 {
                     i.setTitre(ui->editTitre->text().toStdString());
-                    i.SetContenu(ui->editDescription->toPlainText().toStdString());
+                    i.setContenu(ui->editDescription->toPlainText().toStdString());
                 }
             }
             emit AddOperationToLog("Interaction Modified");
@@ -198,7 +198,7 @@ void UI_InteractionContact::DisplayInteractionList()
         QString str = QString::fromStdString(i.getTitre());
         QListWidgetItem* item = new QListWidgetItem(str);
         QVariant v;
-        v.setValue(i.GetId());
+        v.setValue(i.getId());
         item->setData(Qt::UserRole, v);
         ui->InteractionList->addItem(item);
     }
@@ -222,11 +222,11 @@ void UI_InteractionContact::ListItemClick()
 
     for(Interaction i : this->contact.getListInteraction())
     {
-        if(i.GetId() == idInteraction)
+        if(i.getId() == idInteraction)
         {
             ui->editTitre->setText(QString::fromStdString(i.getTitre()));
-            ui->editDescription->setPlainText(QString::fromStdString(i.GetContenu()));
-            ui->editDateCreation->setText(QString::fromStdString(i.GetHorodatage().ToString()));
+            ui->editDescription->setPlainText(QString::fromStdString(i.getContenu()));
+            ui->editDateCreation->setText(QString::fromStdString(i.getHorodatage().ToString()));
             ui->editDateCreation->setEnabled(0);
         }
     }

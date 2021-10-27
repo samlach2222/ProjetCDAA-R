@@ -82,8 +82,8 @@ void JSonStorage::Save(GestionContact gc)
         foreach (Interaction i, fc.getListInteraction()){
             //json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"id"] = i.GetId();  //On a pas besoin d'exporter l'id
             json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"titre"] = QString::fromStdString(i.getTitre());
-            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"contenu"] = QString::fromStdString(i.GetContenu());
-            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"horodatage"] = QString::fromStdString(i.GetHorodatage().ToString());
+            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"contenu"] = QString::fromStdString(i.getContenu());
+            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"horodatage"] = QString::fromStdString(i.getHorodatage().ToString());
 
             ++idInteraction;
         }

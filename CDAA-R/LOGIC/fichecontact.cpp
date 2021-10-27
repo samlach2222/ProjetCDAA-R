@@ -182,7 +182,7 @@ void FicheContact::AddInteraction(std::string contenuInteraction, std::string ti
 
     std::vector<int> idInteractions(allInteractions.size());
     for (int index = 0; index < static_cast<int>(allInteractions.size()); index++){
-        idInteractions[index] = allInteractions[index].GetId();
+        idInteractions[index] = allInteractions[index].getId();
     }
 
     std::sort(idInteractions.begin(), idInteractions.end());
@@ -211,7 +211,7 @@ void FicheContact::RemoveInteraction(int id)
     std::vector<int> indexInteractionsASupprimer;
 
     for (int index = 0; index < static_cast<int>(listInteraction.size()); index++){
-        if (listInteraction[index].GetId() == id){
+        if (listInteraction[index].getId() == id){
             indexInteractionsASupprimer.push_back(index);
         }
     }
