@@ -23,24 +23,23 @@ class Horodatage
         int minute;
         int seconde;
     public:
+        int getJour() const;
+        void setJour(int newJour);
+        int getMois() const;
+        void setMois(int newMois);
+        int getAnnee() const;
+        void setAnnee(int newAnnee);
+        int getHeure() const;
+        void setHeure(int newHeure);
+        int getMinute() const;
+        void setMinute(int newMinute);
+        int getSeconde() const;
+        void setSeconde(int newSeconde);
+
         Horodatage(int, int, int, int, int, int);
         Horodatage();
         Horodatage(std::string);
         std::string ToString();
-        int GetJour();
-        int GetMois();
-        int GetAnnee();
-        int GetHeure();
-        int GetMinute();
-        int GetSeconde();
-
-        void SetJour(int);
-        void SetMois(int);
-        void SetAnnee(int);
-        void SetHeure(int);
-        void SetMinute(int);
-        void SetSeconde(int);
-
 };
 
 #endif // HORODATAGE_H

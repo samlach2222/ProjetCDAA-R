@@ -12,6 +12,114 @@
 #include <QString>
 
 /**
+ * @brief Getter de Jour
+ * @return Retourne le jour en **entier**
+ */
+int Horodatage::getJour() const
+{
+    return jour;
+}
+
+/**
+ * @brief Setter de Jour
+ * @param[in] newJour     Variable que l'on assigne au Jour
+ */
+void Horodatage::setJour(int newJour)
+{
+    jour = newJour;
+}
+
+/**
+ * @brief Getter de Mois
+ * @return Retourne le mois en **entier**
+ */
+int Horodatage::getMois() const
+{
+    return mois;
+}
+
+/**
+ * @brief Setter de Mois
+ * @param[in] newMois     Variable que l'on assigne au Mois
+ */
+void Horodatage::setMois(int newMois)
+{
+    mois = newMois;
+}
+
+/**
+ * @brief Getter d'Annee
+ * @return Retourne l'annee en **entier**
+ */
+int Horodatage::getAnnee() const
+{
+    return annee;
+}
+
+/**
+ * @brief Setter d'Annee
+ * @param[in] newAnnee     Variable que l'on assigne à l'annee
+ */
+void Horodatage::setAnnee(int newAnnee)
+{
+    annee = newAnnee;
+}
+
+/**
+ * @brief Getter d'Heure
+ * @return Retourne l'heure en **entier**
+ */
+int Horodatage::getHeure() const
+{
+    return heure;
+}
+
+/**
+ * @brief Setter de l'Heure
+ * @param[in] newHeure     Variable que l'on assigne au l'Heure
+ */
+void Horodatage::setHeure(int newHeure)
+{
+    heure = newHeure;
+}
+
+/**
+ * @brief Getter de Minutes
+ * @return Retourne les minutes en **entier**
+ */
+int Horodatage::getMinute() const
+{
+    return minute;
+}
+
+/**
+ * @brief Setter des Minutes
+ * @param[in] newMinute     Variable que l'on assigne aux Minutes
+ */
+void Horodatage::setMinute(int newMinute)
+{
+    minute = newMinute;
+}
+
+/**
+ * @brief Getter de Seconde
+ * @return Retourne les secondes en **entier**
+ */
+int Horodatage::getSeconde() const
+{
+    return seconde;
+}
+
+/**
+ * @brief Setter de Secondes
+ * @param[in] newSeconde     Variable que l'on assigne aux secondes
+ */
+void Horodatage::setSeconde(int newSeconde)
+{
+    seconde = newSeconde;
+}
+
+/**
  * @brief Constructeur de la classe Horodatage avec la date et l'heure **en paramètres**
  * @param[in] j     Variable stockant le jour en **entier**
  * @param[in] m     Variable stockant le mois en **entier**
@@ -22,12 +130,12 @@
  */
 Horodatage::Horodatage(int j, int m, int a, int heu, int min, int sec)
 {
-    this->SetJour(j);
-    this->SetMois(m);
-    this->SetAnnee(a);
-    this->SetHeure(heu);
-    this->SetMinute(min);
-    this->SetSeconde(sec);
+    this->setJour(j);
+    this->setMois(m);
+    this->setAnnee(a);
+    this->setHeure(heu);
+    this->setMinute(min);
+    this->setSeconde(sec);
 }
 
 /**
@@ -40,13 +148,13 @@ Horodatage::Horodatage()
     QDate date = dt.date();
     QTime time = dt.time();
 
-    this->SetJour(date.day());
-    this->SetMois(date.month());
-    this->SetAnnee(date.year());
+    this->setJour(date.day());
+    this->setMois(date.month());
+    this->setAnnee(date.year());
 
-    this->SetHeure(time.hour());
-    this->SetMinute(time.minute());
-    this->SetSeconde(time.second());
+    this->setHeure(time.hour());
+    this->setMinute(time.minute());
+    this->setSeconde(time.second());
 }
 
 /**
@@ -59,13 +167,13 @@ Horodatage::Horodatage(std::string strDate)
     QDate date = dt.date();
     QTime time = dt.time();
 
-    this->SetJour(date.day());
-    this->SetMois(date.month());
-    this->SetAnnee(date.year());
+    this->setJour(date.day());
+    this->setMois(date.month());
+    this->setAnnee(date.year());
 
-    this->SetHeure(time.hour());
-    this->SetMinute(time.minute());
-    this->SetSeconde(time.second());
+    this->setHeure(time.hour());
+    this->setMinute(time.minute());
+    this->setSeconde(time.second());
 }
 
 /**
@@ -89,112 +197,4 @@ std::string Horodatage::ToString()
 
     // on retourne en std::string
     return datetime.toString("dd/MM/yyyy hh:mm:ss").toStdString();
-}
-
-/**
- * @brief Getter de Jour
- * @return Retourne le jour en **entier**
- */
-int Horodatage::GetJour()
-{
-    return this->jour;
-}
-
-/**
- * @brief Getter de Mois
- * @return Retourne le mois en **entier**
- */
-int Horodatage::GetMois()
-{
-    return this->mois;
-}
-
-/**
- * @brief Getter d'Annee
- * @return Retourne l'annee en **entier**
- */
-int Horodatage::GetAnnee()
-{
-    return this->annee;
-}
-
-/**
- * @brief Getter d'Heure
- * @return Retourne l'heure en **entier**
- */
-int Horodatage::GetHeure()
-{
-    return this->heure;
-}
-
-/**
- * @brief Getter de Minutes
- * @return Retourne les minutes en **entier**
- */
-int Horodatage::GetMinute()
-{
-    return this->minute;
-}
-
-/**
- * @brief Getter de Seconde
- * @return Retourne les secondes en **entier**
- */
-int Horodatage::GetSeconde()
-{
-    return this->seconde;
-}
-
-/**
- * @brief Setter de Jour
- * @param[in] j     Variable que l'on assigne au Jour
- */
-void Horodatage::SetJour(int j)
-{
-    this->jour = j;
-}
-
-/**
- * @brief Setter de Mois
- * @param[in] m     Variable que l'on assigne au Mois
- */
-void Horodatage::SetMois(int m)
-{
-    this->mois = m;
-}
-
-/**
- * @brief Setter d'Annee
- * @param[in] a     Variable que l'on assigne à l'annee
- */
-void Horodatage::SetAnnee(int a)
-{
-    this->annee = a;
-}
-
-/**
- * @brief Setter de l'Heure
- * @param[in] heu     Variable que l'on assigne au l'Heure
- */
-void Horodatage::SetHeure(int heu)
-{
-    this->heure = heu;
-}
-
-/**
- * @brief Setter des Minutes
- * @param[in] min     Variable que l'on assigne aux Minutes
- */
-void Horodatage::SetMinute(int min)
-{
-    this->minute = min;
-}
-
-/**
- * @brief Setter de Secondes
- * @param[in] sec     Variable que l'on assigne aux secondes
- */
-void Horodatage::SetSeconde(int sec)
-{
-    this->seconde = sec;
 }
