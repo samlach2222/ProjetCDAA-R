@@ -16,7 +16,6 @@
 /**
  * @brief Constructeur de UI_SaveGestionContact
  * @param[out] parent    QWidget de création de classe
- * @param[out] gestionContact    Pointer vers la valeur de la classe GestionContact pour en modifier la valeur en import ou l'exporter
  */
 UI_SaveGestionContact::UI_SaveGestionContact(QWidget *parent) :
     QWidget(parent),

@@ -77,48 +77,50 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="gestioncontact_8h.html">LOGIC/gestioncontact.h</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QDate&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_u_i___filter_contact.html">UI_FilterContact</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_u_i___filter_contact.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_u_i___filter_contact.html">UI_FilterContact</a> : <span class="keyword">public</span> QWidget</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Q_OBJECT</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1">UI_FilterContact</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a">~UI_FilterContact</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    Ui::UI_FilterContact *ui;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::string filtreNom;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::string filtreEntreprise;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    QDate filtreDateDebut;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    QDate filtreDateFin;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> filtreTriAlphabetique;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">bool</span> filtreTrieDateCreation;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="class_gestion_contact.html">GestionContact</a> gc;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> VerificationChamps();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> closeEvent(QCloseEvent*);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99">ButtonValidate</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534">ReceiveFromMainWindow</a>(<a class="code hl_class" href="class_gestion_contact.html">GestionContact</a>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>signals:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb">sendListContactToMainWindow</a>(std::vector&lt;FicheContact&gt;);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// UI_FILTERCONTACT_H</span></div>
-<div class="ttc" id="aclass_gestion_contact_html"><div class="ttname"><a href="class_gestion_contact.html">GestionContact</a></div><div class="ttdoc">Classe pour la gestion des contacts de l'application.</div><div class="ttdef"><b>Definition:</b> gestioncontact.h:20</div></div>
-<div class="ttc" id="aclass_u_i___filter_contact_html"><div class="ttname"><a href="class_u_i___filter_contact.html">UI_FilterContact</a></div><div class="ttdoc">Classe pour la fenêtre d'application de filtre sur une recherche de contacts.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.h:21</div></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;../LOGIC/fichecontact.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;../LOGIC/gestioncontact.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_u_i___filter_contact.html">UI_FilterContact</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_u_i___filter_contact.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_u_i___filter_contact.html">UI_FilterContact</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    Q_OBJECT</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1">UI_FilterContact</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a">~UI_FilterContact</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    Ui::UI_FilterContact *ui;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::string filtreNom;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::string filtreEntreprise;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    QDate filtreDateDebut;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    QDate filtreDateFin;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> filtreTriAlphabetique;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> filtreTrieDateCreation;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="class_gestion_contact.html">GestionContact</a> gc;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> VerificationChamps();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> closeEvent(QCloseEvent*);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99">ButtonValidate</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534">ReceiveFromMainWindow</a>(<a class="code hl_class" href="class_gestion_contact.html">GestionContact</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>signals:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb">sendListContactToMainWindow</a>(std::vector&lt;FicheContact&gt;);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// UI_FILTERCONTACT_H</span></div>
+<div class="ttc" id="aclass_gestion_contact_html"><div class="ttname"><a href="class_gestion_contact.html">GestionContact</a></div><div class="ttdoc">Classe pour la gestion des contacts de l'application.</div><div class="ttdef"><b>Definition:</b> gestioncontact.h:24</div></div>
+<div class="ttc" id="aclass_u_i___filter_contact_html"><div class="ttname"><a href="class_u_i___filter_contact.html">UI_FilterContact</a></div><div class="ttdoc">Classe pour la fenêtre d'application de filtre sur une recherche de contacts.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.h:24</div></div>
 <div class="ttc" id="aclass_u_i___filter_contact_html_a1b509e1a2950d02e24651c855df3b2cb"><div class="ttname"><a href="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb">UI_FilterContact::sendListContactToMainWindow</a></div><div class="ttdeci">void sendListContactToMainWindow(std::vector&lt; FicheContact &gt;)</div><div class="ttdoc">Envoie la liste des contacts filtrée à a MainWindow.</div></div>
-<div class="ttc" id="aclass_u_i___filter_contact_html_a41750ec7fd1cdb5dc756872585feb534"><div class="ttname"><a href="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534">UI_FilterContact::ReceiveFromMainWindow</a></div><div class="ttdeci">void ReceiveFromMainWindow(GestionContact)</div><div class="ttdoc">Permet de recevoir la classe de gestion de contact afin d'avoir la liste complête des contacts.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:212</div></div>
-<div class="ttc" id="aclass_u_i___filter_contact_html_a4fb3472311688bbe0ecadb9e24aaed7a"><div class="ttname"><a href="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a">UI_FilterContact::~UI_FilterContact</a></div><div class="ttdeci">~UI_FilterContact()</div><div class="ttdoc">Destructeur de UI_FilterContact.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:29</div></div>
-<div class="ttc" id="aclass_u_i___filter_contact_html_a6ac07367a9cfccadd3c5426f7b5900e1"><div class="ttname"><a href="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1">UI_FilterContact::UI_FilterContact</a></div><div class="ttdeci">UI_FilterContact(QWidget *parent=nullptr)</div><div class="ttdoc">Constructeur de UI_FilterContact.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:19</div></div>
-<div class="ttc" id="aclass_u_i___filter_contact_html_aa0d3a4ab3f1c6c7d2ab52f0d7690dd99"><div class="ttname"><a href="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99">UI_FilterContact::ButtonValidate</a></div><div class="ttdeci">void ButtonValidate()</div><div class="ttdoc">Permet de valider le filtre à partir du bouton lié</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:38</div></div>
-<div class="ttc" id="agestioncontact_8h_html"><div class="ttname"><a href="gestioncontact_8h.html">gestioncontact.h</a></div><div class="ttdoc">Fichier Header pour la gestion des contacts de l'application.</div></div>
+<div class="ttc" id="aclass_u_i___filter_contact_html_a41750ec7fd1cdb5dc756872585feb534"><div class="ttname"><a href="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534">UI_FilterContact::ReceiveFromMainWindow</a></div><div class="ttdeci">void ReceiveFromMainWindow(GestionContact)</div><div class="ttdoc">Permet de recevoir la classe de gestion de contact afin d'avoir la liste complête des contacts.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:213</div></div>
+<div class="ttc" id="aclass_u_i___filter_contact_html_a4fb3472311688bbe0ecadb9e24aaed7a"><div class="ttname"><a href="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a">UI_FilterContact::~UI_FilterContact</a></div><div class="ttdeci">~UI_FilterContact()</div><div class="ttdoc">Destructeur de UI_FilterContact.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:30</div></div>
+<div class="ttc" id="aclass_u_i___filter_contact_html_a6ac07367a9cfccadd3c5426f7b5900e1"><div class="ttname"><a href="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1">UI_FilterContact::UI_FilterContact</a></div><div class="ttdeci">UI_FilterContact(QWidget *parent=nullptr)</div><div class="ttdoc">Constructeur de UI_FilterContact.</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:20</div></div>
+<div class="ttc" id="aclass_u_i___filter_contact_html_aa0d3a4ab3f1c6c7d2ab52f0d7690dd99"><div class="ttname"><a href="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99">UI_FilterContact::ButtonValidate</a></div><div class="ttdeci">void ButtonValidate()</div><div class="ttdoc">Permet de valider le filtre à partir du bouton lié</div><div class="ttdef"><b>Definition:</b> ui_filtercontact.cpp:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

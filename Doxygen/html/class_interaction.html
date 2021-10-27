@@ -81,7 +81,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a6080d109220d28d490c9d61b5710ebfc"><td class="mdescLeft"> </td><td class="mdescRight">Retourne le contenu de l'intéraction.  <a href="class_interaction.html#a6080d109220d28d490c9d61b5710ebfc">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a6080d109220d28d490c9d61b5710ebfc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a7fa16276ece67880fdba83723e75d96c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#a7fa16276ece67880fdba83723e75d96c">SetContenu</a> (std::string)</td></tr>
-<tr class="memdesc:a7fa16276ece67880fdba83723e75d96c"><td class="mdescLeft"> </td><td class="mdescRight">Remplace le contenu de l'intéraction.  <a href="class_interaction.html#a7fa16276ece67880fdba83723e75d96c">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a7fa16276ece67880fdba83723e75d96c"><td class="mdescLeft"> </td><td class="mdescRight">Remplace le contenu de l'intéraction et met à jour les tags.  <a href="class_interaction.html#a7fa16276ece67880fdba83723e75d96c">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a7fa16276ece67880fdba83723e75d96c"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aed63b112cb40fb85bd5ca5e8127c1433"><td align="right" class="memItemLeft" valign="top"><a class="el" href="class_horodatage.html">Horodatage</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433">GetHorodatage</a> ()</td></tr>
 <tr class="memdesc:aed63b112cb40fb85bd5ca5e8127c1433"><td class="mdescLeft"> </td><td class="mdescRight">Retourne l'horodatage de l'interaction.  <a href="class_interaction.html#aed63b112cb40fb85bd5ca5e8127c1433">Plus de détails...</a><br/></td></tr>
@@ -95,9 +95,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:af2de44e87e631cc95ca31daf6c8a97db"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classtags_interaction.html">tagsInteraction</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#af2de44e87e631cc95ca31daf6c8a97db">getTags</a> ()</td></tr>
 <tr class="memdesc:af2de44e87e631cc95ca31daf6c8a97db"><td class="mdescLeft"> </td><td class="mdescRight">Permet de récupérer les tags d'un intéraction.  <a href="class_interaction.html#af2de44e87e631cc95ca31daf6c8a97db">Plus de détails...</a><br/></td></tr>
 <tr class="separator:af2de44e87e631cc95ca31daf6c8a97db"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0da2ecaf5908017a5525396da09e9c36"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_interaction.html#a0da2ecaf5908017a5525396da09e9c36">setTags</a> (<a class="el" href="classtags_interaction.html">tagsInteraction</a>)</td></tr>
-<tr class="memdesc:a0da2ecaf5908017a5525396da09e9c36"><td class="mdescLeft"> </td><td class="mdescRight">Permet de changer la valeur des tags d'une intéraction.  <a href="class_interaction.html#a0da2ecaf5908017a5525396da09e9c36">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a0da2ecaf5908017a5525396da09e9c36"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a776e9bb404900b89be994e659d207149"><td align="right" class="memItemLeft" valign="top"><a id="a776e9bb404900b89be994e659d207149" name="a776e9bb404900b89be994e659d207149"></a>
+void </td><td class="memItemRight" valign="bottom"><b>UpdateTags</b> ()</td></tr>
+<tr class="memdesc:a776e9bb404900b89be994e659d207149"><td class="mdescLeft"> </td><td class="mdescRight">Met à jour les tags de l'interaction. <br/></td></tr>
+<tr class="separator:a776e9bb404900b89be994e659d207149"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe pour une intéraction. </p>
@@ -250,7 +251,7 @@ Fonctions membres publiques</h2></td></tr>
 </tr>
 </table>
 </div><!-- $$$SetContenu[overload1]$$$voidInteraction::SetContenu(std::string c) --><div class="memdoc"><div style="display: none">void Interaction::SetContenu(std::string c)</div>
-<p>Remplace le contenu de l'intéraction. </p>
+<p>Remplace le contenu de l'intéraction et met à jour les tags. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Le nouveau contenu </td></tr>
@@ -258,29 +259,6 @@ Fonctions membres publiques</h2></td></tr>
 </dd>
 </dl>
 </div><!-- @@@SetContenu -->
-</div>
-<a id="a0da2ecaf5908017a5525396da09e9c36" name="a0da2ecaf5908017a5525396da09e9c36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da2ecaf5908017a5525396da09e9c36">◆ </a></span>setTags()</h2>
-<div class="memitem">
-<div class="memproto">
-<table class="memname">
-<tr>
-<td class="memname">void Interaction::setTags </td>
-<td>(</td>
-<td class="paramtype"><a class="el" href="classtags_interaction.html">tagsInteraction</a> </td>
-<td class="paramname"><em>tags</em></td><td>)</td>
-<td></td>
-</tr>
-</table>
-</div><!-- $$$setTags[overload1]$$$voidInteraction::setTags(tagsInteraction tags) --><div class="memdoc"><div style="display: none">void Interaction::setTags(tagsInteraction tags)</div>
-<p>Permet de changer la valeur des tags d'une intéraction. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-<table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">tags</td><td>d'une intéraction </td></tr>
-</table>
-</dd>
-</dl>
-</div><!-- @@@setTags -->
 </div>
 <a id="a986dc0c1ccfb1d52c6c5cf56122d850e" name="a986dc0c1ccfb1d52c6c5cf56122d850e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a986dc0c1ccfb1d52c6c5cf56122d850e">◆ </a></span>setTitre()</h2>

@@ -132,6 +132,9 @@ void </td><td class="memItemRight" valign="bottom"><b>ChooseImage</b> ()</td></
 void </td><td class="memItemRight" valign="bottom"><b>resetFilters</b> ()</td></tr>
 <tr class="memdesc:a47f4eaf9bf802041b3087d6ee60040b7"><td class="mdescLeft"> </td><td class="mdescRight">Permet de retirer les filtres de recherche et de revenir à la liste par défaut. <br/></td></tr>
 <tr class="separator:a47f4eaf9bf802041b3087d6ee60040b7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adc010ec668ec3ffc71c523667417c2b4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#adc010ec668ec3ffc71c523667417c2b4">getGcFromSaveGestionContact</a> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
+<tr class="memdesc:adc010ec668ec3ffc71c523667417c2b4"><td class="mdescLeft"> </td><td class="mdescRight">Récupère le <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> envoyé par la fenêtre SaveGestionContact.  <a href="class_main_window.html#adc010ec668ec3ffc71c523667417c2b4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:adc010ec668ec3ffc71c523667417c2b4"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signaux</h2></td></tr>
@@ -143,6 +146,10 @@ void </td><td class="memItemRight" valign="bottom"><b>sendIdToInteraction</b> (
 void </td><td class="memItemRight" valign="bottom"><b>sendToFilterContact</b> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
 <tr class="memdesc:a879e232f03a72410cc6788b6f5bb4c97"><td class="mdescLeft"> </td><td class="mdescRight">Signal permettant d'envoyer la classe de gestion de contact à la classe FilterContact. <br/></td></tr>
 <tr class="separator:a879e232f03a72410cc6788b6f5bb4c97"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a979a81e4ebef828f3395a073a142b7eb"><td align="right" class="memItemLeft" valign="top"><a id="a979a81e4ebef828f3395a073a142b7eb" name="a979a81e4ebef828f3395a073a142b7eb"></a>
+void </td><td class="memItemRight" valign="bottom"><b>sendGcToSaveGestionContact</b> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
+<tr class="memdesc:a979a81e4ebef828f3395a073a142b7eb"><td class="mdescLeft"> </td><td class="mdescRight">Envoie le <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à la fenêtre SaveGestionContact. <br/></td></tr>
+<tr class="separator:a979a81e4ebef828f3395a073a142b7eb"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -211,6 +218,37 @@ Fonctions membres publiques</h2></td></tr>
 </dd>
 </dl>
 </div><!-- @@@AddOperationToLog -->
+</div>
+<a id="adc010ec668ec3ffc71c523667417c2b4" name="adc010ec668ec3ffc71c523667417c2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc010ec668ec3ffc71c523667417c2b4">◆ </a></span>getGcFromSaveGestionContact</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void MainWindow::getGcFromSaveGestionContact </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="class_gestion_contact.html">GestionContact</a> </td>
+<td class="paramname"><em>gc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span> </td>
+</tr>
+</table>
+</div><!-- $$$getGcFromSaveGestionContact[overload1]$$$voidMainWindow::getGcFromSaveGestionContact(GestionContact gc) --><div class="memdoc"><div style="display: none">void MainWindow::getGcFromSaveGestionContact(GestionContact gc)</div>
+<p>Récupère le <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> envoyé par la fenêtre SaveGestionContact. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramname">gc</td><td><a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à importer </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@getGcFromSaveGestionContact -->
 </div>
 <a id="aa35f62a002e2f5301d3526ece23071ae" name="aa35f62a002e2f5301d3526ece23071ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa35f62a002e2f5301d3526ece23071ae">◆ </a></span>ReceiveContactToMainWindow</h2>
