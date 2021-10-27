@@ -10,14 +10,6 @@
 #include "interaction.h"
 
 /**
- * @brief Constructeur de la classe Interaction
- * @param[in] id        L'id de l'interaction
- * @param[in] c     Le contenu de l'interaction
- * @param[in] titre     Le titre de l'interaction
- * @param[in] horodatage        L'horodatage de l'interaction
- */
-
-/**
  * @brief Retourne l'id
  * @return l'id
  */
@@ -80,6 +72,13 @@ const tagsInteraction &Interaction::getTags() const
     return tags;
 }
 
+/**
+ * @brief Constructeur de la classe Interaction
+ * @param[in] id        L'id de l'interaction
+ * @param[in] c     Le contenu de l'interaction
+ * @param[in] titre     Le titre de l'interaction
+ * @param[in] horodatage        L'horodatage de l'interaction
+ */
 Interaction::Interaction(int id, std::string c, std::string titre, Horodatage horodatage)
 {
     this->setContenu(c);
