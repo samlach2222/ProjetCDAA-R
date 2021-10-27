@@ -180,7 +180,7 @@ Horodatage::Horodatage(std::string strDate)
  * @brief Renvoie en chaine de caractère la date et l'heure de l'horodatage afin de le rendre affichable
  * @return Retourne la date et l'heure au format **dd/MM/yyyy hh:mm:ss** en chaine de caractère
  */
-std::string Horodatage::ToString()
+std::string Horodatage::ToString() const
 {
     // On définit la date
     QDate date;

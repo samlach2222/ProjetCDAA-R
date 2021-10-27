@@ -138,7 +138,7 @@ const Horodatage &FicheContact::getDateCreation() const
  * @brief Retourne la liste des intéractions du contact
  * @return la liste des interactions du contact
  */
-const std::vector<Interaction> &FicheContact::getListInteraction() const
+std::vector<Interaction> &FicheContact::getListInteraction()
 {
     return listInteraction;
 }

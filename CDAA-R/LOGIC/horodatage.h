@@ -39,7 +39,7 @@ class Horodatage
         Horodatage(int, int, int, int, int, int);
         Horodatage();
         Horodatage(std::string);
-        std::string ToString();
+        std::string ToString() const;
 };
 
 #endif // HORODATAGE_H

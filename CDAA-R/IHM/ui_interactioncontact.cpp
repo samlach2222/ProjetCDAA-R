@@ -88,7 +88,7 @@ void UI_InteractionContact::SupprimerInteraction()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    if(this->contact.GetListInteraction().size() > 0 && !ModeAjoutInteraction)
+    if(this->contact.getListInteraction().size() > 0 && !ModeAjoutInteraction)
     {
         QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
         QVariant v = selectedItem[0]->data(Qt::UserRole);
@@ -144,7 +144,7 @@ void UI_InteractionContact::ValiderInteraction()
             QVariant v = selectedItem[0]->data(Qt::UserRole);
             int idInteraction = v.value<int>();
 
-            for(Interaction &i : this->contact.GetListInteraction())
+            for(Interaction &i : this->contact.getListInteraction())
             {
                 if(i.GetId() == idInteraction)
                 {
@@ -193,7 +193,7 @@ void UI_InteractionContact::ReceiveIdToInteraction(int idreceive,GestionContact 
 void UI_InteractionContact::DisplayInteractionList()
 {
     ui->InteractionList->clear();
-    for(Interaction i : this->contact.GetListInteraction())
+    for(Interaction i : this->contact.getListInteraction())
     {
         QString str = QString::fromStdString(i.getTitre());
         QListWidgetItem* item = new QListWidgetItem(str);
@@ -220,7 +220,7 @@ void UI_InteractionContact::ListItemClick()
 
     ui->frameEditInteraction->setVisible(1);
 
-    for(Interaction i : this->contact.GetListInteraction())
+    for(Interaction i : this->contact.getListInteraction())
     {
         if(i.GetId() == idInteraction)
         {

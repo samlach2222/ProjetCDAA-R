@@ -47,9 +47,9 @@ void UI_FilterContact::ButtonValidate()
         for(FicheContact fc : this->gc.GetAllContacts())
         {
             //Check de la validité de la date
-            int fcAnnee = fc.getDateCreation().GetAnnee();
-            int fcMois = fc.getDateCreation().GetMois();
-            int fcJour = fc.getDateCreation().GetJour();
+            int fcAnnee = fc.getDateCreation().getAnnee();
+            int fcMois = fc.getDateCreation().getMois();
+            int fcJour = fc.getDateCreation().getJour();
             QDate date = QDate(fcAnnee,fcMois, fcJour);
             if(date >= dateMin && date <= dateMax) // date souhaitée
             {
@@ -94,14 +94,14 @@ void UI_FilterContact::ButtonValidate()
             {
                 std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
                     // fiche1
-                    std::string fcAnnee1 = std::to_string(fiche1.getDateCreation().GetAnnee());
-                    std::string fcMois1 = std::to_string(fiche1.getDateCreation().GetMois());
-                    std::string fcJour1 = std::to_string(fiche1.getDateCreation().GetJour());
+                    std::string fcAnnee1 = std::to_string(fiche1.getDateCreation().getAnnee());
+                    std::string fcMois1 = std::to_string(fiche1.getDateCreation().getMois());
+                    std::string fcJour1 = std::to_string(fiche1.getDateCreation().getJour());
                     QDate date1 = QDate::fromString(QString::fromStdString(fcJour1 + "/" + fcMois1 + "/" + fcAnnee1),"dd/MM/yyyy");
                     // fiche2
-                    std::string fcAnnee2 = std::to_string(fiche2.getDateCreation().GetAnnee());
-                    std::string fcMois2 = std::to_string(fiche2.getDateCreation().GetMois());
-                    std::string fcJour2 = std::to_string(fiche2.getDateCreation().GetJour());
+                    std::string fcAnnee2 = std::to_string(fiche2.getDateCreation().getAnnee());
+                    std::string fcMois2 = std::to_string(fiche2.getDateCreation().getMois());
+                    std::string fcJour2 = std::to_string(fiche2.getDateCreation().getJour());
                     QDate date2 = QDate::fromString(QString::fromStdString(fcJour2 + "/" + fcMois2 + "/" + fcAnnee2),"dd/MM/yyyy");
                     return date1 < date2;
                 });
@@ -218,12 +218,12 @@ void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
     for(FicheContact fc : gc.GetAllContacts())
     {
         if(minDate.toString().isEmpty() && maxDate.toString().isEmpty()){
-            minDate = QDate(fc.getDateCreation().GetAnnee(), fc.getDateCreation().GetMois(), fc.getDateCreation().GetJour());
-            maxDate = QDate(fc.getDateCreation().GetAnnee(), fc.getDateCreation().GetMois(), fc.getDateCreation().GetJour());
+            minDate = QDate(fc.getDateCreation().getAnnee(), fc.getDateCreation().getMois(), fc.getDateCreation().getJour());
+            maxDate = QDate(fc.getDateCreation().getAnnee(), fc.getDateCreation().getMois(), fc.getDateCreation().getJour());
         }
         else
         {
-            QDate curDate = QDate(fc.getDateCreation().GetAnnee(), fc.getDateCreation().GetMois(), fc.getDateCreation().GetJour());
+            QDate curDate = QDate(fc.getDateCreation().getAnnee(), fc.getDateCreation().getMois(), fc.getDateCreation().getJour());
             if(curDate < minDate)
             {
                 minDate = curDate;

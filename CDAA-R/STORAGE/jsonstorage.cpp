@@ -79,7 +79,7 @@ void JSonStorage::Save(GestionContact gc)
 
         //interactions
         int idInteraction = 0;
-        foreach (Interaction i, fc.GetListInteraction()){
+        foreach (Interaction i, fc.getListInteraction()){
             //json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"id"] = i.GetId();  //On a pas besoin d'exporter l'id
             json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"titre"] = QString::fromStdString(i.getTitre());
             json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"contenu"] = QString::fromStdString(i.GetContenu());
