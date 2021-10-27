@@ -50,33 +50,8 @@ void Interaction::SetContenu(std::string c)
 {
     this->contenu = c;
 
-    tagsInteraction tags = tagsInteraction();
-    QStringList text_in_lines = QString::fromStdString(c).split( "\n" );
-    for( int j = 0; j < text_in_lines.count(); j++ )
-    {
-        std::string currentLine = text_in_lines.at( j ).toStdString();
-        if(((int) currentLine.find("@todo")) != -1)
-        {
-            if(((int) currentLine.find("@date")) != -1) // cas où il y a un tag TODO puis un tag DATE
-            {
-                int firstDelPos = currentLine.find("@todo");
-                int secondDelPos = currentLine.find("@date");
-                std::string tagTodo = currentLine.substr(firstDelPos+6, secondDelPos-firstDelPos-7);
-                std::string strDate = currentLine.substr(secondDelPos+6);
-
-                tags.addTag(tagTodo,strDate);
-            }
-            else // cas où il y a un tag TODO mais pas de tag DATE
-            {
-                int firstDelPos = currentLine.find("@todo");
-                std::string tagTodo = currentLine.substr(firstDelPos+6);
-                std::string strDate = QDate::currentDate().toString("dd/MM/yyyy").toStdString();
-
-                tags.addTag(tagTodo,strDate);
-            }
-        }
-    }
-    this->setTags(tags);
+    //Il faut mettre à jour les tags à chaque fois que le contenu est modifié
+    UpdateTags();
 }
 
 /**
@@ -116,10 +91,36 @@ tagsInteraction Interaction::getTags()
 }
 
 /**
- * @brief Permet de changer la valeur des tags d'une intéraction
- * @param[in] tags d'une intéraction
+ * @brief Met à jour les tags de l'interaction
  */
-void Interaction::setTags(tagsInteraction tags)
+void Interaction::UpdateTags()
 {
-    this->tags = tags;
+    tagsInteraction newTags = tagsInteraction();
+    QStringList text_in_lines = QString::fromStdString(this->contenu).split('\n');
+    for( int j = 0; j < text_in_lines.count(); j++ )
+    {
+        std::string currentLine = text_in_lines.at( j ).toStdString();
+        if(((int) currentLine.find("@todo")) != -1)
+        {
+            if(((int) currentLine.find("@date")) != -1) // cas où il y a un tag TODO puis un tag DATE
+            {
+                int firstDelPos = currentLine.find("@todo");
+                int secondDelPos = currentLine.find("@date");
+                std::string tagTodo = currentLine.substr(firstDelPos+6, secondDelPos-firstDelPos-7);
+                std::string strDate = currentLine.substr(secondDelPos+6);
+
+                newTags.addTag(tagTodo,strDate);
+            }
+            else // cas où il y a un tag TODO mais pas de tag DATE
+            {
+                int firstDelPos = currentLine.find("@todo");
+                std::string tagTodo = currentLine.substr(firstDelPos+6);
+                std::string strDate = QDate::currentDate().toString("dd/MM/yyyy").toStdString();
+
+                newTags.addTag(tagTodo,strDate);
+            }
+        }
+    }
+
+    this->tags = newTags;
 }
