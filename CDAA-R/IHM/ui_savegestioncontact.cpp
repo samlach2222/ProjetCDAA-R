@@ -34,7 +34,7 @@ UI_SaveGestionContact::~UI_SaveGestionContact()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
- * @param event     Event de fermeture de la fenêtre
+ * @param[out] event     Event de fermeture de la fenêtre
  */
 void UI_SaveGestionContact::closeEvent(QCloseEvent *event)
 {
@@ -83,7 +83,7 @@ void UI_SaveGestionContact::Export()
 
 /**
  * @brief Récupère le GestionContact envoyé par le MainWindow
- * @param gc    GestionContact à exporter
+ * @param[in] gc    GestionContact à exporter
  */
 void UI_SaveGestionContact::getGcFromMainWindow(GestionContact gc)
 {

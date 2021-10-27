@@ -41,7 +41,7 @@ void UI_RequestContact::ButtonDoRequest()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
- * @param event     Event de fermeture de la fenêtre
+ * @param[out] event     Event de fermeture de la fenêtre
  */
 void UI_RequestContact::closeEvent(QCloseEvent *event)
 {

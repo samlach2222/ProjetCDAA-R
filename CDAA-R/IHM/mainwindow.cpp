@@ -427,7 +427,7 @@ void MainWindow::resetFilters()
 
 /**
  * @brief Récupère le GestionContact envoyé par la fenêtre SaveGestionContact
- * @param gc    GestionContact à importer
+ * @param[in] gc    GestionContact à importer
  */
 void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
 {
@@ -440,7 +440,7 @@ void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
- * @param event     Event de fermeture de la fenêtre
+ * @param[out] event     Event de fermeture de la fenêtre
  */
 void MainWindow::closeEvent(QCloseEvent *event)
 {

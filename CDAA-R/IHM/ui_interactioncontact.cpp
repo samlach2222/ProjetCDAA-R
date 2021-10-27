@@ -51,7 +51,7 @@ UI_InteractionContact::~UI_InteractionContact()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
- * @param event     Event de fermeture de la fenêtre
+ * @param[out] event     Event de fermeture de la fenêtre
  */
 void UI_InteractionContact::closeEvent(QCloseEvent *event)
 {

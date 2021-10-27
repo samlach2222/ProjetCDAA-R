@@ -114,7 +114,7 @@ void UI_FilterContact::ButtonValidate()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
- * @param event     Event de fermeture de la fenêtre
+ * @param[out] event     Event de fermeture de la fenêtre
  */
 void UI_FilterContact::closeEvent(QCloseEvent *event)
 {
