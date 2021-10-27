@@ -2,6 +2,7 @@
  * @file LOGIC/log.cpp
  * @brief Contient les logs de l'application
  * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  * @version 1.0
  * @date 22/09/2021
  */
