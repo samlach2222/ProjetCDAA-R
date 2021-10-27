@@ -32,7 +32,7 @@ class Interaction
         std::string getTitre();
         void setTitre(std::string);
         tagsInteraction getTags();
-        void setTags(tagsInteraction);
+        void UpdateTags();
 };
 
 #endif // INTERACTION_H

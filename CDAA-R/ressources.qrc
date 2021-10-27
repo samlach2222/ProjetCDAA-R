@@ -10,11 +10,14 @@
         <file>Ressources/Sounds/ButtonSound.wav</file>
         <file>Ressources/Sounds/ButtonSound2.wav</file>
         <file>Ressources/Sounds/ErrorSound.wav</file>
-        <file>Ressources/Icons/Logo.png</file>
         <file>Ressources/Icons/FilterContact avec fond.png</file>
         <file>Ressources/Icons/InteractionContact avec fond.png</file>
         <file>Ressources/Icons/AddInteractionContact.png</file>
         <file>Ressources/Icons/AddContact rogne.png</file>
         <file>Ressources/Icons/AddInteractionContact rogne.png</file>
+        <file>Ressources/Icons/Exporter.png</file>
+        <file>Ressources/Icons/Importer.png</file>
+        <file>Ressources/Icons/Logo bruit.png</file>
+        <file>Ressources/Icons/Logo lisse.png</file>
     </qresource>
 </RCC>
