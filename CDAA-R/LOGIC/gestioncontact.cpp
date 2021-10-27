@@ -44,7 +44,7 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
     int lastId = -1;
     foreach (int sortedId, idContacts){
         if (sortedId != lastId + 1){
-            //Exemple : si idContacts contient 0,1,2,4,5 alors lorsque sortedIndex sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
+            //Exemple : si idContacts contient 0,1,2,4,5 alors lorsque sortedId sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
             firstAvailableId = lastId + 1;
             break;
         }
@@ -55,7 +55,6 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
     FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo, dateCreation);
 
     this->TabContacts.push_back(c);
-    // sort here By ID
     DatabaseStorage::Create(c);
     this->log.AddToTabLog("Contact Added");
 }
