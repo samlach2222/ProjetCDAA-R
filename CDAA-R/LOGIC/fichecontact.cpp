@@ -9,6 +9,141 @@
 #include "fichecontact.h"
 
 /**
+ * @brief Retourne l'id
+ * @return l'id
+ */
+int FicheContact::getId() const
+{
+    return id;
+}
+
+/**
+ * @brief Retourne le nom
+ * @return le nom
+ */
+const std::string &FicheContact::getNom() const
+{
+    return nom;
+}
+
+/**
+ * @brief Remplace le nom
+ * @param[in] newNom        Le nouveau nom
+ */
+void FicheContact::setNom(const std::string &newNom)
+{
+    nom = newNom;
+}
+
+/**
+ * @brief Retourne le prénom
+ * @return le prénom
+ */
+const std::string &FicheContact::getPrenom() const
+{
+    return prenom;
+}
+
+/**
+ * @brief Remplace le prénom
+ * @param[in] newPrenom     Le nouveau prénom
+ */
+void FicheContact::setPrenom(const std::string &newPrenom)
+{
+    prenom = newPrenom;
+}
+
+/**
+ * @brief Retourne l'entreprise
+ * @return l'entreprise
+ */
+const std::string &FicheContact::getEntreprise() const
+{
+    return entreprise;
+}
+
+/**
+ * @brief Remplace l'entreprise
+ * @param[in] newEntreprise     La nouvelle entreprise
+ */
+void FicheContact::setEntreprise(const std::string &newEntreprise)
+{
+    entreprise = newEntreprise;
+}
+
+/**
+ * @brief Retourne le mail
+ * @return le mail
+ */
+const std::string &FicheContact::getMail() const
+{
+    return mail;
+}
+
+/**
+ * @brief Remplace le mail
+ * @param[in] newMail       Le nouveau mail
+ */
+void FicheContact::setMail(const std::string &newMail)
+{
+    mail = newMail;
+}
+
+/**
+ * @brief Retourne le numéro de téléphone
+ * @return le numéro de téléphone
+ */
+const std::string &FicheContact::getTelephone() const
+{
+    return telephone;
+}
+
+/**
+ * @brief Remplace le numéro de téléphone
+ * @param[in] newTelephone      Le nouveau numéro de téléphone
+ */
+void FicheContact::setTelephone(const std::string &newTelephone)
+{
+    telephone = newTelephone;
+}
+
+/**
+ * @brief Retourne la photo de profil
+ * @return la photo de profil
+ */
+const QImage &FicheContact::getPhoto() const
+{
+    return photo;
+}
+
+/**
+ * @brief Remplace la photo de profil
+ * @param[in] newPhoto      La nouvelle photo de profil
+ */
+void FicheContact::setPhoto(const QImage &newPhoto)
+{
+    photo = newPhoto;
+}
+
+/**
+ * @brief Retourne la date de création de la fiche contact
+ * @return la date de création de la fiche contact
+ */
+const Horodatage &FicheContact::getDateCreation() const
+{
+    return dateCreation;
+}
+
+/**
+ * @brief Retourne la liste des intéractions du contact
+ * @return la liste des interactions du contact
+ */
+const std::vector<Interaction> &FicheContact::getListInteraction() const
+{
+    return listInteraction;
+}
+
+/**
  * @brief Constructeur de la classe FicheContact
  * @param[in] id        L'id du contact
  * @param[in] nom       Nom du contact
@@ -35,141 +170,6 @@ FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::str
 }
 
 /**
- * @brief Retourne l'id
- * @return l'id
- */
-int FicheContact::getId()
-{
-    return id;
-}
-
-/**
- * @brief Retourne le nom
- * @return le nom
- */
-std::string FicheContact::getNom()
-{
-    return nom;
-}
-
-/**
- * @brief Remplace le nom
- * @param[in] newNom        Le nouveau nom
- */
-void FicheContact::setNom(std::string newNom)
-{
-    nom = newNom;
-}
-
-/**
- * @brief Retourne le prénom
- * @return le prénom
- */
-std::string FicheContact::getPrenom()
-{
-    return prenom;
-}
-
-/**
- * @brief Remplace le prénom
- * @param[in] newPrenom     Le nouveau prénom
- */
-void FicheContact::setPrenom(std::string newPrenom)
-{
-    prenom = newPrenom;
-}
-
-/**
- * @brief Retourne l'entreprise
- * @return l'entreprise
- */
-std::string FicheContact::getEntreprise()
-{
-    return entreprise;
-}
-
-/**
- * @brief Remplace l'entreprise
- * @param[in] newEntreprise     La nouvelle entreprise
- */
-void FicheContact::setEntreprise(std::string newEntreprise)
-{
-    entreprise = newEntreprise;
-}
-
-/**
- * @brief Retourne le mail
- * @return le mail
- */
-std::string FicheContact::getMail()
-{
-    return mail;
-}
-
-/**
- * @brief Remplace le mail
- * @param[in] newMail       Le nouveau mail
- */
-void FicheContact::setMail(std::string newMail)
-{
-    mail = newMail;
-}
-
-/**
- * @brief Retourne le numéro de téléphone
- * @return le numéro de téléphone
- */
-std::string FicheContact::getTelephone()
-{
-    return telephone;
-}
-
-/**
- * @brief Remplace le numéro de téléphone
- * @param[in] newTelephone      Le nouveau numéro de téléphone
- */
-void FicheContact::setTelephone(std::string newTelephone)
-{
-    telephone = newTelephone;
-}
-
-/**
- * @brief Retourne la photo de profil
- * @return la photo de profil
- */
-QImage FicheContact::getPhoto()
-{
-    return photo;
-}
-
-/**
- * @brief Remplace la photo de profil
- * @param[in] newPhoto      La nouvelle photo de profil
- */
-void FicheContact::setPhoto(QImage newPhoto)
-{
-    photo = newPhoto;
-}
-
-/**
- * @brief Retourne la date de création de la fiche contact
- * @return la date de création de la fiche contact
- */
-Horodatage FicheContact::getDateCreation()
-{
-    return dateCreation;
-}
-
-/**
- * @brief Retourne la liste des intéractions du contact
- * @return la liste des interactions du contact
- */
-std::vector<Interaction> &FicheContact::GetListInteraction()
-{
-    return listInteraction;
-}
-
-/**
  * @brief Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions
  * @param[in] contenuInteraction        Le contenu à partir duquel l'interaction sera créé
  * @param[in] titreInteraction        Le titre de l'interaction
@@ -177,7 +177,7 @@ std::vector<Interaction> &FicheContact::GetListInteraction()
  */
 void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction, Horodatage horodatage)
 {
-    std::vector<Interaction> allInteractions = GetListInteraction();
+    std::vector<Interaction> allInteractions = getListInteraction();
     int firstAvailableId = allInteractions.size();
 
     std::vector<int> idInteractions(allInteractions.size());

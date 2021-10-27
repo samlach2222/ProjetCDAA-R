@@ -29,24 +29,24 @@ class FicheContact
         Horodatage dateCreation;  //Readonly
         std::vector<Interaction> listInteraction;
     public:
-        FicheContact(int, std::string, std::string, std::string, std::string, std::string, QImage, Horodatage);
         //Getters & Setters
-        int getId();
-        std::string getNom();
-        void setNom(std::string);
-        std::string getPrenom();
-        void setPrenom(std::string);
-        std::string getEntreprise();
-        void setEntreprise(std::string);
-        std::string getMail();
-        void setMail(std::string);
-        std::string getTelephone();
-        void setTelephone(std::string);
-        QImage getPhoto();
-        void setPhoto(QImage);
-        Horodatage getDateCreation();
+        int getId() const;
+        const std::string &getNom() const;
+        void setNom(const std::string &newNom);
+        const std::string &getPrenom() const;
+        void setPrenom(const std::string &newPrenom);
+        const std::string &getEntreprise() const;
+        void setEntreprise(const std::string &newEntreprise);
+        const std::string &getMail() const;
+        void setMail(const std::string &newMail);
+        const std::string &getTelephone() const;
+        void setTelephone(const std::string &newTelephone);
+        const QImage &getPhoto() const;
+        void setPhoto(const QImage &newPhoto);
+        const Horodatage &getDateCreation() const;
+        const std::vector<Interaction> &getListInteraction() const;
 
-        std::vector<Interaction> &GetListInteraction();
+        FicheContact(int, std::string, std::string, std::string, std::string, std::string, QImage, Horodatage);
         void AddInteraction(std::string, std::string, Horodatage = Horodatage());
         void RemoveInteraction(int);
         std::string ToString();
