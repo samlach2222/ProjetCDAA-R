@@ -191,7 +191,7 @@ void FicheContact::AddInteraction(std::string contenuInteraction, std::string ti
         if (sortedId != lastId + 1){
             //Exemple : si idInteractions contient 0,1,2,4,5 alors lorsque sortedId sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
             firstAvailableId = lastId + 1;
-            break; // on sort du foreach si l'élément est trouvé (économie de performence)
+            break;  // on sort du foreach si l'élément est trouvé (économie de performence)
         }
 
         lastId = sortedId;
@@ -234,7 +234,7 @@ std::string FicheContact::ToString()
     std::string nom = this->nom;
     std::string prenom = this->prenom;
 
-    std::transform(nom.begin(), nom.end(), nom.begin(), ::toupper);  //::toupper à la place de std::toupper.
+    std::transform(nom.begin(), nom.end(), nom.begin(), ::toupper);  //::toupper car std::toupper n'est pas accepté
     prenom[0] = std::toupper(prenom[0]);
 
     return nom + ' ' + prenom;
