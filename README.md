@@ -13,4 +13,3 @@ Projet CDAA - L3 Info - Grpe R
 - Ajout en IHM des fonctions basiques des affichages
 - Voir si on peut redéfinir les opérators et la fonction remove des vector
 - Ajouter des shortcuts pour les boutons
-- Mettre à jour la documentation
