@@ -130,6 +130,9 @@ void MainWindow::DisplayContactList()
         item->setData(Qt::UserRole, v);
         ui->ContactList->addItem(item);
     }
+
+    //Réinitialise l'id selectionné
+    this->idContactSelectionne = -1;
 }
 
 /**
