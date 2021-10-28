@@ -96,6 +96,11 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>importerPushButton</tabstop>
+  <tabstop>exporterPushButton</tabstop>
+  <tabstop>fermerPushButton</tabstop>
+ </tabstops>
  <resources>
   <include location="../ressources.qrc"/>
  </resources>

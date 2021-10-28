@@ -388,6 +388,24 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>ContactList</tabstop>
+  <tabstop>BAddContact</tabstop>
+  <tabstop>editNom</tabstop>
+  <tabstop>editPrenom</tabstop>
+  <tabstop>editEntreprise</tabstop>
+  <tabstop>editMail</tabstop>
+  <tabstop>editTelephone</tabstop>
+  <tabstop>ChooseImage</tabstop>
+  <tabstop>Validate</tabstop>
+  <tabstop>Delete</tabstop>
+  <tabstop>editDateCreation</tabstop>
+  <tabstop>BFilterContact</tabstop>
+  <tabstop>FilterContactIndicator</tabstop>
+  <tabstop>BRequestContact</tabstop>
+  <tabstop>BSaveGestionContact</tabstop>
+  <tabstop>LogsList</tabstop>
+ </tabstops>
  <resources>
   <include location="../ressources.qrc"/>
  </resources>

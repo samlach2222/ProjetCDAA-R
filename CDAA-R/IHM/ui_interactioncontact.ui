@@ -173,6 +173,16 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>InteractionList</tabstop>
+  <tabstop>BAddInteraction</tabstop>
+  <tabstop>editDateCreation</tabstop>
+  <tabstop>editTitre</tabstop>
+  <tabstop>editDescription</tabstop>
+  <tabstop>Validate</tabstop>
+  <tabstop>Delete</tabstop>
+  <tabstop>BValider</tabstop>
+ </tabstops>
  <resources>
   <include location="../ressources.qrc"/>
  </resources>
