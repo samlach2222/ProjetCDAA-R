@@ -74,7 +74,6 @@ void UI_InteractionContact::AddInteraction()
 
     ModeAjoutInteraction = 1;
     ui->frameEditInteraction->setVisible(1);
-    ui->editDateCreation->setDisabled(1);
 
     ui->editTitre->clear();
     ui->editDescription->clear();
@@ -227,7 +226,6 @@ void UI_InteractionContact::ListItemClick()
             ui->editTitre->setText(QString::fromStdString(i.getTitre()));
             ui->editDescription->setPlainText(QString::fromStdString(i.getContenu()));
             ui->editDateCreation->setText(QString::fromStdString(i.getHorodatage().ToString()));
-            ui->editDateCreation->setEnabled(0);
         }
     }
 }

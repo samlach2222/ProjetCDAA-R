@@ -100,7 +100,6 @@ void MainWindow::AddContact()
 
     ModeAjout = 1;
     ui->frameEditContact->setVisible(1);
-    ui->editDateCreation->setDisabled(1);
     QPixmap image = QPixmap::fromImage(QImage(":/Ressources/Icons/unknownContact.png"));
     int w = ui->Image->width();
     int h = ui->Image->height();
@@ -243,7 +242,6 @@ void MainWindow::ListItemClick()
         ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
 
         ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
-        ui->editDateCreation->setEnabled(0);
 
         QPixmap image = QPixmap::fromImage(contact.getPhoto());
         int w = ui->Image->width();

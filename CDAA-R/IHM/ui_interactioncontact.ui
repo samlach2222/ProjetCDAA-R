@@ -104,6 +104,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="editDateCreation">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>170</x>
