@@ -42,6 +42,9 @@
    <property name="text">
     <string/>
    </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
   </widget>
   <widget class="QFrame" name="frameEditInteraction">
    <property name="geometry">
@@ -119,11 +122,14 @@
       <x>30</x>
       <y>440</y>
       <width>80</width>
-      <height>21</height>
+      <height>22</height>
      </rect>
     </property>
     <property name="text">
      <string>Valider</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Delete">
@@ -132,7 +138,7 @@
       <x>190</x>
       <y>440</y>
       <width>80</width>
-      <height>21</height>
+      <height>22</height>
      </rect>
     </property>
     <property name="text">
@@ -144,8 +150,8 @@
      <rect>
       <x>20</x>
       <y>150</y>
-      <width>271</width>
-      <height>241</height>
+      <width>270</width>
+      <height>240</height>
      </rect>
     </property>
    </widget>
@@ -156,11 +162,14 @@
      <x>260</x>
      <y>500</y>
      <width>80</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="text">
     <string>Fermer</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
    </property>
   </widget>
  </widget>

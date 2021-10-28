@@ -170,6 +170,9 @@
    <property name="text">
     <string>Valider</string>
    </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="boutonAnnuler">
    <property name="geometry">
@@ -182,6 +185,9 @@
    </property>
    <property name="text">
     <string>Annuler</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
    </property>
   </widget>
  </widget>

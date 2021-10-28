@@ -160,9 +160,13 @@ void MainWindow::OpenFC()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
-        emit sendToFilterContact(this->gc);
-        fc.show();
+    if (ui->FilterContactIndicator->isVisible()){
+        this->resetFilters();  //Permet au raccourci clavier de d'abord désactiver le filtrage des contacts si activé
+    } else {
+        if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
+            emit sendToFilterContact(this->gc);
+            fc.show();
+        }
     }
 }
 
