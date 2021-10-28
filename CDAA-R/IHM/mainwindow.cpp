@@ -130,9 +130,6 @@ void MainWindow::DisplayContactList()
         item->setData(Qt::UserRole, v);
         ui->ContactList->addItem(item);
     }
-
-    //Réinitialise l'id selectionné
-    this->idContactSelectionne = -1;
 }
 
 /**
@@ -150,6 +147,9 @@ void MainWindow::RefreshLog()
     }
     model->setStringList(list);
     ui->LogsList->setModel(model);
+
+    //Réinitialise l'id selectionné
+    this->idContactSelectionne = -1;
 }
 
 /**
