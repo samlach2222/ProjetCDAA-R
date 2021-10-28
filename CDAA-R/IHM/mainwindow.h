@@ -44,6 +44,7 @@ private:
     void RefreshLog();
     int GetIdFromRow(std::string);
     void closeEvent(QCloseEvent*);
+    void resetFilters();
 
 public slots:
     void AddContact();
@@ -59,7 +60,6 @@ public slots:
     void ReceiveContactToMainWindow(FicheContact);
     void AddOperationToLog(std::string);
     void ReceiveFromFilterContact(std::vector<FicheContact>);
-    void resetFilters();
     void getGcFromSaveGestionContact(GestionContact);
 
 signals :

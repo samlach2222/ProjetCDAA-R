@@ -365,19 +365,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="FilterContactIndicator">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>40</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -404,7 +391,6 @@
   <tabstop>Delete</tabstop>
   <tabstop>editDateCreation</tabstop>
   <tabstop>BFilterContact</tabstop>
-  <tabstop>FilterContactIndicator</tabstop>
   <tabstop>BRequestContact</tabstop>
   <tabstop>BSaveGestionContact</tabstop>
   <tabstop>LogsList</tabstop>
@@ -570,22 +556,6 @@
     <hint type="destinationlabel">
      <x>243</x>
      <y>33</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>FilterContactIndicator</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>resetFilters()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>270</x>
-     <y>527</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>123</x>
-     <y>567</y>
     </hint>
    </hints>
   </connection>

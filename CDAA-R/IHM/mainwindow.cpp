@@ -48,7 +48,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Edition des controlleurs par défaut
     ui->frameEditContact->setVisible(0);
-    ui->FilterContactIndicator->setVisible(0);
     ui->ChooseImage->setStyleSheet("QPushButton { background-color: rgba(10, 0, 0, 0); }");
 
     // Gestion de la taille relative des icones des boutons avec 90% du bouton
@@ -75,12 +74,6 @@ MainWindow::MainWindow(QWidget *parent)
     int hac = ui->BAddContact->height() * 80/100;
     ui->BAddContact->setIcon(QPAddContact);
     ui->BAddContact->setIconSize(QSize(wac,hac));
-
-    QPixmap QPFilterContactIndicator(":/Ressources/Icons/FilterContact.png");
-    int wfci = ui->BFilterContact->width() * 90/100;
-    int hfci = ui->BFilterContact->height() * 90/100;
-    ui->FilterContactIndicator->setIcon(QPFilterContactIndicator);
-    ui->FilterContactIndicator->setIconSize(QSize(wfci,hfci));
 }
 /**
  * @brief Destructeur de mainwindow
@@ -159,7 +152,7 @@ void MainWindow::OpenFC()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    if (ui->FilterContactIndicator->isVisible()){
+    if (ui->BFilterContact->styleSheet().contains("QPushButton {background-color:red;")){  //Ne pas vérifier le styleSheet avec == au cas où on veuille le modifier plus tard
         this->resetFilters();  //Permet au raccourci clavier de d'abord désactiver le filtrage des contacts si activé
     } else {
         if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
@@ -400,8 +393,7 @@ void MainWindow::AddOperationToLog(std::string str)
  */
 void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 {
-    ui->FilterContactIndicator->setVisible(1);
-    ui->FilterContactIndicator->setStyleSheet("QPushButton {background-color:red;}");
+    ui->BFilterContact->setStyleSheet("QPushButton {background-color:red;}");
     ui->ContactList->clear();
     for(FicheContact c :listContact)
     {
@@ -425,7 +417,7 @@ void MainWindow::resetFilters()
     SoundPlayer::PlayButtonSound();
 
     this->DisplayContactList();
-    ui->FilterContactIndicator->setVisible(0);
+    ui->BFilterContact->setStyleSheet("");
 
     this->setWindowTitle("Projet de CDAA - Groupe R");
 }
