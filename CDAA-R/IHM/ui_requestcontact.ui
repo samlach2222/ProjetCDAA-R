@@ -48,6 +48,9 @@
    <property name="text">
     <string>R1 : Obtenir le nombre de contact total</string>
    </property>
+   <property name="shortcut">
+    <string>&amp;</string>
+   </property>
   </widget>
   <widget class="QCheckBox" name="CB_R2">
    <property name="geometry">
@@ -60,6 +63,9 @@
    </property>
    <property name="text">
     <string>R2 : Obtenir toutes les interactions entre deux dates</string>
+   </property>
+   <property name="shortcut">
+    <string>É</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="DE_DateDebutR2">
@@ -126,6 +132,9 @@
    <property name="text">
     <string>R3 : Obtenir tags TODO d'un contact entre deux dates</string>
    </property>
+   <property name="shortcut">
+    <string>&quot;</string>
+   </property>
   </widget>
   <widget class="QComboBox" name="L_ContactR3">
    <property name="enabled">
@@ -159,6 +168,9 @@
    </property>
    <property name="text">
     <string>R4 : Obtenir tags DATE d'un contact entre deux dates</string>
+   </property>
+   <property name="shortcut">
+    <string>'</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="DE_DateFinR4">
@@ -217,6 +229,9 @@
    <property name="text">
     <string>R5 : Obtenir les tags TODO de tout les contacts entre deux dates</string>
    </property>
+   <property name="shortcut">
+    <string>(</string>
+   </property>
   </widget>
   <widget class="QDateEdit" name="DE_DateFinR5">
    <property name="enabled">
@@ -255,6 +270,9 @@
    </property>
    <property name="text">
     <string>R6 : Obtenir les tags DATE de tout les contacts entre deux dates</string>
+   </property>
+   <property name="shortcut">
+    <string>-</string>
    </property>
   </widget>
   <widget class="QDateEdit" name="DE_DateFinR6">
@@ -298,6 +316,9 @@
    <property name="text">
     <string>Executer Requête</string>
    </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="B_Fermer">
    <property name="geometry">
@@ -310,6 +331,9 @@
    </property>
    <property name="text">
     <string>Fermer</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
    </property>
   </widget>
  </widget>
