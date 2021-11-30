@@ -45,6 +45,7 @@ class FicheContact
         void setPhoto(const QImage &newPhoto);
         const Horodatage &getDateCreation() const;
         std::vector<Interaction> &getListInteraction();
+        void setListInteraction(const std::vector<Interaction> &newListInteraction);
 
         FicheContact(int, std::string, std::string, std::string, std::string, std::string, QImage, Horodatage);
         void AddInteraction(std::string, std::string, Horodatage = Horodatage());

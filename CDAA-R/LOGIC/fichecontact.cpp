@@ -12,6 +12,11 @@
  * @brief Retourne l'id
  * @return l'id
  */
+void FicheContact::setListInteraction(const std::vector<Interaction> &newListInteraction)
+{
+    listInteraction = newListInteraction;
+}
+
 int FicheContact::getId() const
 {
     return id;
