@@ -419,8 +419,7 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
         QListWidgetItem* item = ui->ContactList->item(row);
 
         //Si le dernier id selectionné est trouvé dans la liste des contacts après filtrage
-        int heu = item->data(Qt::UserRole).value<int>();
-        if (heu == idContactSelectionne) {
+        if (item->data(Qt::UserRole).value<int>() == idContactSelectionne) {
             item->setSelected(true);
             contactFiltre = false;
             break;
@@ -448,6 +447,7 @@ void MainWindow::resetFilters()
     SoundPlayer::PlayButtonSound();
 
     this->DisplayContactList();
+    this->ReselectSelectedContact();
     ui->BFilterContact->setStyleSheet("");
 
     this->setWindowTitle("Projet de CDAA - Groupe R");
@@ -471,6 +471,23 @@ void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
     ui->editTelephone->clear();
     ui->frameEditContact->setVisible(0);
     idContactSelectionne = -1;
+}
+
+/**
+ * @brief Resélectionne un contact avec la variable de classe \p idContactSelectionne
+ */
+void MainWindow::ReselectSelectedContact(){
+
+    //Boucle pour chaque contact dans la liste des contacts
+    for (int row = 0; row < ui->ContactList->count(); row++){
+        QListWidgetItem* item = ui->ContactList->item(row);
+
+        //Si l'id correspond au dernier id selectionné
+        if (item->data(Qt::UserRole).value<int>() == idContactSelectionne) {
+            item->setSelected(true);
+            break;
+        }
+    }
 }
 
 /**

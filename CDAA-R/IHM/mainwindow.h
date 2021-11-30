@@ -45,6 +45,7 @@ private:
     int GetIdFromRow(std::string);
     void closeEvent(QCloseEvent*);
     void resetFilters();
+    void ReselectSelectedContact();
 
 public slots:
     void AddContact();
