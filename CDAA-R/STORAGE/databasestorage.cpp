@@ -22,7 +22,7 @@
 static const QSqlDatabase GetBDD(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setHostName("localhost");  //Nom de l'host
-    db.setDatabaseName("ContactDB");  //Nom de la base de données
+    db.setDatabaseName(":/Ressources/Database/FakeDB.db");  //Nom de la base de données
     //db.setUserName("root");
     //db.setPassword("root");
 
@@ -103,6 +103,7 @@ GestionContact DatabaseStorage::Load()
             Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
 
             //Créer un FicheContact avec GestionContact, puis ajouter les interactions en utilisant idFC
+
 
         }
 
