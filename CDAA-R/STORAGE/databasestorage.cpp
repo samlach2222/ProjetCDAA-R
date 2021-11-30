@@ -21,15 +21,15 @@
  */
 static const QSqlDatabase GetBDD(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setHostName("localhost");  //Nom de l'host
-    db.setDatabaseName(":/Ressources/Database/FakeDB.db");  //Nom de la base de données
+    //db.setHostName("localhost");  //Nom de l'host
+
+    db.setDatabaseName("FakeDB.db");  //Nom de la base de données
     //db.setUserName("root");
     //db.setPassword("root");
 
     if (!db.open()){
-        throw std::runtime_error("La connexion à la base de données à échoué");
+        throw db.lastError();
     }
-
 
     return db;
 }
@@ -73,6 +73,7 @@ GestionContact DatabaseStorage::Load()
 {
     std::vector<FicheContact> tabContacts = std::vector<FicheContact>();
 
+    GetBDD();
     QSqlQuery query("SELECT logsValue from LOGS");
 
     if (!query.exec()){
