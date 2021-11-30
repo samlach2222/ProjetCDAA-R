@@ -43,8 +43,9 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(&sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
-    gc = GestionContact();
+    gc = DatabaseStorage::Load();
     idContactSelectionne = -1;
+    DisplayContactList();
     this->RefreshLog();
 
     // Edition des controlleurs par défaut
