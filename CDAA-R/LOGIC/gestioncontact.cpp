@@ -32,10 +32,10 @@ Log &GestionContact::getLog()
 /**
  * @brief Constructeur de la classe
  */
-GestionContact::GestionContact()
+GestionContact::GestionContact(std::vector<FicheContact> tabContacts, Log log)
 {
-    this->TabContacts = std::vector<FicheContact>();
-    this->log = Log();
+    this->TabContacts = tabContacts;
+    this->log = log;
 }
 
 /**

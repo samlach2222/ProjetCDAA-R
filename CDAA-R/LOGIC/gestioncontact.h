@@ -29,7 +29,7 @@ class GestionContact
         const std::vector<FicheContact> &GetAllContacts() const;
         Log &getLog();
 
-        GestionContact();
+        GestionContact(std::vector<FicheContact> = std::vector<FicheContact>(), Log = Log());
         void AddContact(std::string, std::string, std::string, std::string, std::string, QImage, Horodatage = Horodatage());
         void SupprContact(int);
         void ModifyContact(FicheContact);
