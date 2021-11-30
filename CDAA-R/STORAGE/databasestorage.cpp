@@ -96,13 +96,12 @@ GestionContact DatabaseStorage::Load()
         std::string entreprise = query.value(3).toString().toStdString();
         std::string mail = query.value(4).toString().toStdString();
         std::string telephone = query.value(5).toString().toStdString();
+        Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
 
         //photo
         QImage photo;
         photo.loadFromData(query.value(6).toByteArray());
 
-        //creationDate
-        Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
 
         FicheContact fc = FicheContact(id, nom, prenom, entreprise, mail, telephone, photo, creationDate);
 
@@ -113,9 +112,9 @@ GestionContact DatabaseStorage::Load()
             int idInteraction = queryInteractions.value(0).toInt();
             std::string titreInteraction = queryInteractions.value(1).toString().toStdString();
             std::string contenuInteraction = queryInteractions.value(2).toString().toStdString();
-            Horodatage horodatage = Horodatage(queryInteractions.value(3).toString().toStdString());
+            Horodatage dateCreationInteraction = Horodatage(queryInteractions.value(3).toString().toStdString());
 
-            Interaction interaction = Interaction(idInteraction, contenuInteraction, titreInteraction, horodatage);
+            Interaction interaction = Interaction(idInteraction, contenuInteraction, titreInteraction, dateCreationInteraction);
             interactions.push_back(interaction);
         }
         fc.setListInteraction(interactions);

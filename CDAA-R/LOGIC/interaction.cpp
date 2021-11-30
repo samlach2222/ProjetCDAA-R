@@ -55,12 +55,12 @@ void Interaction::setContenu(const std::string &newContenu)
 }
 
 /**
- * @brief Retourne l'horodatage de l'interaction
- * @return l'horodatage de l'interaction
+ * @brief Retourne la date de création de l'interaction
+ * @return la date de création de l'interaction
  */
-const Horodatage &Interaction::getHorodatage() const
+const Horodatage &Interaction::getDateCreation() const
 {
-    return horodatage;
+    return dateCreation;
 }
 
 /**
@@ -77,13 +77,13 @@ const tagsInteraction &Interaction::getTags() const
  * @param[in] id        L'id de l'interaction
  * @param[in] c     Le contenu de l'interaction
  * @param[in] titre     Le titre de l'interaction
- * @param[in] horodatage        L'horodatage de l'interaction
+ * @param[in] horodatage        La date de création de l'interaction
  */
-Interaction::Interaction(int id, std::string c, std::string titre, Horodatage horodatage)
+Interaction::Interaction(int id, std::string c, std::string titre, Horodatage dateCreation)
 {
     this->setContenu(c);
     this->id = id;
-    this->horodatage = horodatage;
+    this->dateCreation = dateCreation;
     this->titre = titre;
 }
 

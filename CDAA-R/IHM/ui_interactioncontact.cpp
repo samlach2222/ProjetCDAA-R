@@ -225,7 +225,7 @@ void UI_InteractionContact::ListItemClick()
         {
             ui->editTitre->setText(QString::fromStdString(i.getTitre()));
             ui->editDescription->setPlainText(QString::fromStdString(i.getContenu()));
-            ui->editDateCreation->setText(QString::fromStdString(i.getHorodatage().ToString()));
+            ui->editDateCreation->setText(QString::fromStdString(i.getDateCreation().ToString()));
         }
     }
 }

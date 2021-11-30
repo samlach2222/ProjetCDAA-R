@@ -21,7 +21,7 @@ class Interaction
         int id;
         std::string titre;
         std::string contenu;
-        Horodatage horodatage;
+        Horodatage dateCreation;
         tagsInteraction tags;
     public:
         int getId() const;
@@ -29,7 +29,7 @@ class Interaction
         void setTitre(const std::string &newTitre);
         const std::string &getContenu() const;
         void setContenu(const std::string &newContenu);
-        const Horodatage &getHorodatage() const;
+        const Horodatage &getDateCreation() const;
         const tagsInteraction &getTags() const;
 
         Interaction(int, std::string, std::string, Horodatage);

@@ -83,7 +83,7 @@ void JSonStorage::Save(GestionContact gc)
             //json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"id"] = i.GetId();  //On a pas besoin d'exporter l'id
             json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"titre"] = QString::fromStdString(i.getTitre());
             json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"contenu"] = QString::fromStdString(i.getContenu());
-            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"horodatage"] = QString::fromStdString(i.getHorodatage().ToString());
+            json["contact"+QString::number(id)+"interaction"+QString::number(idInteraction)+"dateCreation"] = QString::fromStdString(i.getDateCreation().ToString());
 
             ++idInteraction;
         }
@@ -141,10 +141,6 @@ GestionContact JSonStorage::Load()
         std::string entreprise = json["contact"+QString::number(cId)+"entreprise"].toString().toStdString();
         std::string mail = json["contact"+QString::number(cId)+"mail"].toString().toStdString();
         std::string telephone = json["contact"+QString::number(cId)+"telephone"].toString().toStdString();
-
-        //Conversion du string en Horodatage
-        //std::string strDateCreation = json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString();
-        //Horodatage dateCreation = Horodatage(strDateCreation);
         Horodatage dateContact = Horodatage(json["contact"+QString::number(cId)+"dateCreation"].toString().toStdString());
 
         //Conversion du base64 en QImage
@@ -162,11 +158,7 @@ GestionContact JSonStorage::Load()
             //int id = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"id"].toInt();
             std::string titre = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"titre"].toString().toStdString();
             std::string contenu = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"contenu"].toString().toStdString();
-
-            //Conversion du string en Horodatage
-            //std::string strDateInteraction = json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"horodatage"].toString().toStdString();
-            //Horodatage dateInteraction = Horodatage(strDateInteraction);
-            Horodatage dateInteraction = Horodatage(json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"horodatage"].toString().toStdString());
+            Horodatage dateInteraction = Horodatage(json["contact"+QString::number(cId)+"interaction"+QString::number(iId)+"dateCreation"].toString().toStdString());
 
             gc.GetContact(cId).AddInteraction(contenu, titre, dateInteraction);
         }
