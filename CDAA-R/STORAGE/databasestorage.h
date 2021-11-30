@@ -18,6 +18,8 @@
 class DatabaseStorage
 {
     public:
+        static void InitializeBDD();
+
         static void Create(FicheContact);
         static void Update(FicheContact);
         static void Delete(int);

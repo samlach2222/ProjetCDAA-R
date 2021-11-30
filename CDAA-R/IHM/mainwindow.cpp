@@ -44,7 +44,10 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(this, SIGNAL(sendGcToRequestContact(GestionContact)), &rc, SLOT(getGcFromMainWindow(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
+    //Initialisation et chargement de la BDD
+    DatabaseStorage::InitializeBDD();
     gc = DatabaseStorage::Load();
+
     idContactSelectionne = -1;
     DisplayContactList();
     this->RefreshLog();

@@ -19,7 +19,7 @@
  * @brief Fonction constante qui renvoie une base de données \p QSqlDatabase initialisé
  * @return une base de données \p QSqlDatabase initialisé
  */
-static const QSqlDatabase GetBDD(){
+void DatabaseStorage::InitializeBDD(){
     const QString nomBdd = "FakeDB.db";  //Nom du fichier de base de données à utiliser
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
@@ -35,8 +35,6 @@ static const QSqlDatabase GetBDD(){
     if (!db.open()){
         throw db.lastError();
     }
-
-    return db;
 }
 
 /**
@@ -78,7 +76,6 @@ GestionContact DatabaseStorage::Load()
 {
     std::vector<FicheContact> tabContacts = std::vector<FicheContact>();
 
-    GetBDD();
     QSqlQuery query("SELECT logsValue from LOGS");
 
     if (!query.exec()){
