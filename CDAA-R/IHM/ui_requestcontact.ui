@@ -139,6 +139,11 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
    <property name="editable">
     <bool>false</bool>
    </property>
@@ -180,6 +185,11 @@
      <width>121</width>
      <height>24</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QDateEdit" name="DE_DateDebutR4">

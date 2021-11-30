@@ -10,6 +10,7 @@
 #include "ui_ui_requestcontact.h"
 
 #include "../LOGIC/soundplayer.h"
+#include "../STORAGE/databasestorage.h"
 
 #include <QListWidgetItem>
 
@@ -79,22 +80,32 @@ void UI_RequestContact::closeEvent(QCloseEvent *event)
 }
 
 std::string UI_RequestContact::NbContact(){
-    return "6\n";
+    return DatabaseStorage::Request("SELECT COUNT(idContact) FROM CONTACT");
 }
 
 std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate d2){
-    return "Titre : Interaction 1\nContenu : Contenu 1\n\nTitre : Interaction 2\nContenu : Contenu 2\n";
+
+    /*
+        SELECT passenger_ID,
+        train_number,
+        STRFTIME('%d/%m/%Y, %H:%M', sale_datetime)
+        AS sale_formatted_datetime
+        FROM ticket;
+
+        //datetime(timestring, modifiers...)	This returns YYYY-MM-DD HH:MM:SS
+    */
+    return DatabaseStorage::Request("");
 }
 
 std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
-    return "Tag 1 : Tag num 1\nTag 2 : Tag num 2\n";
+    return DatabaseStorage::Request("");
 }
 
 std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
-    return "Tag 1 : Tag num 1\nTag 2 : Tag num 2\n";
+    return DatabaseStorage::Request("");
 }
 std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2){
-    return "Tag 1 : Tag num 1\nTag 2 : Tag num 2\n";
+    return DatabaseStorage::Request("");
 }
 
 std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2){
