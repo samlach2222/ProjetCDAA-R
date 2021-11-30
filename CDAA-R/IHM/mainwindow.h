@@ -77,5 +77,10 @@ signals :
      * @brief Envoie le GestionContact à la fenêtre SaveGestionContact
      */
     void sendGcToSaveGestionContact(GestionContact);
+
+    /**
+     * @brief Envoie le GestionContact à la fenêtre RequestContact
+     */
+    void sendGcToRequestContact(GestionContact);
 };
 #endif // MAINWINDOW_H

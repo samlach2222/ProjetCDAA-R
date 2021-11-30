@@ -41,6 +41,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(&fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
     QObject::connect(this, SIGNAL(sendGcToSaveGestionContact(GestionContact)), &sgc, SLOT(getGcFromMainWindow(GestionContact)));
     QObject::connect(&sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
+    QObject::connect(this, SIGNAL(sendGcToRequestContact(GestionContact)), &rc, SLOT(getGcFromMainWindow(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
     gc = DatabaseStorage::Load();
@@ -173,6 +174,7 @@ void MainWindow::OpenRC()
     SoundPlayer::PlayButtonSound();
 
     if(!(fc.isVisible() || sgc.isVisible() || ic.isVisible())){
+        emit sendGcToRequestContact(this->gc);
         rc.show();
     }
 }

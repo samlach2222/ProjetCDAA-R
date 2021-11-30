@@ -21,6 +21,9 @@
     <normaloff>:/Ressources/Icons/RequestContact.png</normaloff>:/Ressources/Icons/RequestContact.png</iconset>
   </property>
   <widget class="QPlainTextEdit" name="PT_ShowResults">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -28,6 +31,9 @@
      <width>651</width>
      <height>251</height>
     </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QCheckBox" name="CB_R1">
@@ -297,6 +303,29 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>CB_R1</tabstop>
+  <tabstop>CB_R2</tabstop>
+  <tabstop>DE_DateDebutR2</tabstop>
+  <tabstop>DE_DateFinR2</tabstop>
+  <tabstop>CB_R3</tabstop>
+  <tabstop>L_ContactR3</tabstop>
+  <tabstop>DE_DateDebutR3</tabstop>
+  <tabstop>DE_DateFinR3</tabstop>
+  <tabstop>CB_R4</tabstop>
+  <tabstop>L_ContactR4</tabstop>
+  <tabstop>DE_DateDebutR4</tabstop>
+  <tabstop>DE_DateFinR4</tabstop>
+  <tabstop>CB_R5</tabstop>
+  <tabstop>DE_DateDebutR5</tabstop>
+  <tabstop>DE_DateFinR5</tabstop>
+  <tabstop>CB_R6</tabstop>
+  <tabstop>DE_DateDebutR6</tabstop>
+  <tabstop>DE_DateFinR6</tabstop>
+  <tabstop>B_ExecuterRequete</tabstop>
+  <tabstop>B_Fermer</tabstop>
+  <tabstop>PT_ShowResults</tabstop>
+ </tabstops>
  <resources>
   <include location="../ressources.qrc"/>
  </resources>

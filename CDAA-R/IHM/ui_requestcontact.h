@@ -8,6 +8,8 @@
 
 #include <QWidget>
 
+#include <LOGIC/gestioncontact.h>
+
 namespace Ui {
 class UI_RequestContact;
 }
@@ -24,6 +26,7 @@ public:
     ~UI_RequestContact();
 
 private:
+    GestionContact gc;
     Ui::UI_RequestContact *ui;
     void closeEvent(QCloseEvent*);
     std::string NbContact();
@@ -32,10 +35,12 @@ private:
     std::string GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2);
     std::string GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2);
     std::string GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2);
+    void DisplayContactList();
 
 public slots:
     void ButtonDoRequest();
     void changementStatusCB();
+    void getGcFromMainWindow(GestionContact);
 };
 
 #endif // UI_REQUESTCONTACT_H

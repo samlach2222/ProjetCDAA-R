@@ -11,6 +11,8 @@
 
 #include "../LOGIC/soundplayer.h"
 
+#include <QListWidgetItem>
+
 /**
  * @brief Constructeur de UI_RequestContact
  * @param[out] parent    QWidget de création de classe
@@ -19,7 +21,6 @@ UI_RequestContact::UI_RequestContact(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::UI_RequestContact)
 {
-
     ui->setupUi(this);
 }
 
@@ -155,5 +156,29 @@ void UI_RequestContact::changementStatusCB(){
     }
     else{
         ui->B_ExecuterRequete->setEnabled(0);
+    }
+}
+
+
+void UI_RequestContact::getGcFromMainWindow(GestionContact gc){
+    this->gc = gc;
+    DisplayContactList();
+}
+
+/**
+ * @brief Méthode pour rafraichir l'affichage de la liste des contacts
+ */
+void UI_RequestContact::DisplayContactList(){
+    ui->L_ContactR3->clear();
+    ui->L_ContactR4->clear();
+    for(FicheContact c : this->gc.GetAllContacts())
+    {
+        QString str = QString::fromStdString(c.ToString());
+        QListWidgetItem* item = new QListWidgetItem(str);
+        QVariant v;
+        v.setValue(c.getId());
+        item->setData(Qt::UserRole, v);
+        ui->L_ContactR3->addItem(QString::fromStdString(c.ToString()), v);
+        ui->L_ContactR4->addItem(QString::fromStdString(c.ToString()), v);
     }
 }
