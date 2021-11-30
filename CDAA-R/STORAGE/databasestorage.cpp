@@ -71,49 +71,50 @@ void DatabaseStorage::Delete(int id)
  */
 GestionContact DatabaseStorage::Load()
 {
-    GestionContact gc = GestionContact();
+    std::vector<FicheContact> tabContacts = std::vector<FicheContact>();
+
     QSqlQuery query("SELECT logsValue from LOGS");
 
     if (!query.exec()){
         //La base de données ne peut pas être accédé donc GestionContact est vide
-        return gc;
-    }
-    else {
-        std::vector<std::string> logs;
-        while (query.next()){
-            logs.push_back(query.value(0).toString().toStdString());
-        }
-
-        query = QSqlQuery("SELECT * from CONTACT");
-        while (query.next()){
-            int idFC = query.value(0).toInt();
-            std::string nom = query.value(1).toString().toStdString();
-            std::string prenom = query.value(2).toString().toStdString();
-            std::string entreprise = query.value(3).toString().toStdString();
-            std::string mail = query.value(4).toString().toStdString();
-            std::string telephone = query.value(5).toString().toStdString();
-
-            //photo
-            QImage photo;
-            //QByteArray baPhoto = query.value(6).toByteArray();
-            //photo.loadFromData(baPhoto);
-            photo.loadFromData(query.value(6).toByteArray());
-
-            //creationDate
-            Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
-
-            //Créer un FicheContact avec GestionContact, puis ajouter les interactions en utilisant idFC
-
-
-        }
-
-
-
-        //Doit être fait à la fin
-        gc.getLog().setTabLog(logs);
+        return GestionContact();
     }
 
-    return gc;
+    std::vector<std::string> logs;
+    while (query.next()){
+        logs.push_back(query.value(0).toString().toStdString());
+    }
+
+    query = QSqlQuery("SELECT * from CONTACT");
+    while (query.next()){
+        int idFC = query.value(0).toInt();
+        std::string nom = query.value(1).toString().toStdString();
+        std::string prenom = query.value(2).toString().toStdString();
+        std::string entreprise = query.value(3).toString().toStdString();
+        std::string mail = query.value(4).toString().toStdString();
+        std::string telephone = query.value(5).toString().toStdString();
+
+        //photo
+        QImage photo;
+        photo.loadFromData(query.value(6).toByteArray());
+
+        //creationDate
+        Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
+
+        FicheContact fc = FicheContact(idFC, nom, prenom, entreprise, mail, telephone, photo, creationDate);
+
+        //Ajouter les interactions
+
+
+        //Ajouter le contact à tabContacts
+        tabContacts.push_back(fc);
+    }
+
+    //Convertie le vecteur de string en un Log
+    Log log = Log();
+    log.setTabLog(logs);
+
+    return GestionContact(tabContacts, log);
 }
 
 /**
