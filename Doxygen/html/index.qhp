@@ -24,6 +24,7 @@
               <section title="getTelephone" ref="class_fiche_contact.html#a63699b1421423a525c0235caf644ecf1" />
               <section title="RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
               <section title="setEntreprise" ref="class_fiche_contact.html#ac2eb13f8dfd5cceaa9b4af410b0875c7" />
+              <section title="setListInteraction" ref="class_fiche_contact.html#a999bd1736f1dbb9f6ae4491fda9f0bf3" />
               <section title="setMail" ref="class_fiche_contact.html#acf50153df2c61437201485811cb823ea" />
               <section title="setNom" ref="class_fiche_contact.html#ae59b10a724fa6b07771111157c92e176" />
               <section title="setPhoto" ref="class_fiche_contact.html#a72257bda6699552bb73dedab81686709" />
@@ -32,7 +33,7 @@
               <section title="ToString" ref="class_fiche_contact.html#a9f6b0c7e3dda229b3ccf320cc8ea3b1d" />
             </section>
             <section title="GestionContact" ref="class_gestion_contact.html">
-              <section title="GestionContact" ref="class_gestion_contact.html#a0d42db3777c1e15d557979c897acf344" />
+              <section title="GestionContact" ref="class_gestion_contact.html#a9ff6fbb308b6c84306b76441cd4d950f" />
               <section title="AddContact" ref="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca" />
               <section title="GetAllContacts" ref="class_gestion_contact.html#a6314d24d6dee41da4b275b7008e8b603" />
               <section title="GetContact" ref="class_gestion_contact.html#ad56f0f89a3c9a097ccfadbf6781ee266" />
@@ -91,7 +92,7 @@
               <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
               <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
               <section title="ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
-              <section title="resetFilters" ref="class_main_window.html#a47f4eaf9bf802041b3087d6ee60040b7" />
+              <section title="sendGcToRequestContact" ref="class_main_window.html#a9896c8cdabe1e69925d829be86bce942" />
               <section title="sendGcToSaveGestionContact" ref="class_main_window.html#a979a81e4ebef828f3395a073a142b7eb" />
               <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
               <section title="sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
@@ -186,7 +187,7 @@
                   <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
                   <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
                   <section title="ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
-                  <section title="resetFilters" ref="class_main_window.html#a47f4eaf9bf802041b3087d6ee60040b7" />
+                  <section title="sendGcToRequestContact" ref="class_main_window.html#a9896c8cdabe1e69925d829be86bce942" />
                   <section title="sendGcToSaveGestionContact" ref="class_main_window.html#a979a81e4ebef828f3395a073a142b7eb" />
                   <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
                   <section title="sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
@@ -257,6 +258,7 @@
                   <section title="getTelephone" ref="class_fiche_contact.html#a63699b1421423a525c0235caf644ecf1" />
                   <section title="RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
                   <section title="setEntreprise" ref="class_fiche_contact.html#ac2eb13f8dfd5cceaa9b4af410b0875c7" />
+                  <section title="setListInteraction" ref="class_fiche_contact.html#a999bd1736f1dbb9f6ae4491fda9f0bf3" />
                   <section title="setMail" ref="class_fiche_contact.html#acf50153df2c61437201485811cb823ea" />
                   <section title="setNom" ref="class_fiche_contact.html#ae59b10a724fa6b07771111157c92e176" />
                   <section title="setPhoto" ref="class_fiche_contact.html#a72257bda6699552bb73dedab81686709" />
@@ -268,7 +270,7 @@
               <section title="gestioncontact.cpp" ref="gestioncontact_8cpp.html" />
               <section title="gestioncontact.h" ref="gestioncontact_8h.html">
                 <section title="GestionContact" ref="class_gestion_contact.html">
-                  <section title="GestionContact" ref="class_gestion_contact.html#a0d42db3777c1e15d557979c897acf344" />
+                  <section title="GestionContact" ref="class_gestion_contact.html#a9ff6fbb308b6c84306b76441cd4d950f" />
                   <section title="AddContact" ref="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca" />
                   <section title="GetAllContacts" ref="class_gestion_contact.html#a6314d24d6dee41da4b275b7008e8b603" />
                   <section title="GetContact" ref="class_gestion_contact.html#ad56f0f89a3c9a097ccfadbf6781ee266" />
@@ -343,6 +345,7 @@
       <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
       <keyword name="Liste des choses à faire" id="Liste des choses à faire" ref="todo.html" />
       <keyword name="DatabaseStorage" id="DatabaseStorage" ref="class_database_storage.html" />
+      <keyword name="InitializeBDD" id="DatabaseStorage::InitializeBDD" ref="class_database_storage.html#a1761ea4e2e543a31c0798ab412b3e89f" />
       <keyword name="Create" id="DatabaseStorage::Create" ref="class_database_storage.html#a859a5356c6eab52156b442d86f848895" />
       <keyword name="Update" id="DatabaseStorage::Update" ref="class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92" />
       <keyword name="Delete" id="DatabaseStorage::Delete" ref="class_database_storage.html#a7d1eec8934bee30d43b37a6e6087b796" />
@@ -364,6 +367,7 @@
       <keyword name="setPhoto" id="FicheContact::setPhoto" ref="class_fiche_contact.html#a72257bda6699552bb73dedab81686709" />
       <keyword name="getDateCreation" id="FicheContact::getDateCreation" ref="class_fiche_contact.html#ae24355bf3a785dfb04f825c378bfc3b3" />
       <keyword name="getListInteraction" id="FicheContact::getListInteraction" ref="class_fiche_contact.html#ae8a3e404f2d9a9b53cd8adaa4d6439b0" />
+      <keyword name="setListInteraction" id="FicheContact::setListInteraction" ref="class_fiche_contact.html#a999bd1736f1dbb9f6ae4491fda9f0bf3" />
       <keyword name="FicheContact" id="FicheContact::FicheContact" ref="class_fiche_contact.html#a1c7bd5f54d53ea5ac2a14b4e46abb6ba" />
       <keyword name="AddInteraction" id="FicheContact::AddInteraction" ref="class_fiche_contact.html#ae6f9d3e86bbec78878413114f3c61d1a" />
       <keyword name="RemoveInteraction" id="FicheContact::RemoveInteraction" ref="class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c" />
@@ -371,7 +375,7 @@
       <keyword name="GestionContact" id="GestionContact" ref="class_gestion_contact.html" />
       <keyword name="GetAllContacts" id="GestionContact::GetAllContacts" ref="class_gestion_contact.html#a6314d24d6dee41da4b275b7008e8b603" />
       <keyword name="getLog" id="GestionContact::getLog" ref="class_gestion_contact.html#a9c4866042cd57963e34a0513aa6c87ed" />
-      <keyword name="GestionContact" id="GestionContact::GestionContact" ref="class_gestion_contact.html#a0d42db3777c1e15d557979c897acf344" />
+      <keyword name="GestionContact" id="GestionContact::GestionContact" ref="class_gestion_contact.html#a9ff6fbb308b6c84306b76441cd4d950f" />
       <keyword name="AddContact" id="GestionContact::AddContact" ref="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca" />
       <keyword name="SupprContact" id="GestionContact::SupprContact" ref="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25" />
       <keyword name="ModifyContact" id="GestionContact::ModifyContact" ref="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e" />
@@ -425,11 +429,11 @@
       <keyword name="ReceiveContactToMainWindow" id="MainWindow::ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
       <keyword name="AddOperationToLog" id="MainWindow::AddOperationToLog" ref="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f" />
       <keyword name="ReceiveFromFilterContact" id="MainWindow::ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
-      <keyword name="resetFilters" id="MainWindow::resetFilters" ref="class_main_window.html#a47f4eaf9bf802041b3087d6ee60040b7" />
       <keyword name="getGcFromSaveGestionContact" id="MainWindow::getGcFromSaveGestionContact" ref="class_main_window.html#adc010ec668ec3ffc71c523667417c2b4" />
       <keyword name="sendIdToInteraction" id="MainWindow::sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
       <keyword name="sendToFilterContact" id="MainWindow::sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
       <keyword name="sendGcToSaveGestionContact" id="MainWindow::sendGcToSaveGestionContact" ref="class_main_window.html#a979a81e4ebef828f3395a073a142b7eb" />
+      <keyword name="sendGcToRequestContact" id="MainWindow::sendGcToRequestContact" ref="class_main_window.html#a9896c8cdabe1e69925d829be86bce942" />
       <keyword name="MainWindow" id="MainWindow::MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
       <keyword name="~MainWindow" id="MainWindow::~MainWindow" ref="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" />
       <keyword name="SoundPlayer" id="SoundPlayer" ref="class_sound_player.html" />
@@ -460,6 +464,8 @@
       <keyword name="~UI_InteractionContact" id="UI_InteractionContact::~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
       <keyword name="UI_RequestContact" id="UI_RequestContact" ref="class_u_i___request_contact.html" />
       <keyword name="ButtonDoRequest" id="UI_RequestContact::ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
+      <keyword name="changementStatusCB" id="UI_RequestContact::changementStatusCB" ref="class_u_i___request_contact.html#aa9744f1f9f426dcaae1b2e2e0e9e1efd" />
+      <keyword name="getGcFromMainWindow" id="UI_RequestContact::getGcFromMainWindow" ref="class_u_i___request_contact.html#a9a02721cefc17c0a35258e219c3854b7" />
       <keyword name="UI_RequestContact" id="UI_RequestContact::UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
       <keyword name="~UI_RequestContact" id="UI_RequestContact::~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
       <keyword name="UI_SaveGestionContact" id="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html" />

@@ -3,7 +3,7 @@
  * @brief Classe pour la gestion de la base de données
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.0
+ * @version 1.1
  * @date 22/09/2021
  */
 
@@ -16,8 +16,7 @@
 #include <QVariant>
 
 /**
- * @brief Fonction constante qui renvoie une base de données \p QSqlDatabase initialisé
- * @return une base de données \p QSqlDatabase initialisé
+ * @brief Initialise la base de données
  */
 void DatabaseStorage::InitializeBDD(){
     const QString nomBdd = "FakeDB.db";  //Nom du fichier de base de données à utiliser

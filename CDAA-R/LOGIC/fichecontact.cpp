@@ -2,7 +2,7 @@
  * @file LOGIC/fichecontact.cpp
  * @brief Contient les détails d'un contact et ses interactions
  * @author Loïs PAZOLA
- * @version 1.2
+ * @version 1.3
  * @date 04/10/2021
  */
 
@@ -12,11 +12,6 @@
  * @brief Retourne l'id
  * @return l'id
  */
-void FicheContact::setListInteraction(const std::vector<Interaction> &newListInteraction)
-{
-    listInteraction = newListInteraction;
-}
-
 int FicheContact::getId() const
 {
     return id;
@@ -146,6 +141,15 @@ const Horodatage &FicheContact::getDateCreation() const
 std::vector<Interaction> &FicheContact::getListInteraction()
 {
     return listInteraction;
+}
+
+/**
+ * @brief Remplace la liste d'interactions
+ * @param[in] newListInteraction        La nouvelle liste d'interactions
+ */
+void FicheContact::setListInteraction(const std::vector<Interaction> &newListInteraction)
+{
+    listInteraction = newListInteraction;
 }
 
 /**

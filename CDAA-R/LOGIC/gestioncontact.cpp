@@ -31,6 +31,8 @@ Log &GestionContact::getLog()
 
 /**
  * @brief Constructeur de la classe
+ * @param[in] tabContacts       Contacts de l'application
+ * @param[in] log       Logs de l'application
  */
 GestionContact::GestionContact(std::vector<FicheContact> tabContacts, Log log)
 {

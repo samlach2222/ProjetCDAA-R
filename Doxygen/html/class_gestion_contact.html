@@ -77,10 +77,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a9c4866042cd57963e34a0513aa6c87ed"><td align="right" class="memItemLeft" valign="top"><a class="el" href="class_log.html">Log</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a9c4866042cd57963e34a0513aa6c87ed">getLog</a> ()</td></tr>
 <tr class="memdesc:a9c4866042cd57963e34a0513aa6c87ed"><td class="mdescLeft"> </td><td class="mdescRight">Getter de <a class="el" href="class_log.html" title="Classe pour les logs de l'application.">Log</a>.  <a href="class_gestion_contact.html#a9c4866042cd57963e34a0513aa6c87ed">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a9c4866042cd57963e34a0513aa6c87ed"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0d42db3777c1e15d557979c897acf344"><td align="right" class="memItemLeft" valign="top"><a id="a0d42db3777c1e15d557979c897acf344" name="a0d42db3777c1e15d557979c897acf344"></a>
- </td><td class="memItemRight" valign="bottom"><b>GestionContact</b> ()</td></tr>
-<tr class="memdesc:a0d42db3777c1e15d557979c897acf344"><td class="mdescLeft"> </td><td class="mdescRight">Constructeur de la classe. <br/></td></tr>
-<tr class="separator:a0d42db3777c1e15d557979c897acf344"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9ff6fbb308b6c84306b76441cd4d950f"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a9ff6fbb308b6c84306b76441cd4d950f">GestionContact</a> (std::vector&lt;<a class="el" href="class_fiche_contact.html">FicheContact</a>&gt;=std::vector&lt;<a class="el" href="class_fiche_contact.html">FicheContact</a>&gt;(), <a class="el" href="class_log.html">Log</a>=<a class="el" href="class_log.html">Log</a>())</td></tr>
+<tr class="memdesc:a9ff6fbb308b6c84306b76441cd4d950f"><td class="mdescLeft"> </td><td class="mdescRight">Constructeur de la classe.  <a href="class_gestion_contact.html#a9ff6fbb308b6c84306b76441cd4d950f">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a9ff6fbb308b6c84306b76441cd4d950f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a3e46dc0b2954a6de8856efac2c0d11ca"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca">AddContact</a> (std::string, std::string, std::string, std::string, std::string, QImage, <a class="el" href="class_horodatage.html">Horodatage</a>=<a class="el" href="class_horodatage.html">Horodatage</a>())</td></tr>
 <tr class="memdesc:a3e46dc0b2954a6de8856efac2c0d11ca"><td class="mdescLeft"> </td><td class="mdescRight">Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres.  <a href="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a3e46dc0b2954a6de8856efac2c0d11ca"><td class="memSeparator" colspan="2"> </td></tr>
@@ -96,7 +95,42 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe pour la gestion des contacts de l'application. </p>
-</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a9ff6fbb308b6c84306b76441cd4d950f" name="a9ff6fbb308b6c84306b76441cd4d950f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff6fbb308b6c84306b76441cd4d950f">◆ </a></span>GestionContact()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">GestionContact::GestionContact </td>
+<td>(</td>
+<td class="paramtype">std::vector&lt;<a class="el" href="class_fiche_contact.html">FicheContact</a>&gt; </td>
+<td class="paramname"><em>tabContacts</em> = <code>std::vector&lt;<a class="el" href="class_fiche_contact.html">FicheContact</a>&gt;()</code>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="class_log.html">Log</a> </td>
+<td class="paramname"><em>log</em> = <code><a class="el" href="class_log.html">Log</a>()</code> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><!-- $$$GestionContact[overload1]$$$GestionContact::GestionContact(std::vector<FicheContact> tabContacts=std::vector<FicheContact>(),Log log=Log() ) --><div class="memdoc"><div style="display: none">GestionContact::GestionContact(std::vector&lt;FicheContact&gt; tabContacts = std::vector&lt;FicheContact&gt;(), Log log = Log() )</div>
+<p>Constructeur de la classe. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">tabContacts</td><td>Contacts de l'application </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">log</td><td>Logs de l'application </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@GestionContact -->
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a3e46dc0b2954a6de8856efac2c0d11ca" name="a3e46dc0b2954a6de8856efac2c0d11ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e46dc0b2954a6de8856efac2c0d11ca">◆ </a></span>AddContact()</h2>
 <div class="memitem">
