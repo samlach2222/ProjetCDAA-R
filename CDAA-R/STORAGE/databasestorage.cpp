@@ -20,12 +20,17 @@
  * @return une base de données \p QSqlDatabase initialisé
  */
 static const QSqlDatabase GetBDD(){
+    const QString nomBdd = "FakeDB.db";  //Nom du fichier de base de données à utiliser
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    //db.setHostName("localhost");  //Nom de l'host
 
-    db.setDatabaseName("FakeDB.db");  //Nom de la base de données
-    //db.setUserName("root");
-    //db.setPassword("root");
+    //Si la base de données n'est pas présente, copie celui des ressources
+    if (!QFileInfo::exists(nomBdd)){
+        QFile fichierBddRessources(":/Ressources/Database/FakeDB.db");
+
+        fichierBddRessources.copy(nomBdd);
+    }
+
+    db.setDatabaseName(nomBdd);  //Nom de la base de données
 
     if (!db.open()){
         throw db.lastError();
