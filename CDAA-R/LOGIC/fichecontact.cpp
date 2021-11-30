@@ -164,9 +164,6 @@ FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::str
     this->setTelephone(telephone);
     this->setPhoto(photo);
     this->dateCreation = dateCreation;
-
-    std::list<int> test;
-    test.remove(10);
 }
 
 /**
