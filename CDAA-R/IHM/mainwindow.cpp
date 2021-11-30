@@ -11,6 +11,7 @@
 #include "ui_mainwindow.h"
 
 #include "../LOGIC/soundplayer.h"
+#include "../STORAGE/databasestorage.h"
 
 #include <QFileDialog>
 #include <QMessageBox>
@@ -42,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(&sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
-    gc = GestionContact();
+    gc = DatabaseStorage::Load();
     idContactSelectionne = -1;
     this->RefreshLog();
 
