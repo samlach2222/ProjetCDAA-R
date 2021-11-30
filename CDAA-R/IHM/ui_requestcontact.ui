@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>693</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +20,419 @@
    <iconset resource="../ressources.qrc">
     <normaloff>:/Ressources/Icons/RequestContact.png</normaloff>:/Ressources/Icons/RequestContact.png</iconset>
   </property>
+  <widget class="QPlainTextEdit" name="PT_ShowResults">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>651</width>
+     <height>251</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CB_R1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>561</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R1 : Obtenir le nombre de contact total</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CB_R2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>561</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R2 : Obtenir toutes les interactions entre deux dates</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateDebutR2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>60</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateFinR2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>60</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateDebutR3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>100</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateFinR3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>100</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CB_R3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>331</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R3 : Obtenir tags TODO d'un contact entre deux dates</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="L_ContactR3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>100</y>
+     <width>120</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CB_R4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>331</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R4 : Obtenir tags DATE d'un contact entre deux dates</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateFinR4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>140</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="L_ContactR4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>140</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateDebutR4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>140</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CB_R5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>401</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R5 : Obtenir les tags TODO de tout les contacts entre deux dates</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateFinR5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>180</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateDebutR5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>180</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CB_R6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>401</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R6 : Obtenir les tags DATE de tout les contacts entre deux dates</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateFinR6">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>220</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="DE_DateDebutR6">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>220</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="B_ExecuterRequete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Executer Requête</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="B_Fermer">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="../ressources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>CB_R6</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>changementStatusCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CB_R5</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>changementStatusCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>26</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>14</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CB_R4</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>changementStatusCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CB_R3</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>changementStatusCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CB_R2</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>changementStatusCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CB_R1</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>changementStatusCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>22</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_Fermer</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>596</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>B_ExecuterRequete</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_RequestContact</receiver>
+   <slot>ButtonDoRequest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>282</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>changementStatusCB()</slot>
+  <slot>closeEvent()</slot>
+  <slot>ButtonDoRequest()</slot>
+ </slots>
 </ui>

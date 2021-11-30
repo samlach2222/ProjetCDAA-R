@@ -26,9 +26,16 @@ public:
 private:
     Ui::UI_RequestContact *ui;
     void closeEvent(QCloseEvent*);
+    std::string NbContact();
+    std::string GetAllInteractionsBetweenTwoDates(QDate d1, QDate d2);
+    std::string GetTagTodoContactBetweenTwoDates(int idContact, QDate d1, QDate d2);
+    std::string GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2);
+    std::string GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2);
+    std::string GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2);
 
 public slots:
     void ButtonDoRequest();
+    void changementStatusCB();
 };
 
 #endif // UI_REQUESTCONTACT_H
