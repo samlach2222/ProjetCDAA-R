@@ -60,6 +60,10 @@ void UI_InteractionContact::closeEvent(QCloseEvent *event)
 
     emit sendContactToMainWindow(this->contact);
 
+    ui->editTitre->clear();
+    ui->editDescription->clear();
+    ui->frameEditInteraction->setVisible(0);
+
     //event->ignore();  //Empêche la fermeture de la fenêtre
     //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }
