@@ -67,7 +67,7 @@ void DatabaseStorage::Delete(int id)
 GestionContact DatabaseStorage::Load()
 {
     GestionContact gc = GestionContact();
-    QSqlQuery query("SELECT logsValue from LOGS");
+    QSqlQuery query("SELECT logsValue from LOGS", GetBDD());
 
     if (!query.exec()){
         //La base de données ne peut pas être accédé donc GestionContact est vide
