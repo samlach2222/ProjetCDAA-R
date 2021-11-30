@@ -401,8 +401,10 @@ void MainWindow::AddOperationToLog(std::string str)
 void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 {
     ui->BFilterContact->setStyleSheet("QPushButton {background-color:red;}");
+
+    idContactSelectionne = -1;
     ui->ContactList->clear();
-    for(FicheContact c :listContact)
+    for(FicheContact c : listContact)
     {
         QString str = QString::fromStdString(c.ToString());
         QListWidgetItem* item = new QListWidgetItem(str);
@@ -411,6 +413,14 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
         item->setData(Qt::UserRole, v);
         ui->ContactList->addItem(item);
     }
+
+    //Cache l'édition de contact
+    ui->editNom->clear();
+    ui->editPrenom->clear();
+    ui->editEntreprise->clear();
+    ui->editMail->clear();
+    ui->editTelephone->clear();
+    ui->frameEditContact->setVisible(0);
 
     this->setWindowTitle("Projet de CDAA - Groupe R (FILTRAGE ACTIVÉ)");
 }
@@ -436,10 +446,17 @@ void MainWindow::resetFilters()
 void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
 {
     this->gc = gc;
+    idContactSelectionne = -1;
 
     //Rafraichissement de la fenêtre
     this->DisplayContactList();
     this->RefreshLog();
+    ui->editNom->clear();
+    ui->editPrenom->clear();
+    ui->editEntreprise->clear();
+    ui->editMail->clear();
+    ui->editTelephone->clear();
+    ui->frameEditContact->setVisible(0);
 }
 
 /**
