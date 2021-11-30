@@ -86,9 +86,10 @@ GestionContact DatabaseStorage::Load()
         logs.push_back(query.value(0).toString().toStdString());
     }
 
+    //Boucle pour chaque contact
     query = QSqlQuery("SELECT * from CONTACT");
     while (query.next()){
-        int idFC = query.value(0).toInt();
+        int id = query.value(0).toInt();
         std::string nom = query.value(1).toString().toStdString();
         std::string prenom = query.value(2).toString().toStdString();
         std::string entreprise = query.value(3).toString().toStdString();
@@ -102,12 +103,23 @@ GestionContact DatabaseStorage::Load()
         //creationDate
         Horodatage creationDate = Horodatage(query.value(7).toString().toStdString());
 
-        FicheContact fc = FicheContact(idFC, nom, prenom, entreprise, mail, telephone, photo, creationDate);
+        FicheContact fc = FicheContact(id, nom, prenom, entreprise, mail, telephone, photo, creationDate);
 
-        //Ajouter les interactions
+        //Boucle pour chaque interaction du contact
+        std::vector<Interaction> interactions = std::vector<Interaction>();
+        QSqlQuery queryInteractions = QSqlQuery("SELECT * from INTERACTION WHERE contactId = "+QString::number(id));
+        while (queryInteractions.next()){
+            int idInteraction = queryInteractions.value(0).toInt();
+            std::string titreInteraction = queryInteractions.value(1).toString().toStdString();
+            std::string contenuInteraction = queryInteractions.value(2).toString().toStdString();
+            Horodatage horodatage = Horodatage(queryInteractions.value(3).toString().toStdString());
 
+            Interaction interaction = Interaction(idInteraction, contenuInteraction, titreInteraction, horodatage);
+            interactions.push_back(interaction);
+        }
+        fc.setListInteraction(interactions);
 
-        //Ajouter le contact à tabContacts
+        //Ajoute le contact à tabContacts
         tabContacts.push_back(fc);
     }
 
