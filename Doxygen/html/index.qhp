@@ -62,7 +62,7 @@
             <section title="Interaction" ref="class_interaction.html">
               <section title="Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
               <section title="getContenu" ref="class_interaction.html#a6e48c2f533cad1635a0339aa58eaa4df" />
-              <section title="getHorodatage" ref="class_interaction.html#abaf5eec55477d564f6f0b00fd576cedb" />
+              <section title="getDateCreation" ref="class_interaction.html#ac520505066dcf509d9d047273a7d551e" />
               <section title="getId" ref="class_interaction.html#aaead50ecd23e853601de816b701bcb12" />
               <section title="getTags" ref="class_interaction.html#aeb756b7792c20838b7f1e49218e6b294" />
               <section title="getTitre" ref="class_interaction.html#a1e786d709b728db6d4cc315f66d34448" />
@@ -286,7 +286,7 @@
                 <section title="Interaction" ref="class_interaction.html">
                   <section title="Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
                   <section title="getContenu" ref="class_interaction.html#a6e48c2f533cad1635a0339aa58eaa4df" />
-                  <section title="getHorodatage" ref="class_interaction.html#abaf5eec55477d564f6f0b00fd576cedb" />
+                  <section title="getDateCreation" ref="class_interaction.html#ac520505066dcf509d9d047273a7d551e" />
                   <section title="getId" ref="class_interaction.html#aaead50ecd23e853601de816b701bcb12" />
                   <section title="getTags" ref="class_interaction.html#aeb756b7792c20838b7f1e49218e6b294" />
                   <section title="getTitre" ref="class_interaction.html#a1e786d709b728db6d4cc315f66d34448" />
@@ -403,7 +403,7 @@
       <keyword name="setTitre" id="Interaction::setTitre" ref="class_interaction.html#a26ff4a42202e97a92d428415fd10db73" />
       <keyword name="getContenu" id="Interaction::getContenu" ref="class_interaction.html#a6e48c2f533cad1635a0339aa58eaa4df" />
       <keyword name="setContenu" id="Interaction::setContenu" ref="class_interaction.html#ae46f9352cd56ea072a2d7946a364f133" />
-      <keyword name="getHorodatage" id="Interaction::getHorodatage" ref="class_interaction.html#abaf5eec55477d564f6f0b00fd576cedb" />
+      <keyword name="getDateCreation" id="Interaction::getDateCreation" ref="class_interaction.html#ac520505066dcf509d9d047273a7d551e" />
       <keyword name="getTags" id="Interaction::getTags" ref="class_interaction.html#aeb756b7792c20838b7f1e49218e6b294" />
       <keyword name="Interaction" id="Interaction::Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
       <keyword name="UpdateTags" id="Interaction::UpdateTags" ref="class_interaction.html#a776e9bb404900b89be994e659d207149" />

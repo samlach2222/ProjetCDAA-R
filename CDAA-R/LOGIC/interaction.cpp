@@ -77,7 +77,7 @@ const tagsInteraction &Interaction::getTags() const
  * @param[in] id        L'id de l'interaction
  * @param[in] c     Le contenu de l'interaction
  * @param[in] titre     Le titre de l'interaction
- * @param[in] horodatage        La date de création de l'interaction
+ * @param[in] dateCreation        La date de création de l'interaction
  */
 Interaction::Interaction(int id, std::string c, std::string titre, Horodatage dateCreation)
 {
