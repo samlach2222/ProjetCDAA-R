@@ -10,8 +10,7 @@ Projet CDAA - L3 Info - Grpe R
 - Conception UML
   - Lien entre les classes IHM
   - Correction des fonctions par rapport au code
-- Ajout en IHM des fonctions basiques des affichages
-- Ajouter des shortcuts pour les boutons
 - Actualiser les contacts filtrés après l'ajout ou la modification d'un contact
 - Déselectionner et vider le contenu des zones de texte après fermeture des sous-fenêtres
 - Enlever CDAA-R\Ressources\Database\FakeDb.db quand on ne l'utilisera plus
+- Gérer la sélection d'un contact et d'une interaction avec les touches fléchées
