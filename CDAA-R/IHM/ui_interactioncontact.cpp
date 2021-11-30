@@ -17,7 +17,7 @@
 #include <QMessageBox>
 
 /**
- * @brief Variable Booléenne pour savoir si on modifie ou si on crée une intéraction
+ * @brief Variable Booléenne pour savoir si on modifie ou si on crée une interaction
  */
 bool ModeAjoutInteraction = 1;
 

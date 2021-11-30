@@ -197,7 +197,7 @@ void MainWindow::OpenSGC()
 }
 
 /**
- * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'intéraction, si aucune fenêtre n'est ouverte
+ * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'interaction, si aucune fenêtre n'est ouverte
  */
 void MainWindow::ListItemDoubleClick()
 {
@@ -251,7 +251,7 @@ void MainWindow::ListItemClick()
 }
 
 /**
- * @brief Méthode permettant de supprimer l'intéraction des logs
+ * @brief Méthode permettant de supprimer l'interaction des logs
  */
 void MainWindow::LogsDoubleClick()  // disable Logs edition
 {
@@ -376,7 +376,7 @@ int MainWindow::GetIdFromRow(std::string row)
 }
 
 /**
- * @brief Slot permettant de mettre à jour le contact après édition de ses intéractions
+ * @brief Slot permettant de mettre à jour le contact après édition de ses interactions
  * @param[in] contact
  */
 void MainWindow::ReceiveContactToMainWindow(FicheContact contact)

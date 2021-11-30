@@ -1,6 +1,6 @@
 /**
  * @file LOGIC/tagsInteraction.cpp
- * @brief Contient le tableau pour gèrer les tags des intéractions
+ * @brief Contient le tableau pour gèrer les tags des interactions
  * @author Samuel LACHAUD
  * @version 1.0
  * @date 06/10/2021
@@ -27,7 +27,7 @@ void tagsInteraction::setTags(const std::vector<std::tuple<std::string, std::str
 }
 
 /**
- * @brief Constructeur de la classe de gestion des tags d'intéraction
+ * @brief Constructeur de la classe de gestion des tags d'interaction
  */
 tagsInteraction::tagsInteraction()
 {

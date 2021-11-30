@@ -64,7 +64,7 @@ public slots:
 
 signals :
     /**
-     * @brief Signal permettant d'envoyer l'id du contact auquel on met des intéraction, ainsi que la classe de gestion de contacts
+     * @brief Signal permettant d'envoyer l'id du contact auquel on met des interaction, ainsi que la classe de gestion de contacts
      */
     void sendIdToInteraction(int,GestionContact);
 

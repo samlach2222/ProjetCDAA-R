@@ -1,6 +1,6 @@
 /**
  * @file IHM/ui_interactioncontact.h
- * @brief Fichier header pour la fenêtre de gestion des intéractions d'un contact
+ * @brief Fichier header pour la fenêtre de gestion des interactions d'un contact
  * @author Samuel LACHAUD
  */
 #ifndef UI_INTERACTIONCONTACT_H
@@ -17,7 +17,7 @@ class UI_InteractionContact;
 }
 
 /**
- * @brief Classe pour la fenêtre de gestion des intéractions d'un contact
+ * @brief Classe pour la fenêtre de gestion des interactions d'un contact
  */
 class UI_InteractionContact : public QWidget
 {
@@ -49,7 +49,7 @@ signals :
     void sendContactToMainWindow(FicheContact);
 
     /**
-     * @brief Signal permettant d'envoyer les modifications, ajout et suppression d'intéraction vers les logs
+     * @brief Signal permettant d'envoyer les modifications, ajout et suppression d'interaction vers les logs
      */
     void AddOperationToLog(std::string);
 };

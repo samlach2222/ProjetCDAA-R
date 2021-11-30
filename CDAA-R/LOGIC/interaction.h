@@ -1,6 +1,6 @@
 /**
  * @file LOGIC/interaction.h
- * @brief Fichier header pour une intéraction
+ * @brief Fichier header pour une interaction
  * @author Samuel LACHAUD
  * @author Samuel LACHAUD
  */
@@ -13,7 +13,7 @@
 #include <string>
 
 /**
- * @brief Classe pour une intéraction
+ * @brief Classe pour une interaction
  */
 class Interaction
 {

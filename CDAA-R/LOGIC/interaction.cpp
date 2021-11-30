@@ -1,6 +1,6 @@
 /**
  * @file LOGIC/interaction.cpp
- * @brief Classe pour une intéraction
+ * @brief Classe pour une interaction
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
  * @version 1.1
@@ -37,8 +37,8 @@ void Interaction::setTitre(const std::string &newTitre)
 }
 
 /**
- * @brief Retourne le contenu de l'intéraction
- * @return le contenu de l'intéraction
+ * @brief Retourne le contenu de l'interaction
+ * @return le contenu de l'interaction
  */
 const std::string &Interaction::getContenu() const
 {
@@ -46,7 +46,7 @@ const std::string &Interaction::getContenu() const
 }
 
 /**
- * @brief Remplace le contenu de l'intéraction et met à jour les tags
+ * @brief Remplace le contenu de l'interaction et met à jour les tags
  * @param[in] newContenu     Le nouveau contenu
  */
 void Interaction::setContenu(const std::string &newContenu)
@@ -64,8 +64,8 @@ const Horodatage &Interaction::getHorodatage() const
 }
 
 /**
- * @brief Permet de récupérer les tags d'un intéraction
- * @return classe des tags d'intéraction
+ * @brief Permet de récupérer les tags d'un interaction
+ * @return classe des tags d'interaction
  */
 const tagsInteraction &Interaction::getTags() const
 {

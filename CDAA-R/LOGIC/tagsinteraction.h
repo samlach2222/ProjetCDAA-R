@@ -1,6 +1,6 @@
 /**
  * @file LOGIC/tagsInteraction.h
- * @brief Fichier header pour la gestion des tags des intéractions
+ * @brief Fichier header pour la gestion des tags des interactions
  * @author Samuel LACHAUD
  */
 #ifndef TAGSINTERACTION_H
