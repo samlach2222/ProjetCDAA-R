@@ -146,7 +146,7 @@ void MainWindow::RefreshLog()
     model->setStringList(list);
     ui->LogsList->setModel(model);
 
-    //Réinitialise l'id selectionné
+    //Réinitialise l'id sélectionné
     this->idContactSelectionne = -1;
 }
 
@@ -418,7 +418,7 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
     for (int row = 0; row < ui->ContactList->count(); row++){
         QListWidgetItem* item = ui->ContactList->item(row);
 
-        //Si le dernier id selectionné est trouvé dans la liste des contacts après filtrage
+        //Si le dernier id sélectionné est trouvé dans la liste des contacts après filtrage
         if (item->data(Qt::UserRole).value<int>() == idContactSelectionne) {
             item->setSelected(true);
             contactFiltre = false;
@@ -482,7 +482,7 @@ void MainWindow::ReselectSelectedContact(){
     for (int row = 0; row < ui->ContactList->count(); row++){
         QListWidgetItem* item = ui->ContactList->item(row);
 
-        //Si l'id correspond au dernier id selectionné
+        //Si l'id correspond au dernier id sélectionné
         if (item->data(Qt::UserRole).value<int>() == idContactSelectionne) {
             item->setSelected(true);
             break;
