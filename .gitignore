@@ -70,3 +70,7 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
+
+# Ignore DB Browser for SQLite Portable
+Programs/SQLiteDatabaseBrowser
+Programs/SQLiteDatabaseBrowserPortable
