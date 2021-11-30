@@ -14,3 +14,4 @@ Projet CDAA - L3 Info - Grpe R
 - Ajouter des shortcuts pour les boutons
 - Actualiser les contacts filtrés après l'ajout ou la modification d'un contact
 - Déselectionner et vider le contenu des zones de texte après fermeture des sous-fenêtres
+- Enlever CDAA-R\Ressources\Database\FakeDb.db quand on ne l'utilisera plus
