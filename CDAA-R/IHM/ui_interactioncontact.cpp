@@ -16,6 +16,8 @@
 #include <QDate>
 #include <QMessageBox>
 
+#include <STORAGE/databasestorage.h>
+
 /**
  * @brief Variable Booléenne pour savoir si on modifie ou si on crée une interaction
  */
@@ -153,6 +155,7 @@ void UI_InteractionContact::ValiderInteraction()
                 {
                     i.setTitre(ui->editTitre->text().toStdString());
                     i.setContenu(ui->editDescription->toPlainText().toStdString());
+                    DatabaseStorage::UpdateInteractionAndTags(i);
                 }
             }
             emit AddOperationToLog("Interaction Modified");

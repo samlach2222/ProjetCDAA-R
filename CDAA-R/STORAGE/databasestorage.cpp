@@ -86,7 +86,7 @@ void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId)
     tagsInteraction t = i.getTags(); // ajout des tags associés
     for(std::tuple<std::string, std::string> tuple : t.getTags()){
         strQuery = "INSERT INTO TAGS (tagTodo, tagDate, interactionId) ";
-        strQuery = "VALUES(:todo, :date, :id)";
+        strQuery += "VALUES(:todo, :date, :id)";
         query.prepare(strQuery);
         query.bindValue(":todo", QString::fromStdString(std::get<0>(tuple)));
         query.bindValue(":date", QString::fromStdString(std::get<1>(tuple)));
@@ -135,9 +135,6 @@ void DatabaseStorage::UpdateContact(FicheContact c)
     query.bindValue(":picture", b64str);
     query.bindValue(":creationDate", QString::fromStdString(c.getDateCreation().ToString()));
     query.exec();
-
-    QSqlError err = query.lastError();
-    int qizufg = 0;
 }
 
 /**
@@ -147,7 +144,7 @@ void DatabaseStorage::UpdateContact(FicheContact c)
 void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
 {
     QString strQuery = "UPDATE INTERACTION "; // mise à jour d'interaction
-    strQuery += "SET(:interactionTitle, :interactionContent, :interactionDate) ";
+    strQuery += "SET interactionTitle = :interactionTitle, interactionContent = :interactionContent, interactionDate = :interactionDate ";
     strQuery += "WHERE interactionId = :id";
     QSqlQuery query;
     query.prepare(strQuery);
@@ -157,7 +154,7 @@ void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
     query.bindValue(":interactionDate", QString::fromStdString(i.getDateCreation().ToString()));
     query.exec();
 
-    strQuery = "DELETE FROM TAGS"; // suppression des tags associés
+    strQuery = "DELETE FROM TAGS "; // suppression des tags associés
     strQuery += "WHERE interactionId = :id";
     query.prepare(strQuery);
     query.bindValue(":id", i.getId());
@@ -166,12 +163,15 @@ void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
     tagsInteraction t = i.getTags(); // recréation des tags associés
     for(std::tuple<std::string, std::string> tuple : t.getTags()){
         strQuery = "INSERT INTO TAGS (tagTodo, tagDate, interactionId) ";
-        strQuery = "VALUES(:todo, :date, :id)";
+        strQuery += "VALUES(:todo, :date, :id)";
         query.prepare(strQuery);
         query.bindValue(":todo", QString::fromStdString(std::get<0>(tuple)));
         query.bindValue(":date", QString::fromStdString(std::get<1>(tuple)));
         query.bindValue(":id", i.getId());
         query.exec();
+
+        QSqlError err = query.lastError();
+        int qizufg = 0;
     }
 }
 
@@ -203,7 +203,7 @@ void DatabaseStorage::DeleteInteractionAndTags(Interaction i)
     query.bindValue(":id", i.getId());
     query.exec();
 
-    strQuery = "DELETE FROM TAGS";
+    strQuery = "DELETE FROM TAGS ";
     strQuery += "WHERE interactionId = :id";
     query.prepare(strQuery);
     query.bindValue(":id", i.getId());

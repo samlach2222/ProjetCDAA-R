@@ -8,6 +8,8 @@
 
 #include "fichecontact.h"
 
+#include <STORAGE/databasestorage.h>
+
 /**
  * @brief Retourne l'id
  * @return l'id
@@ -206,6 +208,7 @@ void FicheContact::AddInteraction(std::string contenuInteraction, std::string ti
     Interaction i = Interaction(firstAvailableId, contenuInteraction, titreInteraction, horodatage);
 
     listInteraction.push_back(i);
+    DatabaseStorage::CreateInteractionAndTags(i, this->getId());
 }
 
 /**
@@ -225,8 +228,11 @@ void FicheContact::RemoveInteraction(int id)
     int decalage = 0;
     for (int& index: indexInteractionsASupprimer){
         listInteraction.erase(listInteraction.begin() + index - decalage);
+        DatabaseStorage::DeleteInteractionAndTags(this->listInteraction.at(index));
         decalage++;
     }
+
+
 
     //listInteraction.erase (std::remove_if(listInteraction.begin(), listInteraction.end(), [&](Interaction currentI){return currentI == i;}));
 }
