@@ -9,7 +9,7 @@
 
 #include "databasestorage.h"
 
-#include "../LOGIC/horodatage.h"
+#include <LOGIC/horodatage.h>
 
 #include <QImage>
 #include <QtSql>

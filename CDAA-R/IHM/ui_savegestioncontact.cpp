@@ -10,8 +10,8 @@
 #include "ui_savegestioncontact.h"
 #include "ui_ui_savegestioncontact.h"
 
-#include "../LOGIC/soundplayer.h"
-#include "../STORAGE/jsonstorage.h"
+#include <LOGIC/soundplayer.h>
+#include <STORAGE/jsonstorage.h>
 
 /**
  * @brief Constructeur de UI_SaveGestionContact

@@ -6,7 +6,7 @@
  * @date 23/09/2021
  */
 
-#include "IHM/mainwindow.h"
+#include <IHM/mainwindow.h>
 
 #include <QApplication>
 

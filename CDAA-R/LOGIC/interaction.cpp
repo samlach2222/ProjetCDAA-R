@@ -9,6 +9,10 @@
 
 #include "interaction.h"
 
+#include <QDate>
+#include <QString>
+#include <QStringList>
+
 /**
  * @brief Retourne l'id
  * @return l'id

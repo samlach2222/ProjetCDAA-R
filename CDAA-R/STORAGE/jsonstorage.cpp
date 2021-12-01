@@ -9,8 +9,8 @@
 
 #include "jsonstorage.h"
 
-#include "../LOGIC/fichecontact.h"
-#include "../LOGIC/horodatage.h"
+#include <LOGIC/fichecontact.h>
+#include <LOGIC/horodatage.h>
 
 #include <QBuffer>
 #include <QByteArray>

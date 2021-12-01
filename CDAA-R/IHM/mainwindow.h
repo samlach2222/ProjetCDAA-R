@@ -9,8 +9,8 @@
 
 #include <QMainWindow>
 
-#include "../LOGIC/fichecontact.h"
-#include "../LOGIC/gestioncontact.h"
+#include <LOGIC/fichecontact.h>
+#include <LOGIC/gestioncontact.h>
 #include "ui_filtercontact.h"
 #include "ui_interactioncontact.h"
 #include "ui_requestcontact.h"

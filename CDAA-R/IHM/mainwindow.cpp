@@ -10,8 +10,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "../LOGIC/soundplayer.h"
-#include "../STORAGE/databasestorage.h"
+#include <LOGIC/soundplayer.h>
+#include <STORAGE/databasestorage.h>
 
 #include <QFileDialog>
 #include <QMessageBox>

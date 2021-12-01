@@ -9,7 +9,7 @@
 #ifndef JSONSTORAGE_H
 #define JSONSTORAGE_H
 
-#include "../LOGIC/gestioncontact.h"
+#include <LOGIC/gestioncontact.h>
 
 /**
  * @brief Classe pour la gestion de l'import et l'export au format JSon des informations du programme

@@ -15,6 +15,7 @@
 #include <QImage>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QListWidgetItem>
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QSound>

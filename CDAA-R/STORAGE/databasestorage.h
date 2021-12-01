@@ -7,8 +7,8 @@
 #ifndef DATABASESTORAGE_H
 #define DATABASESTORAGE_H
 
-#include "../LOGIC/fichecontact.h"
-#include "../LOGIC/gestioncontact.h"
+#include <LOGIC/fichecontact.h>
+#include <LOGIC/gestioncontact.h>
 
 #include <string>
 

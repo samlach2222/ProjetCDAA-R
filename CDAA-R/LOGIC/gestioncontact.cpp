@@ -9,7 +9,7 @@
 
 #include "gestioncontact.h"
 
-#include "../STORAGE/databasestorage.h"
+#include <STORAGE/databasestorage.h>
 
 /**
  * @brief Permet de retourner tout les contacts

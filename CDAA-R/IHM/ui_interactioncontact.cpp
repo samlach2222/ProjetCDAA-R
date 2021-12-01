@@ -9,9 +9,9 @@
 #include "ui_interactioncontact.h"
 #include "ui_ui_interactioncontact.h"
 
-#include "../LOGIC/horodatage.h"
-#include "../LOGIC/soundplayer.h"
-#include "../LOGIC/tagsinteraction.h"
+#include <LOGIC/horodatage.h>
+#include <LOGIC/soundplayer.h>
+#include <LOGIC/tagsinteraction.h>
 
 #include <QDate>
 #include <QMessageBox>
