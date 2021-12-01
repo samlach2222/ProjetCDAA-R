@@ -100,8 +100,7 @@ GestionContact DatabaseStorage::Load()
 
         //photo
         QImage photo;
-        photo.loadFromData(query.value(6).toByteArray());
-
+        photo.loadFromData(QByteArray::fromBase64(query.value(6).toString().toLocal8Bit()));
 
         FicheContact fc = FicheContact(id, nom, prenom, entreprise, mail, telephone, photo, creationDate);
 
