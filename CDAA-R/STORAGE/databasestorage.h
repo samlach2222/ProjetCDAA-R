@@ -24,7 +24,7 @@ class DatabaseStorage
         static void Update(FicheContact);
         static void Delete(int);
         static GestionContact Load();
-        static std::string Request(std::string);
+        static std::vector<std::vector<std::string>> Request(std::string);
 };
 
 #endif // DATABASESTORAGE_H

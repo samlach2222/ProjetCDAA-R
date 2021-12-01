@@ -136,10 +136,24 @@ GestionContact DatabaseStorage::Load()
 /**
  * @brief Envoie la requête sql \p sqlRequest et retourne le résultat
  * @param[in] sqlRequest        La requête sql
- * @return le résultat de la requête
- * @todo MÉTHODE À ÉCRIRE
+ * @return le résultat sous forme de string pour chaque valeur, pour chaque ligne de résultat
  */
-std::string DatabaseStorage::Request(std::string sqlRequest)
+std::vector<std::vector<std::string>> DatabaseStorage::Request(std::string sqlRequest)
 {
-    //TODO
+    std::vector<std::vector<std::string>> resultats = std::vector<std::vector<std::string>>();
+    QSqlQuery query(QString::fromStdString(sqlRequest));
+
+    //Pour chaque ligne de résultat de la requête
+    while(query.next()){
+        //Ajoute chaque valeur dans un vector de string...
+        std::vector<std::string> ligneResultat = std::vector<std::string>();
+        for (int idValue = 0; idValue < query.record().count(); idValue++){
+            ligneResultat.push_back(query.value(idValue).toString().toStdString());
+        }
+
+        //....Puis ajoute ce vector au vector principal contenant les valeurs de chaque ligne
+        resultats.push_back(ligneResultat);
+    }
+
+    return resultats;
 }
