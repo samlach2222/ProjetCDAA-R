@@ -20,9 +20,16 @@ class DatabaseStorage
     public:
         static void InitializeBDD();
 
-        static void Create(FicheContact);
-        static void Update(FicheContact);
-        static void Delete(int);
+        static void CreateContact(FicheContact);
+        static void CreateInteractionAndTags(Interaction i, int contactId);
+        static void CreateLog(std::string);
+
+        static void UpdateContact(FicheContact);
+        static void UpdateInteractionAndTags(Interaction);
+
+        static void DeleteContact(FicheContact);
+        static void DeleteInteractionAndTags(Interaction);
+
         static GestionContact Load();
         static std::vector<std::vector<std::string>> Request(std::string);
 };

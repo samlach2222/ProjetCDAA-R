@@ -39,9 +39,8 @@ void DatabaseStorage::InitializeBDD(){
 /**
  * @brief Créé une FicheContact dans la base de données
  * @param[in] c     La FicheContact à créé dans la base de données
- * @todo MÉTHODE À ÉCRIRE
  */
-void DatabaseStorage::Create(FicheContact c)
+void DatabaseStorage::CreateContact(FicheContact c)
 {
     QString strQuery = "INSERT INTO CONTACT(contactFirstName, contactLastName, contactEntreprise, contactMail, contactMail, contactPhone, contactPicture, contactCreationDate) ";
     strQuery += "VALUES(:firstName, :lastName, :entreprise, :mail, :phone, :picture, :creationDate)";
@@ -68,11 +67,50 @@ void DatabaseStorage::Create(FicheContact c)
 }
 
 /**
+ * @brief Créé une interaction et ses tags associés dans la base de données
+ * @param i     Interaction à ajouter
+ * @param contactId     id du contact auquel appartiens l'interaction
+ */
+void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId)
+{
+    QString strQuery = "INSERT INTO INTERACTION(interactionTitle, interactionContent, interactionDate, contactId) "; // mise à jour d'interaction
+    strQuery += "VALUES(:interactionTitle, :interactionContent, :interactionDate, :id)";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":id", i.getId());
+    query.bindValue(":interactionTitle", QString::fromStdString(i.getTitre()));
+    query.bindValue(":interactionContent", QString::fromStdString(i.getContenu()));
+    query.bindValue(":interactionDate", QString::fromStdString(i.getDateCreation().ToString()));
+    query.bindValue(":id", contactId);
+    query.exec();
+
+    tagsInteraction t = i.getTags(); // ajout des tags associés
+    for(std::tuple<std::string, std::string> tuple : t.getTags()){
+        strQuery = "INSERT INTO TAGS (tagTodo, tagDate, interactionId) ";
+        strQuery = "VALUES(:todo, :date, :id)";
+        query.prepare(strQuery);
+        query.bindValue(":todo", QString::fromStdString(get<0>(tuple)));
+        query.bindValue(":date", QString::fromStdString(get<1>(tuple)));
+        query.bindValue(":id", i.getId());
+        query.exec();
+    }
+}
+
+void DatabaseStorage::CreateLog(std::string l)
+{
+    QString strQuery = "INSERT INTO LOGS(logsValue) "; // mise à jour d'interaction
+    strQuery += "VALUES(:logsValue)";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":logsValue", QString::fromStdString(l));
+    query.exec();
+}
+
+/**
  * @brief Met à jour une FicheContact dans la base de données
  * @param[in] c     La nouvelle FicheContact
- * @todo MÉTHODE À ÉCRIRE
  */
-void DatabaseStorage::Update(FicheContact c)
+void DatabaseStorage::UpdateContact(FicheContact c)
 {
     QString strQuery = "UPDATE CONTACT ";
     strQuery += "SET(:firstName, :lastName, :entreprise, :mail, :phone, :picture, :creationDate) ";
@@ -101,18 +139,72 @@ void DatabaseStorage::Update(FicheContact c)
 }
 
 /**
- * @brief Supprime une FicheContact dans la base de données
- * @param[in] id        L'id de la FicheContact à supprimer
- * @todo MÉTHODE À ÉCRIRE
+ * @brief Met à jour une Interaction dans la base de données
+ * @param[in] i     La nouvelle Interaction
  */
-void DatabaseStorage::Delete(int id)
+void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
+{
+    QString strQuery = "UPDATE INTERACTION "; // mise à jour d'interaction
+    strQuery += "SET(:interactionTitle, :interactionContent, :interactionDate) ";
+    strQuery += "WHERE interactionId = :id";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":id", i.getId());
+    query.bindValue(":interactionTitle", QString::fromStdString(i.getTitre()));
+    query.bindValue(":interactionContent", QString::fromStdString(i.getContenu()));
+    query.bindValue(":interactionDate", QString::fromStdString(i.getDateCreation().ToString()));
+    query.exec();
+
+    strQuery = "DELETE FROM TAGS"; // suppression des tags associés
+    strQuery += "WHERE interactionId = :id";
+    query.prepare(strQuery);
+    query.bindValue(":id", i.getId());
+    query.exec();
+
+    tagsInteraction t = i.getTags(); // recréation des tags associés
+    for(std::tuple<std::string, std::string> tuple : t.getTags()){
+        strQuery = "INSERT INTO TAGS (tagTodo, tagDate, interactionId) ";
+        strQuery = "VALUES(:todo, :date, :id)";
+        query.prepare(strQuery);
+        query.bindValue(":todo", QString::fromStdString(get<0>(tuple)));
+        query.bindValue(":date", QString::fromStdString(get<1>(tuple)));
+        query.bindValue(":id", i.getId());
+        query.exec();
+    }
+}
+
+/**
+ * @brief Supprime une FicheContact dans la base de données
+ * @param[in] c     Le contact à supprimer
+ */
+void DatabaseStorage::DeleteContact(FicheContact c)
 {
     QString strQuery = "DELETE FROM CONTACT ";
     strQuery += "WHERE contactId = :id";
     QSqlQuery query;
     query.prepare(strQuery);
-    query.bindValue(":id", id);
+    query.bindValue(":id", c.getId());
 
+    query.exec();
+}
+
+/**
+ * @brief Supprime une Interaction et ses tags dans la base de données
+ * @param[in] i     l'interaction à supprimer
+ */
+void DatabaseStorage::DeleteInteractionAndTags(Interaction i)
+{
+    QString strQuery = "DELETE FROM INTERACTION ";
+    strQuery += "WHERE interactionId = :id";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":id", i.getId());
+    query.exec();
+
+    strQuery = "DELETE FROM TAGS";
+    strQuery += "WHERE interactionId = :id";
+    query.prepare(strQuery);
+    query.bindValue(":id", i.getId());
     query.exec();
 }
 
