@@ -2,8 +2,8 @@
  * @file IHM/ui_requestcontact.cpp
  * @brief Permet de gèrer les requêtes à la base de donnée sur la liste de contacts
  * @author Samuel LACHAUD
- * @version 1.0
- * @date 23/09/2021
+ * @version 1.1
+ * @date 01/12/2021
  */
 
 #include "ui_requestcontact.h"
@@ -35,7 +35,6 @@ UI_RequestContact::~UI_RequestContact()
 
 /**
  * @brief Méthode liée au bouton permettant d'effectuer la requête choisie
- * @todo Gèrer les indexs de contacts
  */
 void UI_RequestContact::ButtonDoRequest()
 {
@@ -49,7 +48,7 @@ void UI_RequestContact::ButtonDoRequest()
     }
 
     if(ui->CB_R3->isChecked()){ // CB3 Activé
-        res += "R3 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR3->currentIndex(),ui->DE_DateDebutR3->date(), ui->DE_DateFinR3->date()) + "--------------------\n"; // gèrer la liste
+        res += "R3 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR3->currentIndex(),ui->DE_DateDebutR3->date(), ui->DE_DateFinR3->date()) + "--------------------\n";
     }
 
     if(ui->CB_R4->isChecked()){ // CB4 Activé
@@ -79,16 +78,33 @@ void UI_RequestContact::closeEvent(QCloseEvent *event)
     //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }
 
+/**
+ * @brief Méthode qui sert à obtenir le nombre de contacts de l'application depuis la BDD
+ * @return le nombre de contacts de l'application sous forme de chaine de caractères
+ */
 std::string UI_RequestContact::NbContact(){
     return DatabaseStorage::Request("SELECT COUNT(*) FROM CONTACT");
 }
 
+/**
+ * @brief Méthode qui sert à obtenir la liste de toutes les interactions entre la date \p d1 et la date \p d2
+ * @param d1    date de début de la recherche
+ * @param d2    date de fin de la recherche
+ * @return la liste de toutes les intéractions entre les deux dates sous forme de chaine de caratères
+ */
 std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
     return DatabaseStorage::Request("SELECT * FROM INTERACTION WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
+/**
+ * @brief Méthode qui sert à obtenir la liste des tags TODO du contact \p idContact entre la date \p d1 et la date \p d2
+ * @param idContact identifiant du contact recherché
+ * @param d1    date de début de la recherche
+ * @param d2    date de fin de la recherche
+ * @return la liste de toutes les tags TODO du contact entre les deux dates sous forme de chaine de caratères
+ */
 std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
@@ -96,24 +112,47 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
     return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
+/**
+ * @brief Méthode qui sert à obtenir la liste des tags DATE du contact \p idContact entre la date \p d1 et la date \p d2
+ * @param idContact identifiant du contact recherché
+ * @param d1    date de début de la recherche
+ * @param d2    date de fin de la recherche
+ * @return la liste de toutes les tags DATE du contact entre les deux dates sous forme de chaine de caratères
+ */
 std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
     std::string contact = QString::number(idContact).toStdString();
     return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
+
+/**
+ * @brief Méthode qui sert à obtenir la liste des tags TODO de tout les contacts entre la date \p d1 et la date \p d2
+ * @param d1    date de début de la recherche
+ * @param d2    date de fin de la recherche
+ * @return la liste de toutes les tags TODO entre les deux dates sous forme de chaine de caratères
+ */
 std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
     return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
+/**
+ * @brief Méthode qui sert à obtenir la liste des tags DATE de tout les contacts entre la date \p d1 et la date \p d2
+ * @param d1    date de début de la recherche
+ * @param d2    date de fin de la recherche
+ * @return la liste de toutes les tags DATE entre les deux dates sous forme de chaine de caratères
+ */
 std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
     return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
+/**
+ * @brief Slot permettant quand on coche/décoche une checkBox d'activer/désactiver les différents controleurs
+ */
 void UI_RequestContact::changementStatusCB(){
     if(ui->CB_R2->isChecked()){ // CB2 Activé
         ui->DE_DateDebutR2->setEnabled(1);
@@ -172,7 +211,10 @@ void UI_RequestContact::changementStatusCB(){
     }
 }
 
-
+/**
+ * @brief Slot permettant d'obtenir la GestionContact envoyée par la MainWindow
+ * @param gc    GestionContact
+ */
 void UI_RequestContact::getGcFromMainWindow(GestionContact gc){
     this->gc = gc;
     DisplayContactList();

@@ -7,7 +7,7 @@ var searchData=
   ['getcontenu_4',['getContenu',['../class_interaction.html#a6e48c2f533cad1635a0339aa58eaa4df',1,'Interaction']]],
   ['getdatecreation_5',['getDateCreation',['../class_fiche_contact.html#ae24355bf3a785dfb04f825c378bfc3b3',1,'FicheContact::getDateCreation()'],['../class_interaction.html#ac520505066dcf509d9d047273a7d551e',1,'Interaction::getDateCreation()']]],
   ['getentreprise_6',['getEntreprise',['../class_fiche_contact.html#ae8143c8bb1dffb661c154e54a77d38a6',1,'FicheContact']]],
-  ['getgcfrommainwindow_7',['getGcFromMainWindow',['../class_u_i___save_gestion_contact.html#a1eed8e1ff90d505a9e328416bb524384',1,'UI_SaveGestionContact']]],
+  ['getgcfrommainwindow_7',['getGcFromMainWindow',['../class_u_i___request_contact.html#a9a02721cefc17c0a35258e219c3854b7',1,'UI_RequestContact::getGcFromMainWindow()'],['../class_u_i___save_gestion_contact.html#a1eed8e1ff90d505a9e328416bb524384',1,'UI_SaveGestionContact::getGcFromMainWindow()']]],
   ['getgcfromsavegestioncontact_8',['getGcFromSaveGestionContact',['../class_main_window.html#adc010ec668ec3ffc71c523667417c2b4',1,'MainWindow']]],
   ['getheure_9',['getHeure',['../class_horodatage.html#a015fe9312aa0b057640d09706051b54b',1,'Horodatage']]],
   ['getid_10',['getId',['../class_fiche_contact.html#aa97b411491af4b5cda1ae2c3183c0414',1,'FicheContact::getId()'],['../class_interaction.html#aaead50ecd23e853601de816b701bcb12',1,'Interaction::getId()']]],

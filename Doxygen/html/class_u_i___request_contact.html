@@ -78,14 +78,16 @@ Graphe d'héritage de UI_RequestContact:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
-<tr class="memitem:adb57e8147f26b6c2ec1cbe1c31b2406c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c">ButtonDoRequest</a> ()</td></tr>
-<tr class="memdesc:adb57e8147f26b6c2ec1cbe1c31b2406c"><td class="mdescLeft"> </td><td class="mdescRight">Méthode liée au bouton permettant d'effectuer la requête choisie.  <a href="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c">Plus de détails...</a><br/></td></tr>
+<tr class="memitem:adb57e8147f26b6c2ec1cbe1c31b2406c"><td align="right" class="memItemLeft" valign="top"><a id="adb57e8147f26b6c2ec1cbe1c31b2406c" name="adb57e8147f26b6c2ec1cbe1c31b2406c"></a>
+void </td><td class="memItemRight" valign="bottom"><b>ButtonDoRequest</b> ()</td></tr>
+<tr class="memdesc:adb57e8147f26b6c2ec1cbe1c31b2406c"><td class="mdescLeft"> </td><td class="mdescRight">Méthode liée au bouton permettant d'effectuer la requête choisie. <br/></td></tr>
 <tr class="separator:adb57e8147f26b6c2ec1cbe1c31b2406c"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa9744f1f9f426dcaae1b2e2e0e9e1efd"><td align="right" class="memItemLeft" valign="top"><a id="aa9744f1f9f426dcaae1b2e2e0e9e1efd" name="aa9744f1f9f426dcaae1b2e2e0e9e1efd"></a>
 void </td><td class="memItemRight" valign="bottom"><b>changementStatusCB</b> ()</td></tr>
+<tr class="memdesc:aa9744f1f9f426dcaae1b2e2e0e9e1efd"><td class="mdescLeft"> </td><td class="mdescRight">Slot permettant quand on coche/décoche une checkBox d'activer/désactiver les différents controleurs. <br/></td></tr>
 <tr class="separator:aa9744f1f9f426dcaae1b2e2e0e9e1efd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9a02721cefc17c0a35258e219c3854b7"><td align="right" class="memItemLeft" valign="top"><a id="a9a02721cefc17c0a35258e219c3854b7" name="a9a02721cefc17c0a35258e219c3854b7"></a>
-void </td><td class="memItemRight" valign="bottom"><b>getGcFromMainWindow</b> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
+<tr class="memitem:a9a02721cefc17c0a35258e219c3854b7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___request_contact.html#a9a02721cefc17c0a35258e219c3854b7">getGcFromMainWindow</a> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
+<tr class="memdesc:a9a02721cefc17c0a35258e219c3854b7"><td class="mdescLeft"> </td><td class="mdescRight">Slot permettant d'obtenir la <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> envoyée par la <a class="el" href="class_main_window.html" title="Classe pour la fenêtre principale de l'application.">MainWindow</a>.  <a href="class_u_i___request_contact.html#a9a02721cefc17c0a35258e219c3854b7">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a9a02721cefc17c0a35258e219c3854b7"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -133,8 +135,8 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- @@@UI_RequestContact -->
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="adb57e8147f26b6c2ec1cbe1c31b2406c" name="adb57e8147f26b6c2ec1cbe1c31b2406c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb57e8147f26b6c2ec1cbe1c31b2406c">◆ </a></span>ButtonDoRequest</h2>
+<a id="a9a02721cefc17c0a35258e219c3854b7" name="a9a02721cefc17c0a35258e219c3854b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a02721cefc17c0a35258e219c3854b7">◆ </a></span>getGcFromMainWindow</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -142,9 +144,10 @@ Fonctions membres publiques</h2></td></tr>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void UI_RequestContact::ButtonDoRequest </td>
+<td class="memname">void UI_RequestContact::getGcFromMainWindow </td>
 <td>(</td>
-<td class="paramname"></td><td>)</td>
+<td class="paramtype"><a class="el" href="class_gestion_contact.html">GestionContact</a> </td>
+<td class="paramname"><em>gc</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -153,10 +156,15 @@ Fonctions membres publiques</h2></td></tr>
 <span class="mlabels"><span class="mlabel">slot</span></span> </td>
 </tr>
 </table>
-</div><!-- $$$ButtonDoRequest[overload1]$$$voidUI_RequestContact::ButtonDoRequest() --><div class="memdoc"><div style="display: none">void UI_RequestContact::ButtonDoRequest()</div>
-<p>Méthode liée au bouton permettant d'effectuer la requête choisie. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">A faire:</a></b></dt><dd>Gèrer les indexs de contacts </dd></dl>
-</div><!-- @@@ButtonDoRequest -->
+</div><!-- $$$getGcFromMainWindow[overload1]$$$voidUI_RequestContact::getGcFromMainWindow(GestionContact gc) --><div class="memdoc"><div style="display: none">void UI_RequestContact::getGcFromMainWindow(GestionContact gc)</div>
+<p>Slot permettant d'obtenir la <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> envoyée par la <a class="el" href="class_main_window.html" title="Classe pour la fenêtre principale de l'application.">MainWindow</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramname">gc</td><td><a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@getGcFromMainWindow -->
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>IHM/<a class="el" href="ui__requestcontact_8h_source.html">ui_requestcontact.h</a></li>

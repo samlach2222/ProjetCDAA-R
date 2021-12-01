@@ -129,6 +129,8 @@
               <section title="UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
               <section title="~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
               <section title="ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
+              <section title="changementStatusCB" ref="class_u_i___request_contact.html#aa9744f1f9f426dcaae1b2e2e0e9e1efd" />
+              <section title="getGcFromMainWindow" ref="class_u_i___request_contact.html#a9a02721cefc17c0a35258e219c3854b7" />
             </section>
             <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html">
               <section title="UI_SaveGestionContact" ref="class_u_i___save_gestion_contact.html#a6bc00b320fe25802b61cad0db4356a7f" />
@@ -227,6 +229,8 @@
                   <section title="UI_RequestContact" ref="class_u_i___request_contact.html#ab107b6d890eedbb71de4a4dd4d627f4f" />
                   <section title="~UI_RequestContact" ref="class_u_i___request_contact.html#a11410acc082dcf681c31c3feda4545d5" />
                   <section title="ButtonDoRequest" ref="class_u_i___request_contact.html#adb57e8147f26b6c2ec1cbe1c31b2406c" />
+                  <section title="changementStatusCB" ref="class_u_i___request_contact.html#aa9744f1f9f426dcaae1b2e2e0e9e1efd" />
+                  <section title="getGcFromMainWindow" ref="class_u_i___request_contact.html#a9a02721cefc17c0a35258e219c3854b7" />
                 </section>
               </section>
               <section title="ui_savegestioncontact.cpp" ref="ui__savegestioncontact_8cpp.html" />
