@@ -80,36 +80,38 @@ void UI_RequestContact::closeEvent(QCloseEvent *event)
 }
 
 std::string UI_RequestContact::NbContact(){
-    return DatabaseStorage::Request("SELECT COUNT(idContact) FROM CONTACT");
+    return DatabaseStorage::Request("SELECT COUNT(*) FROM CONTACT");
 }
 
 std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate d2){
-
-    /*
-        SELECT passenger_ID,
-        train_number,
-        STRFTIME('%d/%m/%Y, %H:%M', sale_datetime)
-        AS sale_formatted_datetime
-        FROM ticket;
-
-        //datetime(timestring, modifiers...)	This returns YYYY-MM-DD HH:MM:SS
-    */
-    return DatabaseStorage::Request("");
+    std::string date1 = d1.toString().toStdString();
+    std::string date2 = d2.toString().toStdString();
+    return DatabaseStorage::Request("SELECT * FROM INTERACTION WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
 std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
-    return DatabaseStorage::Request("");
+    std::string date1 = d1.toString().toStdString();
+    std::string date2 = d2.toString().toStdString();
+    std::string contact = QString::number(idContact).toStdString();
+    return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
 std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
-    return DatabaseStorage::Request("");
+    std::string date1 = d1.toString().toStdString();
+    std::string date2 = d2.toString().toStdString();
+    std::string contact = QString::number(idContact).toStdString();
+    return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2){
-    return DatabaseStorage::Request("");
+    std::string date1 = d1.toString().toStdString();
+    std::string date2 = d2.toString().toStdString();
+    return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
 std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2){
-    return "Tag 1 : Tag num 1\nTag 2 : Tag num 2\n";
+    std::string date1 = d1.toString().toStdString();
+    std::string date2 = d2.toString().toStdString();
+    return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 }
 
 void UI_RequestContact::changementStatusCB(){
