@@ -56,6 +56,9 @@ const std::string &Interaction::getContenu() const
 void Interaction::setContenu(const std::string &newContenu)
 {
     contenu = newContenu;
+
+    //Il faut mettre à jour les tags à chaque fois que le contenu est modifié
+    UpdateTags();
 }
 
 /**
