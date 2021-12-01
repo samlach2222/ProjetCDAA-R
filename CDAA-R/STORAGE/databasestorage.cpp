@@ -24,9 +24,8 @@ void DatabaseStorage::InitializeBDD(){
 
     //Si la base de données n'est pas présente, copie celui des ressources
     if (!QFileInfo::exists(nomBdd)){
-        QFile fichierBddRessources(":/Ressources/Database/FakeDB.db");
-
-        fichierBddRessources.copy(nomBdd);
+        QFile::copy(":/Ressources/Database/FakeDB.db", nomBdd);
+        QFile::setPermissions(nomBdd, QFile::WriteUser);  //Par défaut les fichiers des ressources sont en readonly
     }
 
     db.setDatabaseName(nomBdd);  //Nom de la base de données
