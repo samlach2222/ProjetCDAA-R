@@ -38,29 +38,55 @@ UI_RequestContact::~UI_RequestContact()
  */
 void UI_RequestContact::ButtonDoRequest()
 {
+    bool R1 = ui->CB_R1->isChecked();
+    bool R2 = ui->CB_R2->isChecked();
+    bool R3 = ui->CB_R3->isChecked();
+    bool R4 = ui->CB_R4->isChecked();
+    bool R5 = ui->CB_R5->isChecked();
+    bool R6 = ui->CB_R6->isChecked();
     std::string res = "";
-    if(ui->CB_R1->isChecked()){ // CB1 Activé
-        res += "R1 : \n" + this->NbContact() + "--------------------\n";
+    if(R1){ // CB1 Activé
+        res += "R1 : \n" + this->NbContact();
+
+        if (R2){
+            res += "------------------------------\n";
+        }
     }
 
-    if(ui->CB_R2->isChecked()){ // CB2 Activé
-        res += "R2 : \n" + this->GetAllInteractionsBetweenTwoDates(ui->DE_DateDebutR2->date(), ui->DE_DateFinR2->date()) + "--------------------\n";
+    if(R2){ // CB2 Activé
+        res += "R2 : \n" + this->GetAllInteractionsBetweenTwoDates(ui->DE_DateDebutR2->date(), ui->DE_DateFinR2->date());
+
+        if (R3){
+            res += "------------------------------\n";
+        }
     }
 
-    if(ui->CB_R3->isChecked()){ // CB3 Activé
-        res += "R3 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR3->currentIndex(),ui->DE_DateDebutR3->date(), ui->DE_DateFinR3->date()) + "--------------------\n";
+    if(R3){ // CB3 Activé
+        res += "R3 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR3->currentIndex(),ui->DE_DateDebutR3->date(), ui->DE_DateFinR3->date());
+
+        if (R4){
+            res += "------------------------------\n";
+        }
     }
 
-    if(ui->CB_R4->isChecked()){ // CB4 Activé
-        res += "R4 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR4->currentIndex(),ui->DE_DateDebutR4->date(), ui->DE_DateFinR4->date()) + "--------------------\n";
+    if(R4){ // CB4 Activé
+        res += "R4 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR4->currentIndex(),ui->DE_DateDebutR4->date(), ui->DE_DateFinR4->date());
+
+        if (R5){
+            res += "------------------------------\n";
+        }
     }
 
-    if(ui->CB_R5->isChecked()){ // CB5 Activé
-        res += "R5 : \n" + this->GetTagTodoAllContactBetweenTwoDates(ui->DE_DateDebutR5->date(), ui->DE_DateFinR5->date()) + "--------------------\n";
+    if(R5){ // CB5 Activé
+        res += "R5 : \n" + this->GetTagTodoAllContactBetweenTwoDates(ui->DE_DateDebutR5->date(), ui->DE_DateFinR5->date());
+
+        if (R6){
+            res += "------------------------------\n";
+        };
     }
 
-    if(ui->CB_R6->isChecked()){ // CB6 Activé
-        res += "R6 : \n" + this->GetTagDateAllContactBetweenTwoDates(ui->DE_DateDebutR6->date(), ui->DE_DateFinR6->date()) + "--------------------\n";
+    if(R6){ // CB6 Activé
+        res += "R6 : \n" + this->GetTagDateAllContactBetweenTwoDates(ui->DE_DateDebutR6->date(), ui->DE_DateFinR6->date());
     }
     ui->PT_ShowResults->setPlainText(QString::fromStdString(res));
 }
