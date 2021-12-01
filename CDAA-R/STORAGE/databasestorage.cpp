@@ -43,7 +43,28 @@ void DatabaseStorage::InitializeBDD(){
  */
 void DatabaseStorage::Create(FicheContact c)
 {
-    //TODO
+    QString strQuery = "INSERT INTO CONTACT(contactFirstName, contactLastName, contactEntreprise, contactMail, contactMail, contactPhone, contactPicture, contactCreationDate) ";
+    strQuery += "VALUES(:firstName, :lastName, :entreprise, :mail, :phone, :picture, :creationDate)";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":firstName", QString::fromStdString(c.getPrenom()));
+    query.bindValue(":lastName", QString::fromStdString(c.getNom()));
+    query.bindValue(":entreprise", QString::fromStdString(c.getEntreprise()));
+    query.bindValue(":mail", QString::fromStdString(c.getMail()));
+    query.bindValue(":phone", QString::fromStdString(c.getTelephone()));
+
+    QImage photo = c.getPhoto();
+    QByteArray ba;
+    QBuffer buf(&ba);
+    buf.open(QIODevice::WriteOnly);
+    photo.save(&buf, "PNG");
+    QByteArray ba2 = ba.toBase64();
+    buf.close();
+    QString b64str = QString::fromLatin1(ba2);
+
+    query.bindValue(":picture", b64str);
+    query.bindValue(":creationDate", QString::fromStdString(c.getDateCreation().ToString()));
+    query.exec();
 }
 
 /**
@@ -53,7 +74,30 @@ void DatabaseStorage::Create(FicheContact c)
  */
 void DatabaseStorage::Update(FicheContact c)
 {
-    //TODO: Utilise l'id
+    QString strQuery = "UPDATE CONTACT ";
+    strQuery += "SET(:firstName, :lastName, :entreprise, :mail, :phone, :picture, :creationDate) ";
+    strQuery += "WHERE contactId = :id";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":id", c.getId());
+    query.bindValue(":firstName", QString::fromStdString(c.getPrenom()));
+    query.bindValue(":lastName", QString::fromStdString(c.getNom()));
+    query.bindValue(":entreprise", QString::fromStdString(c.getEntreprise()));
+    query.bindValue(":mail", QString::fromStdString(c.getMail()));
+    query.bindValue(":phone", QString::fromStdString(c.getTelephone()));
+
+    QImage photo = c.getPhoto();
+    QByteArray ba;
+    QBuffer buf(&ba);
+    buf.open(QIODevice::WriteOnly);
+    photo.save(&buf, "PNG");
+    QByteArray ba2 = ba.toBase64();
+    buf.close();
+    QString b64str = QString::fromLatin1(ba2);
+
+    query.bindValue(":picture", b64str);
+    query.bindValue(":creationDate", QString::fromStdString(c.getDateCreation().ToString()));
+    query.exec();
 }
 
 /**
@@ -63,7 +107,13 @@ void DatabaseStorage::Update(FicheContact c)
  */
 void DatabaseStorage::Delete(int id)
 {
-    //TODO
+    QString strQuery = "DELETE FROM CONTACT ";
+    strQuery += "WHERE contactId = :id";
+    QSqlQuery query;
+    query.prepare(strQuery);
+    query.bindValue(":id", id);
+
+    query.exec();
 }
 
 /**

@@ -163,7 +163,7 @@ Horodatage::Horodatage()
  */
 Horodatage::Horodatage(std::string strDate)
 {
-    QDateTime dt = QDateTime::fromString(QString::fromStdString(strDate), "dd/MM/yyyy hh:mm:ss");
+    QDateTime dt = QDateTime::fromString(QString::fromStdString(strDate), "yyyy-MM-dd hh:mm:ss");
     QDate date = dt.date();
     QTime time = dt.time();
 
@@ -196,5 +196,5 @@ std::string Horodatage::ToString() const
     datetime.setTime(time);
 
     // on retourne en std::string
-    return datetime.toString("dd/MM/yyyy hh:mm:ss").toStdString();
+    return datetime.toString("yyyy-MM-dd hh:mm:ss").toStdString();
 }
