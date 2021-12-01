@@ -107,7 +107,10 @@ GestionContact DatabaseStorage::Load()
 
         //Boucle pour chaque interaction du contact
         std::vector<Interaction> interactions = std::vector<Interaction>();
-        QSqlQuery queryInteractions = QSqlQuery("SELECT * from INTERACTION WHERE contactId = "+QString::number(id));
+        QSqlQuery queryInteractions;
+        queryInteractions.prepare("SELECT * from INTERACTION WHERE contactId = :id");
+        queryInteractions.bindValue(":id", id);
+        queryInteractions.exec();
         while (queryInteractions.next()){
             int idInteraction = queryInteractions.value(0).toInt();
             std::string titreInteraction = queryInteractions.value(1).toString().toStdString();
