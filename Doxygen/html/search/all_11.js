@@ -12,6 +12,7 @@ var searchData=
   ['ui_5fsavegestioncontact_9',['UI_SaveGestionContact',['../class_u_i___save_gestion_contact.html',1,'UI_SaveGestionContact'],['../class_u_i___save_gestion_contact.html#a6bc00b320fe25802b61cad0db4356a7f',1,'UI_SaveGestionContact::UI_SaveGestionContact()']]],
   ['ui_5fsavegestioncontact_2ecpp_10',['ui_savegestioncontact.cpp',['../ui__savegestioncontact_8cpp.html',1,'']]],
   ['ui_5fsavegestioncontact_2eh_11',['ui_savegestioncontact.h',['../ui__savegestioncontact_8h.html',1,'']]],
-  ['update_12',['Update',['../class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92',1,'DatabaseStorage']]],
-  ['updatetags_13',['UpdateTags',['../class_interaction.html#a776e9bb404900b89be994e659d207149',1,'Interaction']]]
+  ['updatecontact_12',['UpdateContact',['../class_database_storage.html#a35ce7e237ce543d661080bc9da887c10',1,'DatabaseStorage']]],
+  ['updateinteractionandtags_13',['UpdateInteractionAndTags',['../class_database_storage.html#a58191ebcab6cee4d27f79f0385c3c2ef',1,'DatabaseStorage']]],
+  ['updatetags_14',['UpdateTags',['../class_interaction.html#a776e9bb404900b89be994e659d207149',1,'Interaction']]]
 ];

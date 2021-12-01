@@ -95,6 +95,10 @@ void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId)
     }
 }
 
+/**
+ * @brief Créé une ligne de log dans la base de données
+ * @param l la ligne de log à rajouter
+ */
 void DatabaseStorage::CreateLog(std::string l)
 {
     QString strQuery = "INSERT INTO LOGS(logsValue) "; // mise à jour d'interaction
@@ -169,9 +173,6 @@ void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
         query.bindValue(":date", QString::fromStdString(std::get<1>(tuple)));
         query.bindValue(":id", i.getId());
         query.exec();
-
-        QSqlError err = query.lastError();
-        int qizufg = 0;
     }
 }
 

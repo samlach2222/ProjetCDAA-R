@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['delete_0',['Delete',['../class_database_storage.html#a7d1eec8934bee30d43b37a6e6087b796',1,'DatabaseStorage']]]
+  ['deletecontact_0',['DeleteContact',['../class_database_storage.html#ab7d6413f6dc28f943d7c55c52dfd93cd',1,'DatabaseStorage']]],
+  ['deleteinteractionandtags_1',['DeleteInteractionAndTags',['../class_database_storage.html#abea89ab4844b3e08c24bf43881164bc0',1,'DatabaseStorage']]]
 ];

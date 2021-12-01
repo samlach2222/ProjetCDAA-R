@@ -350,11 +350,15 @@
       <keyword name="Liste des choses à faire" id="Liste des choses à faire" ref="todo.html" />
       <keyword name="DatabaseStorage" id="DatabaseStorage" ref="class_database_storage.html" />
       <keyword name="InitializeBDD" id="DatabaseStorage::InitializeBDD" ref="class_database_storage.html#a1761ea4e2e543a31c0798ab412b3e89f" />
-      <keyword name="Create" id="DatabaseStorage::Create" ref="class_database_storage.html#a859a5356c6eab52156b442d86f848895" />
-      <keyword name="Update" id="DatabaseStorage::Update" ref="class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92" />
-      <keyword name="Delete" id="DatabaseStorage::Delete" ref="class_database_storage.html#a7d1eec8934bee30d43b37a6e6087b796" />
+      <keyword name="CreateContact" id="DatabaseStorage::CreateContact" ref="class_database_storage.html#ac5eba38bd8533c59e012e67ba5748766" />
+      <keyword name="CreateInteractionAndTags" id="DatabaseStorage::CreateInteractionAndTags" ref="class_database_storage.html#ab57d36105e93940907b0cbdc04e9685c" />
+      <keyword name="CreateLog" id="DatabaseStorage::CreateLog" ref="class_database_storage.html#ad843d29783b7d9a64b7b0f2658b8bb0f" />
+      <keyword name="UpdateContact" id="DatabaseStorage::UpdateContact" ref="class_database_storage.html#a35ce7e237ce543d661080bc9da887c10" />
+      <keyword name="UpdateInteractionAndTags" id="DatabaseStorage::UpdateInteractionAndTags" ref="class_database_storage.html#a58191ebcab6cee4d27f79f0385c3c2ef" />
+      <keyword name="DeleteContact" id="DatabaseStorage::DeleteContact" ref="class_database_storage.html#ab7d6413f6dc28f943d7c55c52dfd93cd" />
+      <keyword name="DeleteInteractionAndTags" id="DatabaseStorage::DeleteInteractionAndTags" ref="class_database_storage.html#abea89ab4844b3e08c24bf43881164bc0" />
       <keyword name="Load" id="DatabaseStorage::Load" ref="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c" />
-      <keyword name="Request" id="DatabaseStorage::Request" ref="class_database_storage.html#a3664bba7d22a573f8ae56666c2beb29e" />
+      <keyword name="Request" id="DatabaseStorage::Request" ref="class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a" />
       <keyword name="FicheContact" id="FicheContact" ref="class_fiche_contact.html" />
       <keyword name="getId" id="FicheContact::getId" ref="class_fiche_contact.html#aa97b411491af4b5cda1ae2c3183c0414" />
       <keyword name="getNom" id="FicheContact::getNom" ref="class_fiche_contact.html#a6217038c3e817f81ef8f664cf3fd5af6" />

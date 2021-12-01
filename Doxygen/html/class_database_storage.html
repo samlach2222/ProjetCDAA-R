@@ -75,27 +75,39 @@ Fonctions membres publiques statiques</h2></td></tr>
 static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> ()</td></tr>
 <tr class="memdesc:a1761ea4e2e543a31c0798ab412b3e89f"><td class="mdescLeft"> </td><td class="mdescRight">Initialise la base de données. <br/></td></tr>
 <tr class="separator:a1761ea4e2e543a31c0798ab412b3e89f"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a859a5356c6eab52156b442d86f848895"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a859a5356c6eab52156b442d86f848895">Create</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
-<tr class="memdesc:a859a5356c6eab52156b442d86f848895"><td class="mdescLeft"> </td><td class="mdescRight">Créé une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#a859a5356c6eab52156b442d86f848895">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a859a5356c6eab52156b442d86f848895"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a189a56f2c5cb71e17f646c71b3154a92"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92">Update</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
-<tr class="memdesc:a189a56f2c5cb71e17f646c71b3154a92"><td class="mdescLeft"> </td><td class="mdescRight">Met à jour une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#a189a56f2c5cb71e17f646c71b3154a92">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a189a56f2c5cb71e17f646c71b3154a92"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7d1eec8934bee30d43b37a6e6087b796"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a7d1eec8934bee30d43b37a6e6087b796">Delete</a> (int)</td></tr>
-<tr class="memdesc:a7d1eec8934bee30d43b37a6e6087b796"><td class="mdescLeft"> </td><td class="mdescRight">Supprime une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#a7d1eec8934bee30d43b37a6e6087b796">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a7d1eec8934bee30d43b37a6e6087b796"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac5eba38bd8533c59e012e67ba5748766"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ac5eba38bd8533c59e012e67ba5748766">CreateContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
+<tr class="memdesc:ac5eba38bd8533c59e012e67ba5748766"><td class="mdescLeft"> </td><td class="mdescRight">Créé une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#ac5eba38bd8533c59e012e67ba5748766">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ac5eba38bd8533c59e012e67ba5748766"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab57d36105e93940907b0cbdc04e9685c"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ab57d36105e93940907b0cbdc04e9685c">CreateInteractionAndTags</a> (<a class="el" href="class_interaction.html">Interaction</a> i, int contactId)</td></tr>
+<tr class="memdesc:ab57d36105e93940907b0cbdc04e9685c"><td class="mdescLeft"> </td><td class="mdescRight">Créé une interaction et ses tags associés dans la base de données.  <a href="class_database_storage.html#ab57d36105e93940907b0cbdc04e9685c">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ab57d36105e93940907b0cbdc04e9685c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad843d29783b7d9a64b7b0f2658b8bb0f"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ad843d29783b7d9a64b7b0f2658b8bb0f">CreateLog</a> (std::string)</td></tr>
+<tr class="memdesc:ad843d29783b7d9a64b7b0f2658b8bb0f"><td class="mdescLeft"> </td><td class="mdescRight">Créé une ligne de log dans la base de données.  <a href="class_database_storage.html#ad843d29783b7d9a64b7b0f2658b8bb0f">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ad843d29783b7d9a64b7b0f2658b8bb0f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a35ce7e237ce543d661080bc9da887c10"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a35ce7e237ce543d661080bc9da887c10">UpdateContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
+<tr class="memdesc:a35ce7e237ce543d661080bc9da887c10"><td class="mdescLeft"> </td><td class="mdescRight">Met à jour une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#a35ce7e237ce543d661080bc9da887c10">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a35ce7e237ce543d661080bc9da887c10"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a58191ebcab6cee4d27f79f0385c3c2ef"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a58191ebcab6cee4d27f79f0385c3c2ef">UpdateInteractionAndTags</a> (<a class="el" href="class_interaction.html">Interaction</a>)</td></tr>
+<tr class="memdesc:a58191ebcab6cee4d27f79f0385c3c2ef"><td class="mdescLeft"> </td><td class="mdescRight">Met à jour une <a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> dans la base de données.  <a href="class_database_storage.html#a58191ebcab6cee4d27f79f0385c3c2ef">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a58191ebcab6cee4d27f79f0385c3c2ef"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab7d6413f6dc28f943d7c55c52dfd93cd"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ab7d6413f6dc28f943d7c55c52dfd93cd">DeleteContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
+<tr class="memdesc:ab7d6413f6dc28f943d7c55c52dfd93cd"><td class="mdescLeft"> </td><td class="mdescRight">Supprime une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#ab7d6413f6dc28f943d7c55c52dfd93cd">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ab7d6413f6dc28f943d7c55c52dfd93cd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abea89ab4844b3e08c24bf43881164bc0"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#abea89ab4844b3e08c24bf43881164bc0">DeleteInteractionAndTags</a> (<a class="el" href="class_interaction.html">Interaction</a>)</td></tr>
+<tr class="memdesc:abea89ab4844b3e08c24bf43881164bc0"><td class="mdescLeft"> </td><td class="mdescRight">Supprime une <a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> et ses tags dans la base de données.  <a href="class_database_storage.html#abea89ab4844b3e08c24bf43881164bc0">Plus de détails...</a><br/></td></tr>
+<tr class="separator:abea89ab4844b3e08c24bf43881164bc0"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:abc2fafcdb63b7888678564a776d6a89c"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="class_gestion_contact.html">GestionContact</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c">Load</a> ()</td></tr>
 <tr class="memdesc:abc2fafcdb63b7888678564a776d6a89c"><td class="mdescLeft"> </td><td class="mdescRight">Retourne une <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à partir de la base de données.  <a href="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c">Plus de détails...</a><br/></td></tr>
 <tr class="separator:abc2fafcdb63b7888678564a776d6a89c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3664bba7d22a573f8ae56666c2beb29e"><td align="right" class="memItemLeft" valign="top">static std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a3664bba7d22a573f8ae56666c2beb29e">Request</a> (std::string)</td></tr>
-<tr class="memdesc:a3664bba7d22a573f8ae56666c2beb29e"><td class="mdescLeft"> </td><td class="mdescRight">Envoie la requête sql <code>sqlRequest</code> et retourne le résultat.  <a href="class_database_storage.html#a3664bba7d22a573f8ae56666c2beb29e">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a3664bba7d22a573f8ae56666c2beb29e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a77ec420d9a1070a0ef98859526a1224a"><td align="right" class="memItemLeft" valign="top">static std::vector&lt;std::vector&lt;std::string&gt;&gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a">Request</a> (std::string)</td></tr>
+<tr class="memdesc:a77ec420d9a1070a0ef98859526a1224a"><td class="mdescLeft"> </td><td class="mdescRight">Envoie la requête sql <code>sqlRequest</code> et retourne le résultat.  <a href="class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a77ec420d9a1070a0ef98859526a1224a"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe pour la gestion de la base de données. </p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a859a5356c6eab52156b442d86f848895" name="a859a5356c6eab52156b442d86f848895"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a859a5356c6eab52156b442d86f848895">◆ </a></span>Create()</h2>
+<a id="ac5eba38bd8533c59e012e67ba5748766" name="ac5eba38bd8533c59e012e67ba5748766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5eba38bd8533c59e012e67ba5748766">◆ </a></span>CreateContact()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -103,7 +115,7 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void DatabaseStorage::Create </td>
+<td class="memname">void DatabaseStorage::CreateContact </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="class_fiche_contact.html">FicheContact</a> </td>
 <td class="paramname"><em>c</em></td><td>)</td>
@@ -115,7 +127,7 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <span class="mlabels"><span class="mlabel">static</span></span> </td>
 </tr>
 </table>
-</div><!-- $$$Create[overload1]$$$voidDatabaseStorage::Create(FicheContact c) --><div class="memdoc"><div style="display: none">void DatabaseStorage::Create(FicheContact c)</div>
+</div><!-- $$$CreateContact[overload1]$$$voidDatabaseStorage::CreateContact(FicheContact c) --><div class="memdoc"><div style="display: none">void DatabaseStorage::CreateContact(FicheContact c)</div>
 <p>Créé une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
@@ -123,11 +135,10 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 </table>
 </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
-</div><!-- @@@Create -->
+</div><!-- @@@CreateContact -->
 </div>
-<a id="a7d1eec8934bee30d43b37a6e6087b796" name="a7d1eec8934bee30d43b37a6e6087b796"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d1eec8934bee30d43b37a6e6087b796">◆ </a></span>Delete()</h2>
+<a id="ab57d36105e93940907b0cbdc04e9685c" name="ab57d36105e93940907b0cbdc04e9685c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57d36105e93940907b0cbdc04e9685c">◆ </a></span>CreateInteractionAndTags()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -135,10 +146,52 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void DatabaseStorage::Delete </td>
+<td class="memname">void DatabaseStorage::CreateInteractionAndTags </td>
 <td>(</td>
+<td class="paramtype"><a class="el" href="class_interaction.html">Interaction</a> </td>
+<td class="paramname"><em>i</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
 <td class="paramtype">int </td>
-<td class="paramname"><em>id</em></td><td>)</td>
+<td class="paramname"><em>contactId</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><!-- $$$CreateInteractionAndTags[overload1]$$$voidDatabaseStorage::CreateInteractionAndTags(Interaction i,int contactId ) --><div class="memdoc"><div style="display: none">void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId )</div>
+<p>Créé une interaction et ses tags associés dans la base de données. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramname">i</td><td><a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> à ajouter </td></tr>
+<tr><td class="paramname">contactId</td><td>id du contact auquel appartiens l'interaction </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@CreateInteractionAndTags -->
+</div>
+<a id="ad843d29783b7d9a64b7b0f2658b8bb0f" name="ad843d29783b7d9a64b7b0f2658b8bb0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad843d29783b7d9a64b7b0f2658b8bb0f">◆ </a></span>CreateLog()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void DatabaseStorage::CreateLog </td>
+<td>(</td>
+<td class="paramtype">std::string </td>
+<td class="paramname"><em>l</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -147,16 +200,77 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <span class="mlabels"><span class="mlabel">static</span></span> </td>
 </tr>
 </table>
-</div><!-- $$$Delete[overload1]$$$voidDatabaseStorage::Delete(int id) --><div class="memdoc"><div style="display: none">void DatabaseStorage::Delete(int id)</div>
-<p>Supprime une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données. </p>
+</div><!-- $$$CreateLog[overload1]$$$voidDatabaseStorage::CreateLog(std::string l) --><div class="memdoc"><div style="display: none">void DatabaseStorage::CreateLog(std::string l)</div>
+<p>Créé une ligne de log dans la base de données. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>L'id de la <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> à supprimer </td></tr>
+<tr><td class="paramname">l</td><td>la ligne de log à rajouter </td></tr>
 </table>
 </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
-</div><!-- @@@Delete -->
+</div><!-- @@@CreateLog -->
+</div>
+<a id="ab7d6413f6dc28f943d7c55c52dfd93cd" name="ab7d6413f6dc28f943d7c55c52dfd93cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d6413f6dc28f943d7c55c52dfd93cd">◆ </a></span>DeleteContact()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void DatabaseStorage::DeleteContact </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="class_fiche_contact.html">FicheContact</a> </td>
+<td class="paramname"><em>c</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><!-- $$$DeleteContact[overload1]$$$voidDatabaseStorage::DeleteContact(FicheContact c) --><div class="memdoc"><div style="display: none">void DatabaseStorage::DeleteContact(FicheContact c)</div>
+<p>Supprime une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Le contact à supprimer </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@DeleteContact -->
+</div>
+<a id="abea89ab4844b3e08c24bf43881164bc0" name="abea89ab4844b3e08c24bf43881164bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea89ab4844b3e08c24bf43881164bc0">◆ </a></span>DeleteInteractionAndTags()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void DatabaseStorage::DeleteInteractionAndTags </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="class_interaction.html">Interaction</a> </td>
+<td class="paramname"><em>i</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><!-- $$$DeleteInteractionAndTags[overload1]$$$voidDatabaseStorage::DeleteInteractionAndTags(Interaction i) --><div class="memdoc"><div style="display: none">void DatabaseStorage::DeleteInteractionAndTags(Interaction i)</div>
+<p>Supprime une <a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> et ses tags dans la base de données. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>l'interaction à supprimer </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@DeleteInteractionAndTags -->
 </div>
 <a id="abc2fafcdb63b7888678564a776d6a89c" name="abc2fafcdb63b7888678564a776d6a89c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc2fafcdb63b7888678564a776d6a89c">◆ </a></span>Load()</h2>
@@ -181,11 +295,11 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 </div><!-- $$$Load[overload1]$$$GestionContactDatabaseStorage::Load() --><div class="memdoc"><div style="display: none">GestionContact DatabaseStorage::Load()</div>
 <p>Retourne une <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à partir de la base de données. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>une <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à partir de la base de données </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
 </div><!-- @@@Load -->
 </div>
-<a id="a3664bba7d22a573f8ae56666c2beb29e" name="a3664bba7d22a573f8ae56666c2beb29e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3664bba7d22a573f8ae56666c2beb29e">◆ </a></span>Request()</h2>
+<a id="a77ec420d9a1070a0ef98859526a1224a" name="a77ec420d9a1070a0ef98859526a1224a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ec420d9a1070a0ef98859526a1224a">◆ </a></span>Request()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -193,7 +307,7 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">std::string DatabaseStorage::Request </td>
+<td class="memname">std::vector&lt;std::vector&lt;std::string&gt;&gt; DatabaseStorage::Request </td>
 <td>(</td>
 <td class="paramtype">std::string </td>
 <td class="paramname"><em>sqlRequest</em></td><td>)</td>
@@ -205,7 +319,7 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <span class="mlabels"><span class="mlabel">static</span></span> </td>
 </tr>
 </table>
-</div><!-- $$$Request[overload1]$$$std::stringDatabaseStorage::Request(std::string sqlRequest) --><div class="memdoc"><div style="display: none">std::string DatabaseStorage::Request(std::string sqlRequest)</div>
+</div><!-- $$$Request[overload1]$$$std::vector<std::vector<std::string>>DatabaseStorage::Request(std::string sqlRequest) --><div class="memdoc"><div style="display: none">std::vector&lt;std::vector&lt;std::string&gt;&gt; DatabaseStorage::Request(std::string sqlRequest)</div>
 <p>Envoie la requête sql <code>sqlRequest</code> et retourne le résultat. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
@@ -213,12 +327,11 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 </table>
 </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>le résultat de la requête </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le résultat sous forme de string pour chaque valeur, pour chaque ligne de résultat </dd></dl>
 </div><!-- @@@Request -->
 </div>
-<a id="a189a56f2c5cb71e17f646c71b3154a92" name="a189a56f2c5cb71e17f646c71b3154a92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a189a56f2c5cb71e17f646c71b3154a92">◆ </a></span>Update()</h2>
+<a id="a35ce7e237ce543d661080bc9da887c10" name="a35ce7e237ce543d661080bc9da887c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ce7e237ce543d661080bc9da887c10">◆ </a></span>UpdateContact()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -226,7 +339,7 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void DatabaseStorage::Update </td>
+<td class="memname">void DatabaseStorage::UpdateContact </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="class_fiche_contact.html">FicheContact</a> </td>
 <td class="paramname"><em>c</em></td><td>)</td>
@@ -238,7 +351,7 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <span class="mlabels"><span class="mlabel">static</span></span> </td>
 </tr>
 </table>
-</div><!-- $$$Update[overload1]$$$voidDatabaseStorage::Update(FicheContact c) --><div class="memdoc"><div style="display: none">void DatabaseStorage::Update(FicheContact c)</div>
+</div><!-- $$$UpdateContact[overload1]$$$voidDatabaseStorage::UpdateContact(FicheContact c) --><div class="memdoc"><div style="display: none">void DatabaseStorage::UpdateContact(FicheContact c)</div>
 <p>Met à jour une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
@@ -246,8 +359,38 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 </table>
 </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
-</div><!-- @@@Update -->
+</div><!-- @@@UpdateContact -->
+</div>
+<a id="a58191ebcab6cee4d27f79f0385c3c2ef" name="a58191ebcab6cee4d27f79f0385c3c2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58191ebcab6cee4d27f79f0385c3c2ef">◆ </a></span>UpdateInteractionAndTags()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void DatabaseStorage::UpdateInteractionAndTags </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="class_interaction.html">Interaction</a> </td>
+<td class="paramname"><em>i</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><!-- $$$UpdateInteractionAndTags[overload1]$$$voidDatabaseStorage::UpdateInteractionAndTags(Interaction i) --><div class="memdoc"><div style="display: none">void DatabaseStorage::UpdateInteractionAndTags(Interaction i)</div>
+<p>Met à jour une <a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> dans la base de données. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>La nouvelle <a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@UpdateInteractionAndTags -->
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>STORAGE/<a class="el" href="databasestorage_8h_source.html">databasestorage.h</a></li>
