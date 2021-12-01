@@ -36,6 +36,7 @@ private:
     std::string GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2);
     std::string GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2);
     void DisplayContactList();
+    std::string ConvertQDateIntoSQLiteFormat(QDate, bool = false);
 
 public slots:
     void ButtonDoRequest();

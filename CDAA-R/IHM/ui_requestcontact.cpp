@@ -237,3 +237,18 @@ void UI_RequestContact::DisplayContactList(){
         ui->L_ContactR4->addItem(QString::fromStdString(c.ToString()), v);
     }
 }
+
+/**
+ * @brief Convertie un QDate en un string au format SQLite
+ * @param[in] date  QDate à convertir au format SQLite
+ * @param[in] fin  Si il s'agit d'une date de début (par défaut) ou de fin
+ * @return un string au format SQLite
+ */
+std::string UI_RequestContact::ConvertQDateIntoSQLiteFormat(QDate date, bool fin)
+{
+    if (fin){
+        return date.toString("yyyy-MM-dd 23:59:59").toStdString();
+    } else {
+        return date.toString("yyyy-MM-dd 00:00:00").toStdString();
+    }
+}
