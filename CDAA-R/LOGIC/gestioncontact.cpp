@@ -75,7 +75,7 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
     FicheContact c = FicheContact(firstAvailableId, nom, prenom, entreprise, mail, telephone, photo, dateCreation);
 
     this->TabContacts.push_back(c);
-    DatabaseStorage::Create(c);
+    DatabaseStorage::CreateContact(c);
     this->log.AddToTabLog("Contact Added");
 }
 
@@ -96,7 +96,7 @@ void GestionContact::SupprContact(int id)
     int decalage = 0;
     for (int& index: indexContactASupprimer){
         FicheContact c = this->GetContact(id);
-        DatabaseStorage::Delete(c);
+        DatabaseStorage::DeleteContact(c);
         this->TabContacts.erase(this->TabContacts.begin() + index - decalage);
         this->log.AddToTabLog("Contact Removed");
 
@@ -115,7 +115,7 @@ void GestionContact::ModifyContact(FicheContact c)
     for (int index = 0; index < static_cast<int>(this->TabContacts.size()); index++){
         if (this->TabContacts[index].getId() == id){
             this->TabContacts.at(index) = c;
-            DatabaseStorage::Update(c);
+            DatabaseStorage::UpdateContact(c);
             this->log.AddToTabLog("Contact Modified");
         }
     }

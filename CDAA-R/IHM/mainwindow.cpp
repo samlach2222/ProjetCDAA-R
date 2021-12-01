@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
     // DEBUT DEFINITION SIGNAUX
     QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), &ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
     QObject::connect(&ic, SIGNAL(sendContactToMainWindow(FicheContact)), this, SLOT(ReceiveContactToMainWindow(FicheContact)));
-    QObject::connect(&ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
+    QObject::connect(&ic, SIGNAL(AddOperationTo(std::string)), this, SLOT(AddOperationTo(std::string)));
     QObject::connect(this, SIGNAL(sendToFilterContact(GestionContact)), &fc, SLOT(ReceiveFromMainWindow(GestionContact)));
     QObject::connect(&fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
     QObject::connect(this, SIGNAL(sendGcToSaveGestionContact(GestionContact)), &sgc, SLOT(getGcFromMainWindow(GestionContact)));

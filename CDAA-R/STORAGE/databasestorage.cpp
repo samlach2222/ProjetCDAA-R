@@ -89,8 +89,8 @@ void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId)
         strQuery = "INSERT INTO TAGS (tagTodo, tagDate, interactionId) ";
         strQuery = "VALUES(:todo, :date, :id)";
         query.prepare(strQuery);
-        query.bindValue(":todo", QString::fromStdString(get<0>(tuple)));
-        query.bindValue(":date", QString::fromStdString(get<1>(tuple)));
+        query.bindValue(":todo", QString::fromStdString(std::get<0>(tuple)));
+        query.bindValue(":date", QString::fromStdString(std::get<1>(tuple)));
         query.bindValue(":id", i.getId());
         query.exec();
     }
@@ -166,8 +166,8 @@ void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
         strQuery = "INSERT INTO TAGS (tagTodo, tagDate, interactionId) ";
         strQuery = "VALUES(:todo, :date, :id)";
         query.prepare(strQuery);
-        query.bindValue(":todo", QString::fromStdString(get<0>(tuple)));
-        query.bindValue(":date", QString::fromStdString(get<1>(tuple)));
+        query.bindValue(":todo", QString::fromStdString(std::get<0>(tuple)));
+        query.bindValue(":date", QString::fromStdString(std::get<1>(tuple)));
         query.bindValue(":id", i.getId());
         query.exec();
     }
