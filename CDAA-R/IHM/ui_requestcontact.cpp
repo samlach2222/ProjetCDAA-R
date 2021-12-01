@@ -83,7 +83,14 @@ void UI_RequestContact::closeEvent(QCloseEvent *event)
  * @return le nombre de contacts de l'application sous forme de chaine de caractères
  */
 std::string UI_RequestContact::NbContact(){
-    return NULL;
+    std::string nombreContacts = DatabaseStorage::Request("SELECT COUNT(*) FROM CONTACT")[0].at(0);  //On savait pas quoi choisir entre [] et la fonction at
+    std::string resultat = "Il y a "+nombreContacts+" contact";
+    if (stoi(nombreContacts) > 1){
+        //contacts au pluriel si il y a plus d'un contact
+        resultat += 's';
+    }
+    resultat += " en tout\n";
+    return resultat;
 }
 
 /**
@@ -93,9 +100,24 @@ std::string UI_RequestContact::NbContact(){
  * @return la liste de toutes les intéractions entre les deux dates sous forme de chaine de caratères
  */
 std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate d2){
-    std::string date1 = d1.toString().toStdString();
-    std::string date2 = d2.toString().toStdString();
-    return NULL;
+    std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
+    std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
+
+    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT * FROM INTERACTION WHERE interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
+
+    std::string resultat = "";
+    for (std::vector<std::string> ligneResultat : resultatsRequete){
+        resultat += "titre : "+ligneResultat[1]+'\n';
+        resultat += "contenu : "+ligneResultat.at(2)+'\n';
+        resultat += "date de création : "+ligneResultat[3]+'\n';
+
+        //Ajoute un saut de ligne si ce n'est pas la dernière interaction
+        if (ligneResultat != resultatsRequete.back()){
+            resultat += '\n';
+        }
+    }
+
+    return resultat;
 }
 
 /**
@@ -109,6 +131,8 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
     std::string contact = QString::number(idContact).toStdString();
+    //return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
+
     return NULL;
 }
 
@@ -123,6 +147,8 @@ std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, Q
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
     std::string contact = QString::number(idContact).toStdString();
+    //return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
+
     return NULL;
 }
 
@@ -135,6 +161,8 @@ std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, Q
 std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
+    //return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
+
     return NULL;
 }
 
@@ -147,6 +175,8 @@ std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDa
 std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = d1.toString().toStdString();
     std::string date2 = d2.toString().toStdString();
+    //return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
+
     return NULL;
 }
 
