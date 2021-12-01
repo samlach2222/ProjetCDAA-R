@@ -14,3 +14,4 @@ Projet CDAA - L3 Info - Grpe R
 - Déselectionner et vider le contenu des zones de texte après fermeture des sous-fenêtres
 - Enlever CDAA-R\Ressources\Database\FakeDb.db quand on ne l'utilisera plus
 - Gérer la sélection d'un contact et d'une interaction avec les touches fléchées
+- Corriger les interactionId de la table INTERACTION qui ne correspond pas à ceux de TAGS
