@@ -41,7 +41,7 @@ void DatabaseStorage::InitializeBDD(){
  */
 void DatabaseStorage::CreateContact(FicheContact c)
 {
-    QString strQuery = "INSERT INTO CONTACT(contactFirstName, contactLastName, contactEntreprise, contactMail, contactMail, contactPhone, contactPicture, contactCreationDate) ";
+    QString strQuery = "INSERT INTO CONTACT(contactFirstName, contactLastName, contactEntreprise, contactMail, contactPhone, contactPicture, contactCreationDate) ";
     strQuery += "VALUES(:firstName, :lastName, :entreprise, :mail, :phone, :picture, :creationDate)";
     QSqlQuery query;
     query.prepare(strQuery);
@@ -112,7 +112,7 @@ void DatabaseStorage::CreateLog(std::string l)
 void DatabaseStorage::UpdateContact(FicheContact c)
 {
     QString strQuery = "UPDATE CONTACT ";
-    strQuery += "SET(:firstName, :lastName, :entreprise, :mail, :phone, :picture, :creationDate) ";
+    strQuery += "SET contactFirstName = :firstName, contactLastName = :lastName, contactEntreprise = :entreprise, contactMail = :mail, contactPhone = :phone, contactPicture = :picture, contactCreationDate = :creationDate ";
     strQuery += "WHERE contactId = :id";
     QSqlQuery query;
     query.prepare(strQuery);
@@ -135,6 +135,9 @@ void DatabaseStorage::UpdateContact(FicheContact c)
     query.bindValue(":picture", b64str);
     query.bindValue(":creationDate", QString::fromStdString(c.getDateCreation().ToString()));
     query.exec();
+
+    QSqlError err = query.lastError();
+    int qizufg = 0;
 }
 
 /**

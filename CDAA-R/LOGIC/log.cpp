@@ -11,6 +11,8 @@
 
 #include "horodatage.h"
 
+#include <STORAGE/databasestorage.h>
+
 /**
  * @brief Retourne la liste de logs
  * @return la liste de logs
@@ -45,5 +47,6 @@ void Log::AddToTabLog(std::string log)
 {
     Horodatage h = Horodatage();
     tabLog.push_back('(' + h.ToString() + ')' + '\n' + log);
+    DatabaseStorage::CreateLog('(' + h.ToString() + ')' + '\n' + log);
 }
 
