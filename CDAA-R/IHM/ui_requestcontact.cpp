@@ -86,7 +86,7 @@ void UI_RequestContact::ButtonDoRequest()
     }
 
     if(R6){ // CB6 Activé
-        res += "R6 :\n" + this->GetTagDateAllContactBetweenTwoDates(ui->DE_DateDebutR6->date(), ui->DE_DateFinR6->date()) + '\n';
+        res += "R6 :\n" + this->GetTagDateAllContactBetweenTwoDates(ui->DE_DateDebutR6->date(), ui->DE_DateFinR6->date());
     }
     ui->PT_ShowResults->setPlainText(QString::fromStdString(res));
 }
@@ -162,11 +162,11 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
     std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
     std::string contact = std::to_string(idContact);
 
-    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT * FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
+    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
 
     std::string resultat = "";
     for (std::vector<std::string> ligneResultat : resultatsRequete){
-        resultat += ligneResultat.at(6)+" ("+ligneResultat[7]+')';
+        resultat += ligneResultat.at(0);
 
         //Ajoute un saut de ligne si ce n'est pas la dernière interaction
         if (ligneResultat != resultatsRequete.back()){
@@ -176,7 +176,7 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
 
     //Change le message si resultat est vide
     if (resultat == ""){
-        resultat += "Le contact "+ui->L_ContactR3->currentText().toStdString()+" n'a aucune interaction contenant des tags TODO entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
+        resultat += "Le contact "+ui->L_ContactR3->currentText().toStdString()+" n'a aucune interaction contenant des tags créée entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
     }
 
     return resultat;
