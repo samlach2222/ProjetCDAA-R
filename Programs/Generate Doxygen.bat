@@ -4,7 +4,7 @@ cd "%~dp0"
 echo.
 python doxygen2qtcreator_modified.py ..\Doxygen\html
 echo.
-if %username% == SYSTEM ("D:\LOGICIELS\QT\5.12.11\mingw73_64\bin\qhelpgenerator.exe" ..\Doxygen\html\index.qhp -o ..\Doxygen\CDAA-R.qch) else ("C:\Qt\5.12.11\mingw73_64\bin\qhelpgenerator.exe" ..\Doxygen\html\index.qhp -o ..\Doxygen\CDAA-R.qch
+if %username% == SYSTEM ("D:\LOGICIELS\QT\5.12.11\mingw73_64\bin\qhelpgenerator.exe" ..\Doxygen\html\index.qhp -o ..\Doxygen\CDAA-R.qch) else ("C:\Qt\5.12.12\mingw73_64\bin\qhelpgenerator.exe" ..\Doxygen\html\index.qhp -o ..\Doxygen\CDAA-R.qch
 chcp 65001)
 echo.
 echo.
