@@ -181,34 +181,16 @@ FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::str
  * @brief Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions
  * @param[in] contenuInteraction        Le contenu à partir duquel l'interaction sera créé
  * @param[in] titreInteraction        Le titre de l'interaction
- * @param[in] horodatage        L'horodatage de l'interaction (**optionelle**)
+ * @param[in] dateCreation        L'horodatage de l'interaction (**optionelle**)
  */
-void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction, Horodatage horodatage)
+void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction, Horodatage dateCreation)
 {
-    std::vector<Interaction> allInteractions = getListInteraction();
-    int firstAvailableId = allInteractions.size();
-
-    std::vector<int> idInteractions(allInteractions.size());
-    for (int index = 0; index < static_cast<int>(allInteractions.size()); index++){
-        idInteractions[index] = allInteractions[index].getId();
-    }
-
-    std::sort(idInteractions.begin(), idInteractions.end());
-    int lastId = -1;
-    foreach (int sortedId, idInteractions){
-        if (sortedId != lastId + 1){
-            //Exemple : si idInteractions contient 0,1,2,4,5 alors lorsque sortedId sera 4, le if testera si 4 != 2 + 1 et puisque c'est vrai renvoyer l'id 2 + 1
-            firstAvailableId = lastId + 1;
-            break;  // on sort du foreach si l'élément est trouvé (économie de performence)
-        }
-
-        lastId = sortedId;
-    }
-
-    Interaction i = Interaction(firstAvailableId, contenuInteraction, titreInteraction, horodatage);
+    /* On a besoin de la base de données pour connaitre l'id de l'interaction,
+       utiliser l'id des interactions avec GetListInteraction() pourraient
+       causer plusieurs contacts avec le même id d'interaction */
+    Interaction i = DatabaseStorage::CreateInteractionAndTags(contenuInteraction, titreInteraction, dateCreation, this->getId());
 
     listInteraction.push_back(i);
-    DatabaseStorage::CreateInteractionAndTags(i, this->getId());
 }
 
 /**
@@ -217,24 +199,16 @@ void FicheContact::AddInteraction(std::string contenuInteraction, std::string ti
  */
 void FicheContact::RemoveInteraction(int id)
 {
-    std::vector<int> indexInteractionsASupprimer;
-
+    //Boucle pour la position de chaque interaction dans la liste d'interaction du contact
     for (int index = 0; index < static_cast<int>(listInteraction.size()); index++){
-        if (listInteraction[index].getId() == id){
-            indexInteractionsASupprimer.push_back(index);
+        //Si l'id de l'interaction à l'emplacement actuel correspond à celui voulu
+        if (listInteraction.at(index).getId() == id){
+            DatabaseStorage::DeleteInteractionAndTags(this->listInteraction.at(index));
+            listInteraction.erase(listInteraction.begin() + index);
+
+            break;  //Pas besoin de parcourir le reste
         }
     }
-
-    int decalage = 0;
-    for (int& index: indexInteractionsASupprimer){
-        listInteraction.erase(listInteraction.begin() + index - decalage);
-        DatabaseStorage::DeleteInteractionAndTags(this->listInteraction.at(index));
-        decalage++;
-    }
-
-
-
-    //listInteraction.erase (std::remove_if(listInteraction.begin(), listInteraction.end(), [&](Interaction currentI){return currentI == i;}));
 }
 
 /**

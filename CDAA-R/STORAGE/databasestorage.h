@@ -21,7 +21,7 @@ class DatabaseStorage
         static void InitializeBDD();
 
         static void CreateContact(FicheContact);
-        static void CreateInteractionAndTags(Interaction i, int contactId);
+        static Interaction CreateInteractionAndTags(std::string, std::string, Horodatage, int);
         static void CreateLog(std::string);
 
         static void UpdateContact(FicheContact);

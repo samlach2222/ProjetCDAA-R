@@ -67,21 +67,31 @@ void DatabaseStorage::CreateContact(FicheContact c)
 
 /**
  * @brief Créé une interaction et ses tags associés dans la base de données
- * @param i     Interaction à ajouter
+ * @param contenuInteraction     Contenu de l'interaction à ajouter
+ * @param titreInteraction     Titre de l'interaction à ajouter
+ * @param dateCreation      Date de création de l'interaction à ajouter
  * @param contactId     id du contact auquel appartiens l'interaction
+ * @return l'interaction ajouté à la base de données
  */
-void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId)
+Interaction DatabaseStorage::CreateInteractionAndTags(std::string contenuInteraction, std::string titreInteraction, Horodatage dateCreation, int contactId)
 {
     QString strQuery = "INSERT INTO INTERACTION(interactionTitle, interactionContent, interactionDate, contactId) "; // mise à jour d'interaction
-    strQuery += "VALUES(:interactionTitle, :interactionContent, :interactionDate, :id)";
+    strQuery += "VALUES(:interactionTitle, :interactionContent, :interactionDate, :contactId)";
     QSqlQuery query;
     query.prepare(strQuery);
-    query.bindValue(":id", i.getId());
-    query.bindValue(":interactionTitle", QString::fromStdString(i.getTitre()));
-    query.bindValue(":interactionContent", QString::fromStdString(i.getContenu()));
-    query.bindValue(":interactionDate", QString::fromStdString(i.getDateCreation().ToString()));
-    query.bindValue(":id", contactId);
+    query.bindValue(":interactionTitle", QString::fromStdString(titreInteraction));
+    query.bindValue(":interactionContent", QString::fromStdString(contenuInteraction));
+    query.bindValue(":interactionDate", QString::fromStdString(dateCreation.ToString()));
+    query.bindValue(":contactId", contactId);
     query.exec();
+
+    //On récupère l'id de l'interaction
+    query = QSqlQuery("SELECT MAX(interactionId) FROM INTERACTION");
+    query.next();
+    int interactionId = query.value(0).toInt();
+
+    //Création de l'interaction
+    Interaction i = Interaction(interactionId, contenuInteraction, titreInteraction, dateCreation);
 
     tagsInteraction t = i.getTags(); // ajout des tags associés
     for(std::tuple<std::string, std::string> tuple : t.getTags()){
@@ -93,6 +103,8 @@ void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId)
         query.bindValue(":id", i.getId());
         query.exec();
     }
+
+    return i;
 }
 
 /**
