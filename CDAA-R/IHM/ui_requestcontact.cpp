@@ -38,55 +38,55 @@ UI_RequestContact::~UI_RequestContact()
  */
 void UI_RequestContact::ButtonDoRequest()
 {
-    bool R1 = ui->CB_R1->isChecked();
-    bool R2 = ui->CB_R2->isChecked();
-    bool R3 = ui->CB_R3->isChecked();
-    bool R4 = ui->CB_R4->isChecked();
-    bool R5 = ui->CB_R5->isChecked();
-    bool R6 = ui->CB_R6->isChecked();
+    const bool R1 = ui->CB_R1->isChecked();
+    const bool R2 = ui->CB_R2->isChecked();
+    const bool R3 = ui->CB_R3->isChecked();
+    const bool R4 = ui->CB_R4->isChecked();
+    const bool R5 = ui->CB_R5->isChecked();
+    const bool R6 = ui->CB_R6->isChecked();
     std::string res = "";
     if(R1){ // CB1 Activé
-        res += "R1 : \n" + this->NbContact();
+        res += "R1 :\n" + this->NbContact() + '\n';
 
-        if (R2){
-            res += "------------------------------\n";
+        if (R2 || R3 || R4 || R5 || R6){
+            res += "------------------------------------------------------------------------------------------\n";
         }
     }
 
     if(R2){ // CB2 Activé
-        res += "R2 : \n" + this->GetAllInteractionsBetweenTwoDates(ui->DE_DateDebutR2->date(), ui->DE_DateFinR2->date());
+        res += "R2 :\n" + this->GetAllInteractionsBetweenTwoDates(ui->DE_DateDebutR2->date(), ui->DE_DateFinR2->date()) + '\n';
 
-        if (R3){
-            res += "------------------------------\n";
+        if (R3 || R4 || R5 || R6){
+            res += "------------------------------------------------------------------------------------------\n";
         }
     }
 
     if(R3){ // CB3 Activé
-        res += "R3 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR3->currentIndex(),ui->DE_DateDebutR3->date(), ui->DE_DateFinR3->date());
+        res += "R3 :\n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR3->currentIndex(),ui->DE_DateDebutR3->date(), ui->DE_DateFinR3->date()) + '\n';
 
-        if (R4){
-            res += "------------------------------\n";
+        if (R4 || R5 || R6){
+            res += "------------------------------------------------------------------------------------------\n";
         }
     }
 
     if(R4){ // CB4 Activé
-        res += "R4 : \n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR4->currentIndex(),ui->DE_DateDebutR4->date(), ui->DE_DateFinR4->date());
+        res += "R4 :\n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR4->currentIndex(),ui->DE_DateDebutR4->date(), ui->DE_DateFinR4->date()) + '\n';
 
-        if (R5){
-            res += "------------------------------\n";
+        if (R5 || R6){
+            res += "------------------------------------------------------------------------------------------\n";
         }
     }
 
     if(R5){ // CB5 Activé
-        res += "R5 : \n" + this->GetTagTodoAllContactBetweenTwoDates(ui->DE_DateDebutR5->date(), ui->DE_DateFinR5->date());
+        res += "R5 :\n" + this->GetTagTodoAllContactBetweenTwoDates(ui->DE_DateDebutR5->date(), ui->DE_DateFinR5->date()) + '\n';
 
         if (R6){
-            res += "------------------------------\n";
+            res += "------------------------------------------------------------------------------------------\n";
         };
     }
 
     if(R6){ // CB6 Activé
-        res += "R6 : \n" + this->GetTagDateAllContactBetweenTwoDates(ui->DE_DateDebutR6->date(), ui->DE_DateFinR6->date());
+        res += "R6 :\n" + this->GetTagDateAllContactBetweenTwoDates(ui->DE_DateDebutR6->date(), ui->DE_DateFinR6->date()) + '\n';
     }
     ui->PT_ShowResults->setPlainText(QString::fromStdString(res));
 }
@@ -115,7 +115,7 @@ std::string UI_RequestContact::NbContact(){
         //contacts au pluriel si il y a plus d'un contact
         resultat += 's';
     }
-    resultat += " en tout\n";
+    resultat += " en tout";
     return resultat;
 }
 
@@ -133,14 +133,18 @@ std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate
 
     std::string resultat = "";
     for (std::vector<std::string> ligneResultat : resultatsRequete){
-        resultat += "titre : "+ligneResultat[1]+'\n';
-        resultat += "contenu : "+ligneResultat.at(2)+'\n';
-        resultat += "date de création : "+ligneResultat[3]+'\n';
+        resultat += ligneResultat[1]+" ("+ligneResultat.at(3)+")\n";
+        resultat += ligneResultat[2];
 
         //Ajoute un saut de ligne si ce n'est pas la dernière interaction
         if (ligneResultat != resultatsRequete.back()){
-            resultat += '\n';
+            resultat += "\n\n";
         }
+    }
+
+    //Change le message si resultat est vide
+    if (resultat == ""){
+        resultat += "Il n'y a aucune interaction créée entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
     }
 
     return resultat;
@@ -186,8 +190,8 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
  * @return la liste de toutes les tags DATE du contact entre les deux dates sous forme de chaine de caratères
  */
 std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
-    std::string date1 = d1.toString().toStdString();
-    std::string date2 = d2.toString().toStdString();
+    std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
+    std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
     std::string contact = QString::number(idContact).toStdString();
     //return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 
@@ -201,8 +205,8 @@ std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, Q
  * @return la liste de toutes les tags TODO entre les deux dates sous forme de chaine de caratères
  */
 std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2){
-    std::string date1 = d1.toString().toStdString();
-    std::string date2 = d2.toString().toStdString();
+    std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
+    std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
     //return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 
     return NULL;
@@ -215,8 +219,8 @@ std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDa
  * @return la liste de toutes les tags DATE entre les deux dates sous forme de chaine de caratères
  */
 std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2){
-    std::string date1 = d1.toString().toStdString();
-    std::string date2 = d2.toString().toStdString();
+    std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
+    std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
     //return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 
     return NULL;
