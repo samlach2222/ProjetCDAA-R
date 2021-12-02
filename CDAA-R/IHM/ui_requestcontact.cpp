@@ -154,12 +154,28 @@ std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate
  * @return la liste de toutes les tags TODO du contact entre les deux dates sous forme de chaine de caratères
  */
 std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
-    std::string date1 = d1.toString().toStdString();
-    std::string date2 = d2.toString().toStdString();
-    std::string contact = QString::number(idContact).toStdString();
-    //return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
+    std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
+    std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
+    std::string contact = std::to_string(idContact);
 
-    return NULL;
+    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT * FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
+
+    std::string resultat = "";
+    for (std::vector<std::string> ligneResultat : resultatsRequete){
+        resultat += ligneResultat.at(6)+" ("+ligneResultat[7]+')';
+
+        //Ajoute un saut de ligne si ce n'est pas la dernière interaction
+        if (ligneResultat != resultatsRequete.back()){
+            resultat += '\n';
+        }
+    }
+
+    //Change le message si resultat est vide
+    if (resultat == ""){
+        resultat += "Le contact "+ui->L_ContactR3->currentText().toStdString()+" n'a aucune interaction contenant des tags TODO entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
+    }
+
+    return resultat;
 }
 
 /**
