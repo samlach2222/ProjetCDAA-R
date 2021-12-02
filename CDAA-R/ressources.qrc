@@ -20,6 +20,5 @@
         <file>Ressources/Icons/Logo bruit.png</file>
         <file>Ressources/Icons/Logo lisse.png</file>
         <file>Ressources/Database/ContactDB.db</file>
-        <file>Ressources/Database/FakeDB.db</file>
     </qresource>
 </RCC>

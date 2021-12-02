@@ -19,12 +19,12 @@
  * @brief Initialise la base de données
  */
 void DatabaseStorage::InitializeBDD(){
-    const QString nomBdd = "FakeDB.db";  //Nom du fichier de base de données à utiliser
+    const QString nomBdd = "ContactDB.db";  //Nom du fichier de base de données à utiliser
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
     //Si la base de données n'est pas présente, copie celui des ressources
     if (!QFileInfo::exists(nomBdd)){
-        QFile::copy(":/Ressources/Database/FakeDB.db", nomBdd);
+        QFile::copy(":/Ressources/Database/ContactDB.db", nomBdd);
         QFile::setPermissions(nomBdd, QFile::WriteUser);  //Par défaut les fichiers des ressources sont en readonly
     }
 

@@ -198,3 +198,22 @@ std::string Horodatage::ToString() const
     // on retourne en std::string
     return datetime.toString("yyyy-MM-dd hh:mm:ss").toStdString();
 }
+
+std::string Horodatage::ToStringShowLog() const
+{
+    // On définit la date
+    QDate date;
+    date.setDate(this->annee, this->mois, this->jour);
+
+    // On définit l'heure
+    QTime time;
+    time.setHMS(this->heure, this->minute, this->seconde);
+
+    // On regroupe dans un datetime
+    QDateTime datetime;
+    datetime.setDate(date);
+    datetime.setTime(time);
+
+    // on retourne en std::string
+    return datetime.toString("dd/MM/yyyy hh:mm:ss").toStdString();
+}

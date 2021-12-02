@@ -43,10 +43,10 @@ Log::Log()
  * @brief Ajoute un log \p log à la liste de logs
  * @param[in] log       Le log à ajouter
  */
-void Log::AddToTabLog(std::string log)
+void Log::AddToTabLog(std::string log) // CREER DEUXIEME TOSTRING POUR AFFICHAGE XX/XX/XXXX xx:xx:xx
 {
     Horodatage h = Horodatage();
-    tabLog.push_back('(' + h.ToString() + ')' + '\n' + log);
-    DatabaseStorage::CreateLog('(' + h.ToString() + ')' + '\n' + log);
+    tabLog.push_back('(' + h.ToStringShowLog() + ')' + '\n' + log);
+    DatabaseStorage::CreateLog('(' + h.ToStringShowLog() + ')' + '\n' + log);
 }
 
