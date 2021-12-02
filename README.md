@@ -11,4 +11,3 @@ Projet CDAA - L3 Info - Grpe R
 - Actualiser les contacts filtrés après l'ajout ou la modification d'un contact
 - Enlever CDAA-R\Ressources\Database\FakeDb.db quand on ne l'utilisera plus
 - Gérer la sélection d'un contact et d'une interaction avec les touches fléchées
-- Corriger les interactionId de la table INTERACTION qui ne correspond pas à ceux de TAGS
