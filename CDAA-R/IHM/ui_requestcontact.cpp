@@ -70,7 +70,7 @@ void UI_RequestContact::ButtonDoRequest()
     }
 
     if(R4){ // CB4 Activé
-        res += "R4 :\n" + this->GetTagTodoContactBetweenTwoDates(ui->L_ContactR4->currentIndex(),ui->DE_DateDebutR4->date(), ui->DE_DateFinR4->date()) + '\n';
+        res += "R4 :\n" + this->GetTagDateContactBetweenTwoDates(ui->L_ContactR4->currentIndex(),ui->DE_DateDebutR4->date(), ui->DE_DateFinR4->date()) + '\n';
 
         if (R5 || R6){
             res += "------------------------------------------------------------------------------------------\n";
@@ -192,10 +192,26 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
 std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, QDate d1, QDate d2){
     std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
     std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
-    std::string contact = QString::number(idContact).toStdString();
-    //return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
+    std::string contact = std::to_string(idContact);
 
-    return NULL;
+    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE contactId = " + contact + " AND interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
+
+    std::string resultat = "";
+    for (std::vector<std::string> ligneResultat : resultatsRequete){
+        resultat += ligneResultat[0];
+
+        //Ajoute un saut de ligne si ce n'est pas la dernière interaction
+        if (ligneResultat != resultatsRequete.back()){
+            resultat += '\n';
+        }
+    }
+
+    //Change le message si resultat est vide
+    if (resultat == ""){
+        resultat += "Le contact "+ui->L_ContactR4->currentText().toStdString()+" n'a aucune interaction contenant des tags créée entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
+    }
+
+    return resultat;
 }
 
 /**
@@ -207,9 +223,25 @@ std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, Q
 std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
     std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
-    //return DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 
-    return NULL;
+    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT tagTodo FROM INTERACTION NATURAL JOIN TAGS WHERE interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
+
+    std::string resultat = "";
+    for (std::vector<std::string> ligneResultat : resultatsRequete){
+        resultat += ligneResultat.at(0);
+
+        //Ajoute un saut de ligne si ce n'est pas la dernière interaction
+        if (ligneResultat != resultatsRequete.back()){
+            resultat += '\n';
+        }
+    }
+
+    //Change le message si resultat est vide
+    if (resultat == ""){
+        resultat += "Il n'y a aucune interaction contenant des tags créée entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
+    }
+
+    return resultat;
 }
 
 /**
@@ -221,9 +253,25 @@ std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDa
 std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDate d2){
     std::string date1 = ConvertQDateIntoSQLiteFormat(d1);
     std::string date2 = ConvertQDateIntoSQLiteFormat(d2, true);
-    //return DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE strftime('%d/%m/%Y %H:%M:%S', interactionDate) BETWEEN strftime('%d/%m/%Y, %H:%M:%S', " + date1 + " ) AND strftime('%d/%m/%Y %H:%M:%S', " + date2 + " )");
 
-    return NULL;
+    std::vector<std::vector<std::string>> resultatsRequete = DatabaseStorage::Request("SELECT tagDate FROM INTERACTION NATURAL JOIN TAGS WHERE interactionDate BETWEEN '" + date1 + "' AND '" + date2 + "'");
+
+    std::string resultat = "";
+    for (std::vector<std::string> ligneResultat : resultatsRequete){
+        resultat += ligneResultat[0];
+
+        //Ajoute un saut de ligne si ce n'est pas la dernière interaction
+        if (ligneResultat != resultatsRequete.back()){
+            resultat += '\n';
+        }
+    }
+
+    //Change le message si resultat est vide
+    if (resultat == ""){
+        resultat += "Il n'y a aucune interaction contenant des tags créée entre le "+d1.toString("dd/MM/yyyy").toStdString()+" et le "+d2.toString("dd/MM/yyyy").toStdString();
+    }
+
+    return resultat;
 }
 
 /**
