@@ -43,7 +43,7 @@ Log::Log()
  * @brief Ajoute un log \p log à la liste de logs
  * @param[in] log       Le log à ajouter
  */
-void Log::AddToTabLog(std::string log) // CREER DEUXIEME TOSTRING POUR AFFICHAGE XX/XX/XXXX xx:xx:xx
+void Log::AddToTabLog(std::string log)
 {
     Horodatage h = Horodatage();
     tabLog.push_back('(' + h.ToStringShowLog() + ')' + '\n' + log);
