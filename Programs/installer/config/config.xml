@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+	<Name>CDAA-R</Name>
+	<Version>1.0.1</Version>
+	<Title>CDAA-R</Title>
+	<Publisher>Groupe R</Publisher>
+	<StartMenuDir>CDAA-R</StartMenuDir>
+	<Logo>../logo installer.png</Logo>
+	<InstallerApplicationIcon>../logo installer file</InstallerApplicationIcon>
+	<InstallerWindowIcon>../logo installer window.png</InstallerWindowIcon>
+	<TargetDir>@ApplicationsDir@/CDAA-R</TargetDir>
+	<RunProgram>@ApplicationsDir@/CDAA-R/CDAA-R.exe</RunProgram>
+	<AllowNonAsciiCharacters>true</AllowNonAsciiCharacters>
+	<WizardShowPageList>false</WizardShowPageList>
+	<WizardStyle>Modern</WizardStyle>
+	<WizardMinimumWidth>700</WizardMinimumWidth>
+	<WizardMinimumHeight>450</WizardMinimumHeight>
+</Installer>
