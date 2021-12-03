@@ -44,7 +44,7 @@ void UI_FilterContact::ButtonValidate()
         QDate dateMin = QDate::fromString(ui->editDateDebut->text(),"dd/MM/yyyy");
         QDate dateMax = QDate::fromString(ui->editDateFin->text(),"dd/MM/yyyy");
 
-        for(FicheContact fc : this->gc.GetAllContacts())
+        for(const FicheContact &fc : this->gc.GetAllContacts())
         {
             //Check de la validité de la date
             int fcAnnee = fc.getDateCreation().getAnnee();
@@ -90,7 +90,7 @@ void UI_FilterContact::ButtonValidate()
         else if(ui->triDateCreation->isChecked())   // tri par date de création
         {
             const std::vector<FicheContact> liste = listContact;
-            for(FicheContact fc : liste)
+            for(const FicheContact &fc : liste)
             {
                 std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
                     // fiche1
@@ -215,7 +215,7 @@ void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
     this->gc = gc;
     QDate minDate;
     QDate maxDate;
-    for(FicheContact fc : gc.GetAllContacts())
+    for(const FicheContact &fc : gc.GetAllContacts())
     {
         if(minDate.toString().isEmpty() && maxDate.toString().isEmpty()){
             minDate = QDate(fc.getDateCreation().getAnnee(), fc.getDateCreation().getMois(), fc.getDateCreation().getJour());
