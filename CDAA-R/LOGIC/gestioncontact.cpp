@@ -124,7 +124,8 @@ void GestionContact::ModifyContact(FicheContact c)
 /**
  * @brief Permet de récupérer le contact à partir de son identifiant **id**
  * @param[in] id    Identifiant du contact que l'on veux récupérer dans la liste
- * @return Retourne le contact qui a pour **id** le paramètre
+ * @return le contact qui a pour **id** le paramètre
+ * @throw std::invalid_argument Il n'y a aucun contact ayant l'id passé en paramètre
  */
 FicheContact &GestionContact::GetContact(int id)
 {
