@@ -133,6 +133,7 @@ FicheContact &GestionContact::GetContact(int id)
             return this->TabContacts[index];
         }
     }
-    FicheContact c = FicheContact(NULL, "", "", "", "", "", QImage(), Horodatage());
-    return c;
+
+    //Aucun contact ayant l'id recherché --> Erreur
+    throw std::invalid_argument("Il n'y a aucun contact avec l'id "+std::to_string(id));
 }
