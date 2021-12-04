@@ -4,6 +4,7 @@ QT       += core gui \
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+win32:RC_ICONS += Logo.ico
 PRECOMPILED_HEADER = precompiled-header.h
 CONFIG += c++11
 
