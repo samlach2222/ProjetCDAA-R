@@ -76,4 +76,4 @@ Programs/SQLiteDatabaseBrowser
 Programs/SQLiteDatabaseBrowserPortable
 
 # Don't ignore what's inside the packages data folder
-!Programs/installer/packages/com.groupe_R.CDAA-R/data/*
+!Programs/installer/packages/com.groupe_R.CDAA_R/data/*

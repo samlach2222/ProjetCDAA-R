@@ -1,10 +1,16 @@
 @ECHO OFF
 cd "%~dp0"
-::Check if the .exe file exists, ask to copy and deploy it
-chcp 65001
-if NOT exist packages\com.groupe_R.CDAA-R\data\CDAA-R.exe (
-	echo Copiez un builded CDAA-R.exe, de préférence une release build, dans le dossier Programs\installer\packages\com.groupe_R.CDAA-R\data
-	echo Puis déployez-le avec la commande "<RépertoireDeQt>\<VersionDeQt>\mingw73_64\bin\windeployqt.exe packages\com.groupe_R.CDAA-R\data\CDAA-R.exe" ^(oublie certains dll^)
+::Copy the latest release build
+if %username% == SYSTEM (
+xcopy /y "..\..\build-CDAA-R-Desktop_Qt_5_12_11_MinGW_64_bit-Release\release\CDAA-R.exe" "packages\com.groupe_R.CDAA_R\data\"
+) else (
+	chcp 65001
+	xcopy /y "..\..\build-CDAA-R-Desktop_Qt_5_12_12_MinGW_64_bit-Release\release\CDAA-R.exe" "packages\com.groupe_R.CDAA_R\data\"
+)
+echo.
+::Check if the .exe file exists, ask to deploy it
+if NOT exist packages\com.groupe_R.CDAA_R\data\Qt5Core.dll (
+	echo Déployez CDAA-R avec la commande "<RépertoireDeQt>\<VersionDeQt>\mingw73_64\bin\windeployqt.exe packages\com.groupe_R.CDAA_R\data\CDAA-R.exe" ^(oublie certains dll^)
 	echo puis utilisez un outil tel que https://github.com/lucasg/Dependencies pour connaitre les dépendances
 	echo Les dll à ajouter se trouve dans "<RépertoireDeQt>\<VersionDeQt>\mingw73_64\bin" et doivent être placer au même endroit que CDAA-R.exe
 	pause
