@@ -2,7 +2,7 @@
 cd "%~dp0"
 ::Copy the latest release build
 if %username% == SYSTEM (
-xcopy /y "..\..\build-CDAA-R-Desktop_Qt_5_12_11_MinGW_64_bit-Release\release\CDAA-R.exe" "packages\com.groupe_R.CDAA_R\data\"
+	xcopy /y "..\..\build-CDAA-R-Desktop_Qt_5_12_11_MinGW_64_bit-Release\release\CDAA-R.exe" "packages\com.groupe_R.CDAA_R\data\"
 ) else (
 	chcp 65001
 	xcopy /y "..\..\build-CDAA-R-Desktop_Qt_5_12_12_MinGW_64_bit-Release\release\CDAA-R.exe" "packages\com.groupe_R.CDAA_R\data\"
@@ -17,7 +17,7 @@ if NOT exist packages\com.groupe_R.CDAA_R\data\Qt5Core.dll (
 	exit /b 1
 )
 ::--ac = compression level, -v = verbose, -f = offline installer
-if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur.exe")
+if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 1.0.1.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 1.0.1.exe")
 echo.
 echo L'installateur "CDAA-R installateur.exe" se trouve dans Programs\installer
 TIMEOUT 3
