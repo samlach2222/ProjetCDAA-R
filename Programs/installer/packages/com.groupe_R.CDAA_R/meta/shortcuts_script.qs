@@ -9,6 +9,6 @@ Component.prototype.createOperations = function()
 	
 	if (systemInfo.productType === "windows") {
         component.addOperation("CreateShortcut", "@TargetDir@/CDAA-R.exe", "@StartMenuDir@/CDAA-R.lnk", "workingDirectory=@TargetDir@",  "description=Démarre CDAA-R");
-		component.addOperation("CreateDesktopShortcut", "@TargetDir@/CDAA-R.exe", "@DesktopDir@/CDAA-R.lnk", "workingDirectory=@TargetDir@", "description=Démarre CDAA-R");
+		component.addOperation("CreateShortcut", "@TargetDir@/CDAA-R.exe", "@DesktopDir@/CDAA-R.lnk", "workingDirectory=@TargetDir@", "description=Démarre CDAA-R");
     }
 }
