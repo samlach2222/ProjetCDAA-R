@@ -75,12 +75,16 @@ Fonctions membres publiques statiques</h2></td></tr>
 static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> ()</td></tr>
 <tr class="memdesc:a1761ea4e2e543a31c0798ab412b3e89f"><td class="mdescLeft"> </td><td class="mdescRight">Initialise la base de données. <br/></td></tr>
 <tr class="separator:a1761ea4e2e543a31c0798ab412b3e89f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3d409da175235d9d07e32b415c19f6c6"><td align="right" class="memItemLeft" valign="top"><a id="a3d409da175235d9d07e32b415c19f6c6" name="a3d409da175235d9d07e32b415c19f6c6"></a>
+static void </td><td class="memItemRight" valign="bottom"><b>CloseBDD</b> ()</td></tr>
+<tr class="memdesc:a3d409da175235d9d07e32b415c19f6c6"><td class="mdescLeft"> </td><td class="mdescRight">Ferme la base de données. <br/></td></tr>
+<tr class="separator:a3d409da175235d9d07e32b415c19f6c6"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac5eba38bd8533c59e012e67ba5748766"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ac5eba38bd8533c59e012e67ba5748766">CreateContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
 <tr class="memdesc:ac5eba38bd8533c59e012e67ba5748766"><td class="mdescLeft"> </td><td class="mdescRight">Créé une <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a> dans la base de données.  <a href="class_database_storage.html#ac5eba38bd8533c59e012e67ba5748766">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ac5eba38bd8533c59e012e67ba5748766"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab57d36105e93940907b0cbdc04e9685c"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ab57d36105e93940907b0cbdc04e9685c">CreateInteractionAndTags</a> (<a class="el" href="class_interaction.html">Interaction</a> i, int contactId)</td></tr>
-<tr class="memdesc:ab57d36105e93940907b0cbdc04e9685c"><td class="mdescLeft"> </td><td class="mdescRight">Créé une interaction et ses tags associés dans la base de données.  <a href="class_database_storage.html#ab57d36105e93940907b0cbdc04e9685c">Plus de détails...</a><br/></td></tr>
-<tr class="separator:ab57d36105e93940907b0cbdc04e9685c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6181e4452d3f6976f0e2f215b3cfec32"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="class_interaction.html">Interaction</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a6181e4452d3f6976f0e2f215b3cfec32">CreateInteractionAndTags</a> (std::string, std::string, <a class="el" href="class_horodatage.html">Horodatage</a>, int)</td></tr>
+<tr class="memdesc:a6181e4452d3f6976f0e2f215b3cfec32"><td class="mdescLeft"> </td><td class="mdescRight">Créé une interaction et ses tags associés dans la base de données.  <a href="class_database_storage.html#a6181e4452d3f6976f0e2f215b3cfec32">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a6181e4452d3f6976f0e2f215b3cfec32"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ad843d29783b7d9a64b7b0f2658b8bb0f"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#ad843d29783b7d9a64b7b0f2658b8bb0f">CreateLog</a> (std::string)</td></tr>
 <tr class="memdesc:ad843d29783b7d9a64b7b0f2658b8bb0f"><td class="mdescLeft"> </td><td class="mdescRight">Créé une ligne de log dans la base de données.  <a href="class_database_storage.html#ad843d29783b7d9a64b7b0f2658b8bb0f">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ad843d29783b7d9a64b7b0f2658b8bb0f"><td class="memSeparator" colspan="2"> </td></tr>
@@ -137,8 +141,8 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 </dl>
 </div><!-- @@@CreateContact -->
 </div>
-<a id="ab57d36105e93940907b0cbdc04e9685c" name="ab57d36105e93940907b0cbdc04e9685c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab57d36105e93940907b0cbdc04e9685c">◆ </a></span>CreateInteractionAndTags()</h2>
+<a id="a6181e4452d3f6976f0e2f215b3cfec32" name="a6181e4452d3f6976f0e2f215b3cfec32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6181e4452d3f6976f0e2f215b3cfec32">◆ </a></span>CreateInteractionAndTags()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,10 +150,22 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void DatabaseStorage::CreateInteractionAndTags </td>
+<td class="memname"><a class="el" href="class_interaction.html">Interaction</a> DatabaseStorage::CreateInteractionAndTags </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="class_interaction.html">Interaction</a> </td>
-<td class="paramname"><em>i</em>, </td>
+<td class="paramtype">std::string </td>
+<td class="paramname"><em>contenuInteraction</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">std::string </td>
+<td class="paramname"><em>titreInteraction</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="class_horodatage.html">Horodatage</a> </td>
+<td class="paramname"><em>dateCreation</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
@@ -168,15 +184,18 @@ static void </td><td class="memItemRight" valign="bottom"><b>InitializeBDD</b> 
 <span class="mlabels"><span class="mlabel">static</span></span> </td>
 </tr>
 </table>
-</div><!-- $$$CreateInteractionAndTags[overload1]$$$voidDatabaseStorage::CreateInteractionAndTags(Interaction i,int contactId ) --><div class="memdoc"><div style="display: none">void DatabaseStorage::CreateInteractionAndTags(Interaction i, int contactId )</div>
+</div><!-- $$$CreateInteractionAndTags[overload1]$$$InteractionDatabaseStorage::CreateInteractionAndTags(std::string contenuInteraction,std::string titreInteraction,Horodatage dateCreation,int contactId ) --><div class="memdoc"><div style="display: none">Interaction DatabaseStorage::CreateInteractionAndTags(std::string contenuInteraction, std::string titreInteraction, Horodatage dateCreation, int contactId )</div>
 <p>Créé une interaction et ses tags associés dans la base de données. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
-<tr><td class="paramname">i</td><td><a class="el" href="class_interaction.html" title="Classe pour une interaction.">Interaction</a> à ajouter </td></tr>
+<tr><td class="paramname">contenuInteraction</td><td>Contenu de l'interaction à ajouter </td></tr>
+<tr><td class="paramname">titreInteraction</td><td>Titre de l'interaction à ajouter </td></tr>
+<tr><td class="paramname">dateCreation</td><td>Date de création de l'interaction à ajouter </td></tr>
 <tr><td class="paramname">contactId</td><td>id du contact auquel appartiens l'interaction </td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section return"><dt>Renvoie</dt><dd>l'interaction ajouté à la base de données </dd></dl>
 </div><!-- @@@CreateInteractionAndTags -->
 </div>
 <a id="ad843d29783b7d9a64b7b0f2658b8bb0f" name="ad843d29783b7d9a64b7b0f2658b8bb0f"></a>

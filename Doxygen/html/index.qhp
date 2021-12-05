@@ -350,8 +350,9 @@
       <keyword name="Liste des choses à faire" id="Liste des choses à faire" ref="todo.html" />
       <keyword name="DatabaseStorage" id="DatabaseStorage" ref="class_database_storage.html" />
       <keyword name="InitializeBDD" id="DatabaseStorage::InitializeBDD" ref="class_database_storage.html#a1761ea4e2e543a31c0798ab412b3e89f" />
+      <keyword name="CloseBDD" id="DatabaseStorage::CloseBDD" ref="class_database_storage.html#a3d409da175235d9d07e32b415c19f6c6" />
       <keyword name="CreateContact" id="DatabaseStorage::CreateContact" ref="class_database_storage.html#ac5eba38bd8533c59e012e67ba5748766" />
-      <keyword name="CreateInteractionAndTags" id="DatabaseStorage::CreateInteractionAndTags" ref="class_database_storage.html#ab57d36105e93940907b0cbdc04e9685c" />
+      <keyword name="CreateInteractionAndTags" id="DatabaseStorage::CreateInteractionAndTags" ref="class_database_storage.html#a6181e4452d3f6976f0e2f215b3cfec32" />
       <keyword name="CreateLog" id="DatabaseStorage::CreateLog" ref="class_database_storage.html#ad843d29783b7d9a64b7b0f2658b8bb0f" />
       <keyword name="UpdateContact" id="DatabaseStorage::UpdateContact" ref="class_database_storage.html#a35ce7e237ce543d661080bc9da887c10" />
       <keyword name="UpdateInteractionAndTags" id="DatabaseStorage::UpdateInteractionAndTags" ref="class_database_storage.html#a58191ebcab6cee4d27f79f0385c3c2ef" />
@@ -405,6 +406,7 @@
       <keyword name="Horodatage" id="Horodatage::Horodatage" ref="class_horodatage.html#a8c9ebdc5bd52f17e6cc180d892960c95" />
       <keyword name="Horodatage" id="Horodatage::Horodatage" ref="class_horodatage.html#ac76fd9cdedfc2ddd89977123ecc60903" />
       <keyword name="ToString" id="Horodatage::ToString" ref="class_horodatage.html#ad21ca6880c62586b00581b4e242ee15f" />
+      <keyword name="ToStringShowLog" id="Horodatage::ToStringShowLog" ref="class_horodatage.html#af6c440759230cc280b34bd1b6b25101f" />
       <keyword name="Interaction" id="Interaction" ref="class_interaction.html" />
       <keyword name="getId" id="Interaction::getId" ref="class_interaction.html#aaead50ecd23e853601de816b701bcb12" />
       <keyword name="getTitre" id="Interaction::getTitre" ref="class_interaction.html#a1e786d709b728db6d4cc315f66d34448" />
