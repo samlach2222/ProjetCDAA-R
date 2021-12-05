@@ -39,7 +39,14 @@ void DatabaseStorage::InitializeBDD(){
  * @brief Ferme la base de données
  */
 void DatabaseStorage::CloseBDD(){
-    QSqlDatabase::database().close();
+
+    QString connectionName;
+    {
+        QSqlDatabase db = QSqlDatabase::database();
+        connectionName = db.connectionName();
+        db.close();
+    }
+    QSqlDatabase::removeDatabase(connectionName);
 }
 
 /**
