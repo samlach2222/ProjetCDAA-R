@@ -304,6 +304,50 @@ GestionContact DatabaseStorage::Load()
 }
 
 /**
+ * @brief Réinitialise la base de données avec le GestionContact et Log passé en paramètre
+ * @param gc    GestionContact utilisé pour remplir les tables
+ */
+void DatabaseStorage::ReinitializeBDD(GestionContact gc)
+{
+    QSqlQuery query;
+    const QStringList tables = {"sqlite_sequence","LOGS","INTERACTION","TAGS","CONTACT"};  //sqlite_sequence contient les prochains id des colonnes auto increment
+
+    //Pour chaque table de la base de données
+    for (const QString &table : tables)
+    {
+        //Supprime tout le contenu de la table
+        query = QSqlQuery("DELETE FROM "+table);
+        QSqlError error = query.lastError();
+
+        switch(tables.indexOf(table))
+        {
+            //LOGS
+            case 1:
+                for (const std::string &str_log : gc.getLog().getTabLog())
+                {
+                    CreateLog(str_log);
+                }
+                break;
+
+            //CONTACT (ainsi qu'INTERACTION et TAGS)
+            case 4:
+                for (FicheContact fc : gc.GetAllContacts())
+                {
+                    CreateContact(fc);
+
+                    for (Interaction i : fc.getListInteraction())
+                    {
+                        CreateInteractionAndTags(i.getContenu(), i.getTitre(), i.getDateCreation(), fc.getId());
+                    }
+                }
+                break;
+
+            //Pas besoin d'un case pour les interactions et tags car ils sont ajouter à l'ajout d'un contact (case 4)
+        }
+    }
+}
+
+/**
  * @brief Envoie la requête sql \p sqlRequest et retourne le résultat
  * @param[in] sqlRequest        La requête sql
  * @return le résultat sous forme de string pour chaque valeur, pour chaque ligne de résultat

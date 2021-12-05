@@ -464,6 +464,9 @@ void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
 {
     this->gc = gc;
 
+    //Il faut réinitialiser la base de données avec le nouveau GestionContact
+    DatabaseStorage::ReinitializeBDD(this->gc);
+
     //Rafraichissement de la fenêtre
     this->DisplayContactList();
     this->RefreshLog();

@@ -32,6 +32,7 @@ class DatabaseStorage
         static void DeleteInteractionAndTags(Interaction);
 
         static GestionContact Load();
+        static void ReinitializeBDD(GestionContact);
         static std::vector<std::vector<std::string>> Request(std::string);
 };
 
