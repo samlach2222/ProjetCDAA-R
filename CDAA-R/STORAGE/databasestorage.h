@@ -19,6 +19,7 @@ class DatabaseStorage
 {
     public:
         static void InitializeBDD();
+        static void CloseBDD();
 
         static void CreateContact(FicheContact);
         static Interaction CreateInteractionAndTags(std::string, std::string, Horodatage, int);

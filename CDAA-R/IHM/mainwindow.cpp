@@ -86,6 +86,9 @@ MainWindow::MainWindow(QWidget *parent)
  */
 MainWindow::~MainWindow()
 {
+    // On ferme la base de données
+    DatabaseStorage::CloseBDD();
+
     delete ui;
 }
 

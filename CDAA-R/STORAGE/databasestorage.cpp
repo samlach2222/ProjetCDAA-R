@@ -36,6 +36,13 @@ void DatabaseStorage::InitializeBDD(){
 }
 
 /**
+ * @brief Ferme la base de données
+ */
+void DatabaseStorage::CloseBDD(){
+    QSqlDatabase::database().close();
+}
+
+/**
  * @brief Créé une FicheContact dans la base de données
  * @param[in] c     La FicheContact à créé dans la base de données
  */
