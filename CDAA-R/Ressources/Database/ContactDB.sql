@@ -4,17 +4,17 @@
 Project : CDAA-R
 Author : Samuel LACHAUD
 CreationDate : 07/10/2021
-LatestUpdate : 08/10/2021
-Brief : This SQL file is linked to the QT project named CDAA-R,
+LatestUpdate : 05/12/2021
+Brief : This SQL file is linked to the Qt project named CDAA-R,
 which allows to graphically manage a SQLite database created from this SQL file.
 
 ***** SQLITE3 COMMANDS *****
 
-Open .SQL file in SQLITE3 :
-    sqlite3 .read <filename.sql>
 Export .SQL to .DB file in SQLITE3 :
     sqlite3 <filename.db> ".read <filename.sql>"
     You can now open .DB file in "DB Browser For SQLite" program
+Open .DB file in SQLITE3 :
+    sqlite3 <filename.db>
 */
 -------------------------
 ----- CREATION PART -----
@@ -64,8 +64,8 @@ INSERT INTO CONTACT
 VALUES
     (
         0,
-        "JORAIS",
-        "Charles",
+		"Charles",
+        "Jorais",
         "LIB",
         "CJ@mail.com",
         "0620158917",
@@ -74,8 +74,8 @@ VALUES
     ),
     (
         1,
-        "HUNE",
         "Marion",
+        "Hune",
         "LIB",
         "MH@mail.com",
         "0726274586",
@@ -84,8 +84,8 @@ VALUES
     ),
     (
         2,
-        "BAUNNE",
-        "Roger",
+		"Roger",
+        "Baunne",
         "Université de Bourgogne",
         "RB@mail.com",
         "0880264578",
@@ -95,8 +95,8 @@ VALUES
 
     (
         3,
-        "NOTHE",
-        "Viviane",
+		"Viviane",
+        "Nothe",
         "AIVA",
         "VN@mail.com",
         "0985864578",
@@ -105,8 +105,8 @@ VALUES
     ),
     (
         4,
-        "NOTHE",
-        "Baptiste",
+		"Baptiste",
+        "Nothe",
         "GitHub",
         "TN@mail.com",
         "0910154586",
@@ -346,7 +346,7 @@ VALUES
     (
       5,
       "Acheter de la raclette pour fêter la fin du projet CDAA-R (signification : CDAA-Raclette)",
-      "10/10/2021",
+      "15/12/2021",
       5
     ),
 
