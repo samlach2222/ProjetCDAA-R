@@ -34,10 +34,10 @@ public:
 private:
     Ui::MainWindow *ui;
     GestionContact gc;
-    UI_FilterContact fc;
-    UI_RequestContact rc;
-    UI_SaveGestionContact sgc; // Not StarGate Command
-    UI_InteractionContact ic;
+    UI_FilterContact *fc;
+    UI_RequestContact *rc;
+    UI_SaveGestionContact *sgc; // Not StarGate Command
+    UI_InteractionContact *ic;
     int idContactSelectionne;
 
     void DisplayContactList();

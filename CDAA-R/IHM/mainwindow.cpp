@@ -33,15 +33,21 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // DEBUT DEFINITION SIGNAUX
-    QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), &ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
-    QObject::connect(&ic, SIGNAL(sendContactToMainWindow(FicheContact)), this, SLOT(ReceiveContactToMainWindow(FicheContact)));
-    QObject::connect(&ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
-    QObject::connect(this, SIGNAL(sendToFilterContact(GestionContact)), &fc, SLOT(ReceiveFromMainWindow(GestionContact)));
-    QObject::connect(&fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
-    QObject::connect(this, SIGNAL(sendGcToSaveGestionContact(GestionContact)), &sgc, SLOT(getGcFromMainWindow(GestionContact)));
-    QObject::connect(&sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
-    QObject::connect(this, SIGNAL(sendGcToRequestContact(GestionContact)), &rc, SLOT(getGcFromMainWindow(GestionContact)));
+    //Initialisation des sous-fenêtres
+    fc = new UI_FilterContact;
+    rc = new UI_RequestContact;
+    sgc = new UI_SaveGestionContact;
+    ic = new UI_InteractionContact;
+
+    //DEBUT DEFINITION SIGNAUX
+    QObject::connect(this, SIGNAL(sendIdToInteraction(int,GestionContact)), ic, SLOT(ReceiveIdToInteraction(int,GestionContact)));
+    QObject::connect(ic, SIGNAL(sendContactToMainWindow(FicheContact)), this, SLOT(ReceiveContactToMainWindow(FicheContact)));
+    QObject::connect(ic, SIGNAL(AddOperationToLog(std::string)), this, SLOT(AddOperationToLog(std::string)));
+    QObject::connect(this, SIGNAL(sendToFilterContact(GestionContact)), fc, SLOT(ReceiveFromMainWindow(GestionContact)));
+    QObject::connect(fc, SIGNAL(sendListContactToMainWindow(std::vector<FicheContact>)), this, SLOT(ReceiveFromFilterContact(std::vector<FicheContact>)));
+    QObject::connect(this, SIGNAL(sendGcToSaveGestionContact(GestionContact)), sgc, SLOT(getGcFromMainWindow(GestionContact)));
+    QObject::connect(sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
+    QObject::connect(this, SIGNAL(sendGcToRequestContact(GestionContact)), rc, SLOT(getGcFromMainWindow(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
     //Initialisation et chargement de la BDD
@@ -86,8 +92,11 @@ MainWindow::MainWindow(QWidget *parent)
  */
 MainWindow::~MainWindow()
 {
-    // On ferme la base de données
-    DatabaseStorage::CloseBDD();
+    // On supprime toutes les sous-fenêtres
+    delete fc;
+    delete rc;
+    delete sgc;
+    delete ic;
 
     delete ui;
 }
@@ -164,9 +173,9 @@ void MainWindow::OpenFC()
     if (ui->BFilterContact->styleSheet().contains("QPushButton {background-color:red;")){  //Ne pas vérifier le styleSheet avec == au cas où on veuille le modifier plus tard
         this->resetFilters();  //Permet au raccourci clavier de d'abord désactiver le filtrage des contacts si activé
     } else {
-        if(!(rc.isVisible() || sgc.isVisible() || ic.isVisible())){
+        if(!(rc->isVisible() || sgc->isVisible() || ic->isVisible())){
             emit sendToFilterContact(this->gc);
-            fc.show();
+            fc->show();
         }
     }
 }
@@ -179,9 +188,9 @@ void MainWindow::OpenRC()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    if(!(fc.isVisible() || sgc.isVisible() || ic.isVisible())){
+    if(!(fc->isVisible() || sgc->isVisible() || ic->isVisible())){
         emit sendGcToRequestContact(this->gc);
-        rc.show();
+        rc->show();
     }
 }
 
@@ -193,9 +202,9 @@ void MainWindow::OpenSGC()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
-    if(!(fc.isVisible() || rc.isVisible() || ic.isVisible())){
+    if(!(fc->isVisible() || rc->isVisible() || ic->isVisible())){
         emit sendGcToSaveGestionContact(this->gc);
-        sgc.show();
+        sgc->show();
     }
 }
 
@@ -213,10 +222,10 @@ void MainWindow::ListItemDoubleClick()
 
     FicheContact contact = gc.GetContact(idContact);
 
-    ic.setWindowTitle("Interactions de "+QString::fromStdString(contact.ToString()));
+    ic->setWindowTitle("Interactions de "+QString::fromStdString(contact.ToString()));
     emit sendIdToInteraction(idContact,this->gc);
-    if(!(fc.isVisible() || rc.isVisible() || sgc.isVisible())){
-        ic.show();
+    if(!(fc->isVisible() || rc->isVisible() || sgc->isVisible())){
+        ic->show();
     }
 }
 
@@ -504,6 +513,12 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
+
+    // On ferme la base de données
+    DatabaseStorage::CloseBDD();
+
+    // On détruit le MainWindow; fermer la fenêtre doit fermer le programme
+    //this->~MainWindow();
 
     //event->ignore();  //Empêche la fermeture de la fenêtre
     //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
