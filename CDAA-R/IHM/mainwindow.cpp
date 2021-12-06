@@ -112,9 +112,9 @@ void MainWindow::AddContact()
     ModeAjout = 1;
     ui->frameEditContact->setVisible(1);
     QPixmap image = QPixmap::fromImage(QImage(":/Ressources/Icons/unknownContact.png"));
-    int w = ui->Image->width();
-    int h = ui->Image->height();
-    ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+    QIcon buttonIcon(image);
+    ui->ChooseImage->setIcon(buttonIcon);
+    ui->ChooseImage->setIconSize(ui->ChooseImage->size());
 
     ui->editNom->clear();
     ui->editPrenom->clear();
@@ -256,9 +256,9 @@ void MainWindow::ListItemClick()
         ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
 
         QPixmap image = QPixmap::fromImage(contact.getPhoto());
-        int w = ui->Image->width();
-        int h = ui->Image->height();
-        ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+        QIcon buttonIcon(image);
+        ui->ChooseImage->setIcon(buttonIcon);
+        ui->ChooseImage->setIconSize(ui->ChooseImage->size());
     }
 }
 
@@ -316,7 +316,7 @@ void MainWindow::ValiderContact()
             contact.setEntreprise(ui->editEntreprise->text().toStdString());
             contact.setMail(ui->editMail->text().toStdString());
             contact.setTelephone(ui->editTelephone->text().toStdString());
-            contact.setPhoto(ui->Image->pixmap()->toImage());
+            contact.setPhoto(ui->ChooseImage->icon().pixmap(ui->ChooseImage->iconSize()).toImage());
             gc.ModifyContact(contact);
         }
         else
@@ -326,7 +326,7 @@ void MainWindow::ValiderContact()
             std::string entreprise = ui->editEntreprise->text().toStdString();
             std::string mail = ui->editMail->text().toStdString();
             std::string telephone = ui->editTelephone->text().toStdString();
-            QImage image = ui->Image->pixmap()->toImage();
+            QImage image = ui->ChooseImage->icon().pixmap(ui->ChooseImage->iconSize()).toImage();
             gc.AddContact(nom,prenom,entreprise,mail,telephone,image);
         }
         ui->frameEditContact->setVisible(0);
@@ -366,10 +366,10 @@ void MainWindow::ChooseImage()
 
     if(!fileName.isEmpty())
     {
-        QPixmap image = QPixmap::fromImage(QImage(fileName));
-        int w = ui->Image->width();
-        int h = ui->Image->height();
-        ui->Image->setPixmap(image.scaled(w,h,Qt::KeepAspectRatio));
+        QPixmap image = QPixmap::fromImage(QImage(fileName));        
+        QIcon buttonIcon(image);
+        ui->ChooseImage->setIcon(buttonIcon);
+        ui->ChooseImage->setIconSize(ui->ChooseImage->size());
     }
 }
 
