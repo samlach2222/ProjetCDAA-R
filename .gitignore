@@ -48,7 +48,10 @@ qrc_*.cpp
 *.qmlc
 *.jsc
 Makefile*
-*build-*
+*build-*Debug/*
+*build-*Release/*
+*build-*Debug/debug/*
+*build-*Release/release/*
 *.qm
 *.prl
 
@@ -72,8 +75,15 @@ compile_commands.json
 *creator.user*
 
 # Ignore DB Browser for SQLite Portable
-Programs/SQLiteDatabaseBrowser
-Programs/SQLiteDatabaseBrowserPortable
+Programs/SQLiteDatabaseBrowser/
+Programs/SQLiteDatabaseBrowserPortable/
 
 # Don't ignore what's inside the packages data folder
 !Programs/installer/packages/com.groupe_R.CDAA_R/data/*
+
+# Don't ignore files needed for UWP builds
+
+!*build-*UWP*/debug/
+!*build-*UWP*/release/
+!*build-*UWP*/*/AppxManifest.xml
+!*build-*UWP*/*/assets/

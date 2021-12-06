@@ -136,5 +136,9 @@ FicheContact &GestionContact::GetContact(int id)
     }
 
     //Aucun contact ayant l'id recherché --> Erreur
+#ifdef UWP
+    exit(1);  //UWP ne supporte pas les throws
+#else
     throw std::invalid_argument("Il n'y a aucun contact avec l'id "+std::to_string(id));
+#endif
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap uap3 desktop">
+
+  <Identity
+    Name="cdaa-r"
+    Publisher="CN=qt"
+    Version="1.0.0.1"
+    ProcessorArchitecture="x86" />
+
+  <Properties>
+    <DisplayName>CDAA-R</DisplayName>
+    <PublisherDisplayName>Groupe R</PublisherDisplayName>
+    <Logo>assets/logo_store.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal"
+      MinVersion="10.0.14393.0"
+      MaxVersionTested="10.0.14393.0" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.0.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="fr"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="CDAA-R.exe"
+      EntryPoint="CDAA-R.App">
+      <uap:VisualElements
+        DisplayName="CDAA-R"
+        Description="Application de gestion de contacts et d'interactions"
+        BackgroundColor="white"
+        Square150x150Logo="assets/logo_150x150.png"
+        Square44x44Logo="assets/logo_44x44.png">
+
+        <uap:SplashScreen BackgroundColor="white" Image="assets/logo_splash.png" uap5:Optional="true"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+</Package>
