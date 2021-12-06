@@ -517,9 +517,6 @@ void MainWindow::closeEvent(QCloseEvent *event)
     // On ferme la base de données
     DatabaseStorage::CloseBDD();
 
-    // On détruit le MainWindow; fermer la fenêtre doit fermer le programme
-    //this->~MainWindow();
-
     //event->ignore();  //Empêche la fermeture de la fenêtre
     //event->accept();  //Ré-autorise la fermeture de la fenêtre si ignore() appelé
 }
