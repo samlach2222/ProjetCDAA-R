@@ -178,7 +178,7 @@ Horodatage::Horodatage(std::string strDate)
 
 /**
  * @brief Renvoie en chaine de caractère la date et l'heure de l'horodatage afin de le rendre affichable
- * @return Retourne la date et l'heure au format **dd/MM/yyyy hh:mm:ss** en chaine de caractère
+ * @return Retourne la date et l'heure au format **yyyy-MM-dd hh:mm:ss** en chaine de caractère
  */
 std::string Horodatage::ToString() const
 {
@@ -199,6 +199,10 @@ std::string Horodatage::ToString() const
     return datetime.toString("yyyy-MM-dd hh:mm:ss").toStdString();
 }
 
+/**
+ * @brief Renvoie en chaine de caractère la date et l'heure de l'horodatage afin de le rendre affichable pour les logs
+ * @return Retourne la date et l'heure au format **dd/MM/yyyy hh:mm:ss** en chaine de caractère
+ */
 std::string Horodatage::ToStringShowLog() const
 {
     // On définit la date
