@@ -10,7 +10,7 @@
 
   <Identity
     Name="cdaa-r"
-    Publisher="CN=Test UWP Certificate"
+    Publisher="CN=Groupe R"
     Version="1.0.0.1"
     ProcessorArchitecture="x86" />
 
