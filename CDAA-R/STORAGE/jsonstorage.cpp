@@ -120,19 +120,21 @@ GestionContact JSonStorage::Load()
 
     //Lecture du fichier de sauvegarde
     QFile file(GetFilepath());
-    if(!file.open(QIODevice::ReadOnly)){
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
         //Quitte prématurément si le fichier n'existe pas
         return gc;
     }
-    QTextStream fileText(&file);
-    QString jsonText = fileText.readAll();
+    QString jsonText = file.readAll();
     file.close();
 
     //Conversion en QJsonObject
-    //QByteArray jsonData = jsonText.toLatin1();
-    //QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
-    //QJsonObject json = jsonDoc.object();
-    QJsonObject json = QJsonDocument::fromJson(jsonText.toLatin1()).object();
+    //QByteArray jsonData = jsonText.toUtf8();
+    QJsonParseError* error = nullptr;
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonText.toUtf8(), error);
+    if (jsonDoc.isNull()) {
+        throw error;
+    }
+    QJsonObject json = jsonDoc.object();
 
     for (int cId = 0; cId < json["contactTotal"].toInt(); ++cId){
         //int id = json["contact"+QString::number(cId)+"id"].toInt();  //On a pas besoin d'importer l'id
