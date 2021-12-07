@@ -25,7 +25,7 @@ void DatabaseStorage::InitializeBDD(){
     //Si la base de données n'est pas présente, copie celui des ressources
     if (!QFileInfo::exists(nomBdd)){
         QFile::copy(":/Ressources/Database/ContactDB.db", nomBdd);
-        QFile::setPermissions(nomBdd, QFile::WriteUser);  //Par défaut les fichiers des ressources sont en readonly
+        QFile::setPermissions(nomBdd, QFile::WriteUser | QFile::ReadUser);  //Par défaut les fichiers des ressources sont en readonly...Sauf sur Android où il faut aussi les droits en lecture
     }
 
     db.setDatabaseName(nomBdd);  //Nom de la base de données
