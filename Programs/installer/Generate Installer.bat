@@ -1,5 +1,7 @@
 @ECHO OFF
 cd "%~dp0"
+
+::win32 win32 win32 win32 win32 win32 win32 win32
 ::Copy the latest release build
 if %username% == SYSTEM (
 	xcopy /y "..\..\build-CDAA-R-Desktop_Qt_5_12_11_MinGW_64_bit-Release\release\CDAA-R.exe" "packages\com.groupe_R.CDAA_R_win32\data\"
@@ -16,6 +18,17 @@ if NOT exist packages\com.groupe_R.CDAA_R_win32\data\Qt5Core.dll (
 	pause
 	exit /b 1
 )
+echo.
+
+::UWP UWP UWP UWP UWP UWP UWP UWP UWP UWP UWP UWP
+::Generate the msix
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\makeappx.exe" pack /o /d "..\..\build-CDAA-R-Qt_5_12_12_for_UWP_32bit_MSVC_2017-Release\release" /p "packages\com.groupe_R.CDAA_R_uwp\data\CDAA-R_UWP.msix"
+echo.
+::Sign the msix
+"C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\signtool.exe" sign /debug /fd sha256 /f "Groupe R without password.pfx" /t http://timestamp.digicert.com/ "packages\com.groupe_R.CDAA_R_uwp\data\CDAA-R_UWP.msix"
+echo.
+
+::Installateur Installateur Installateur Installateur
 ::--ac = compression level, -v = verbose, -f = offline installer
 if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 1.1.0.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 1.1.0.exe")
 echo.
