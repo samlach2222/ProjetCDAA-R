@@ -266,8 +266,8 @@ GestionContact DatabaseStorage::Load()
     query = QSqlQuery("SELECT * from CONTACT");
     while (query.next()){
         int id = query.value(0).toInt();
-        std::string nom = query.value(1).toString().toStdString();
-        std::string prenom = query.value(2).toString().toStdString();
+        std::string prenom = query.value(1).toString().toStdString();
+        std::string nom = query.value(2).toString().toStdString();
         std::string entreprise = query.value(3).toString().toStdString();
         std::string mail = query.value(4).toString().toStdString();
         std::string telephone = query.value(5).toString().toStdString();
@@ -314,7 +314,7 @@ GestionContact DatabaseStorage::Load()
 void DatabaseStorage::ReinitializeBDD(GestionContact gc)
 {
     QSqlQuery query;
-    const QStringList tables = {"sqlite_sequence","LOGS","INTERACTION","TAGS","CONTACT"};  //sqlite_sequence contient les prochains id des colonnes auto increment
+    const QStringList tables = {"sqlite_sequence","LOGS","INTERACTION","TAGS","CONTACT"};  //sqlite_sequence contient les prochains id des colonnes auto-increment
 
     //Pour chaque table de la base de données
     for (const QString &table : tables)
