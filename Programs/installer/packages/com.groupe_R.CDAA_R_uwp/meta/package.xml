@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+	<DisplayName>CDAA-R UWP</DisplayName>
+	<Description>Installe la version UWP de CDAA-R</Description>
+	<Version>1.0.2</Version>
+	<ReleaseDate>2021-12-07</ReleaseDate>
+	<Default>true</Default>
+	<RequiresAdminRights>true</RequiresAdminRights>
+	<Operations>
+		<Operation name="Execute">
+			<Argument>certutil</Argument>
+			<Argument>-addstore</Argument>
+			<Argument>TrustedPeople</Argument>
+			<Argument>@TargetDir@\Groupe R.cer</Argument>
+		</Operation>
+		<Operation name="Execute">
+			<Argument>Powershell</Argument>
+			<Argument>-NoProfile</Argument>
+			<Argument>-executionpolicy</Argument>
+			<Argument>Bypass</Argument>
+			<Argument>-Command</Argument>
+			<Argument>Add-AppPackage -path '@TargetDir@\CDAA-R_UWP.msix'</Argument>
+		</Operation>
+	</Operations>
+</Package>
