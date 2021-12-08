@@ -238,35 +238,40 @@ void MainWindow::ListItemDoubleClick()
 }
 
 /**
- * @brief Méthode liée au  clic sur un contact permettant l'édition de celui-ci
+ * @brief Méthode liée à la sélection d'un contact permettant l'édition de celui-ci
  */
-void MainWindow::ListItemClick()
+void MainWindow::ListItemSelected()
 {
-    QList<QListWidgetItem*> selectedItem = ui->ContactList->selectedItems();
-    QVariant v = selectedItem[0]->data(Qt::UserRole);
-    if (idContactSelectionne != v.value<int>()){
-        // On joue le son du bouton
-        SoundPlayer::PlayButtonSound();
+    // La fonction est aussi appelé quand la liste est vidée (avec la fonction clear)
+    // Si nous sommes dans ce cas là, ne rien faire
+    QList<QListWidgetItem*> selectedItems = ui->ContactList->selectedItems();
+    if (!selectedItems.isEmpty())
+    {
+        QVariant v = selectedItems[0]->data(Qt::UserRole);
+        if (idContactSelectionne != v.value<int>()){
+            // On joue le son du bouton
+            SoundPlayer::PlayButtonSound();
 
-        ModeAjout = 0;
-        idContactSelectionne = v.value<int>();
+            ModeAjout = 0;
+            idContactSelectionne = v.value<int>();
 
-        FicheContact contact = gc.GetContact(idContactSelectionne);
+            FicheContact contact = gc.GetContact(idContactSelectionne);
 
-        ui->frameEditContact->setVisible(1);
+            ui->frameEditContact->setVisible(1);
 
-        ui->editNom->setText(QString::fromStdString(contact.getNom()));
-        ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
-        ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
-        ui->editMail->setText(QString::fromStdString(contact.getMail()));
-        ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
+            ui->editNom->setText(QString::fromStdString(contact.getNom()));
+            ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
+            ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
+            ui->editMail->setText(QString::fromStdString(contact.getMail()));
+            ui->editTelephone->setText(QString::fromStdString(contact.getTelephone()));
 
-        ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
+            ui->editDateCreation->setText(QString::fromStdString(contact.getDateCreation().ToString()));
 
-        QPixmap image = QPixmap::fromImage(contact.getPhoto());
-        QIcon buttonIcon(image);
-        ui->ChooseImage->setIcon(buttonIcon);
-        ui->ChooseImage->setIconSize(ui->ChooseImage->size());
+            QPixmap image = QPixmap::fromImage(contact.getPhoto());
+            QIcon buttonIcon(image);
+            ui->ChooseImage->setIcon(buttonIcon);
+            ui->ChooseImage->setIconSize(ui->ChooseImage->size());
+        }
     }
 }
 

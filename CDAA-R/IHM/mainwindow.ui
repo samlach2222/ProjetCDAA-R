@@ -509,9 +509,9 @@
   </connection>
   <connection>
    <sender>ContactList</sender>
-   <signal>clicked(QModelIndex)</signal>
+   <signal>itemSelectionChanged()</signal>
    <receiver>MainWindow</receiver>
-   <slot>ListItemClick()</slot>
+   <slot>ListItemSelected()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>126</x>
@@ -546,10 +546,9 @@
   <slot>OpenRC()</slot>
   <slot>OpenSGC()</slot>
   <slot>ListItemDoubleClick()</slot>
-  <slot>ListItemClick()</slot>
   <slot>ValiderContact()</slot>
   <slot>SupprimerContact()</slot>
   <slot>ChooseImage()</slot>
-  <slot>resetFilters()</slot>
+  <slot>ListItemSelected()</slot>
  </slots>
 </ui>
