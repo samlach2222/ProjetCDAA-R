@@ -6,7 +6,6 @@
     <filterAttribute>doxygen</filterAttribute>
     <toc>
       <section title="CDAA-R 1.0" ref="index.html">
-        <section title="Liste des choses à faire" ref="todo.html" />
         <section title="Classes" ref="annotated.html">
           <section title="Liste des classes" ref="annotated.html">
             <section title="DatabaseStorage" ref="class_database_storage.html" />
@@ -352,7 +351,6 @@
       <keyword name="ModeAjout" id="mainwindow.cpp::ModeAjout" ref="mainwindow_8cpp.html#ae7d91d2759414e644fb54e14bb6cc921" />
       <keyword name="ModeAjoutInteraction" id="ui_interactioncontact.cpp::ModeAjoutInteraction" ref="ui__interactioncontact_8cpp.html#a579bb1b05542dea6b06db789a60394c7" />
       <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
-      <keyword name="Liste des choses à faire" id="Liste des choses à faire" ref="todo.html" />
       <keyword name="DatabaseStorage" id="DatabaseStorage" ref="class_database_storage.html" />
       <keyword name="InitializeBDD" id="DatabaseStorage::InitializeBDD" ref="class_database_storage.html#a1761ea4e2e543a31c0798ab412b3e89f" />
       <keyword name="CloseBDD" id="DatabaseStorage::CloseBDD" ref="class_database_storage.html#a3d409da175235d9d07e32b415c19f6c6" />
@@ -559,7 +557,6 @@
       <file>databasestorage_8cpp.html</file>
       <file>databasestorage_8h.html</file>
       <file>jsonstorage_8cpp.html</file>
-      <file>todo.html</file>
       <file>class_database_storage.html</file>
       <file>class_database_storage-members.html</file>
       <file>class_fiche_contact.html</file>
@@ -597,7 +594,6 @@
       <file>dir_f7b269915b002652e8fce37c3f975c99.html</file>
       <file>dir_4c89bc01d92c6eac37a40728a323d0a9.html</file>
       <file>index.html</file>
-      <file>pages.html</file>
       <file>annotated.html</file>
       <file>classes.html</file>
       <file>hierarchy.html</file>

@@ -47,7 +47,6 @@ void UI_SaveGestionContact::closeEvent(QCloseEvent *event)
 
 /**
  * @brief Méthode d'import des données pour modifier le paramètre de classe **gestioncontact**
- * @todo Exporter le GestionContact dans le mainwindow
  */
 void UI_SaveGestionContact::Import()
 {

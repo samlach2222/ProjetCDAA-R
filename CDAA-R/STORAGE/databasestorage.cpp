@@ -244,7 +244,6 @@ void DatabaseStorage::DeleteInteractionAndTags(Interaction i)
 /**
  * @brief Retourne une GestionContact à partir de la base de données
  * @return une GestionContact à partir de la base de données
- * @todo MÉTHODE À ÉCRIRE
  */
 GestionContact DatabaseStorage::Load()
 {

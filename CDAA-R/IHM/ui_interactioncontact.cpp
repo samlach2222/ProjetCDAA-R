@@ -26,7 +26,6 @@ bool ModeAjoutInteraction = 1;
 /**
  * @brief Constructeur de UI_InteractionContact
  * @param[out] parent    QWidget de création de classe
- * @todo Gèrer les tags comme dans la consigne
  */
 UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
     QWidget(parent),
