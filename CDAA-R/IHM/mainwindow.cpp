@@ -111,7 +111,6 @@ void MainWindow::AddContact()
     SoundPlayer::PlayButtonSound();
 
     ModeAjout = 1;
-    ui->frameEditContact->setVisible(1);
     QPixmap image = QPixmap::fromImage(QImage(":/Ressources/Icons/unknownContact.png"));
     QIcon buttonIcon(image);
     ui->ChooseImage->setIcon(buttonIcon);
@@ -122,6 +121,8 @@ void MainWindow::AddContact()
     ui->editEntreprise->clear();
     ui->editMail->clear();
     ui->editTelephone->clear();
+
+    ui->frameEditContact->setVisible(1);
 
     this->RefreshLog();
 }
@@ -257,8 +258,8 @@ void MainWindow::ListItemSelected()
 
             FicheContact contact = gc.GetContact(idContactSelectionne);
 
-            ui->frameEditContact->setVisible(1);
-
+            ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+            ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
             ui->editNom->setText(QString::fromStdString(contact.getNom()));
             ui->editPrenom->setText(QString::fromStdString(contact.getPrenom()));
             ui->editEntreprise->setText(QString::fromStdString(contact.getEntreprise()));
@@ -271,6 +272,8 @@ void MainWindow::ListItemSelected()
             QIcon buttonIcon(image);
             ui->ChooseImage->setIcon(buttonIcon);
             ui->ChooseImage->setIconSize(ui->ChooseImage->size());
+
+            ui->frameEditContact->setVisible(1);
         }
     }
 }
@@ -287,7 +290,7 @@ void MainWindow::ValiderContact()
 
         ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
-        QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"nom\" est obligatoire.") );
+        QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"Nom\" est obligatoire.") );
 
     }
     else if(ui->editPrenom->text().isEmpty() && !(ui->editNom->text().isEmpty()))   // si Champ PRENOM vide
@@ -297,7 +300,7 @@ void MainWindow::ValiderContact()
 
         ui->editPrenom->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
         ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
-        QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"prénom\" est obligatoire.") );
+        QMessageBox::warning(this, tr("Erreur champs"), tr("Le champ \"Prénom\" est obligatoire.") );
     }
     else if(ui->editNom->text().isEmpty() && ui->editPrenom->text().isEmpty())  // si les champs NOM et PRENOM sont vides
     {
@@ -306,7 +309,7 @@ void MainWindow::ValiderContact()
 
         ui->editNom->setStyleSheet("QLineEdit {border-style: outset; border-width: 2px; border-color: red;}");
         ui->editPrenom->setStyleSheet("QLineEdit { border-style: outset; border-width: 2px; border-color: red;}");
-        QMessageBox::warning(this, tr("Erreur champs"), tr("Les champs \"nom\" et \"prénom\" sont obligatoires.") );
+        QMessageBox::warning(this, tr("Erreur champs"), tr("Les champs \"Nom\" et \"Prénom\" sont obligatoires.") );
     }
     else
     {
@@ -334,11 +337,11 @@ void MainWindow::ValiderContact()
             QImage image = ui->ChooseImage->icon().pixmap(ui->ChooseImage->iconSize()).toImage();
             gc.AddContact(nom,prenom,entreprise,mail,telephone,image);
         }
-        ui->frameEditContact->setVisible(0);
         this->DisplayContactList();
         this->RefreshLog();
         ui->editNom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
         ui->editPrenom->setStyleSheet("QLineEdit {border-style: solid; border-width: 1px; border-color: #7A7A7A;}");
+        ui->frameEditContact->setVisible(0);
     }
 }
 
@@ -353,8 +356,8 @@ void MainWindow::SupprimerContact()
     if(gc.GetAllContacts().size() > 0 && !ModeAjout)
     {
         gc.SupprContact(idContactSelectionne);
-        this->DisplayContactList();
         ui->frameEditContact->setVisible(0);
+        this->DisplayContactList();
         this->RefreshLog();
     }
 }
@@ -443,12 +446,12 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
         }
     }
     if (contactFiltre) {
+        ui->frameEditContact->setVisible(0);
         ui->editNom->clear();
         ui->editPrenom->clear();
         ui->editEntreprise->clear();
         ui->editMail->clear();
         ui->editTelephone->clear();
-        ui->frameEditContact->setVisible(0);
         idContactSelectionne = -1;
     }
 
@@ -482,6 +485,7 @@ void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
     DatabaseStorage::ReinitializeBDD(this->gc);
 
     //Rafraichissement de la fenêtre
+    ui->frameEditContact->setVisible(0);
     this->DisplayContactList();
     this->RefreshLog();
     ui->editNom->clear();
@@ -489,7 +493,6 @@ void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
     ui->editEntreprise->clear();
     ui->editMail->clear();
     ui->editTelephone->clear();
-    ui->frameEditContact->setVisible(0);
     idContactSelectionne = -1;
 }
 
