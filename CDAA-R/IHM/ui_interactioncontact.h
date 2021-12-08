@@ -38,7 +38,7 @@ private:
 public slots:
     void AddInteraction();
     void SupprimerInteraction();
-    void ListItemClick();
+    void ListItemSelected();
     void ValiderInteraction();
     void ReceiveIdToInteraction(int,GestionContact);
 

@@ -207,22 +207,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>InteractionList</sender>
-   <signal>clicked(QModelIndex)</signal>
-   <receiver>UI_InteractionContact</receiver>
-   <slot>ListItemClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>135</x>
-     <y>161</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>208</x>
-     <y>5</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>BValider</sender>
    <signal>clicked()</signal>
    <receiver>UI_InteractionContact</receiver>
@@ -270,14 +254,27 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>InteractionList</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ListItemSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>AddInteraction()</slot>
-  <slot>ListItemClick()</slot>
-  <slot>ListItemDoubleClick()</slot>
-  <slot>ValidateAllInteractions()</slot>
-  <slot>CancelAllInteractions()</slot>
   <slot>ValiderInteraction()</slot>
   <slot>SupprimerInteraction()</slot>
+  <slot>ListItemSelected()</slot>
  </slots>
 </ui>

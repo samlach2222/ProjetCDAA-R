@@ -210,28 +210,32 @@ void UI_InteractionContact::DisplayInteractionList()
 }
 
 /**
- * @brief Méthode reliée à l'action d'un click sur un élément de la liste, permet d'afficher la fenêtre d'édition d'une interaction
+ * @brief Méthode reliée à la sélection d'un élément de la liste, permet d'afficher la fenêtre d'édition d'une interaction
  */
-void UI_InteractionContact::ListItemClick()
+void UI_InteractionContact::ListItemSelected()
 {
-    // On joue le son du bouton
-    SoundPlayer::PlayButtonSound();
-
-    ModeAjoutInteraction = 0;
-    QList<QListWidgetItem*> selectedItem = ui->InteractionList->selectedItems();
-    QVariant v = selectedItem[0]->data(Qt::UserRole);
-    int idInteraction = v.value<int>();
-
-
-    ui->frameEditInteraction->setVisible(1);
-
-    for(Interaction i : this->contact.getListInteraction())
+    // La fonction est aussi appelé quand la liste est vidée (avec la fonction clear)
+    // Si nous sommes dans ce cas là, ne rien faire
+    QList<QListWidgetItem*> selectedItems = ui->InteractionList->selectedItems();
+    if (!selectedItems.isEmpty())
     {
-        if(i.getId() == idInteraction)
+        // On joue le son du bouton
+        SoundPlayer::PlayButtonSound();
+
+        ModeAjoutInteraction = 0;
+        QVariant v = selectedItems[0]->data(Qt::UserRole);
+        int idInteraction = v.value<int>();
+
+        ui->frameEditInteraction->setVisible(1);
+
+        for(Interaction i : this->contact.getListInteraction())
         {
-            ui->editTitre->setText(QString::fromStdString(i.getTitre()));
-            ui->editDescription->setPlainText(QString::fromStdString(i.getContenu()));
-            ui->editDateCreation->setText(QString::fromStdString(i.getDateCreation().ToString()));
+            if(i.getId() == idInteraction)
+            {
+                ui->editTitre->setText(QString::fromStdString(i.getTitre()));
+                ui->editDescription->setPlainText(QString::fromStdString(i.getContenu()));
+                ui->editDateCreation->setText(QString::fromStdString(i.getDateCreation().ToString()));
+            }
         }
     }
 }
