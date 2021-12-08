@@ -27,6 +27,9 @@
       <height>440</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
    </widget>
    <widget class="QListView" name="LogsList">
     <property name="geometry">
@@ -36,6 +39,9 @@
       <width>175</width>
       <height>530</height>
      </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
     </property>
    </widget>
    <widget class="QPushButton" name="BAddContact">
@@ -454,22 +460,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>LogsList</sender>
-   <signal>doubleClicked(QModelIndex)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>LogsDoubleClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>683</x>
-     <y>423</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>497</x>
-     <y>250</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>Validate</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -556,7 +546,6 @@
   <slot>OpenRC()</slot>
   <slot>OpenSGC()</slot>
   <slot>ListItemDoubleClick()</slot>
-  <slot>LogsDoubleClick()</slot>
   <slot>ListItemClick()</slot>
   <slot>ValiderContact()</slot>
   <slot>SupprimerContact()</slot>

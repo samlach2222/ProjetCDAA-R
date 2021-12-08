@@ -271,14 +271,6 @@ void MainWindow::ListItemClick()
 }
 
 /**
- * @brief Méthode permettant de supprimer l'interaction des logs
- */
-void MainWindow::LogsDoubleClick()  // disable Logs edition
-{
-    ui->LogsList->setEditTriggers(QAbstractItemView::NoEditTriggers);
-}
-
-/**
  * @brief Permet de sauvegarder un nouveau contact ou la modification d'un contact déjà existant avec le bouton valider
  */
 void MainWindow::ValiderContact()

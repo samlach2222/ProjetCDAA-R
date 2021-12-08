@@ -53,7 +53,6 @@ public slots:
     void OpenRC();
     void OpenSGC();
     void ListItemDoubleClick();
-    void LogsDoubleClick();
     void ListItemClick();
     void ValiderContact();
     void SupprimerContact();
