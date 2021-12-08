@@ -48,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(this, SIGNAL(sendGcToSaveGestionContact(GestionContact)), sgc, SLOT(getGcFromMainWindow(GestionContact)));
     QObject::connect(sgc, SIGNAL(sendGcToMainWindow(GestionContact)), this, SLOT(getGcFromSaveGestionContact(GestionContact)));
     QObject::connect(this, SIGNAL(sendGcToRequestContact(GestionContact)), rc, SLOT(getGcFromMainWindow(GestionContact)));
+    QObject::connect(this, SIGNAL(refreshFilteredContacts(GestionContact)), fc, SLOT(PrepareSendingToMainWindow(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
     //Initialisation et chargement de la BDD
@@ -126,19 +127,26 @@ void MainWindow::AddContact()
 }
 
 /**
- * @brief Méthode pour rafraichir l'affichage de la liste des contacts
+ * @brief Méthode pour rafraichir l'affichage de la liste des contacts en prenant en compte le filtrage
  */
 void MainWindow::DisplayContactList()
 {
     ui->ContactList->clear();
-    for(FicheContact c : gc.GetAllContacts())
-    {
-        QString str = QString::fromStdString(c.ToString());
-        QListWidgetItem* item = new QListWidgetItem(str);
-        QVariant v;
-        v.setValue(c.getId());
-        item->setData(Qt::UserRole, v);
-        ui->ContactList->addItem(item);
+
+    //Si le filtrage est activé, rafrachit la liste des contacts filtrés
+    if (ui->BFilterContact->styleSheet().contains("QPushButton {background-color:red;")){
+        emit refreshFilteredContacts(gc);
+    }
+    else{
+        for(FicheContact c : gc.GetAllContacts())
+        {
+            QString str = QString::fromStdString(c.ToString());
+            QListWidgetItem* item = new QListWidgetItem(str);
+            QVariant v;
+            v.setValue(c.getId());
+            item->setData(Qt::UserRole, v);
+            ui->ContactList->addItem(item);
+        }
     }
 }
 
@@ -171,7 +179,7 @@ void MainWindow::OpenFC()
     SoundPlayer::PlayButtonSound();
 
     if (ui->BFilterContact->styleSheet().contains("QPushButton {background-color:red;")){  //Ne pas vérifier le styleSheet avec == au cas où on veuille le modifier plus tard
-        this->resetFilters();  //Permet au raccourci clavier de d'abord désactiver le filtrage des contacts si activé
+        this->resetFilters();  //On désactive d'abord le filtrage si activé, il faut réappuyer pour ouvrir la fenêtre
     } else {
         if(!(rc->isVisible() || sgc->isVisible() || ic->isVisible())){
             emit sendToFilterContact(this->gc);
@@ -458,9 +466,9 @@ void MainWindow::resetFilters()
     // On joue le son du bouton
     SoundPlayer::PlayButtonSound();
 
+    ui->BFilterContact->setStyleSheet("");
     this->DisplayContactList();
     this->ReselectSelectedContact();
-    ui->BFilterContact->setStyleSheet("");
 
     this->setWindowTitle("Projet de CDAA - Groupe R");
 }

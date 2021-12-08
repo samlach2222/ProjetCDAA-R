@@ -75,6 +75,11 @@ signals :
     void sendToFilterContact(GestionContact);
 
     /**
+     * @brief Rafraichit la liste des contacts filtrés
+     */
+    void refreshFilteredContacts(GestionContact);
+
+    /**
      * @brief Envoie le GestionContact à la fenêtre SaveGestionContact
      */
     void sendGcToSaveGestionContact(GestionContact);

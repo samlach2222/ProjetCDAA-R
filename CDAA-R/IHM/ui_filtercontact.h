@@ -42,6 +42,7 @@ private:
 public slots:
     void ButtonValidate();
     void ReceiveFromMainWindow(GestionContact);
+    void PrepareSendingToMainWindow(GestionContact);
 
 signals:
     /**

@@ -34,81 +34,12 @@ UI_FilterContact::~UI_FilterContact()
 
 /**
  * @brief Permet de valider le filtre à partir du bouton lié
- * @todo A PROGRAMMER
  */
 void UI_FilterContact::ButtonValidate()
 {
     if(this->VerificationChamps()) // si les champs sont valides et bien remplis
     {
-        std::vector<FicheContact> listContact = std::vector<FicheContact>();
-        QDate dateMin = QDate::fromString(ui->editDateDebut->text(),"dd/MM/yyyy");
-        QDate dateMax = QDate::fromString(ui->editDateFin->text(),"dd/MM/yyyy");
-
-        for(const FicheContact &fc : this->gc.GetAllContacts())
-        {
-            //Check de la validité de la date
-            int fcAnnee = fc.getDateCreation().getAnnee();
-            int fcMois = fc.getDateCreation().getMois();
-            int fcJour = fc.getDateCreation().getJour();
-            QDate date = QDate(fcAnnee,fcMois, fcJour);
-            if(date >= dateMin && date <= dateMax) // date souhaitée
-            {
-                // check nom (si non vide)
-                if(!ui->editNom->text().isEmpty())
-                {
-                    if(fc.getNom() == ui->editNom->text().toStdString()) // si le nom est bien recherché
-                    {
-                        listContact.push_back(fc);
-                    }
-                }
-                //check entreprise (si non vide)
-                else if(!ui->editEntreprise->text().isEmpty())
-                {
-                    if(fc.getEntreprise() == ui->editEntreprise->text().toStdString()) // si l'entreprise est bien recherché
-                    {
-                        listContact.push_back(fc);
-                    }
-                }
-            }
-        }
-
-        if(ui->triAlphabetique->isChecked())    // tri alphabétique
-        {
-            if(!ui->editNom->text().isEmpty()) // on trie alors par Prénom
-            {
-                std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
-                    return fiche1.getPrenom() < fiche2.getPrenom();
-                });
-            }
-            else if(!ui->editEntreprise->text().isEmpty()) // on trie alors par Nom
-            {
-                std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
-                    return fiche1.getNom() < fiche2.getNom();
-                });
-            }
-        }
-        else if(ui->triDateCreation->isChecked())   // tri par date de création
-        {
-            const std::vector<FicheContact> liste = listContact;
-            for(const FicheContact &fc : liste)
-            {
-                std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
-                    // fiche1
-                    std::string fcAnnee1 = std::to_string(fiche1.getDateCreation().getAnnee());
-                    std::string fcMois1 = std::to_string(fiche1.getDateCreation().getMois());
-                    std::string fcJour1 = std::to_string(fiche1.getDateCreation().getJour());
-                    QDate date1 = QDate::fromString(QString::fromStdString(fcJour1 + "/" + fcMois1 + "/" + fcAnnee1),"dd/MM/yyyy");
-                    // fiche2
-                    std::string fcAnnee2 = std::to_string(fiche2.getDateCreation().getAnnee());
-                    std::string fcMois2 = std::to_string(fiche2.getDateCreation().getMois());
-                    std::string fcJour2 = std::to_string(fiche2.getDateCreation().getJour());
-                    QDate date2 = QDate::fromString(QString::fromStdString(fcJour2 + "/" + fcMois2 + "/" + fcAnnee2),"dd/MM/yyyy");
-                    return date1 < date2;
-                });
-            }
-        }
-        emit sendListContactToMainWindow(listContact);
-        this->close();
+        PrepareSendingToMainWindow(this->gc);
     }
 }
 
@@ -236,4 +167,80 @@ void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
     }
     ui->editDateDebut->setDate(minDate);
     ui->editDateFin->setDate(maxDate);
+}
+
+/**
+ * @brief Crée la liste des contacts filtrés et l'envoie au MainWindow
+ * @param gc    GestionContact utilisé pour le filtrage
+ */
+void UI_FilterContact::PrepareSendingToMainWindow(GestionContact gc)
+{
+    this->gc = gc;
+
+    std::vector<FicheContact> listContact = std::vector<FicheContact>();
+    QDate dateMin = QDate::fromString(ui->editDateDebut->text(),"dd/MM/yyyy");
+    QDate dateMax = QDate::fromString(ui->editDateFin->text(),"dd/MM/yyyy");
+
+    for(const FicheContact &fc : this->gc.GetAllContacts())
+    {
+        //Check de la validité de la date
+        int fcAnnee = fc.getDateCreation().getAnnee();
+        int fcMois = fc.getDateCreation().getMois();
+        int fcJour = fc.getDateCreation().getJour();
+        QDate date = QDate(fcAnnee,fcMois, fcJour);
+        if(date >= dateMin && date <= dateMax) // date souhaitée
+        {
+            // check nom (si non vide)
+            if(!ui->editNom->text().isEmpty())
+            {
+                if(fc.getNom() == ui->editNom->text().toStdString()) // si le nom est bien recherché
+                {
+                    listContact.push_back(fc);
+                }
+            }
+            //check entreprise (si non vide)
+            else if(!ui->editEntreprise->text().isEmpty())
+            {
+                if(fc.getEntreprise() == ui->editEntreprise->text().toStdString()) // si l'entreprise est bien recherché
+                {
+                    listContact.push_back(fc);
+                }
+            }
+        }
+    }
+
+    if(ui->triAlphabetique->isChecked())    // tri alphabétique
+    {
+        if(!ui->editNom->text().isEmpty()) // on trie alors par Prénom
+        {
+            std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
+                return fiche1.getPrenom() < fiche2.getPrenom();
+            });
+        }
+        else if(!ui->editEntreprise->text().isEmpty()) // on trie alors par Nom
+        {
+            std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
+                return fiche1.getNom() < fiche2.getNom();
+            });
+        }
+    }
+    else if(ui->triDateCreation->isChecked())   // tri par date de création
+    {
+
+        std::sort(listContact.begin(), listContact.end(), [](FicheContact& fiche1, FicheContact& fiche2) {
+            // fiche1
+            std::string fcAnnee1 = std::to_string(fiche1.getDateCreation().getAnnee());
+            std::string fcMois1 = std::to_string(fiche1.getDateCreation().getMois());
+            std::string fcJour1 = std::to_string(fiche1.getDateCreation().getJour());
+            QDate date1 = QDate::fromString(QString::fromStdString(fcJour1 + "/" + fcMois1 + "/" + fcAnnee1),"dd/MM/yyyy");
+            // fiche2
+            std::string fcAnnee2 = std::to_string(fiche2.getDateCreation().getAnnee());
+            std::string fcMois2 = std::to_string(fiche2.getDateCreation().getMois());
+            std::string fcJour2 = std::to_string(fiche2.getDateCreation().getJour());
+            QDate date2 = QDate::fromString(QString::fromStdString(fcJour2 + "/" + fcMois2 + "/" + fcAnnee2),"dd/MM/yyyy");
+            return date1 < date2;
+        });
+    }
+    emit sendListContactToMainWindow(listContact);
+    this->close();
 }
