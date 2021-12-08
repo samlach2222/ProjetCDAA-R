@@ -103,6 +103,9 @@ static void </td><td class="memItemRight" valign="bottom"><b>CloseBDD</b> ()</t
 <tr class="memitem:abc2fafcdb63b7888678564a776d6a89c"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="class_gestion_contact.html">GestionContact</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c">Load</a> ()</td></tr>
 <tr class="memdesc:abc2fafcdb63b7888678564a776d6a89c"><td class="mdescLeft"> </td><td class="mdescRight">Retourne une <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à partir de la base de données.  <a href="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c">Plus de détails...</a><br/></td></tr>
 <tr class="separator:abc2fafcdb63b7888678564a776d6a89c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a548db919bd1e3d05fa246313a89b7a50"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a548db919bd1e3d05fa246313a89b7a50">ReinitializeBDD</a> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
+<tr class="memdesc:a548db919bd1e3d05fa246313a89b7a50"><td class="mdescLeft"> </td><td class="mdescRight">Réinitialise la base de données avec le <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> et <a class="el" href="class_log.html" title="Classe pour les logs de l'application.">Log</a> passé en paramètre.  <a href="class_database_storage.html#a548db919bd1e3d05fa246313a89b7a50">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a548db919bd1e3d05fa246313a89b7a50"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a77ec420d9a1070a0ef98859526a1224a"><td align="right" class="memItemLeft" valign="top">static std::vector&lt;std::vector&lt;std::string&gt;&gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a">Request</a> (std::string)</td></tr>
 <tr class="memdesc:a77ec420d9a1070a0ef98859526a1224a"><td class="mdescLeft"> </td><td class="mdescRight">Envoie la requête sql <code>sqlRequest</code> et retourne le résultat.  <a href="class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a77ec420d9a1070a0ef98859526a1224a"><td class="memSeparator" colspan="2"> </td></tr>
@@ -314,8 +317,39 @@ static void </td><td class="memItemRight" valign="bottom"><b>CloseBDD</b> ()</t
 </div><!-- $$$Load[overload1]$$$GestionContactDatabaseStorage::Load() --><div class="memdoc"><div style="display: none">GestionContact DatabaseStorage::Load()</div>
 <p>Retourne une <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à partir de la base de données. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>une <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> à partir de la base de données </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">A faire:</a></b></dt><dd>MÉTHODE À ÉCRIRE </dd></dl>
 </div><!-- @@@Load -->
+</div>
+<a id="a548db919bd1e3d05fa246313a89b7a50" name="a548db919bd1e3d05fa246313a89b7a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548db919bd1e3d05fa246313a89b7a50">◆ </a></span>ReinitializeBDD()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void DatabaseStorage::ReinitializeBDD </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="class_gestion_contact.html">GestionContact</a> </td>
+<td class="paramname"><em>gc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><!-- $$$ReinitializeBDD[overload1]$$$voidDatabaseStorage::ReinitializeBDD(GestionContact gc) --><div class="memdoc"><div style="display: none">void DatabaseStorage::ReinitializeBDD(GestionContact gc)</div>
+<p>Réinitialise la base de données avec le <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> et <a class="el" href="class_log.html" title="Classe pour les logs de l'application.">Log</a> passé en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+<table class="params">
+<tr><td class="paramname">gc</td><td><a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> utilisé pour remplir les tables </td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- @@@ReinitializeBDD -->
 </div>
 <a id="a77ec420d9a1070a0ef98859526a1224a" name="a77ec420d9a1070a0ef98859526a1224a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77ec420d9a1070a0ef98859526a1224a">◆ </a></span>Request()</h2>

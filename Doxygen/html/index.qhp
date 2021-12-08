@@ -58,6 +58,7 @@
               <section title="setMois" ref="class_horodatage.html#a8da667243cb2f2d391ffcbdb393d4ad1" />
               <section title="setSeconde" ref="class_horodatage.html#ad02e656607e91f3bee2d9be077a84230" />
               <section title="ToString" ref="class_horodatage.html#ad21ca6880c62586b00581b4e242ee15f" />
+              <section title="ToStringShowLog" ref="class_horodatage.html#af6c440759230cc280b34bd1b6b25101f" />
             </section>
             <section title="Interaction" ref="class_interaction.html">
               <section title="Interaction" ref="class_interaction.html#a4074d3ff745bab28bc2bd4727ba03806" />
@@ -92,6 +93,7 @@
               <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
               <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
               <section title="ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
+              <section title="refreshFilteredContacts" ref="class_main_window.html#a4c55192c34422feada6db408a3729e5a" />
               <section title="sendGcToRequestContact" ref="class_main_window.html#a9896c8cdabe1e69925d829be86bce942" />
               <section title="sendGcToSaveGestionContact" ref="class_main_window.html#a979a81e4ebef828f3395a073a142b7eb" />
               <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
@@ -111,6 +113,7 @@
               <section title="UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
               <section title="~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
               <section title="ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+              <section title="PrepareSendingToMainWindow" ref="class_u_i___filter_contact.html#acadca6f1c961c42564b0da3122a92004" />
               <section title="ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
               <section title="sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
             </section>
@@ -189,6 +192,7 @@
                   <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
                   <section title="ReceiveContactToMainWindow" ref="class_main_window.html#aa35f62a002e2f5301d3526ece23071ae" />
                   <section title="ReceiveFromFilterContact" ref="class_main_window.html#a73a8e5152698caa909ca786162dca8b2" />
+                  <section title="refreshFilteredContacts" ref="class_main_window.html#a4c55192c34422feada6db408a3729e5a" />
                   <section title="sendGcToRequestContact" ref="class_main_window.html#a9896c8cdabe1e69925d829be86bce942" />
                   <section title="sendGcToSaveGestionContact" ref="class_main_window.html#a979a81e4ebef828f3395a073a142b7eb" />
                   <section title="sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
@@ -203,6 +207,7 @@
                   <section title="UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
                   <section title="~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
                   <section title="ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
+                  <section title="PrepareSendingToMainWindow" ref="class_u_i___filter_contact.html#acadca6f1c961c42564b0da3122a92004" />
                   <section title="ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
                   <section title="sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
                 </section>
@@ -359,6 +364,7 @@
       <keyword name="DeleteContact" id="DatabaseStorage::DeleteContact" ref="class_database_storage.html#ab7d6413f6dc28f943d7c55c52dfd93cd" />
       <keyword name="DeleteInteractionAndTags" id="DatabaseStorage::DeleteInteractionAndTags" ref="class_database_storage.html#abea89ab4844b3e08c24bf43881164bc0" />
       <keyword name="Load" id="DatabaseStorage::Load" ref="class_database_storage.html#abc2fafcdb63b7888678564a776d6a89c" />
+      <keyword name="ReinitializeBDD" id="DatabaseStorage::ReinitializeBDD" ref="class_database_storage.html#a548db919bd1e3d05fa246313a89b7a50" />
       <keyword name="Request" id="DatabaseStorage::Request" ref="class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a" />
       <keyword name="FicheContact" id="FicheContact" ref="class_fiche_contact.html" />
       <keyword name="getId" id="FicheContact::getId" ref="class_fiche_contact.html#aa97b411491af4b5cda1ae2c3183c0414" />
@@ -442,6 +448,7 @@
       <keyword name="getGcFromSaveGestionContact" id="MainWindow::getGcFromSaveGestionContact" ref="class_main_window.html#adc010ec668ec3ffc71c523667417c2b4" />
       <keyword name="sendIdToInteraction" id="MainWindow::sendIdToInteraction" ref="class_main_window.html#adecf9e057eb5bf497047254018d048c6" />
       <keyword name="sendToFilterContact" id="MainWindow::sendToFilterContact" ref="class_main_window.html#a879e232f03a72410cc6788b6f5bb4c97" />
+      <keyword name="refreshFilteredContacts" id="MainWindow::refreshFilteredContacts" ref="class_main_window.html#a4c55192c34422feada6db408a3729e5a" />
       <keyword name="sendGcToSaveGestionContact" id="MainWindow::sendGcToSaveGestionContact" ref="class_main_window.html#a979a81e4ebef828f3395a073a142b7eb" />
       <keyword name="sendGcToRequestContact" id="MainWindow::sendGcToRequestContact" ref="class_main_window.html#a9896c8cdabe1e69925d829be86bce942" />
       <keyword name="MainWindow" id="MainWindow::MainWindow" ref="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" />
@@ -459,6 +466,7 @@
       <keyword name="UI_FilterContact" id="UI_FilterContact" ref="class_u_i___filter_contact.html" />
       <keyword name="ButtonValidate" id="UI_FilterContact::ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
       <keyword name="ReceiveFromMainWindow" id="UI_FilterContact::ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
+      <keyword name="PrepareSendingToMainWindow" id="UI_FilterContact::PrepareSendingToMainWindow" ref="class_u_i___filter_contact.html#acadca6f1c961c42564b0da3122a92004" />
       <keyword name="sendListContactToMainWindow" id="UI_FilterContact::sendListContactToMainWindow" ref="class_u_i___filter_contact.html#a1b509e1a2950d02e24651c855df3b2cb" />
       <keyword name="UI_FilterContact" id="UI_FilterContact::UI_FilterContact" ref="class_u_i___filter_contact.html#a6ac07367a9cfccadd3c5426f7b5900e1" />
       <keyword name="~UI_FilterContact" id="UI_FilterContact::~UI_FilterContact" ref="class_u_i___filter_contact.html#a4fb3472311688bbe0ecadb9e24aaed7a" />
