@@ -31,7 +31,7 @@ bool ModeAjoutInteraction = 1;
 UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::UI_InteractionContact),
-    contact(NULL, "","","","","",QImage(), Horodatage())
+    contact(-1, "","","","","",QImage(), Horodatage())
 {
     ui->setupUi(this);
 
