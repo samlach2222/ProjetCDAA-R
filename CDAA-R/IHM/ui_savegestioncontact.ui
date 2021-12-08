@@ -157,6 +157,5 @@
  <slots>
   <slot>Export()</slot>
   <slot>Import()</slot>
-  <slot>Fermer()</slot>
  </slots>
 </ui>

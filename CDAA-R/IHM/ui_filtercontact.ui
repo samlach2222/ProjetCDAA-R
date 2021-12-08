@@ -230,6 +230,5 @@
  </connections>
  <slots>
   <slot>ButtonValidate()</slot>
-  <slot>ButtonCancel()</slot>
  </slots>
 </ui>
