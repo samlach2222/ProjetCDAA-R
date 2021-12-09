@@ -15,6 +15,7 @@
 
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QStandardPaths>
 #include <QStringListModel>
 
 /**

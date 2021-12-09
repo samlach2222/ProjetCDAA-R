@@ -198,7 +198,7 @@ void UI_InteractionContact::ReceiveIdToInteraction(int idreceive,GestionContact 
 void UI_InteractionContact::DisplayInteractionList()
 {
     ui->InteractionList->clear();
-    for(Interaction i : this->contact.getListInteraction())
+    for(const Interaction &i : this->contact.getListInteraction())
     {
         QString str = QString::fromStdString(i.getTitre());
         QListWidgetItem* item = new QListWidgetItem(str);
@@ -228,7 +228,7 @@ void UI_InteractionContact::ListItemSelected()
 
         ui->frameEditInteraction->setVisible(1);
 
-        for(Interaction i : this->contact.getListInteraction())
+        for(const Interaction &i : this->contact.getListInteraction())
         {
             if(i.getId() == idInteraction)
             {

@@ -338,7 +338,7 @@ void DatabaseStorage::ReinitializeBDD(GestionContact gc)
                 {
                     CreateContact(fc);
 
-                    for (Interaction i : fc.getListInteraction())
+                    for (const Interaction &i : fc.getListInteraction())
                     {
                         CreateInteractionAndTags(i.getContenu(), i.getTitre(), i.getDateCreation(), fc.getId());
                     }
