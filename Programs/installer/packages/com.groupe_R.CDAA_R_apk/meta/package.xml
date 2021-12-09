@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+	<DisplayName>CDAA-R APK</DisplayName>
+	<Description>Ajoute l'apk dans le dossier d'installation. L'apk est à installer manuellement !</Description>
+	<Version>1.0.3</Version>
+	<ReleaseDate>2021-12-09</ReleaseDate>
+	<Default>true</Default>
+	<Operations>
+		<Operation name="Execute">
+			<Argument>Powershell</Argument>
+			<Argument>-NoProfile</Argument>
+			<Argument>-executionpolicy</Argument>
+			<Argument>Bypass</Argument>
+			<Argument>-Command</Argument>
+			<Argument>Start "@TargetDir@"</Argument>
+		</Operation>
+	</Operations>
+</Package>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package>
-	<DisplayName>CDAA-R win32</DisplayName>
-	<Description>Installe la version win32 (.exe) de CDAA-R</Description>
-	<Version>1.0.2</Version>
+	<DisplayName>CDAA-R EXE</DisplayName>
+	<Description>Installe la version EXE (Win32) de CDAA-R</Description>
+	<Version>1.0.3</Version>
 	<ReleaseDate>2021-12-07</ReleaseDate>
 	<Default>true</Default>
 	<Script>shortcuts_script.qs</Script>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
 	<Name>CDAA-R</Name>
-	<Version>1.1.0</Version>
+	<Version>2.1.0</Version>
 	<Title>CDAA-R</Title>
 	<Publisher>Groupe R</Publisher>
 	<StartMenuDir>CDAA-R</StartMenuDir>
@@ -9,8 +9,8 @@
 	<InstallerApplicationIcon>../logo installer file</InstallerApplicationIcon>
 	<InstallerWindowIcon>../logo installer window.png</InstallerWindowIcon>
 	<TargetDir>@ApplicationsDir@/CDAA-R</TargetDir>
-	<RunProgram>@TargetDir@\CDAA-R.exe</RunProgram>
-	<RunProgramDescription>Exécutez CDAA-R win32 maintenant.</RunProgramDescription>
+	<RunProgram>@TargetDir@/CDAA-R.exe</RunProgram>
+	<RunProgramDescription>Exécutez CDAA-R EXE maintenant.</RunProgramDescription>
 	<AllowNonAsciiCharacters>true</AllowNonAsciiCharacters>
 	<WizardShowPageList>false</WizardShowPageList>
 	<WizardStyle>Modern</WizardStyle>

@@ -28,9 +28,18 @@ echo.
 "C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\signtool.exe" sign /debug /fd sha256 /f "Groupe R without password.pfx" /t http://timestamp.digicert.com/ "packages\com.groupe_R.CDAA_R_uwp\data\CDAA-R_UWP.msix"
 echo.
 
+::APK APK APK APK APK APK APK APK APK APK APK APK
+::Copy the latest release build
+if %username% == SYSTEM (
+	xcopy /y "..\..\build-CDAA-R-Android_Qt_5_12_11_Clang_armeabi_v7a-Release\android-build\build\outputs\apk\debug\CDAA-R v1.0.3.apk" "packages\com.groupe_R.CDAA_R_apk\data\"
+) else (
+	xcopy /y "..\..\build-CDAA-R-Android_Qt_5_12_12_Clang_armeabi_v7a-Release\android-build\build\outputs\apk\debug\CDAA-R v1.0.3.apk" "packages\com.groupe_R.CDAA_R_apk\data\"
+)
+echo.
+
 ::Installateur Installateur Installateur Installateur
 ::--ac = compression level, -v = verbose, -f = offline installer
-if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 1.1.0.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 1.1.0.exe")
+if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 2.1.0.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 2.1.0.exe")
 echo.
-echo L'installateur "CDAA-R installateur.exe" se trouve dans Programs\installer
+echo L'installateur se trouve dans Programs\installer
 TIMEOUT 3
