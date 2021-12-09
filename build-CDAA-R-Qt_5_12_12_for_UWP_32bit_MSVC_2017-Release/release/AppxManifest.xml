@@ -11,8 +11,7 @@
   <Identity
     Name="cdaa-r"
     Publisher="CN=Groupe R"
-    Version="1.0.0.1"
-    ProcessorArchitecture="x86" />
+    Version="1.0.3.1" />
 
   <Properties>
     <DisplayName>CDAA-R</DisplayName>
@@ -24,7 +23,7 @@
     <TargetDeviceFamily Name="Windows.Universal"
       MinVersion="10.0.14393.0"
       MaxVersionTested="10.0.14393.0" />
-	<PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.0.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+	<PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="0.0.0.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
 
   <Resources>
