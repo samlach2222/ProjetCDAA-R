@@ -11,7 +11,8 @@
   <Identity
     Name="cdaa-r"
     Publisher="CN=Groupe R"
-    Version="1.0.3.1" />
+    Version="1.0.3.1"
+	ProcessorArchitecture="x86" />
 
   <Properties>
     <DisplayName>CDAA-R</DisplayName>
