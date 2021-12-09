@@ -382,20 +382,6 @@ void MainWindow::ChooseImage()
 }
 
 /**
- * @brief Retourne l'id à partir d'une ligne complète
- * @param[in] row       La ligne complète
- * @return l'id obtenu
- */
-int MainWindow::GetIdFromRow(std::string row)
-{
-    //Prend la position du premier charactère ".", et initialise un string à partir du début jusqu'à cette position
-    std::size_t posPoint = row.find_first_of(".");
-    std::string rowId = row.substr(0, posPoint);
-
-    return std::stoi(rowId);
-}
-
-/**
  * @brief Slot permettant de mettre à jour le contact après édition de ses interactions
  * @param[in] contact
  */

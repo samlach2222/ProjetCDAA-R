@@ -43,7 +43,6 @@ void DatabaseStorage::CloseBDD(){
     //Optimise la base de données en réduisant sa taille
     QSqlQuery query("VACUUM");
 
-    QSqlError error = query.lastError();
     QString connectionName;
     {
         QSqlDatabase db = QSqlDatabase::database();

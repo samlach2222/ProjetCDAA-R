@@ -44,11 +44,3 @@ void tagsInteraction::addTag(std::string todo, std::string date)
     std::tuple<std::string, std::string> tuple = std::tuple<std::string, std::string>(todo, date);
     this->tags.push_back(tuple);
 }
-
-/**
- * @brief Permet de réinitialiser la liste des tags
- */
-void tagsInteraction::resetTags()
-{
-    this->tags.clear();
-}

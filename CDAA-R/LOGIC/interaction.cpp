@@ -3,7 +3,7 @@
  * @brief Classe pour une interaction
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
- * @version 1.1
+ * @version 1.2
  * @date 01/10/2021
  */
 
@@ -88,10 +88,10 @@ const tagsInteraction &Interaction::getTags() const
  */
 Interaction::Interaction(int id, std::string c, std::string titre, Horodatage dateCreation)
 {
-    this->setContenu(c);
     this->id = id;
-    this->dateCreation = dateCreation;
+    this->setContenu(c);
     this->titre = titre;
+    this->dateCreation = dateCreation;
 }
 
 /**
@@ -100,28 +100,28 @@ Interaction::Interaction(int id, std::string c, std::string titre, Horodatage da
 void Interaction::UpdateTags()
 {
     tagsInteraction newTags = tagsInteraction();
-    QStringList text_in_lines = QString::fromStdString(this->contenu).split('\n');
-    for( int j = 0; j < text_in_lines.count(); j++ )
+    const QStringList text_in_lines = QString::fromStdString(this->contenu).split('\n');
+    for(int j = 0; j < text_in_lines.count(); j++)
     {
-        std::string currentLine = text_in_lines.at( j ).toStdString();
-        if(((int) currentLine.find("@todo")) != -1)
-        {
-            if(((int) currentLine.find("@date")) != -1) // cas où il y a un tag TODO puis un tag DATE
-            {
-                int firstDelPos = currentLine.find("@todo");
-                int secondDelPos = currentLine.find("@date");
-                std::string tagTodo = currentLine.substr(firstDelPos+6, secondDelPos-firstDelPos-7);
-                std::string strDate = currentLine.substr(secondDelPos+6);
+        const std::string currentLine = text_in_lines.at(j).toStdString();
 
-                newTags.addTag(tagTodo,strDate);
-            }
-            else // cas où il y a un tag TODO mais pas de tag DATE
+        const size_t posTodo = currentLine.find("@todo");
+        if(posTodo != std::string::npos)  //Si le tag @todo existe dans la ligne
+        {
+            const size_t posDate = currentLine.find("@date");
+            if(posDate != std::string::npos && posDate > posTodo)  //Si le tag @date existe et se situe après le tag @todo
             {
-                int firstDelPos = currentLine.find("@todo");
-                std::string tagTodo = currentLine.substr(firstDelPos+6);
+                std::string strTodo = currentLine.substr(posTodo+6, posDate-posTodo-7);
+                std::string strDate = currentLine.substr(posDate+6);
+
+                newTags.addTag(strTodo,strDate);
+            }
+            else  //Cas où il y a un tag @todo mais pas de tag @date ou mal positionné
+            {
+                std::string strTodo = currentLine.substr(posTodo+6);
                 std::string strDate = QDate::currentDate().toString("dd/MM/yyyy").toStdString();
 
-                newTags.addTag(tagTodo,strDate);
+                newTags.addTag(strTodo,strDate);
             }
         }
     }

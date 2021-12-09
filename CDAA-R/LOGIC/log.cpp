@@ -34,9 +34,9 @@ void Log::setTabLog(const std::vector<std::string> &newTabLog)
 /**
  * @brief Constructeur de la classe Log
  */
-Log::Log()
+Log::Log() : tabLog(std::vector<std::string>())
 {
-    tabLog = std::vector<std::string>();
+
 }
 
 /**
