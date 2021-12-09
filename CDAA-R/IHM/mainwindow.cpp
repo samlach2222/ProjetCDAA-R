@@ -51,6 +51,12 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(this, SIGNAL(refreshFilteredContacts(GestionContact)), fc, SLOT(PrepareSendingToMainWindow(GestionContact)));
     //FIN DEFINITION SIGNAUX
 
+    //Création du dossier qui contiendra la base de données et le JSON
+    QDir appDataDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+    if (!appDataDir.exists()){
+        appDataDir.mkpath(".");
+    }
+
     //Initialisation et chargement de la BDD
     DatabaseStorage::InitializeBDD();
     gc = DatabaseStorage::Load();

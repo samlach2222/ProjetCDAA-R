@@ -31,6 +31,7 @@ void DatabaseStorage::InitializeBDD(){
     db.setDatabaseName(nomBdd);  //Nom de la base de données
 
     if (!db.open()){
+        CloseBDD();
         throw db.lastError();
     }
 }

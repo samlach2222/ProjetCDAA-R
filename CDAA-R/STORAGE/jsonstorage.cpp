@@ -98,12 +98,6 @@ void JSonStorage::Save(GestionContact gc)
     //QString json_string = json_doc.toJson();
     QString json_string = QJsonDocument(json).toJson();
 
-    //Création du dossier %AppData%/CDAA-R
-    QDir appDataDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));  //Ne pas donner GetFilepath() car cela créerait un DOSSIER %appdata%/CDAA-R/Save.json/
-    if (!appDataDir.exists()){
-        appDataDir.mkpath(".");
-    }
-
     QFile file(GetFilepath());
     file.open(QIODevice::WriteOnly);
     file.write(json_string.toUtf8());
