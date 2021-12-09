@@ -84,9 +84,8 @@
               <section title="AddOperationToLog" ref="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f" />
               <section title="ChooseImage" ref="class_main_window.html#aad1ebd0dab99fb187071fd3f0cf9a8a9" />
               <section title="getGcFromSaveGestionContact" ref="class_main_window.html#adc010ec668ec3ffc71c523667417c2b4" />
-              <section title="ListItemClick" ref="class_main_window.html#a30e183b8ba1bcfad51ed48a81d94ed8c" />
               <section title="ListItemDoubleClick" ref="class_main_window.html#afbe03af91aefcd7625865ccf6f2e3267" />
-              <section title="LogsDoubleClick" ref="class_main_window.html#ab8ca629263c613454cfefc0c518c4ad2" />
+              <section title="ListItemSelected" ref="class_main_window.html#aad272046fd92a8b04dc7bb548ed757b8" />
               <section title="OpenFC" ref="class_main_window.html#a62e3859336456027de52cb8d1d3760cd" />
               <section title="OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
               <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
@@ -105,7 +104,6 @@
               <section title="tagsInteraction" ref="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e" />
               <section title="addTag" ref="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8" />
               <section title="getTags" ref="classtags_interaction.html#a2b57dff1b46cb1b9cd2456d6bcffc212" />
-              <section title="resetTags" ref="classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23" />
               <section title="setTags" ref="classtags_interaction.html#a5c8b4de42a5a3da4a14b4c14e7a39357" />
             </section>
             <section title="UI_FilterContact" ref="class_u_i___filter_contact.html">
@@ -121,7 +119,7 @@
               <section title="~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
               <section title="AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
               <section title="AddOperationToLog" ref="class_u_i___interaction_contact.html#afeb35cf1c32ced10745233f5c214d13a" />
-              <section title="ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
+              <section title="ListItemSelected" ref="class_u_i___interaction_contact.html#a8ca6aaa4259f05bbf3e01368255b72a7" />
               <section title="ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
               <section title="sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
               <section title="SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
@@ -183,9 +181,8 @@
                   <section title="AddOperationToLog" ref="class_main_window.html#a4fb9ceab65944f3a685a9d9d236e3a6f" />
                   <section title="ChooseImage" ref="class_main_window.html#aad1ebd0dab99fb187071fd3f0cf9a8a9" />
                   <section title="getGcFromSaveGestionContact" ref="class_main_window.html#adc010ec668ec3ffc71c523667417c2b4" />
-                  <section title="ListItemClick" ref="class_main_window.html#a30e183b8ba1bcfad51ed48a81d94ed8c" />
                   <section title="ListItemDoubleClick" ref="class_main_window.html#afbe03af91aefcd7625865ccf6f2e3267" />
-                  <section title="LogsDoubleClick" ref="class_main_window.html#ab8ca629263c613454cfefc0c518c4ad2" />
+                  <section title="ListItemSelected" ref="class_main_window.html#aad272046fd92a8b04dc7bb548ed757b8" />
                   <section title="OpenFC" ref="class_main_window.html#a62e3859336456027de52cb8d1d3760cd" />
                   <section title="OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
                   <section title="OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
@@ -220,7 +217,7 @@
                   <section title="~UI_InteractionContact" ref="class_u_i___interaction_contact.html#a3fb798a9c5725785b6bec394a524d231" />
                   <section title="AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
                   <section title="AddOperationToLog" ref="class_u_i___interaction_contact.html#afeb35cf1c32ced10745233f5c214d13a" />
-                  <section title="ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
+                  <section title="ListItemSelected" ref="class_u_i___interaction_contact.html#a8ca6aaa4259f05bbf3e01368255b72a7" />
                   <section title="ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
                   <section title="sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
                   <section title="SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
@@ -321,7 +318,6 @@
                   <section title="tagsInteraction" ref="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e" />
                   <section title="addTag" ref="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8" />
                   <section title="getTags" ref="classtags_interaction.html#a2b57dff1b46cb1b9cd2456d6bcffc212" />
-                  <section title="resetTags" ref="classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23" />
                   <section title="setTags" ref="classtags_interaction.html#a5c8b4de42a5a3da4a14b4c14e7a39357" />
                 </section>
               </section>
@@ -435,8 +431,7 @@
       <keyword name="OpenRC" id="MainWindow::OpenRC" ref="class_main_window.html#a5a301d13721bbe313ee57308271b2e85" />
       <keyword name="OpenSGC" id="MainWindow::OpenSGC" ref="class_main_window.html#a1199a7e4c3ac89afed5c373f2d4048b2" />
       <keyword name="ListItemDoubleClick" id="MainWindow::ListItemDoubleClick" ref="class_main_window.html#afbe03af91aefcd7625865ccf6f2e3267" />
-      <keyword name="LogsDoubleClick" id="MainWindow::LogsDoubleClick" ref="class_main_window.html#ab8ca629263c613454cfefc0c518c4ad2" />
-      <keyword name="ListItemClick" id="MainWindow::ListItemClick" ref="class_main_window.html#a30e183b8ba1bcfad51ed48a81d94ed8c" />
+      <keyword name="ListItemSelected" id="MainWindow::ListItemSelected" ref="class_main_window.html#aad272046fd92a8b04dc7bb548ed757b8" />
       <keyword name="ValiderContact" id="MainWindow::ValiderContact" ref="class_main_window.html#abfa4f17b6785193c45f23196b953844c" />
       <keyword name="SupprimerContact" id="MainWindow::SupprimerContact" ref="class_main_window.html#acd432e37a1121b9377db225c7f7ff300" />
       <keyword name="ChooseImage" id="MainWindow::ChooseImage" ref="class_main_window.html#aad1ebd0dab99fb187071fd3f0cf9a8a9" />
@@ -460,7 +455,6 @@
       <keyword name="setTags" id="tagsInteraction::setTags" ref="classtags_interaction.html#a5c8b4de42a5a3da4a14b4c14e7a39357" />
       <keyword name="tagsInteraction" id="tagsInteraction::tagsInteraction" ref="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e" />
       <keyword name="addTag" id="tagsInteraction::addTag" ref="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8" />
-      <keyword name="resetTags" id="tagsInteraction::resetTags" ref="classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23" />
       <keyword name="UI_FilterContact" id="UI_FilterContact" ref="class_u_i___filter_contact.html" />
       <keyword name="ButtonValidate" id="UI_FilterContact::ButtonValidate" ref="class_u_i___filter_contact.html#aa0d3a4ab3f1c6c7d2ab52f0d7690dd99" />
       <keyword name="ReceiveFromMainWindow" id="UI_FilterContact::ReceiveFromMainWindow" ref="class_u_i___filter_contact.html#a41750ec7fd1cdb5dc756872585feb534" />
@@ -471,7 +465,7 @@
       <keyword name="UI_InteractionContact" id="UI_InteractionContact" ref="class_u_i___interaction_contact.html" />
       <keyword name="AddInteraction" id="UI_InteractionContact::AddInteraction" ref="class_u_i___interaction_contact.html#af3449fb03ec40e49ab0ffaedef327d07" />
       <keyword name="SupprimerInteraction" id="UI_InteractionContact::SupprimerInteraction" ref="class_u_i___interaction_contact.html#af753a2f25c6c378649af496c4a4a2432" />
-      <keyword name="ListItemClick" id="UI_InteractionContact::ListItemClick" ref="class_u_i___interaction_contact.html#af56bfb5abb38f4330912e389fa018f74" />
+      <keyword name="ListItemSelected" id="UI_InteractionContact::ListItemSelected" ref="class_u_i___interaction_contact.html#a8ca6aaa4259f05bbf3e01368255b72a7" />
       <keyword name="ValiderInteraction" id="UI_InteractionContact::ValiderInteraction" ref="class_u_i___interaction_contact.html#acc567bcc2581925d1edc3fd8927f5292" />
       <keyword name="ReceiveIdToInteraction" id="UI_InteractionContact::ReceiveIdToInteraction" ref="class_u_i___interaction_contact.html#a8eeff65e3e9db9d73425a4b4b92537a7" />
       <keyword name="sendContactToMainWindow" id="UI_InteractionContact::sendContactToMainWindow" ref="class_u_i___interaction_contact.html#a27514ddb0a7f993101daa6a7bc7c72eb" />
