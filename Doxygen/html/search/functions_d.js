@@ -7,6 +7,5 @@ var searchData=
   ['refreshfilteredcontacts_4',['refreshFilteredContacts',['../class_main_window.html#a4c55192c34422feada6db408a3729e5a',1,'MainWindow']]],
   ['reinitializebdd_5',['ReinitializeBDD',['../class_database_storage.html#a548db919bd1e3d05fa246313a89b7a50',1,'DatabaseStorage']]],
   ['removeinteraction_6',['RemoveInteraction',['../class_fiche_contact.html#af98ff7bffb58db9262bba69e11c7143c',1,'FicheContact']]],
-  ['request_7',['Request',['../class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a',1,'DatabaseStorage']]],
-  ['resettags_8',['resetTags',['../classtags_interaction.html#ab2f9fb68def9bb8a577dc3a6f95e0e23',1,'tagsInteraction']]]
+  ['request_7',['Request',['../class_database_storage.html#a77ec420d9a1070a0ef98859526a1224a',1,'DatabaseStorage']]]
 ];

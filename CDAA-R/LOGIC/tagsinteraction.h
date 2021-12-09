@@ -23,7 +23,6 @@ public:
 
     tagsInteraction();
     void addTag(std::string, std::string);
-    void resetTags();
 };
 
 #endif // TAGSINTERACTION_H
