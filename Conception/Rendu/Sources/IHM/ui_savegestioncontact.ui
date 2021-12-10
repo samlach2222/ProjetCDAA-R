@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UI_SaveGestionContact</class>
+ <widget class="QWidget" name="UI_SaveGestionContact">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sauvegarde et chargement</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/Ressources/Icons/SaveGestionContact avec fond.png</normaloff>:/Ressources/Icons/SaveGestionContact avec fond.png</iconset>
+  </property>
+  <widget class="QPushButton" name="exporterPushButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>92</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exporter</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../ressources.qrc">
+     <normaloff>:/Ressources/Icons/Exporter.png</normaloff>:/Ressources/Icons/Exporter.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="importerPushButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>92</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Importer</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../ressources.qrc">
+     <normaloff>:/Ressources/Icons/Importer.png</normaloff>:/Ressources/Icons/Importer.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fermerPushButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>130</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="informationLabel">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>160</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>importerPushButton</tabstop>
+  <tabstop>exporterPushButton</tabstop>
+  <tabstop>fermerPushButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>exporterPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_SaveGestionContact</receiver>
+   <slot>Export()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>importerPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_SaveGestionContact</receiver>
+   <slot>Import()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fermerPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_SaveGestionContact</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Export()</slot>
+  <slot>Import()</slot>
+ </slots>
+</ui>

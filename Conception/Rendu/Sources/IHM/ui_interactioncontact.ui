@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UI_InteractionContact</class>
+ <widget class="QWidget" name="UI_InteractionContact">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>604</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Interactions du contact</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/Ressources/Icons/InteractionContact avec fond.png</normaloff>:/Ressources/Icons/InteractionContact avec fond.png</iconset>
+  </property>
+  <widget class="QListWidget" name="InteractionList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>260</width>
+     <height>440</height>
+    </rect>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BAddInteraction">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>260</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameEditInteraction">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>10</y>
+     <width>311</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="labelTitre">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Titre* :</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editTitre">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>80</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDescription">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Description *:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editDateCreation">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>130</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Validate">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>440</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Valider</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Delete">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>440</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Supprimer</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="editDescription">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>270</width>
+      <height>240</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="BValider">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>500</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>InteractionList</tabstop>
+  <tabstop>BAddInteraction</tabstop>
+  <tabstop>editDateCreation</tabstop>
+  <tabstop>editTitre</tabstop>
+  <tabstop>editDescription</tabstop>
+  <tabstop>Validate</tabstop>
+  <tabstop>Delete</tabstop>
+  <tabstop>BValider</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>BAddInteraction</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>AddInteraction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>469</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BValider</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Validate</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ValiderInteraction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>368</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>499</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Delete</sender>
+   <signal>clicked()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>SupprimerInteraction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>InteractionList</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>UI_InteractionContact</receiver>
+   <slot>ListItemSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>AddInteraction()</slot>
+  <slot>ValiderInteraction()</slot>
+  <slot>SupprimerInteraction()</slot>
+  <slot>ListItemSelected()</slot>
+ </slots>
+</ui>

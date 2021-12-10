@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Ressources/Icons/unknownContact.png</file>
+        <file>Ressources/Icons/FilterContact.png</file>
+        <file>Ressources/Icons/InteractionContact.png</file>
+        <file>Ressources/Icons/SaveGestionContact.png</file>
+        <file>Ressources/Icons/SaveGestionContact avec fond.png</file>
+        <file>Ressources/Icons/RequestContact.png</file>
+        <file>Ressources/Icons/AddContact.png</file>
+        <file>Ressources/Sounds/ButtonSound.wav</file>
+        <file>Ressources/Sounds/ButtonSound2.wav</file>
+        <file>Ressources/Sounds/ErrorSound.wav</file>
+        <file>Ressources/Icons/FilterContact avec fond.png</file>
+        <file>Ressources/Icons/InteractionContact avec fond.png</file>
+        <file>Ressources/Icons/AddInteractionContact.png</file>
+        <file>Ressources/Icons/AddContact rogne.png</file>
+        <file>Ressources/Icons/AddInteractionContact rogne.png</file>
+        <file>Ressources/Icons/Exporter.png</file>
+        <file>Ressources/Icons/Importer.png</file>
+        <file>Ressources/Icons/Logo bruit.png</file>
+        <file>Ressources/Icons/Logo lisse.png</file>
+        <file>Ressources/Database/ContactDB.db</file>
+    </qresource>
+</RCC>

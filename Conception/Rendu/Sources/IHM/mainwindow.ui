@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Projet de CDAA - Groupe R</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../ressources.qrc">
+    <normaloff>:/Ressources/Icons/Logo lisse.png</normaloff>:/Ressources/Icons/Logo lisse.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="ContactList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>265</width>
+      <height>440</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+   </widget>
+   <widget class="QListView" name="LogsList">
+    <property name="geometry">
+     <rect>
+      <x>615</x>
+      <y>30</y>
+      <width>175</width>
+      <height>530</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BAddContact">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>265</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="shortcut">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabelLogs">
+    <property name="geometry">
+     <rect>
+      <x>615</x>
+      <y>0</y>
+      <width>160</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Logs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BFilterContact">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="shortcut">
+     <string>&amp;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BRequestContact">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>0</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="shortcut">
+     <string>É</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BSaveGestionContact">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>0</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="shortcut">
+     <string>&quot;</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frameEditContact">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>310</width>
+      <height>470</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="labelNom">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>140</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Nom* :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editNom">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editPrenom">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>190</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPrenom">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>190</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Prénom* :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editEntreprise">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>240</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelEntreprise">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>240</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Entreprise :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editMail">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>290</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelMail">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>290</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mail :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editTelephone">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>340</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTelephone">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>340</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Téléphone :</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editDateCreation">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>10</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Validate">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>440</y>
+       <width>80</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Valider</string>
+     </property>
+     <property name="shortcut">
+      <string>Return</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Delete">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>440</y>
+       <width>80</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Supprimer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChooseImage">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>ContactList</tabstop>
+  <tabstop>BAddContact</tabstop>
+  <tabstop>editNom</tabstop>
+  <tabstop>editPrenom</tabstop>
+  <tabstop>editEntreprise</tabstop>
+  <tabstop>editMail</tabstop>
+  <tabstop>editTelephone</tabstop>
+  <tabstop>ChooseImage</tabstop>
+  <tabstop>Validate</tabstop>
+  <tabstop>Delete</tabstop>
+  <tabstop>editDateCreation</tabstop>
+  <tabstop>BFilterContact</tabstop>
+  <tabstop>BRequestContact</tabstop>
+  <tabstop>BSaveGestionContact</tabstop>
+  <tabstop>LogsList</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>BAddContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>AddContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>528</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BFilterContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenFC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BRequestContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenRC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BSaveGestionContact</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OpenSGC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Validate</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ValiderContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>568</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Delete</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>SupprimerContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>574</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ChooseImage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>331</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ContactList</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ListItemSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ContactList</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ListItemDoubleClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>AddContact()</slot>
+  <slot>OpenFC()</slot>
+  <slot>OpenRC()</slot>
+  <slot>OpenSGC()</slot>
+  <slot>ListItemDoubleClick()</slot>
+  <slot>ValiderContact()</slot>
+  <slot>SupprimerContact()</slot>
+  <slot>ChooseImage()</slot>
+  <slot>ListItemSelected()</slot>
+ </slots>
+</ui>
