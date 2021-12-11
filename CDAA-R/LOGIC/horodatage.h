@@ -12,6 +12,11 @@
 
 /**
  * @brief La classe pour la gestion du temps et de l'heure d'une action
+ *
+ * Cette classe permet la gestion du temps et de l'heure de chaque action du programme, nous pouvons donc horodater les différentes actions effectuées sur l'application.
+ * Elle gère donc une structure de gestion de l'heure et de la date qui vise à être affichée ou à filtrer ou requêter des contacts, interactions ou tags.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class Horodatage
 {

@@ -19,12 +19,20 @@
 #include <STORAGE/databasestorage.h>
 
 /**
- * @brief Variable Booléenne pour savoir si on modifie ou si on crée une interaction
+ * @brief Valeur booléenne pour savoir si on ajoute une interaction ou si on l'édite
+ *
+ * Ce boolean permettra de savoir une fois que l'on effectue l'appuis sur le bouton de validation de l'interaction si on est en train de modifier ou d'ajouter le contact.
+ * Les finalités seront donc différentes, de même pour l'affichage dans les logs.
  */
 bool ModeAjoutInteraction = 1;
 
 /**
  * @brief Constructeur de UI_InteractionContact
+ *
+ * Constructeur de la fenêtre de gestion des intéractions.
+ * Dans ce constructeur, des valeurs sont initialisées comme un contact temporaire et une image de bouton
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  * @param[out] parent    QWidget de création de classe
  */
 UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
@@ -44,6 +52,10 @@ UI_InteractionContact::UI_InteractionContact(QWidget *parent) :
 }
 /**
  * @brief Destructeur de UI_InteractionContact
+ *
+ * Destructeur de la fenêtre de gestion des intéractions d'un contact.
+ * Ce destructeur détruit la fenêtre avec les composants graphiques qui lui sont liés.
+ * @author Samuel LACHAUD
  */
 UI_InteractionContact::~UI_InteractionContact()
 {
@@ -52,7 +64,11 @@ UI_InteractionContact::~UI_InteractionContact()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ *
+ * Redéfinition de la méthode de fermeture de la fenêtre afin d'appliquer le son du bouton et de revenir à l'état initial de la fenêtre.
+ * C'est également à ce moment que le contact est renvoyé à la MainWindow.
  * @param[out] event     Event de fermeture de la fenêtre
+ * @author Loïs PAZOLA
  */
 void UI_InteractionContact::closeEvent(QCloseEvent *event)
 {
@@ -71,6 +87,10 @@ void UI_InteractionContact::closeEvent(QCloseEvent *event)
 
 /**
  * @brief Methode liée au bouton permettant d'ajouter une interaction à un contact
+ *
+ * Méthode actionnée par le bouton d'ajout d'interaction sur la fenêtre, il permet d'afficher le panel d'ajout d'interaction sur l'écran.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 void UI_InteractionContact::AddInteraction()
 {
@@ -86,6 +106,11 @@ void UI_InteractionContact::AddInteraction()
 
 /**
  * @brief Methode liée au bouton permettant de supprimer l'ajout une interaction d'un contact
+ *
+ * Méthode actionnée par le bouton de suppression d'interaction sur la fenêtre.
+ * L'intéraction sélectionnée dans la liste est donc supprimée de celle-ci.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 void UI_InteractionContact::SupprimerInteraction()
 {
@@ -106,7 +131,11 @@ void UI_InteractionContact::SupprimerInteraction()
 }
 
 /**
- * @brief Methode liée au bouton permettant de valider l'ajout d'une interaction
+ * @brief Permet de sauvegarder une nouvelle interaction ou la modification d'une interaction déjà existante avec le bouton valider
+ *
+ * Méthode effectuée suite à l'appuis sur le bouton de validation, en fonction de la variable globale ModeAjoutInteraction, la méthode va donc enregistrer la nouvelle intéraction ou modifier l'ancienne.
+ * Les champs obligatoires doivent être remplis, ou l'exécution de cette méthode provoquera une erreur à l'utilisateur.
+ * @author Samuel LACHAUD
  */
 void UI_InteractionContact::ValiderInteraction()
 {
@@ -183,6 +212,11 @@ void UI_InteractionContact::ValiderInteraction()
 
 /**
  * @brief Slot permettant de récupérer la gestion contact et l'id du contact courant pour les interactions
+ *
+ * Slot qui permet de récupérer l'id du contact auquel on rajoute/supprime/modifie une ou plusieurs interactions.
+ * Elle récupère également la gestionContact afin de sauvegarder.
+ * La liste d'intéraction est alors affichée à ce moment sur la fenêtre d'interactions.
+ * @author Samuel LACHAUD
  * @param[in] idreceive id du contact courant
  * @param[in] gc    Gestion contact
  */
@@ -194,6 +228,10 @@ void UI_InteractionContact::ReceiveIdToInteraction(int idreceive,GestionContact 
 
 /**
  * @brief Méthode permettant d'afficher la liste des interactions dans l'IHM
+ *
+ * Méthode permettant d'afficher les interactions sur la liste prévue à cet effet sur la fenêtre.
+ * A partir du contact on liste toutes les intéraction de celui-ci.
+ * @author Samuel LACHAUD
  */
 void UI_InteractionContact::DisplayInteractionList()
 {
@@ -211,6 +249,11 @@ void UI_InteractionContact::DisplayInteractionList()
 
 /**
  * @brief Méthode reliée à la sélection d'un élément de la liste, permet d'afficher la fenêtre d'édition d'une interaction
+ *
+ * Méthode permettant quand on clique sur une intéraction dans la liste sur la fenêtre d'afficher le panel de modification/création de celui-ci.
+ * Les éléments permettant alors cette édition sont affichés ainsi que les boutons d'acceptation ou d'annulation.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 void UI_InteractionContact::ListItemSelected()
 {

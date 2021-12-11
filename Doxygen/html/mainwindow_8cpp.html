@@ -82,13 +82,13 @@ $(function() {
 <code>#include &lt;<a class="el" href="databasestorage_8h_source.html">STORAGE/databasestorage.h</a>&gt;</code><br />
 <code>#include &lt;QFileDialog&gt;</code><br />
 <code>#include &lt;QMessageBox&gt;</code><br />
+<code>#include &lt;QStandardPaths&gt;</code><br />
 <code>#include &lt;QStringListModel&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae7d91d2759414e644fb54e14bb6cc921"><td class="memItemLeft" align="right" valign="top"><a id="ae7d91d2759414e644fb54e14bb6cc921" name="ae7d91d2759414e644fb54e14bb6cc921"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ModeAjout</b> = 0</td></tr>
-<tr class="memdesc:ae7d91d2759414e644fb54e14bb6cc921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valeur booléenne pour savoir si on ajoute un contact ou si on l'édite. <br /></td></tr>
+<tr class="memitem:ae7d91d2759414e644fb54e14bb6cc921"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainwindow_8cpp.html#ae7d91d2759414e644fb54e14bb6cc921">ModeAjout</a> = 0</td></tr>
+<tr class="memdesc:ae7d91d2759414e644fb54e14bb6cc921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valeur booléenne pour savoir si on ajoute un contact ou si on l'édite.  <a href="mainwindow_8cpp.html#ae7d91d2759414e644fb54e14bb6cc921">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae7d91d2759414e644fb54e14bb6cc921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -97,8 +97,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ModeAjout</b> = 0</td
 <dd>
 Loïs PAZOLA </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>23/09/2021 </dd></dl>
-</div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>10/12/2021 </dd></dl>
+</div><h2 class="groupheader">Documentation des variables</h2>
+<a id="ae7d91d2759414e644fb54e14bb6cc921" name="ae7d91d2759414e644fb54e14bb6cc921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d91d2759414e644fb54e14bb6cc921">&#9670;&nbsp;</a></span>ModeAjout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModeAjout = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valeur booléenne pour savoir si on ajoute un contact ou si on l'édite. </p>
+<p >Ce boolean permettra de savoir une fois que l'on effectue l'appuis sur le bouton de validation de contact si on est en train de modifier ou d'ajouter le contact. Les finalités seront donc différentes, de même pour l'affichage dans les logs. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

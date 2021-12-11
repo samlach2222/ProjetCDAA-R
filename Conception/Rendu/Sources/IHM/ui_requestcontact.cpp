@@ -16,6 +16,10 @@
 
 /**
  * @brief Constructeur de UI_RequestContact
+ *
+ * Constructeur de la fenêtre de requêtes à la base de données.
+ * Ce constructeur permet d'initialiser l'affiche visuel des différents controlleurs présents sur la fenêtre.
+ * @author Samuel LACHAUD
  * @param[out] parent    QWidget de création de classe
  */
 UI_RequestContact::UI_RequestContact(QWidget *parent) :
@@ -27,6 +31,10 @@ UI_RequestContact::UI_RequestContact(QWidget *parent) :
 
 /**
  * @brief Destructeur de UI_RequestContact
+ *
+ * Destructeur de la fenêtre de requêtes à la base de données.
+ * Ce destructeur supprime les différents controlleurs de la fenêtre et supprime celle-ci.
+ * @author Samuel LACHAUD
  */
 UI_RequestContact::~UI_RequestContact()
 {
@@ -35,6 +43,11 @@ UI_RequestContact::~UI_RequestContact()
 
 /**
  * @brief Méthode liée au bouton permettant d'effectuer la requête choisie
+ *
+ * Méthode permettant d'effectuer les requêtes choisies par l'utilisateur à la base de donnée.
+ * Le résultat de ces requêtes seront alors affichés dans la partie de la fenêtre prévue à cet effet.
+ * Plusieurs requêtes peuvent bien sur être exécutées simultanéement.
+ * @author Loïs PAZOLA
  */
 void UI_RequestContact::ButtonDoRequest()
 {
@@ -93,7 +106,10 @@ void UI_RequestContact::ButtonDoRequest()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ *
+ * Redéfinition de la méthode de fermeture de la fenêtre afin d'appliquer le son du bouton.
  * @param[out] event     Event de fermeture de la fenêtre
+ * @author Loïs PAZOLA
  */
 void UI_RequestContact::closeEvent(QCloseEvent *event)
 {
@@ -106,6 +122,12 @@ void UI_RequestContact::closeEvent(QCloseEvent *event)
 
 /**
  * @brief Méthode qui sert à obtenir le nombre de contacts de l'application depuis la BDD
+ *
+ * Cette méthode correspond à la première requête effectuable sur la base de données.
+ * Elle retourne le nombre de contacts présent dans celle-ci par le biais d'un count().
+ * Le résultat est alors retourné sous forme de chaine caractère.
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
  * @return le nombre de contacts de l'application sous forme de chaine de caractères
  */
 std::string UI_RequestContact::NbContact(){
@@ -121,6 +143,12 @@ std::string UI_RequestContact::NbContact(){
 
 /**
  * @brief Méthode qui sert à obtenir la liste de toutes les interactions entre la date \p d1 et la date \p d2
+ *
+ * Cette méthode correspond à la deuxième requête effectuable sur la base de données.
+ * Elle retourne la liste de toutes les intéraction entre la date \p d1 et la date \p d2.
+ * Le résultat est alors retourné sous forme de chaine caractère.
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
  * @param d1    date de début de la recherche
  * @param d2    date de fin de la recherche
  * @return la liste de toutes les intéractions entre les deux dates sous forme de chaine de caratères
@@ -152,6 +180,12 @@ std::string UI_RequestContact::GetAllInteractionsBetweenTwoDates(QDate d1, QDate
 
 /**
  * @brief Méthode qui sert à obtenir la liste des tags TODO du contact \p idContact entre la date \p d1 et la date \p d2
+ *
+ * Cette méthode correspond à la troisème requête effectuable sur la base de données.
+ * Elle retourne la liste des tags TODO du contact \p idContact entre la date \p d1 et la date \p d2.
+ * Le résultat est alors retourné sous forme de chaine caractère.
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
  * @param idContact identifiant du contact recherché
  * @param d1    date de début de la recherche
  * @param d2    date de fin de la recherche
@@ -184,6 +218,12 @@ std::string UI_RequestContact::GetTagTodoContactBetweenTwoDates(int idContact, Q
 
 /**
  * @brief Méthode qui sert à obtenir la liste des tags DATE du contact \p idContact entre la date \p d1 et la date \p d2
+ *
+ * Cette méthode correspond à la quatrième requête effectuable sur la base de données.
+ * Elle retourne la liste des tags DATE du contact \p idContact entre la date \p d1 et la date \p d2.
+ * Le résultat est alors retourné sous forme de chaine caractère.
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
  * @param idContact identifiant du contact recherché
  * @param d1    date de début de la recherche
  * @param d2    date de fin de la recherche
@@ -216,6 +256,12 @@ std::string UI_RequestContact::GetTagDateContactBetweenTwoDates(int idContact, Q
 
 /**
  * @brief Méthode qui sert à obtenir la liste des tags TODO de tout les contacts entre la date \p d1 et la date \p d2
+ *
+ * Cette méthode correspond à la cinquième requête effectuable sur la base de données.
+ * Elle retourne la liste des tags TODO de tout les contacts entre la date \p d1 et la date \p d2.
+ * Le résultat est alors retourné sous forme de chaine caractère.
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
  * @param d1    date de début de la recherche
  * @param d2    date de fin de la recherche
  * @return la liste de toutes les tags TODO entre les deux dates sous forme de chaine de caratères
@@ -246,6 +292,12 @@ std::string UI_RequestContact::GetTagTodoAllContactBetweenTwoDates(QDate d1, QDa
 
 /**
  * @brief Méthode qui sert à obtenir la liste des tags DATE de tout les contacts entre la date \p d1 et la date \p d2
+ *
+ * Cette méthode correspond à la sixième requête effectuable sur la base de données.
+ * Elle retourne la liste des tags DATE de tout les contacts entre la date \p d1 et la date \p d2.
+ * Le résultat est alors retourné sous forme de chaine caractère.
+ * @author Loïs PAZOLA
+ * @author Samuel LACHAUD
  * @param d1    date de début de la recherche
  * @param d2    date de fin de la recherche
  * @return la liste de toutes les tags DATE entre les deux dates sous forme de chaine de caratères
@@ -276,6 +328,10 @@ std::string UI_RequestContact::GetTagDateAllContactBetweenTwoDates(QDate d1, QDa
 
 /**
  * @brief Slot permettant quand on coche/décoche une checkBox d'activer/désactiver les différents controleurs
+ *
+ * Ce slot permet de mettre à jour les différents controlleurs en fonction des actions utilisateur.
+ * En effet suite au cochage d'une case ou au décochage de celle-ci, des controlleurs peuvent ne pas être utiles, ils sont alors désactivés pour le bien de la visibilité de l'utilisateur.
+ * @author Samuel LACHAUD
  */
 void UI_RequestContact::changementStatusCB(){
     if(ui->CB_R2->isChecked()){ // CB2 Activé
@@ -337,6 +393,10 @@ void UI_RequestContact::changementStatusCB(){
 
 /**
  * @brief Slot permettant d'obtenir la GestionContact envoyée par la MainWindow
+ *
+ * Slot permettant d'obtenir la classe de gestion de contact afin d'afficher une liste de contacts à l'utilisateur.
+ * L'utilsateur peut donc choisir le contact qu'il veut utiliser dans sa requête par ce biais.
+ * @author Samuel LACHAUD
  * @param gc    GestionContact
  */
 void UI_RequestContact::getGcFromMainWindow(GestionContact gc){
@@ -346,6 +406,9 @@ void UI_RequestContact::getGcFromMainWindow(GestionContact gc){
 
 /**
  * @brief Méthode pour rafraichir l'affichage de la liste des contacts
+ *
+ * Méthode servant à actualiser la liste des contacts que l'utilisateur peut utiliser pour choisir le contact qu'il va utiliser dans sa requête.
+ * @author Samuel LACHAUD
  */
 void UI_RequestContact::DisplayContactList(){
     ui->L_ContactR3->clear();
@@ -364,6 +427,10 @@ void UI_RequestContact::DisplayContactList(){
 
 /**
  * @brief Convertie un QDate en un string au format SQLite
+ *
+ * Méthode permettant de convertire une date au format de date pris par SQLite.
+ * Ceci permet d'effectuer des requêtes SQL, directement avec le bon format de date.
+ * @author Loïs PAZOLA
  * @param[in] date  QDate à convertir au format SQLite
  * @param[in] fin  Si il s'agit d'une date de début (par défaut) ou de fin
  * @return un string au format SQLite

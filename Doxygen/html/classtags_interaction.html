@@ -77,17 +77,37 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a5c8b4de42a5a3da4a14b4c14e7a39357"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classtags_interaction.html#a5c8b4de42a5a3da4a14b4c14e7a39357">setTags</a> (const std::vector&lt;std::tuple&lt;std::string, std::string&gt;&gt; &amp;newTags)</td></tr>
 <tr class="memdesc:a5c8b4de42a5a3da4a14b4c14e7a39357"><td class="mdescLeft"> </td><td class="mdescRight">Remplace le vecteur de tuple de tags.  <a href="classtags_interaction.html#a5c8b4de42a5a3da4a14b4c14e7a39357">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a5c8b4de42a5a3da4a14b4c14e7a39357"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6c1817f466ce18f58a0ae31ff22e086e"><td align="right" class="memItemLeft" valign="top"><a id="a6c1817f466ce18f58a0ae31ff22e086e" name="a6c1817f466ce18f58a0ae31ff22e086e"></a>
- </td><td class="memItemRight" valign="bottom"><b>tagsInteraction</b> ()</td></tr>
-<tr class="memdesc:a6c1817f466ce18f58a0ae31ff22e086e"><td class="mdescLeft"> </td><td class="mdescRight">Constructeur de la classe de gestion des tags d'interaction. <br/></td></tr>
+<tr class="memitem:a6c1817f466ce18f58a0ae31ff22e086e"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e">tagsInteraction</a> ()</td></tr>
+<tr class="memdesc:a6c1817f466ce18f58a0ae31ff22e086e"><td class="mdescLeft"> </td><td class="mdescRight">Constructeur de la classe de gestion des tags d'interaction.  <a href="classtags_interaction.html#a6c1817f466ce18f58a0ae31ff22e086e">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a6c1817f466ce18f58a0ae31ff22e086e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa04d2ded192aa0d26f12773d8dd264b8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8">addTag</a> (std::string, std::string)</td></tr>
-<tr class="memdesc:aa04d2ded192aa0d26f12773d8dd264b8"><td class="mdescLeft"> </td><td class="mdescRight">Méthode pour ajouter les tags d'un ligne dans le tableau.  <a href="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:aa04d2ded192aa0d26f12773d8dd264b8"><td class="mdescLeft"> </td><td class="mdescRight">Méthode pour ajouter les tags d'une ligne dans le tableau.  <a href="classtags_interaction.html#aa04d2ded192aa0d26f12773d8dd264b8">Plus de détails...</a><br/></td></tr>
 <tr class="separator:aa04d2ded192aa0d26f12773d8dd264b8"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe gérant le tableau des tags. </p>
-</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<p>Cette classe permet de gérer les différents tags présents dans une interaction Elle stocke donc les tags TODO et les tags DATE du contenu d'une interaction. </p><dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
+<dd>
+Loïs PAZOLA </dd></dl>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a6c1817f466ce18f58a0ae31ff22e086e" name="a6c1817f466ce18f58a0ae31ff22e086e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c1817f466ce18f58a0ae31ff22e086e">◆ </a></span>tagsInteraction()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">tagsInteraction::tagsInteraction </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><!-- $$$tagsInteraction[overload1]$$$tagsInteraction::tagsInteraction() --><div class="memdoc"><div style="display: none">tagsInteraction::tagsInteraction()</div>
+<p>Constructeur de la classe de gestion des tags d'interaction. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
+</div><!-- @@@tagsInteraction -->
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="aa04d2ded192aa0d26f12773d8dd264b8" name="aa04d2ded192aa0d26f12773d8dd264b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa04d2ded192aa0d26f12773d8dd264b8">◆ </a></span>addTag()</h2>
 <div class="memitem">
@@ -112,7 +132,8 @@ Fonctions membres publiques</h2></td></tr>
 </tr>
 </table>
 </div><!-- $$$addTag[overload1]$$$voidtagsInteraction::addTag(std::string todo,std::string date ) --><div class="memdoc"><div style="display: none">void tagsInteraction::addTag(std::string todo, std::string date )</div>
-<p>Méthode pour ajouter les tags d'un ligne dans le tableau. </p>
+<p>Méthode pour ajouter les tags d'une ligne dans le tableau. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">todo</td><td>chaine de caractère liée au [At]todo </td></tr>
@@ -137,6 +158,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getTags[overload1]$$$conststd::vector<std::tuple<std::string,std::string>>&tagsInteraction::getTags()const --><div class="memdoc"><div style="display: none">const std::vector&lt;std::tuple&lt;std::string, std::string&gt;&gt; &amp; tagsInteraction::getTags() const</div>
 <p>retourne le tableaux des couple (todo et date) </p>
 <dl class="section return"><dt>Renvoie</dt><dd>tableau de couple todo date </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getTags -->
 </div>
 <a id="a5c8b4de42a5a3da4a14b4c14e7a39357" name="a5c8b4de42a5a3da4a14b4c14e7a39357"></a>
@@ -160,6 +182,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setTags -->
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>

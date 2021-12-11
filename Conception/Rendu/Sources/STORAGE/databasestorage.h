@@ -14,6 +14,11 @@
 
 /**
  * @brief Classe pour la gestion de la base de données
+ *
+ * Cette classe permet de gèrer les entrées/sorties de l'application au niveau de la base de données.
+ * Elle initialise donc la connexion avec elle et permet d'effectuer les requêtes necessaires pour la fenêtre de requêtes, et la sauvegarde des données de l'application.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class DatabaseStorage
 {

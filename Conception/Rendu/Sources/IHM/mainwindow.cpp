@@ -4,7 +4,7 @@
  * @author Samuel LACHAUD
  * @author Loïs PAZOLA
  * @version 1.1
- * @date 23/09/2021
+ * @date 10/12/2021
  */
 
 #include "mainwindow.h"
@@ -20,13 +20,20 @@
 
 /**
  * @brief Valeur booléenne pour savoir si on ajoute un contact ou si on l'édite
+ *
+ * Ce boolean permettra de savoir une fois que l'on effectue l'appuis sur le bouton de validation de contact si on est en train de modifier ou d'ajouter le contact.
+ * Les finalités seront donc différentes, de même pour l'affichage dans les logs.
  */
 bool ModeAjout = 0;
 
 
 /**
  * @brief Constructeur de mainwindows
+ *
+ * Constructeur du MainWindow, cette méthode est appelée par le main à l'ouverture de l'application afin d'obtenir la fenêtre principale.
  * @param[out] parent    QWidget de création de classe
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -96,7 +103,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->BAddContact->setIconSize(QSize(wac,hac));
 }
 /**
- * @brief Destructeur de mainwindow
+ * @brief Destructeur de MainWindow
+ *
+ * Destructeur de MainWindow, il permet de supprimer les instances des autres classes d'UI, permettant donc de les fermer et de ne pas les laisser en mémoire.
+ * @author Samuel LACHAUD
  */
 MainWindow::~MainWindow()
 {
@@ -111,6 +121,9 @@ MainWindow::~MainWindow()
 
 /**
  * @brief Méthode associée au bouton d'ajout de contact permettant d'ajouter un contact à la gestion de contact
+ *
+ * Méthode assoiée au bouton d'ajout de contact, elle permet d'ajouter un contact à partir de tout les controlleurs (editText, etc.) à la classe GestionContact.
+ * @author Samuel LACHAUD
  */
 void MainWindow::AddContact()
 {
@@ -136,6 +149,11 @@ void MainWindow::AddContact()
 
 /**
  * @brief Méthode pour rafraichir l'affichage de la liste des contacts en prenant en compte le filtrage
+ *
+ * Méthode permettant de raffraichir la liste affichée sur la MainWindow.
+ * Elle prend en compte les changements des contacts, mais également l'application d'un filtrage, et le retrait de celui-ci.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 void MainWindow::DisplayContactList()
 {
@@ -160,6 +178,9 @@ void MainWindow::DisplayContactList()
 
 /**
  * @brief Méthode permettant de rafraichir l'affichage des logs à chaque fois qu'une action est effectuée
+ *
+ * Méthode permettant de raffraichir la liste d'affichage de logs quand un contact ou une interaction est ajouté(e)/Supprimé(e)/Modifié(e)
+ * @author Samuel LACHAUD
  */
 void MainWindow::RefreshLog()
 {
@@ -179,7 +200,12 @@ void MainWindow::RefreshLog()
 }
 
 /**
- * @brief Méthode permettant l'ouverte de FilterContact si aucune fenêtre n'est ouverte
+ * @brief Méthode permettant l'ouverture de FilterContact si aucune fenêtre n'est ouverte
+ *
+ * Méthode permettant l'ouverture de la fenêtre FilterContact si aucune autre fenêtre n'est ouverte.
+ * Celle-ci permettra d'appliquer des filtres sur la liste de contacts présente sur la MainWindow.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 void MainWindow::OpenFC()
 {
@@ -197,7 +223,11 @@ void MainWindow::OpenFC()
 }
 
 /**
- * @brief Méthode permettant l'ouverte de RequestContact si aucune fenêtre n'est ouverte
+ * @brief Méthode permettant l'ouverture de RequestContact si aucune fenêtre n'est ouverte
+ *
+ * Méthode permettant l'ouverture de la fenêtre RequestContact si aucune fenêtre n'est ouverte.
+ * Celle-ci permettra d'effectuer des requêtes prédéfinies sur la base de données de l'application.
+ * @author Samuel LACHAUD
  */
 void MainWindow::OpenRC()
 {
@@ -212,6 +242,10 @@ void MainWindow::OpenRC()
 
 /**
  * @brief Méthode permettant l'ouverte de SaveGestionContact si aucune fenêtre n'est ouverte
+ *
+ * Méthode permettant l'ouverture de la fenêtre SaveGestionContact si aucune fenêtre n'est ouverte.
+ * Celle-ci permettra de sauvegarder ou d'importer différentes données de l'application depuis/dans un fichier JSON
+ * @author Samuel LACHAUD
  */
 void MainWindow::OpenSGC()
 {
@@ -220,12 +254,17 @@ void MainWindow::OpenSGC()
 
     if(!(fc->isVisible() || rc->isVisible() || ic->isVisible())){
         emit sendGcToSaveGestionContact(this->gc);
-        sgc->show();
+        sgc->show(); // pas StarGate Command
     }
 }
 
 /**
  * @brief Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'interaction, si aucune fenêtre n'est ouverte
+ *
+ * Méthode liée au double clic sur un contact permettant l'ouverture de la fiche d'interaction, si aucune fenêtre n'est ouverte.
+ * L'ouverture de cette fenêtre permettra donc d'ajouter/modifier/supprimer des interactions du contact double-cliqué.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 void MainWindow::ListItemDoubleClick()
 {
@@ -247,6 +286,10 @@ void MainWindow::ListItemDoubleClick()
 
 /**
  * @brief Méthode liée à la sélection d'un contact permettant l'édition de celui-ci
+ *
+ * Méthode exécutée lors du clic sur un contact, la fiche contact s'affiche alors dans la zone à cet effet.
+ * Le contact est alors modifiable ou supprimable. Ses donnes sont toutes éditables, sauf la date de création.
+ * @author Samuel LACHAUD
  */
 void MainWindow::ListItemSelected()
 {
@@ -287,6 +330,10 @@ void MainWindow::ListItemSelected()
 
 /**
  * @brief Permet de sauvegarder un nouveau contact ou la modification d'un contact déjà existant avec le bouton valider
+ *
+ * Méthode effectuée suite à l'appuis sur le bouton de validation, en fonction de la variable globale ModeAjout, la méthode va donc enregistrer le nouveau contact ou modifier l'ancien.
+ * Les champs obligatoires doivent être remplis, ou l'exécution de cette méthode provoquera une erreur à l'utilisateur.
+ * @author Samuel LACHAUD
  */
 void MainWindow::ValiderContact()
 {
@@ -354,6 +401,10 @@ void MainWindow::ValiderContact()
 
 /**
  * @brief Méthode permettant du supprimer le contact séléctionné a partir du bouton
+ *
+ * Méthode effectuée à la suite de l'appuis sur le bouton supprimer de la MainWindow.
+ * Le contact actuellement sélectionné sera donc supprimé de la classe GestionContact.
+ * @author Samuel LACHAUD
  */
 void MainWindow::SupprimerContact()
 {
@@ -371,6 +422,10 @@ void MainWindow::SupprimerContact()
 
 /**
  * @brief Permet de changer l'image d'un contact par appui sur celui-ci par ouverture d'un popup.
+ *
+ * Cette méthode est effectuée suite à l'appuis sur l'icone de contact d'un utilisateur.
+ * Un popup système apparaitra donc permettant à l'utiliser de sélectionner un fichier dans sa machine afin de l'uploader dans l'application.
+ * @author Samuel LACHAUD
  */
 void MainWindow::ChooseImage()
 {
@@ -390,7 +445,10 @@ void MainWindow::ChooseImage()
 
 /**
  * @brief Slot permettant de mettre à jour le contact après édition de ses interactions
- * @param[in] contact
+ *
+ * Ce slot permet de retourner le contact que l'on a envoyé a la fenêtre d'interactions.
+ * @param[in] contact auquel on a modifié les interactions.
+ * @author Loïs PAZOLA
  */
 void MainWindow::ReceiveContactToMainWindow(FicheContact contact)
 {
@@ -399,7 +457,10 @@ void MainWindow::ReceiveContactToMainWindow(FicheContact contact)
 
 /**
  * @brief Slot permettant de mettre a jour les logs avec l'ajout, suppression ou modification d'une interaction
- * @param[in] str
+ *
+ * Slot permettant de mettre a jour les logs avec l'ajout, suppression ou modification d'une interaction.
+ * @param[in] str ligne à rajouter aux logs
+ * @author Samuel LACHAUD
  */
 void MainWindow::AddOperationToLog(std::string str)
 {
@@ -409,7 +470,10 @@ void MainWindow::AddOperationToLog(std::string str)
 
 /**
  * @brief Slot permettant de recevoir une liste de contact modifiée par les filtres
+ *
+ * Slot permettant de recevoir une liste de contact modifiée par les filtres et de l'afficher dans la liste de la MainWindow
  * @param[in] listContact  liste de contacts modifiée par les filtres
+ * @author Samuel LACHAUD
  */
 void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 {
@@ -453,6 +517,9 @@ void MainWindow::ReceiveFromFilterContact(std::vector<FicheContact> listContact)
 
 /**
  * @brief Permet de retirer les filtres de recherche et de revenir à la liste par défaut
+ *
+ * Cette méthode permet de retirer les filtres de la liste de contacts de la MainWindow et de revenir à la liste de contacts par défaut.
+ * @author Loïs PAZOLA
  */
 void MainWindow::resetFilters()
 {
@@ -468,7 +535,10 @@ void MainWindow::resetFilters()
 
 /**
  * @brief Récupère le GestionContact envoyé par la fenêtre SaveGestionContact
+ *
+ * Slot permettant de récupérer la classe GestionContact importée depuis un fichier JSON dans la fenêtre SaveGestionContact et de remplacer la classe existante.
  * @param[in] gc    GestionContact à importer
+ * @author Loïs PAZOLA
  */
 void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
 {
@@ -491,6 +561,9 @@ void MainWindow::getGcFromSaveGestionContact(GestionContact gc)
 
 /**
  * @brief Resélectionne un contact avec la variable de classe \p idContactSelectionne
+ *
+ * Méthode permettant de resélectionner le contact  précédemment sélectionné après retrait du filtre
+ * @author Loïs PAZOLA
  */
 void MainWindow::ReselectSelectedContact(){
 
@@ -508,7 +581,10 @@ void MainWindow::ReselectSelectedContact(){
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ *
+ * Redéfinition de la méthode de fermeture de la fenêtre afin d'appliquer le son du bouton et la fermeture de la base de données (fermeture de l'application).
  * @param[out] event     Event de fermeture de la fenêtre
+ * @author Loïs PAZOLA
  */
 void MainWindow::closeEvent(QCloseEvent *event)
 {

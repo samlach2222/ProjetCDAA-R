@@ -19,6 +19,11 @@
 
 /**
  * @brief Classe pour la gestion des contacts de l'application
+ *
+ * Cette classe est un peu le coeur de l'application elle gère les différents contacts qui la compose.
+ * Les différentes méthodes qui servent à les ajouter, supprimer ou modifier sont donc ici.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class GestionContact
 {

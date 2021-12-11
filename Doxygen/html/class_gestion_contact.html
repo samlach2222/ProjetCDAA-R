@@ -84,17 +84,20 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a3e46dc0b2954a6de8856efac2c0d11ca"><td class="mdescLeft"> </td><td class="mdescRight">Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres.  <a href="class_gestion_contact.html#a3e46dc0b2954a6de8856efac2c0d11ca">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a3e46dc0b2954a6de8856efac2c0d11ca"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a5937c3b951b6382120a5484656a72f25"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25">SupprContact</a> (int)</td></tr>
-<tr class="memdesc:a5937c3b951b6382120a5484656a72f25"><td class="mdescLeft"> </td><td class="mdescRight">Permet de supprimer un contact par son <b>id</b> de la liste de contacts.  <a href="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a5937c3b951b6382120a5484656a72f25"><td class="mdescLeft"> </td><td class="mdescRight">Permet de supprimer un contact par son <code>id</code> de la liste de contacts.  <a href="class_gestion_contact.html#a5937c3b951b6382120a5484656a72f25">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a5937c3b951b6382120a5484656a72f25"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a18ca180223e793a022e26b6e8abfc60e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e">ModifyContact</a> (<a class="el" href="class_fiche_contact.html">FicheContact</a>)</td></tr>
-<tr class="memdesc:a18ca180223e793a022e26b6e8abfc60e"><td class="mdescLeft"> </td><td class="mdescRight">Permet de modifier un contact en le remplacant par un contact <b>c</b> <a href="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a18ca180223e793a022e26b6e8abfc60e"><td class="mdescLeft"> </td><td class="mdescRight">Permet de modifier un contact en le remplacant par un contact <code>c</code>.  <a href="class_gestion_contact.html#a18ca180223e793a022e26b6e8abfc60e">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a18ca180223e793a022e26b6e8abfc60e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ad56f0f89a3c9a097ccfadbf6781ee266"><td align="right" class="memItemLeft" valign="top"><a class="el" href="class_fiche_contact.html">FicheContact</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestion_contact.html#ad56f0f89a3c9a097ccfadbf6781ee266">GetContact</a> (int)</td></tr>
-<tr class="memdesc:ad56f0f89a3c9a097ccfadbf6781ee266"><td class="mdescLeft"> </td><td class="mdescRight">Permet de récupérer le contact à partir de son identifiant <b>id</b> <a href="class_gestion_contact.html#ad56f0f89a3c9a097ccfadbf6781ee266">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:ad56f0f89a3c9a097ccfadbf6781ee266"><td class="mdescLeft"> </td><td class="mdescRight">Permet de récupérer le contact à partir de son identifiant <code>id</code>.  <a href="class_gestion_contact.html#ad56f0f89a3c9a097ccfadbf6781ee266">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ad56f0f89a3c9a097ccfadbf6781ee266"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe pour la gestion des contacts de l'application. </p>
+<p>Cette classe est un peu le coeur de l'application elle gère les différents contacts qui la compose. Les différentes méthodes qui servent à les ajouter, supprimer ou modifier sont donc ici. </p><dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
+<dd>
+Loïs PAZOLA </dd></dl>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a9ff6fbb308b6c84306b76441cd4d950f" name="a9ff6fbb308b6c84306b76441cd4d950f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ff6fbb308b6c84306b76441cd4d950f">◆ </a></span>GestionContact()</h2>
@@ -121,6 +124,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$GestionContact[overload1]$$$GestionContact::GestionContact(std::vector<FicheContact> tabContacts=std::vector<FicheContact>(),Log log=Log() ) --><div class="memdoc"><div style="display: none">GestionContact::GestionContact(std::vector&lt;FicheContact&gt; tabContacts = std::vector&lt;FicheContact&gt;(), Log log = Log() )</div>
 <p>Constructeur de la classe. </p>
+<p>Constructeur de la classe <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a> qui initialise les attributs de celle-ci avec les paramètres de cette méthode. </p><dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">tabContacts</td><td>Contacts de l'application </td></tr>
@@ -186,6 +190,9 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$AddContact[overload1]$$$voidGestionContact::AddContact(std::string nom,std::string prenom,std::string entreprise,std::string mail,std::string telephone,QImage photo,Horodatage dateCreation=Horodatage() ) --><div class="memdoc"><div style="display: none">void GestionContact::AddContact(std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation = Horodatage() )</div>
 <p>Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
+<dd>
+Loïs PAZOLA </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">nom</td><td>Nom du contact </td></tr>
@@ -214,6 +221,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$GetAllContacts[overload1]$$$conststd::vector<FicheContact>&GestionContact::GetAllContacts()const --><div class="memdoc"><div style="display: none">const std::vector&lt;FicheContact&gt; &amp; GestionContact::GetAllContacts() const</div>
 <p>Permet de retourner tout les contacts. </p>
+<p>Méthode permettant de récupérer tout les contacts de la classe <a class="el" href="class_gestion_contact.html" title="Classe pour la gestion des contacts de l'application.">GestionContact</a>. </p><dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Retourne un tableau avec tout les contacts de l'application </dd></dl>
 </div><!-- @@@GetAllContacts -->
 </div>
@@ -231,7 +239,8 @@ Fonctions membres publiques</h2></td></tr>
 </tr>
 </table>
 </div><!-- $$$GetContact[overload1]$$$FicheContact&GestionContact::GetContact(int id) --><div class="memdoc"><div style="display: none">FicheContact &amp; GestionContact::GetContact(int id)</div>
-<p>Permet de récupérer le contact à partir de son identifiant <b>id</b> </p>
+<p>Permet de récupérer le contact à partir de son identifiant <code>id</code>. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Identifiant du contact que l'on veux récupérer dans la liste </td></tr>
@@ -278,7 +287,8 @@ Fonctions membres publiques</h2></td></tr>
 </tr>
 </table>
 </div><!-- $$$ModifyContact[overload1]$$$voidGestionContact::ModifyContact(FicheContact c) --><div class="memdoc"><div style="display: none">void GestionContact::ModifyContact(FicheContact c)</div>
-<p>Permet de modifier un contact en le remplacant par un contact <b>c</b> </p>
+<p>Permet de modifier un contact en le remplacant par un contact <code>c</code>. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Contact qu'on modifie dans la liste des contacts </td></tr>
@@ -301,7 +311,10 @@ Fonctions membres publiques</h2></td></tr>
 </tr>
 </table>
 </div><!-- $$$SupprContact[overload1]$$$voidGestionContact::SupprContact(int id) --><div class="memdoc"><div style="display: none">void GestionContact::SupprContact(int id)</div>
-<p>Permet de supprimer un contact par son <b>id</b> de la liste de contacts. </p>
+<p>Permet de supprimer un contact par son <code>id</code> de la liste de contacts. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
+<dd>
+Loïs PAZOLA </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Identifiant du contact à supprimer </td></tr>

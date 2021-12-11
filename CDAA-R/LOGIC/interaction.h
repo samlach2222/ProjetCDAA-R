@@ -14,6 +14,11 @@
 
 /**
  * @brief Classe pour une interaction
+ *
+ * Cette classe gère les interactions d'un contact. Une interaction sera donc créée ici avec ses différents attributs.
+ * Les tags présents dans le contenu de l'interactions seront donc égalements gérées.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class Interaction
 {

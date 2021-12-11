@@ -16,6 +16,12 @@ class UI_RequestContact;
 
 /**
  * @brief Classe pour la fenêtre de requêtes sur la base de donnée
+ *
+ * Cette classe est ouvert par l'appui d'un bouton sur la MainWindow. Ell permet d'effectuer des requêtes sur la base de données.
+ * Ces différentes requêtes permettent d'avoir des appercus avancés de l'ensemble des contacts et de leurs composants.
+ * C'est par exemple ici que l'on pourra récupérer les différents tags des différents contacts.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class UI_RequestContact : public QWidget
 {

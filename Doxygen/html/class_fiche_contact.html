@@ -134,6 +134,9 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe pour les détails d'un contact et ses interactions. </p>
+<p>Cette classe gère la structure du contact. Elle gères les différents attributs qui le compose. Elle gère également comment on le modifie, comment gèrer les interactions qui lui sont liées </p><dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd>
+<dd>
+Loïs PAZOLA </dd></dl>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a1c7bd5f54d53ea5ac2a14b4e46abb6ba" name="a1c7bd5f54d53ea5ac2a14b4e46abb6ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c7bd5f54d53ea5ac2a14b4e46abb6ba">◆ </a></span>FicheContact()</h2>
@@ -196,6 +199,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$FicheContact[overload1]$$$FicheContact::FicheContact(int id,std::string nom,std::string prenom,std::string entreprise,std::string mail,std::string telephone,QImage photo,Horodatage dateCreation ) --><div class="memdoc"><div style="display: none">FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::string entreprise, std::string mail, std::string telephone, QImage photo, Horodatage dateCreation )</div>
 <p>Constructeur de la classe <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a>. </p>
+<p>Contructeur de la classe <a class="el" href="class_fiche_contact.html" title="Classe pour les détails d'un contact et ses interactions.">FicheContact</a>, celui-ci permet d'initialiser tout les attributs de la classe par les paramètre du constructeur. </p><dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>L'id du contact </td></tr>
@@ -243,6 +247,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$AddInteraction[overload1]$$$voidFicheContact::AddInteraction(std::string contenuInteraction,std::string titreInteraction,Horodatage dateCreation=Horodatage() ) --><div class="memdoc"><div style="display: none">void FicheContact::AddInteraction(std::string contenuInteraction, std::string titreInteraction, Horodatage dateCreation = Horodatage() )</div>
 <p>Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions. </p>
+<p>Méthode permettant de créer une intéraction à partir des paramètres de la méthode et de l'ajouter à la liste des intéractions. Elle sera également ajoutée à la base de données (ainsi que les tags associés) </p><dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">contenuInteraction</td><td>Le contenu à partir duquel l'interaction sera créé </td></tr>
@@ -268,6 +273,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getDateCreation[overload1]$$$constHorodatage&FicheContact::getDateCreation()const --><div class="memdoc"><div style="display: none">const Horodatage &amp; FicheContact::getDateCreation() const</div>
 <p>Retourne la date de création de la fiche contact. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>la date de création de la fiche contact </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getDateCreation -->
 </div>
 <a id="ae8143c8bb1dffb661c154e54a77d38a6" name="ae8143c8bb1dffb661c154e54a77d38a6"></a>
@@ -285,6 +291,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getEntreprise[overload1]$$$conststd::string&FicheContact::getEntreprise()const --><div class="memdoc"><div style="display: none">const std::string &amp; FicheContact::getEntreprise() const</div>
 <p>Retourne l'entreprise. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>l'entreprise </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getEntreprise -->
 </div>
 <a id="aa97b411491af4b5cda1ae2c3183c0414" name="aa97b411491af4b5cda1ae2c3183c0414"></a>
@@ -302,6 +309,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getId[overload1]$$$intFicheContact::getId()const --><div class="memdoc"><div style="display: none">int FicheContact::getId() const</div>
 <p>Retourne l'id. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>l'id </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getId -->
 </div>
 <a id="ae8a3e404f2d9a9b53cd8adaa4d6439b0" name="ae8a3e404f2d9a9b53cd8adaa4d6439b0"></a>
@@ -319,6 +327,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getListInteraction[overload1]$$$std::vector<Interaction>&FicheContact::getListInteraction() --><div class="memdoc"><div style="display: none">std::vector&lt;Interaction&gt; &amp; FicheContact::getListInteraction()</div>
 <p>Retourne la liste des interactions du contact. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>la liste des interactions du contact </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getListInteraction -->
 </div>
 <a id="aef4f0e69486db12deb6b619da2e1257e" name="aef4f0e69486db12deb6b619da2e1257e"></a>
@@ -336,6 +345,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getMail[overload1]$$$conststd::string&FicheContact::getMail()const --><div class="memdoc"><div style="display: none">const std::string &amp; FicheContact::getMail() const</div>
 <p>Retourne le mail. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>le mail </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getMail -->
 </div>
 <a id="a6217038c3e817f81ef8f664cf3fd5af6" name="a6217038c3e817f81ef8f664cf3fd5af6"></a>
@@ -353,6 +363,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getNom[overload1]$$$conststd::string&FicheContact::getNom()const --><div class="memdoc"><div style="display: none">const std::string &amp; FicheContact::getNom() const</div>
 <p>Retourne le nom. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>le nom </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getNom -->
 </div>
 <a id="a0ddfacd0bd83681daa311c85cc1178bb" name="a0ddfacd0bd83681daa311c85cc1178bb"></a>
@@ -370,6 +381,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getPhoto[overload1]$$$constQImage&FicheContact::getPhoto()const --><div class="memdoc"><div style="display: none">const QImage &amp; FicheContact::getPhoto() const</div>
 <p>Retourne la photo de profil. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>la photo de profil </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getPhoto -->
 </div>
 <a id="aab60363325a77045d3fbbd0657bb5f5c" name="aab60363325a77045d3fbbd0657bb5f5c"></a>
@@ -387,6 +399,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getPrenom[overload1]$$$conststd::string&FicheContact::getPrenom()const --><div class="memdoc"><div style="display: none">const std::string &amp; FicheContact::getPrenom() const</div>
 <p>Retourne le prénom. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>le prénom </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getPrenom -->
 </div>
 <a id="a63699b1421423a525c0235caf644ecf1" name="a63699b1421423a525c0235caf644ecf1"></a>
@@ -404,6 +417,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- $$$getTelephone[overload1]$$$conststd::string&FicheContact::getTelephone()const --><div class="memdoc"><div style="display: none">const std::string &amp; FicheContact::getTelephone() const</div>
 <p>Retourne le numéro de téléphone. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>le numéro de téléphone </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@getTelephone -->
 </div>
 <a id="af98ff7bffb58db9262bba69e11c7143c" name="af98ff7bffb58db9262bba69e11c7143c"></a>
@@ -421,6 +435,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$RemoveInteraction[overload1]$$$voidFicheContact::RemoveInteraction(int id) --><div class="memdoc"><div style="display: none">void FicheContact::RemoveInteraction(int id)</div>
 <p>Enlève l'interaction d'id <code>id</code> de la liste des interactions. </p>
+<p>Retire l'interaction dont l'id est <code>id</code> de la liste des interactions, elle sera également retiré (ainsi que ses tags) de la base de donnée </p><dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>L'id de l'interaction à enlever </td></tr>
@@ -450,6 +465,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setEntreprise -->
 </div>
 <a id="a999bd1736f1dbb9f6ae4491fda9f0bf3" name="a999bd1736f1dbb9f6ae4491fda9f0bf3"></a>
@@ -473,6 +489,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setListInteraction -->
 </div>
 <a id="acf50153df2c61437201485811cb823ea" name="acf50153df2c61437201485811cb823ea"></a>
@@ -496,6 +513,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setMail -->
 </div>
 <a id="ae59b10a724fa6b07771111157c92e176" name="ae59b10a724fa6b07771111157c92e176"></a>
@@ -519,6 +537,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setNom -->
 </div>
 <a id="a72257bda6699552bb73dedab81686709" name="a72257bda6699552bb73dedab81686709"></a>
@@ -542,6 +561,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setPhoto -->
 </div>
 <a id="a561d9b4189f8481c274d0f8297a1a2c1" name="a561d9b4189f8481c274d0f8297a1a2c1"></a>
@@ -565,6 +585,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setPrenom -->
 </div>
 <a id="a3d65c2adb6a4a9c06b326dea96f6af46" name="a3d65c2adb6a4a9c06b326dea96f6af46"></a>
@@ -588,6 +609,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </dd>
 </dl>
+<dl class="section author"><dt>Auteur</dt><dd>Samuel LACHAUD </dd></dl>
 </div><!-- @@@setTelephone -->
 </div>
 <a id="a9f6b0c7e3dda229b3ccf320cc8ea3b1d" name="a9f6b0c7e3dda229b3ccf320cc8ea3b1d"></a>
@@ -604,6 +626,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><!-- $$$ToString[overload1]$$$std::stringFicheContact::ToString() --><div class="memdoc"><div style="display: none">std::string FicheContact::ToString()</div>
 <p>Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule. </p>
+<p>Méthode permettant de retourne une chaine de caractère contenant le nom du contact en majuscule et le prénom du contact commençant par une majuscule. </p><dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 <dl class="section return"><dt>Renvoie</dt><dd>un string contenant le nom et le prénom </dd></dl>
 </div><!-- @@@ToString -->
 </div>

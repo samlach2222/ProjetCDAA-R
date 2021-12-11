@@ -12,7 +12,11 @@
 #include <LOGIC/gestioncontact.h>
 
 /**
- * @brief Classe pour la gestion de l'import et l'export au format JSon des informations du programme
+ * @brief Classe pour la gestion de l'import et l'export au format JSON des informations du programme
+ *
+ * Cette classe permet de gèrer les imports/export en JSON demandés par la fenêtre de sauvegarde de l'application
+ * Elle permet donc une inter-opérabilité des données entre différents logiciels.
+ * @author Loïs PAZOLA
  */
 class JSonStorage
 {

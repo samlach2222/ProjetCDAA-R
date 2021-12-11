@@ -12,6 +12,7 @@
 
 /**
  * @brief Méthode pour jouer le son du bouton standard
+ * @author Samuel LACHAUD
  */
 void SoundPlayer::PlayButtonSound()
 {
@@ -19,15 +20,8 @@ void SoundPlayer::PlayButtonSound()
 }
 
 /**
- * @brief Méthode pour jouer le son du bouton alternatif
- */
-void SoundPlayer::PlayButtonSound2()
-{
-    QSound::play(":/Ressources/Sounds/ButtonSound2.wav");
-}
-
-/**
  * @brief Méthode pour jouer le son de l'erreur
+ * @author Samuel LACHAUD
  */
 void SoundPlayer::PlayErrorSound()
 {

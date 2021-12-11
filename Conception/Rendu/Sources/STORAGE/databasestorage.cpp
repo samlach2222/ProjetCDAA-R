@@ -17,6 +17,9 @@
 
 /**
  * @brief Initialise la base de données
+ *
+ * Méthode d'initialisation de la base de données SQLite depuis le fichier DB : Ressources/Database/ContactDB.db
+ * @author Loïs PAZOLA
  */
 void DatabaseStorage::InitializeBDD(){
     const QString nomBdd = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)+"/ContactDB.db";  //Chemin et nom du fichier de base de données à utiliser
@@ -38,6 +41,9 @@ void DatabaseStorage::InitializeBDD(){
 
 /**
  * @brief Ferme la base de données
+ *
+ * Méthode permettant de fermer la base de donnée à la fin de l'utilisation de l'application.
+ * @author Loïs PAZOLA
  */
 void DatabaseStorage::CloseBDD(){
 
@@ -55,6 +61,9 @@ void DatabaseStorage::CloseBDD(){
 
 /**
  * @brief Créé une FicheContact dans la base de données
+ *
+ * Méthode permettant de créer un contact dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param[in] c     La FicheContact à créé dans la base de données
  */
 void DatabaseStorage::CreateContact(FicheContact c)
@@ -85,6 +94,9 @@ void DatabaseStorage::CreateContact(FicheContact c)
 
 /**
  * @brief Créé une interaction et ses tags associés dans la base de données
+ *
+ * Méthode permettant de créer une interaction et ses tags associés dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param contenuInteraction     Contenu de l'interaction à ajouter
  * @param titreInteraction     Titre de l'interaction à ajouter
  * @param dateCreation      Date de création de l'interaction à ajouter
@@ -127,6 +139,9 @@ Interaction DatabaseStorage::CreateInteractionAndTags(std::string contenuInterac
 
 /**
  * @brief Créé une ligne de log dans la base de données
+ *
+ * Méthode permettant d'ajoutet une ligne de log dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param l la ligne de log à rajouter
  */
 void DatabaseStorage::CreateLog(std::string l)
@@ -141,6 +156,9 @@ void DatabaseStorage::CreateLog(std::string l)
 
 /**
  * @brief Met à jour une FicheContact dans la base de données
+ *
+ * Méthode permettant de mettre à jour un contact dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param[in] c     La nouvelle FicheContact
  */
 void DatabaseStorage::UpdateContact(FicheContact c)
@@ -173,6 +191,9 @@ void DatabaseStorage::UpdateContact(FicheContact c)
 
 /**
  * @brief Met à jour une Interaction dans la base de données
+ *
+ * Méthode permettant de mettre à jour une interaction et ses tags associés dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param[in] i     La nouvelle Interaction
  */
 void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
@@ -208,6 +229,9 @@ void DatabaseStorage::UpdateInteractionAndTags(Interaction i)
 
 /**
  * @brief Supprime une FicheContact dans la base de données
+ *
+ * Méthode permettant de supprimer un contact dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param[in] c     Le contact à supprimer
  */
 void DatabaseStorage::DeleteContact(FicheContact c)
@@ -223,6 +247,9 @@ void DatabaseStorage::DeleteContact(FicheContact c)
 
 /**
  * @brief Supprime une Interaction et ses tags dans la base de données
+ *
+ * Méthode permettant de supprimer une intéraction et ses tags associés dans la base de données via des requêtes SQL
+ * @author Loïs PAZOLA
  * @param[in] i     l'interaction à supprimer
  */
 void DatabaseStorage::DeleteInteractionAndTags(Interaction i)
@@ -243,6 +270,9 @@ void DatabaseStorage::DeleteInteractionAndTags(Interaction i)
 
 /**
  * @brief Retourne une GestionContact à partir de la base de données
+ *
+ * Charge toutes les données de l'application depuis la base de donnée.
+ * @author Loïs PAZOLA
  * @return une GestionContact à partir de la base de données
  */
 GestionContact DatabaseStorage::Load()
@@ -307,7 +337,10 @@ GestionContact DatabaseStorage::Load()
 }
 
 /**
- * @brief Réinitialise la base de données avec le GestionContact et Log passé en paramètre
+ * @brief Réinitialise la base de données avec le GestionContact passé en paramètre
+ *
+ * Méthode permettant de réinitialiser la base de données à partie de la classe de gestion de contact
+ * @author Loïs PAZOLA
  * @param gc    GestionContact utilisé pour remplir les tables
  */
 void DatabaseStorage::ReinitializeBDD(GestionContact gc)
@@ -352,6 +385,9 @@ void DatabaseStorage::ReinitializeBDD(GestionContact gc)
 
 /**
  * @brief Envoie la requête sql \p sqlRequest et retourne le résultat
+ *
+ * Méthode permettant d'effectuer des requêtes à la base de donnée à partir de la chaine de caractère en paramètre.
+ * @author Loïs PAZOLA
  * @param[in] sqlRequest        La requête sql
  * @return le résultat sous forme de string pour chaque valeur, pour chaque ligne de résultat
  */

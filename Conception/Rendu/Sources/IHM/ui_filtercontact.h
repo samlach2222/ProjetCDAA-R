@@ -19,6 +19,10 @@ class UI_FilterContact;
 
 /**
  * @brief Classe pour la fenêtre d'application de filtre sur une recherche de contacts
+ *
+ * Cette classe est ouverte par la Mainwindow par appuis sur un bouton. Elle permet alors de filtrer la liste de contacts de cette fenêtre.
+ * Les filtres sont appliqués entre deux dates sur des contacts par noms ou par entreprise. Les filtres s'exécutent en local, hors de la base de donnée.
+ * @author Samuel LACHAUD
  */
 class UI_FilterContact : public QWidget
 {
@@ -47,6 +51,10 @@ public slots:
 signals:
     /**
      * @brief Envoie la liste des contacts filtrée à a MainWindow
+     *
+     * Ce signal permet d'envoyer une nouvelle liste de contacts à la MainWindow.
+     * Cette liste de contacts est filtré par cette fenêtre et remplace temporairement la liste de contacts originale afin de la montrer à l'utilisateur
+     * @author Samuel LACHAUD
      */
     void sendListContactToMainWindow(std::vector<FicheContact>);
 };

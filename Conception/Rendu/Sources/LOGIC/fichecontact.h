@@ -15,6 +15,11 @@
 
 /**
  * @brief Classe pour les détails d'un contact et ses interactions
+ *
+ * Cette classe gère la structure du contact. Elle gères les différents attributs qui le compose.
+ * Elle gère également comment on le modifie, comment gèrer les interactions qui lui sont liées
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class FicheContact
 {

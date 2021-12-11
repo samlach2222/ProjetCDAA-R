@@ -11,6 +11,11 @@
 
 /**
  * @brief Classe pour les logs de l'application
+ *
+ * Cette classe gère l'affichage des différents évenements de l'application. Tout est consigné ici, chaque modifications, ajout ou suppression des divers éléments
+ * L'utilisateur pourra donc depuis l'affichage de cette classe dans la MainWindow savoir qu'est-ce qui  a été effectué et quand.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class Log
 {

@@ -13,6 +13,7 @@
 /**
  * @brief Retourne l'id
  * @return l'id
+ * @author Samuel LACHAUD
  */
 int FicheContact::getId() const
 {
@@ -22,6 +23,7 @@ int FicheContact::getId() const
 /**
  * @brief Retourne le nom
  * @return le nom
+ * @author Samuel LACHAUD
  */
 const std::string &FicheContact::getNom() const
 {
@@ -31,6 +33,7 @@ const std::string &FicheContact::getNom() const
 /**
  * @brief Remplace le nom
  * @param[in] newNom        Le nouveau nom
+ * @author Samuel LACHAUD
  */
 void FicheContact::setNom(const std::string &newNom)
 {
@@ -40,6 +43,7 @@ void FicheContact::setNom(const std::string &newNom)
 /**
  * @brief Retourne le prénom
  * @return le prénom
+ * @author Samuel LACHAUD
  */
 const std::string &FicheContact::getPrenom() const
 {
@@ -49,6 +53,7 @@ const std::string &FicheContact::getPrenom() const
 /**
  * @brief Remplace le prénom
  * @param[in] newPrenom     Le nouveau prénom
+ * @author Samuel LACHAUD
  */
 void FicheContact::setPrenom(const std::string &newPrenom)
 {
@@ -58,6 +63,7 @@ void FicheContact::setPrenom(const std::string &newPrenom)
 /**
  * @brief Retourne l'entreprise
  * @return l'entreprise
+ * @author Samuel LACHAUD
  */
 const std::string &FicheContact::getEntreprise() const
 {
@@ -67,6 +73,7 @@ const std::string &FicheContact::getEntreprise() const
 /**
  * @brief Remplace l'entreprise
  * @param[in] newEntreprise     La nouvelle entreprise
+ * @author Samuel LACHAUD
  */
 void FicheContact::setEntreprise(const std::string &newEntreprise)
 {
@@ -76,6 +83,7 @@ void FicheContact::setEntreprise(const std::string &newEntreprise)
 /**
  * @brief Retourne le mail
  * @return le mail
+ * @author Samuel LACHAUD
  */
 const std::string &FicheContact::getMail() const
 {
@@ -85,6 +93,7 @@ const std::string &FicheContact::getMail() const
 /**
  * @brief Remplace le mail
  * @param[in] newMail       Le nouveau mail
+ * @author Samuel LACHAUD
  */
 void FicheContact::setMail(const std::string &newMail)
 {
@@ -94,6 +103,7 @@ void FicheContact::setMail(const std::string &newMail)
 /**
  * @brief Retourne le numéro de téléphone
  * @return le numéro de téléphone
+ * @author Samuel LACHAUD
  */
 const std::string &FicheContact::getTelephone() const
 {
@@ -103,6 +113,7 @@ const std::string &FicheContact::getTelephone() const
 /**
  * @brief Remplace le numéro de téléphone
  * @param[in] newTelephone      Le nouveau numéro de téléphone
+ * @author Samuel LACHAUD
  */
 void FicheContact::setTelephone(const std::string &newTelephone)
 {
@@ -112,6 +123,7 @@ void FicheContact::setTelephone(const std::string &newTelephone)
 /**
  * @brief Retourne la photo de profil
  * @return la photo de profil
+ * @author Samuel LACHAUD
  */
 const QImage &FicheContact::getPhoto() const
 {
@@ -121,6 +133,7 @@ const QImage &FicheContact::getPhoto() const
 /**
  * @brief Remplace la photo de profil
  * @param[in] newPhoto      La nouvelle photo de profil
+ * @author Samuel LACHAUD
  */
 void FicheContact::setPhoto(const QImage &newPhoto)
 {
@@ -130,6 +143,7 @@ void FicheContact::setPhoto(const QImage &newPhoto)
 /**
  * @brief Retourne la date de création de la fiche contact
  * @return la date de création de la fiche contact
+ * @author Samuel LACHAUD
  */
 const Horodatage &FicheContact::getDateCreation() const
 {
@@ -139,6 +153,7 @@ const Horodatage &FicheContact::getDateCreation() const
 /**
  * @brief Retourne la liste des interactions du contact
  * @return la liste des interactions du contact
+ * @author Samuel LACHAUD
  */
 std::vector<Interaction> &FicheContact::getListInteraction()
 {
@@ -148,6 +163,7 @@ std::vector<Interaction> &FicheContact::getListInteraction()
 /**
  * @brief Remplace la liste d'interactions
  * @param[in] newListInteraction        La nouvelle liste d'interactions
+ * @author Samuel LACHAUD
  */
 void FicheContact::setListInteraction(const std::vector<Interaction> &newListInteraction)
 {
@@ -156,6 +172,9 @@ void FicheContact::setListInteraction(const std::vector<Interaction> &newListInt
 
 /**
  * @brief Constructeur de la classe FicheContact
+ *
+ * Contructeur de la classe FicheContact, celui-ci permet d'initialiser tout les attributs de la classe par les paramètre du constructeur.
+ * @author Samuel LACHAUD
  * @param[in] id        L'id du contact
  * @param[in] nom       Nom du contact
  * @param[in] prenom        Prénom du contact
@@ -179,6 +198,10 @@ FicheContact::FicheContact(int id, std::string nom, std::string prenom, std::str
 
 /**
  * @brief Crée une interaction à partir d'un contenu passé en paramètre et l'ajoute à la liste des interactions
+ *
+ * Méthode permettant de créer une intéraction à partir des paramètres de la méthode et de l'ajouter à la liste des intéractions.
+ * Elle sera également ajoutée à la base de données (ainsi que les tags associés)
+ * @author Loïs PAZOLA
  * @param[in] contenuInteraction        Le contenu à partir duquel l'interaction sera créé
  * @param[in] titreInteraction        Le titre de l'interaction
  * @param[in] dateCreation        L'horodatage de l'interaction (**optionelle**)
@@ -195,6 +218,9 @@ void FicheContact::AddInteraction(std::string contenuInteraction, std::string ti
 
 /**
  * @brief Enlève l'interaction d'id \p id de la liste des interactions
+ *
+ * Retire l'interaction dont l'id est \p id de la liste des interactions, elle sera également retiré (ainsi que ses tags) de la base de donnée
+ * @author Loïs PAZOLA
  * @param[in] id        L'id de l'interaction à enlever
  */
 void FicheContact::RemoveInteraction(int id)
@@ -213,6 +239,9 @@ void FicheContact::RemoveInteraction(int id)
 
 /**
  * @brief Retourne un string contenant le nom tout en majuscule et le prénom commençant par une majuscule
+ *
+ * Méthode permettant de retourne une chaine de caractère contenant le nom du contact en majuscule et le prénom du contact commençant par une majuscule.
+ * @author Loïs PAZOLA
  * @return un string contenant le nom et le prénom
  */
 std::string FicheContact::ToString()

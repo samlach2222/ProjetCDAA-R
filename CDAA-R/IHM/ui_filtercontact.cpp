@@ -15,7 +15,10 @@
 
 /**
  * @brief Constructeur de UI_FilterContact
+ *
+ * Constructeur de la classe IHM de filtrage de contacts. Celui-ci initialise l'affichage graphique de la fenêtre de filtrage.
  * @param[out] parent   QWidget de création de classe
+ * @author Samuel LACHAUD
  */
 UI_FilterContact::UI_FilterContact(QWidget *parent) :
     QWidget(parent),
@@ -26,6 +29,9 @@ UI_FilterContact::UI_FilterContact(QWidget *parent) :
 
 /**
  * @brief Destructeur de UI_FilterContact
+ *
+ * Destructeur de la classe de filtrage de contacts. Il permet de supprimer l'affichage graphique de la fenêtre de filtrage.
+ * @author Samuel LACHAUD
  */
 UI_FilterContact::~UI_FilterContact()
 {
@@ -34,6 +40,10 @@ UI_FilterContact::~UI_FilterContact()
 
 /**
  * @brief Permet de valider le filtre à partir du bouton lié
+ *
+ * Méthode liée a l'appuis sur le bouton valider du filtrage.
+ * Il permet d'appliquer le filtre saisi sur la liste de contact de la MainWindow1
+ * @author Loïs PAZOLA
  */
 void UI_FilterContact::ButtonValidate()
 {
@@ -45,7 +55,10 @@ void UI_FilterContact::ButtonValidate()
 
 /**
  * @brief Override de la méthode appelée lors d'une demande de fermeture de la fenêtre
+ *
+ * Redéfinition de la méthode de fermeture de la fenêtre afin d'appliquer le son du bouton.
  * @param[out] event     Event de fermeture de la fenêtre
+ * @author Loïs PAZOLA
  */
 void UI_FilterContact::closeEvent(QCloseEvent *event)
 {
@@ -58,6 +71,10 @@ void UI_FilterContact::closeEvent(QCloseEvent *event)
 
 /**
  * @brief Méthode permettant de vérifier que les champs sont remplis correctement
+ *
+ * Méthode appelée lors de la validation du filtrage pour vérifier si les champs obligatoire pour la bonne exécution du filtrage sont remplis correctement.
+ * Le cas contraire, une erreur est affichée à l'utilisateur, et celui-ci est invité à remplir correctement les champs necéssaires.
+ * @author Samuel LACHAUD
  * @return Retourne true si les champss sont bien remplis et false s'il ne le sont pas
  */
 bool UI_FilterContact::VerificationChamps()
@@ -139,6 +156,10 @@ bool UI_FilterContact::VerificationChamps()
 
 /**
  * @brief Permet de recevoir la classe de gestion de contact afin d'avoir la liste complête des contacts
+ *
+ * Slot permettant de recevoir la classe de gestion de contact pour pouvoir appliquer les filtres sur la liste de contacts.
+ * La classe de gestion de contact nous sert donc a récupérer la liste de contacts.
+ * @author Samuel LACHAUD
  * @param[in] gc classe de Gestion de contacts
  */
 void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
@@ -171,6 +192,10 @@ void UI_FilterContact::ReceiveFromMainWindow(GestionContact gc)
 
 /**
  * @brief Crée la liste des contacts filtrés et l'envoie au MainWindow
+ *
+ * Méthode permettant de mettre en place le filtrage des contacts.
+ * Pour celà la liste de contact va être modifiée, filtrée, puis envoyée au MainWindow.
+ * @author Loïs PAZOLA
  * @param gc    GestionContact utilisé pour le filtrage
  */
 void UI_FilterContact::PrepareSendingToMainWindow(GestionContact gc)

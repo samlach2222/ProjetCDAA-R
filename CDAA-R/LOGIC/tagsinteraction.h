@@ -12,6 +12,11 @@
 
 /**
  * @brief Classe gérant le tableau des tags
+ *
+ * Cette classe permet de gérer les différents tags présents dans une interaction
+ * Elle stocke donc les tags TODO et les tags DATE du contenu d'une interaction.
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  */
 class tagsInteraction
 {

@@ -16,6 +16,7 @@
 /**
  * @brief Retourne la liste de logs
  * @return la liste de logs
+ * @author Samuel LACHAUD
  */
 const std::vector<std::string> &Log::getTabLog() const
 {
@@ -25,6 +26,7 @@ const std::vector<std::string> &Log::getTabLog() const
 /**
  * @brief Remplace la liste de logs
  * @param[in] newTabLog      La nouvelle liste de logs
+ * @author Samuel LACHAUD
  */
 void Log::setTabLog(const std::vector<std::string> &newTabLog)
 {
@@ -33,6 +35,7 @@ void Log::setTabLog(const std::vector<std::string> &newTabLog)
 
 /**
  * @brief Constructeur de la classe Log
+ * @author Samuel LACHAUD
  */
 Log::Log() : tabLog(std::vector<std::string>())
 {
@@ -42,6 +45,7 @@ Log::Log() : tabLog(std::vector<std::string>())
 /**
  * @brief Ajoute un log \p log à la liste de logs
  * @param[in] log       Le log à ajouter
+ * @author Samuel LACHAUD
  */
 void Log::AddToTabLog(std::string log)
 {

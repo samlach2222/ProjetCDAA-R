@@ -65,21 +65,22 @@ $(function() {
 <div class="headertitle"><div class="title">Référence de la classe JSonStorage</div></div>
 </div><!--header-->
 <div class="contents">
-<!-- $$$ Référence-brief --><p>Classe pour la gestion de l'import et l'export au format JSon des informations du programme.  
+<!-- $$$ Référence-brief --><p>Classe pour la gestion de l'import et l'export au format JSON des informations du programme.  
  <a href="class_j_son_storage.html#details">Plus de détails...</a></p><!-- @@@Référence -->
 <p><code>#include &lt;<a class="el" href="jsonstorage_8h_source.html">jsonstorage.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
 <tr class="memitem:a5d679870947fef13252e180967641726"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_son_storage.html#a5d679870947fef13252e180967641726">Save</a> (<a class="el" href="class_gestion_contact.html">GestionContact</a>)</td></tr>
-<tr class="memdesc:a5d679870947fef13252e180967641726"><td class="mdescLeft"> </td><td class="mdescRight">Permet de sauvegarder l'ensemble des contacts et logs de <b>gc</b> dans le fichier JSon afin <b>d'assurer l'interopérabilité</b> <a href="class_j_son_storage.html#a5d679870947fef13252e180967641726">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a5d679870947fef13252e180967641726"><td class="mdescLeft"> </td><td class="mdescRight">Permet de sauvegarder l'ensemble des contacts et logs de <code>gc</code> dans le fichier JSon afin <b>d'assurer l'interopérabilité</b> <a href="class_j_son_storage.html#a5d679870947fef13252e180967641726">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a5d679870947fef13252e180967641726"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a31ee906612e6aca4c1b5fdd3a034a1a4"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="class_gestion_contact.html">GestionContact</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="class_j_son_storage.html#a31ee906612e6aca4c1b5fdd3a034a1a4">Load</a> ()</td></tr>
 <tr class="memdesc:a31ee906612e6aca4c1b5fdd3a034a1a4"><td class="mdescLeft"> </td><td class="mdescRight">Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin <b>d'assurer l'interopérabilité</b> <a href="class_j_son_storage.html#a31ee906612e6aca4c1b5fdd3a034a1a4">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a31ee906612e6aca4c1b5fdd3a034a1a4"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Classe pour la gestion de l'import et l'export au format JSon des informations du programme. </p>
+<div class="textblock"><p>Classe pour la gestion de l'import et l'export au format JSON des informations du programme. </p>
+<p>Cette classe permet de gèrer les imports/export en JSON demandés par la fenêtre de sauvegarde de l'application Elle permet donc une inter-opérabilité des données entre différents logiciels. </p><dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a31ee906612e6aca4c1b5fdd3a034a1a4" name="a31ee906612e6aca4c1b5fdd3a034a1a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31ee906612e6aca4c1b5fdd3a034a1a4">◆ </a></span>Load()</h2>
@@ -103,6 +104,7 @@ Fonctions membres publiques statiques</h2></td></tr>
 </table>
 </div><!-- $$$Load[overload1]$$$GestionContactJSonStorage::Load() --><div class="memdoc"><div style="display: none">GestionContact JSonStorage::Load()</div>
 <p>Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin <b>d'assurer l'interopérabilité</b> </p>
+<p>Méthode permettant de charger les données de l'application (données de gestionContact) depuis le fichier JSON. </p><dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 <dl class="section return"><dt>Renvoie</dt><dd>l'ensemble des informations des contacts et des logs sauvegardées </dd></dl>
 </div><!-- @@@Load -->
 </div>
@@ -128,7 +130,8 @@ Fonctions membres publiques statiques</h2></td></tr>
 </tr>
 </table>
 </div><!-- $$$Save[overload1]$$$voidJSonStorage::Save(GestionContact gc) --><div class="memdoc"><div style="display: none">void JSonStorage::Save(GestionContact gc)</div>
-<p>Permet de sauvegarder l'ensemble des contacts et logs de <b>gc</b> dans le fichier JSon afin <b>d'assurer l'interopérabilité</b> </p>
+<p>Permet de sauvegarder l'ensemble des contacts et logs de <code>gc</code> dans le fichier JSon afin <b>d'assurer l'interopérabilité</b> </p>
+<p>Méthode permettant de sauvegarder les données de l'application (données de gestionContact) dans le fichier JSON. </p><dl class="section author"><dt>Auteur</dt><dd>Loïs PAZOLA </dd></dl>
 <dl class="params"><dt>Paramètres</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">gc</td><td>Ensemble des contacts et logs de l'application </td></tr>

@@ -28,7 +28,11 @@
 
 /**
  * @brief Retourne le chemin et nom du fichier de sauvegarde
+ *
+ * Méthode permettant de retourne le chemier du fihier de sauvegarde JSON avec le nom du fichier
+ * Type de retour : Repertoire/SousRepertoire/Save.json
  * @return le chemin et nom du fichier de sauvegarde
+ * @author Loïs PAZOLA
  */
 static const QString GetFilepath(){
     //Ne peut pas être une variable globale constante car sinon donne le chemin %appdata%/Save.json
@@ -37,7 +41,10 @@ static const QString GetFilepath(){
 }
 
 /**
- * @brief Permet de sauvegarder l'ensemble des contacts et logs de **gc** dans le fichier JSon afin **d'assurer l'interopérabilité**
+ * @brief Permet de sauvegarder l'ensemble des contacts et logs de \p gc dans le fichier JSon afin **d'assurer l'interopérabilité**
+ *
+ * Méthode permettant de sauvegarder les données de l'application (données de gestionContact) dans le fichier JSON.
+ * @author Loïs PAZOLA
  * @param[in] gc        Ensemble des contacts et logs de l'application
  */
 void JSonStorage::Save(GestionContact gc)
@@ -106,6 +113,9 @@ void JSonStorage::Save(GestionContact gc)
 
 /**
  * @brief Permer de charger depuis le fichier JSon toutes les informations des contacts et des logs afin **d'assurer l'interopérabilité**
+ *
+ * Méthode permettant de charger les données de l'application (données de gestionContact) depuis le fichier JSON.
+ * @author Loïs PAZOLA
  * @return l'ensemble des informations des contacts et des logs sauvegardées
  */
 GestionContact JSonStorage::Load()

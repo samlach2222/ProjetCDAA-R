@@ -333,7 +333,6 @@
             <section title="main.cpp" ref="main_8cpp.html">
               <section title="main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
             </section>
-            <section title="precompiled-header.h" ref="precompiled-header_8h_source.html" />
           </section>
           <section title="Membres de fichier" ref="globals.html">
             <section title="Tout" ref="globals.html" />
@@ -448,7 +447,6 @@
       <keyword name="~MainWindow" id="MainWindow::~MainWindow" ref="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" />
       <keyword name="SoundPlayer" id="SoundPlayer" ref="class_sound_player.html" />
       <keyword name="PlayButtonSound" id="SoundPlayer::PlayButtonSound" ref="class_sound_player.html#a5b61a3ff5528a289d5483f07a469eb4f" />
-      <keyword name="PlayButtonSound2" id="SoundPlayer::PlayButtonSound2" ref="class_sound_player.html#a6213c0a75f974975aa817d0ea6eb1c50" />
       <keyword name="PlayErrorSound" id="SoundPlayer::PlayErrorSound" ref="class_sound_player.html#ad15b7390dda09d3a8821a497574c3781" />
       <keyword name="tagsInteraction" id="tagsInteraction" ref="classtags_interaction.html" />
       <keyword name="getTags" id="tagsInteraction::getTags" ref="classtags_interaction.html#a2b57dff1b46cb1b9cd2456d6bcffc212" />
@@ -522,7 +520,6 @@
       <file>log_8h_source.html</file>
       <file>soundplayer_8h_source.html</file>
       <file>tagsinteraction_8h_source.html</file>
-      <file>precompiled-header_8h_source.html</file>
       <file>databasestorage_8h_source.html</file>
       <file>jsonstorage_8h_source.html</file>
       <file>mainwindow_8cpp.html</file>

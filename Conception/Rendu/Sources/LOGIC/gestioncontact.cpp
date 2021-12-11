@@ -13,6 +13,9 @@
 
 /**
  * @brief Permet de retourner tout les contacts
+ *
+ * Méthode permettant de récupérer tout les contacts de la classe GestionContact.
+ * @author Samuel LACHAUD
  * @return Retourne un tableau avec tout les contacts de l'application
  */
 const std::vector<FicheContact> &GestionContact::GetAllContacts() const
@@ -31,6 +34,9 @@ Log &GestionContact::getLog()
 
 /**
  * @brief Constructeur de la classe
+ *
+ * Constructeur de la classe GestionContact qui initialise les attributs de celle-ci avec les paramètres de cette méthode.
+ * @author Samuel LACHAUD
  * @param[in] tabContacts       Contacts de l'application
  * @param[in] log       Logs de l'application
  */
@@ -42,6 +48,9 @@ GestionContact::GestionContact(std::vector<FicheContact> tabContacts, Log log)
 
 /**
  * @brief Permet de créer et ajouter un contact à la liste des contacts à partir des données passées en paramètres
+ *
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  * @param[in] nom       Nom du contact
  * @param[in] prenom        Prénom du contact
  * @param[in] entreprise        Entreprise du contact
@@ -80,7 +89,10 @@ void GestionContact::AddContact(std::string nom, std::string prenom, std::string
 }
 
 /**
- * @brief Permet de supprimer un contact par son **id** de la liste de contacts
+ * @brief Permet de supprimer un contact par son \p id de la liste de contacts
+ *
+ * @author Samuel LACHAUD
+ * @author Loïs PAZOLA
  * @param[in] id    Identifiant du contact à supprimer
  */
 void GestionContact::SupprContact(int id)
@@ -105,7 +117,9 @@ void GestionContact::SupprContact(int id)
 }
 
 /**
- * @brief Permet de modifier un contact en le remplacant par un contact **c**
+ * @brief Permet de modifier un contact en le remplacant par un contact \p c
+ *
+ * @author Samuel LACHAUD
  * @param[in] c     Contact qu'on modifie dans la liste des contacts
  */
 void GestionContact::ModifyContact(FicheContact c)
@@ -122,7 +136,9 @@ void GestionContact::ModifyContact(FicheContact c)
 }
 
 /**
- * @brief Permet de récupérer le contact à partir de son identifiant **id**
+ * @brief Permet de récupérer le contact à partir de son identifiant \p id
+ *
+ * @author Loïs PAZOLA
  * @param[in] id    Identifiant du contact que l'on veux récupérer dans la liste
  * @return le contact qui a pour **id** le paramètre
  * @throw std::invalid_argument Il n'y a aucun contact ayant l'id passé en paramètre

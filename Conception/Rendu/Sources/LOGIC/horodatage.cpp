@@ -14,6 +14,7 @@
 /**
  * @brief Getter de Jour
  * @return Retourne le jour en **entier**
+ * @author Samuel LACHAUD
  */
 int Horodatage::getJour() const
 {
@@ -23,6 +24,7 @@ int Horodatage::getJour() const
 /**
  * @brief Setter de Jour
  * @param[in] newJour     Variable que l'on assigne au Jour
+ * @author Samuel LACHAUD
  */
 void Horodatage::setJour(int newJour)
 {
@@ -32,6 +34,7 @@ void Horodatage::setJour(int newJour)
 /**
  * @brief Getter de Mois
  * @return Retourne le mois en **entier**
+ * @author Samuel LACHAUD
  */
 int Horodatage::getMois() const
 {
@@ -41,6 +44,7 @@ int Horodatage::getMois() const
 /**
  * @brief Setter de Mois
  * @param[in] newMois     Variable que l'on assigne au Mois
+ * @author Samuel LACHAUD
  */
 void Horodatage::setMois(int newMois)
 {
@@ -50,6 +54,7 @@ void Horodatage::setMois(int newMois)
 /**
  * @brief Getter d'Annee
  * @return Retourne l'annee en **entier**
+ * @author Samuel LACHAUD
  */
 int Horodatage::getAnnee() const
 {
@@ -59,6 +64,7 @@ int Horodatage::getAnnee() const
 /**
  * @brief Setter d'Annee
  * @param[in] newAnnee     Variable que l'on assigne à l'annee
+ * @author Samuel LACHAUD
  */
 void Horodatage::setAnnee(int newAnnee)
 {
@@ -68,6 +74,7 @@ void Horodatage::setAnnee(int newAnnee)
 /**
  * @brief Getter d'Heure
  * @return Retourne l'heure en **entier**
+ * @author Samuel LACHAUD
  */
 int Horodatage::getHeure() const
 {
@@ -77,6 +84,7 @@ int Horodatage::getHeure() const
 /**
  * @brief Setter de l'Heure
  * @param[in] newHeure     Variable que l'on assigne au l'Heure
+ * @author Samuel LACHAUD
  */
 void Horodatage::setHeure(int newHeure)
 {
@@ -86,6 +94,7 @@ void Horodatage::setHeure(int newHeure)
 /**
  * @brief Getter de Minutes
  * @return Retourne les minutes en **entier**
+ * @author Samuel LACHAUD
  */
 int Horodatage::getMinute() const
 {
@@ -95,6 +104,7 @@ int Horodatage::getMinute() const
 /**
  * @brief Setter des Minutes
  * @param[in] newMinute     Variable que l'on assigne aux Minutes
+ * @author Samuel LACHAUD
  */
 void Horodatage::setMinute(int newMinute)
 {
@@ -104,6 +114,7 @@ void Horodatage::setMinute(int newMinute)
 /**
  * @brief Getter de Seconde
  * @return Retourne les secondes en **entier**
+ * @author Samuel LACHAUD
  */
 int Horodatage::getSeconde() const
 {
@@ -113,6 +124,7 @@ int Horodatage::getSeconde() const
 /**
  * @brief Setter de Secondes
  * @param[in] newSeconde     Variable que l'on assigne aux secondes
+ * @author Samuel LACHAUD
  */
 void Horodatage::setSeconde(int newSeconde)
 {
@@ -121,6 +133,7 @@ void Horodatage::setSeconde(int newSeconde)
 
 /**
  * @brief Constructeur de la classe Horodatage avec la date et l'heure **en paramètres**
+ * @author Samuel LACHAUD
  * @param[in] j     Variable stockant le jour en **entier**
  * @param[in] m     Variable stockant le mois en **entier**
  * @param[in] a     Variable stockant l'année en **entier**
@@ -140,6 +153,10 @@ Horodatage::Horodatage(int j, int m, int a, int heu, int min, int sec)
 
 /**
  * @brief Constructeur de la classe Horodatage avec date et heure **automatique**
+ *
+ * Constructeur de la classe Horodatage, sans paramètres.
+ * La date et l'heure sont fixées sur l'horloge système
+ * @author Loïs PAZOLA
  */
 Horodatage::Horodatage()
 {
@@ -159,6 +176,7 @@ Horodatage::Horodatage()
 
 /**
  * @brief Constructeur de la classe Horodatage à partir d'un string généré par le \p ToString()
+ * @author Samuel LACHAUD
  * @param[in] strDate       La date sous forme de string qui sera convertie
  */
 Horodatage::Horodatage(std::string strDate)
@@ -178,6 +196,9 @@ Horodatage::Horodatage(std::string strDate)
 
 /**
  * @brief Renvoie en chaine de caractère la date et l'heure de l'horodatage afin de le rendre affichable
+ *
+ * Retourne en chaine de caractère la date et l'heure de la classe horodatage sous le format "yyyy-MM-dd hh:mm:ss" pour l'utiliser dans la base de données.
+ * @author Loïs PAZOLA
  * @return Retourne la date et l'heure au format **yyyy-MM-dd hh:mm:ss** en chaine de caractère
  */
 std::string Horodatage::ToString() const
@@ -201,6 +222,9 @@ std::string Horodatage::ToString() const
 
 /**
  * @brief Renvoie en chaine de caractère la date et l'heure de l'horodatage afin de le rendre affichable pour les logs
+ *
+ * Retourne en chaine de caractère la date et l'heure de la classe horodatage sous le format "dd/MM/yyyy hh:mm:ss" pour l'afficher dans les logs.
+ * @author Samuel LACHAUD
  * @return Retourne la date et l'heure au format **dd/MM/yyyy hh:mm:ss** en chaine de caractère
  */
 std::string Horodatage::ToStringShowLog() const
