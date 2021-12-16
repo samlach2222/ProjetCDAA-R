@@ -15,9 +15,14 @@ Racine
 │       └───COMPTE RENDU DU PROJET
 │
 ├───Doxygen
-│   └───index.html
-│       └───DOCUMENTATION DU PROJET
-│
+│   ├───HTML
+│   │   └───index.html
+│   │       └───DOCUMENTATION DU PROJET 
+│   ├───CDAA-R.qch
+│   │   └───FICHIER PERMETTANT D'OBTENIR LA DOCUMENTATION LORS DE L'OUVERTURE DE L'AIDE OU DU SURVOL D'UNE METHODE A LA SOURIS.
+│   │       POUR L'UTILISER : OUTILS/OPTIONS/AIDE/DOCUMENTATION --> Ajouter --> [FICHIER QCH]
+│   └───Doxyfile
+│       └───FICHIER PERMETTANT DE GENERER LA DOCUMENTATION DOXYGEN. /!\ CE FICHIER EST RELATIF, IL GENERE LA DOCUMENTATION DANS ../DOXYGEN.
 │
 ├───Installateur
 │   └───CDAA-R installateur 2.1.0.exe
