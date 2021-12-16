@@ -2,7 +2,7 @@
 
 [![GitHub version](https://img.shields.io/badge/version-2.1.1-purple.svg)](https://img.shields.io/badge)
 
-## Projet de CDAA (Conception et Développement Avancée d'Applications) portant sur la création d'une interface de gestion de conatcts en C++ avec QT.
+## Projet de CDAA (Conception et Développement Avancée d'Applications) portant sur la création d'une interface de gestion de contacts en C++ avec QT.
 > **/!\ En raison de gifs, ce readme peut-être long à chagrer en fonction de votre connexion, merci d'avance de votre patience et nous excusons pour le temps de chargement le cas échéant.**
 
 # I) Introduction
