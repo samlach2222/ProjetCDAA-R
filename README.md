@@ -3,7 +3,7 @@
 [![GitHub version](https://img.shields.io/badge/version-2.1.2-purple.svg)](https://img.shields.io/badge)
 
 ## Projet de CDAA (Conception et Développement Avancée d'Applications) portant sur la création d'une interface de gestion de contacts en C++ avec QT.
-> **/!\ En raison de gifs, ce readme peut-être long à chagrer en fonction de votre connexion, merci d'avance de votre patience et nous excusons pour le temps de chargement le cas échéant.**
+> **/!\ Ce readme contient des gifs qui peuvent être long à charger. Nous recommandons de cliquez sur ceux-ci pour accéder aux vidéos MP4.**
 
 # I) Introduction
 ## Qu’est-ce que CDAA-R
@@ -24,12 +24,12 @@ installation.
 Notre projet étant en source libre sur **GitHub** , la documentation **Doxygen** est un outil indispensable
 pour permettre à toute personnes s’intéressant au projet de savoir rapidement les composants et le
 fonctionnement de celui-ci. On peut alors retrouver cette documentation **ci-dessous** :
--  [lien vers la documentation](https://github.com/samlach2222/ProjetCDAA-R/tree/main/Doxygen/html)
+-  [lien vers la documentation](Doxygen/html)
 
 # II) Conception
 ## Diagramme de classe
 
-[![Conception du projet](/Conception/projetCDAA.png)](/Conception/projetCDAA.pdf)
+[![Conception du projet](Conception/projetCDAA.png "Cliquez pour la version PDF")](https://github.com/samlach2222/ProjetCDAA-R/blob/main/Conception/projetCDAA.pdf?raw=true)
 
 Nous trouvons sur la feuille précédente le diagramme UML de Classes présentant notre projet. Il est
 composé de la partie Métier/Logic qui forme l’ensemble des classes gérant les structures et les choses
@@ -74,7 +74,7 @@ UML.
 Notre installateur se présente comme un fichier exe permettant d’installer notre application. Par le
 double clic dessus-la fenêtre s’ouvre et l’application se retrouve installée en suivant la procédure suivante : 
 
-[![Guide d'installation sur EXE et UWP](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_EXE-UWP.gif)](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_EXE-UWP.gif)
+[![Guide d'installation sur EXE et UWP](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_EXE-UWP.gif)](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_EXE-UWP.mp4)
 
 A la fin de l’installateur, le répertoire d’installation s’ouvre, on y retrouve l’exécutable de l’application
 Windows. Si on regarde dans le menu démarrer, on trouvera également l’application UWP (Application
@@ -88,7 +88,7 @@ Une fois que nous avons notre fichier APK, nous le récupérons depuis notre app
 (tablette, smartphone). En cliquant sur celui-ci, une demande d’autorisation vous sera faite, il suffit
 d’accepter pour lancer l’installation de celui-ci comme ci-contre :
 
-[![Guide d'installation sur APK](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_APK.gif)](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_APK.gif)
+[![Guide d'installation sur APK](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_APK.gif)](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_APK.mp4)
 
 # IV) Utilisation 
 
@@ -101,7 +101,7 @@ Beaucoup d’utilisateurs ayant un usage avancé d’un ordinateur utilisent les
 naviguer sur un logiciel. La navigation à l’aide du clavier est donc totalement possible sur notre
 application, comme montré ci-dessous :
 
-[![démonstration du clavier](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Raccourcis%20clavier.gif)](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Raccourcis%20clavier.gif)
+[![Démonstration des raccourcis clavier](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Raccourcis%20clavier.gif)](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Raccourcis%20clavier.mp4)
 
 ## Feedbacks sonores
 
@@ -115,8 +115,8 @@ Après analyse des sons de plusieurs applications et systèmes d’exploitation,
 à un enregistrement personnel, avec une série de traitement pour façonner ce bruitage à notre image.  
 Le deuxième bruitage est le message d’erreur, celui-ci se doit d’être impactant et de ne pas frustrer
 l’utilisateur, nous l’avons donc créé en conséquence. Vous pouvez alors les entendre ci-dessous :
--  [Démonstration son au clic](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Son_Clic.mp4)
--  [Démonstration son erreur](/Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Son_Erreur.mp4)
+-  [Démonstration son au clic](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Son_Clic.mp4)
+-  [Démonstration son erreur](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Son_Erreur.mp4)
 
 
 #### Membres du projet :
