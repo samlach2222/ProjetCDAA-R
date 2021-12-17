@@ -39,7 +39,7 @@ echo.
 
 ::Installateur Installateur Installateur Installateur
 ::--ac = compression level, -v = verbose, -f = offline installer
-if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 2.1.1.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 2.1.1.exe")
+if %username% == SYSTEM ("D:\LOGICIELS\QT\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 2.1.2.exe") else ("C:\Qt\Tools\QtInstallerFramework\4.2\bin\binarycreator.exe" -c config\config.xml -p packages --ac 9 -v -f "CDAA-R installateur 2.1.2.exe")
 echo.
 echo L'installateur se trouve dans Programs\installer
 TIMEOUT 3

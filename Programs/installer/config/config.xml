@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
 	<Name>CDAA-R</Name>
-	<Version>2.1.1</Version>
+	<Version>2.1.2</Version>
 	<Title>CDAA-R</Title>
 	<Publisher>Groupe R</Publisher>
 	<StartMenuDir>CDAA-R</StartMenuDir>
@@ -16,4 +16,5 @@
 	<WizardStyle>Modern</WizardStyle>
 	<WizardMinimumWidth>700</WizardMinimumWidth>
 	<WizardMinimumHeight>450</WizardMinimumHeight>
+	<ProductUrl>https://github.com/samlach2222/ProjetCDAA-R</ProductUrl>
 </Installer>
