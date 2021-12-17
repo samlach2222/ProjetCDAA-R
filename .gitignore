@@ -79,13 +79,14 @@ Programs/SQLiteDatabaseBrowser/
 Programs/SQLiteDatabaseBrowserPortable/
 
 # Don't ignore what's inside the packages data folder
-
 !Programs/installer/packages/com.groupe_R.CDAA_R_win32/data/*
 !Programs/installer/packages/com.groupe_R.CDAA_R_win32/data/*/*
 
 # Don't ignore files needed for UWP builds
-
 !*build-*UWP*/debug/
 !*build-*UWP*/release/
 !*build-*UWP*/*/AppxManifest.xml
 !*build-*UWP*/*/assets/
+
+# Ignore personal files
+desktop.ini
