@@ -3,7 +3,6 @@
 [![GitHub version](https://img.shields.io/badge/version-2.1.2-purple.svg)](https://img.shields.io/badge)
 
 ## Projet de CDAA (Conception et Développement Avancée d'Applications) portant sur la création d'une interface de gestion de contacts en C++ avec Qt.
-> **/!\ Ce readme contient des gifs qui peuvent être long à charger. Nous recommandons de cliquez sur ceux-ci pour accéder aux vidéos MP4.**
 
 # I) Introduction
 ## Qu'est-ce que CDAA-R
@@ -49,7 +48,7 @@ Pour finir, ce package est composé uniquement de classes statiques. Il ne compr
 
 Notre installateur se présente comme un fichier EXE permettant d'installer notre application. En l'exécutant, la fenêtre d'installation s'ouvre et l'application peut être installée en suivant la procédure suivante :
 
-[![Guide d'installation sur EXE et UWP](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_EXE-UWP.gif)](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_EXE-UWP.mp4)
+https://user-images.githubusercontent.com/89837262/146622589-b53abf32-9fe8-4255-985f-78dee8e1b28c.mp4
 
 À la fin de l'installation, le répertoire d'installation s'ouvre. On y retrouve l'exécutable EXE de l'application. Si on regarde dans le menu démarrer, on trouvera également l'application au format UWP (Universal Windows Platform, application Windows Store). Enfin dans le dossier d'installation se trouve le fichier APK (Android Package Kit) qui va nous servir pour la partie suivante.
 
@@ -57,7 +56,7 @@ Notre installateur se présente comme un fichier EXE permettant d'installer notr
 
 Une fois que nous avons notre fichier APK, nous le récupérons depuis notre appareil Android (tablette, smartphone). En cliquant sur celui-ci, une demande d'autorisation vous sera faite, il suffit d'accepter pour lancer l'installation de celui-ci comme ci-contre :
 
-[![Guide d'installation sur APK](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_APK.gif)](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/CDAA-R_APK.mp4)
+https://user-images.githubusercontent.com/89837262/146622718-3394e0a5-5147-4ae4-8616-3cb5b06bc881.mp4
 
 # IV) Utilisation
 
@@ -67,16 +66,17 @@ Maintenant que l'application est installée sur notre support préféré, nous a
 
 Beaucoup d'utilisateurs ayant un usage avancé d'un ordinateur utilisent les raccourcis clavier pour naviguer sur un logiciel. La navigation à l'aide du clavier est donc totalement possible sur notre application, comme montré ci-dessous :
 
-[![Démonstration des raccourcis clavier](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Raccourcis%20clavier.gif)](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Raccourcis%20clavier.mp4)
+https://user-images.githubusercontent.com/89837262/146622739-081e7fe3-8162-415e-a353-80d00bc25fef.mp4
 
 ## Feedbacks sonores
 
 Dans un jeu vidéo comme dans une application, aussi petite soit-elle, la patte musicale est super importante. On reconnaitra facilement une interface avec des bons retours (ou feedbacks) sonores (comme les menus de Nintendo avec des bruitages très reconnaissables et qui donnent plaisir à juste naviguer dans cette interface).
 
 À notre petite échelle, nous avons donc musicalement travaillé sur les sons des boutons afin d'obtenir une sonorité agréable à l'oreille, qui donne envie de cliquer sur les différents boutons de notre application. Après analyse des sons de plusieurs applications et systèmes d'exploitation, nous avons décidé de procéder à un enregistrement personnel, avec une série de traitement pour façonner ce bruitage à notre image. Le deuxième bruitage est le message d'erreur, celui-ci se doit d'être impactant et de ne pas frustrer l'utilisateur, nous l'avons donc créé en conséquence. Vous pouvez alors les entendre ci-dessous :
--  [Démonstration son au clic](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Son_Clic.mp4)
--  [Démonstration son erreur](Conception/Rendu%20CDAA-R/Compte%20Rendu/Installation/Son_Erreur.mp4)
 
+https://user-images.githubusercontent.com/89837262/146622763-99f3f85a-80d1-43a3-90e7-9f81045c7af6.mp4
+
+https://user-images.githubusercontent.com/89837262/146622787-12927ad6-4e1b-41f3-899f-fb2163442990.mp4
 
 #### Membres du projet :
 
